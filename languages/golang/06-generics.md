@@ -61,6 +61,68 @@ Contains([]int{1, 2, 3}, 2)           // true
 Contains([]string{"a", "b"}, "b")     // true
 ```
 
+### The Problem with Type Assertions
+
+Before generics, `interface{}` required runtime type assertions that were verbose and error-prone:
+
+```go
+// Pre-generics approach: Runtime type checking
+func Sum(values []interface{}) interface{} {
+    var sum float64
+    for _, v := range values {
+        switch n := v.(type) {
+        case int:
+            sum += float64(n)
+        case float64:
+            sum += n
+        case int64:
+            sum += float64(n)
+        default:
+            panic("unsupported type")  // Runtime error!
+        }
+    }
+    return sum
+}
+
+// Problems:
+// 1. No compile-time type checking - errors happen at runtime
+// 2. Verbose type switches for every type combination
+// 3. Easy to forget a case, leading to panics
+// 4. Loss of original type information in the return value
+// 5. Caller must also use type assertions: result.(float64)
+```
+
+**Generics solve all of these:**
+
+```go
+// With generics: Compile-time type safety
+func Sum[T Number](values []T) T {
+    var sum T
+    for _, v := range values {
+        sum += v  // v is already type T, no assertion needed
+    }
+    return sum
+}
+
+// Benefits:
+// 1. Type errors caught at compile time
+// 2. No type switches or assertions needed
+// 3. Return type is known (T, not interface{})
+// 4. Cleaner, more readable code
+```
+
+### When Type Assertions Are Still Needed
+
+Even with generics, type assertions remain necessary for:
+
+1. **Legacy standard library interfaces** (`container/heap`, `container/list`, `sort.Interface`)
+2. **JSON and external data** (parsed as `map[string]interface{}`)
+3. **Context values** (`ctx.Value()` returns `any`)
+4. **Reflection-based APIs** (testing frameworks, serialization)
+5. **Plugin systems** where types aren't known at compile time
+
+See [01-syntax-quick-reference.md#type-assertions--type-switches](01-syntax-quick-reference.md#type-assertions--type-switches) for safe usage patterns.
+
 ---
 
 ## Type Parameters

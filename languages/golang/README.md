@@ -116,8 +116,10 @@ make(chan T, bufferSize)       // Channels
 append(slice, elements...)     // Add elements
 copy(dst, src)                 // Copy elements
 
-// Type assertions
-value, ok := x.(Type)          // Safe type assertion
+// Type assertions (see 01-syntax-quick-reference.md#type-assertions--type-switches)
+value, ok := x.(Type)          // Safe - returns ok=false if wrong type
+value := x.(Type)              // Unsafe - PANICS if wrong type!
+switch v := x.(type) { }       // Type switch for multiple types
 
 // Panic and recover
 panic("error message")         // Crash the program

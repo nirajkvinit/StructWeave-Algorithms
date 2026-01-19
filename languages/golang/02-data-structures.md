@@ -679,18 +679,38 @@ func nextGreater(nums []int) []int {
 
 ## Queues
 
+**Definition**: A Queue is a **FIFO** (First-In, First-Out) data structure.
+Think of a line of people waiting to buy tickets:
+
+1. **Enqueue**: You join the back of the line.
+2. **Dequeue**: The person at the front gets served and leaves.
+Fairness is key: The first one to arrive is the first one served.
+
+**Real-World Use Cases**:
+
+1. **Task Processing**: Background jobs (like sending emails) are processed in order.
+2. **Printer Spool**: Documents wait in a queue; the first file sent is printed first.
+3. **Web Server Requests**: Handling incoming HTTP requests when the server is busy.
+4. **Breadth-First Search (BFS)**: Exploring graphs level-by-level (closest nodes first).
+
 ### Queue Implementation
 
 ```go
-// Simple queue using slice (inefficient for large queues)
+// 1. Slice-based Queue (Easiest to write, but performance trap!)
+// Pros: Simple, valid for small queues (e.g., BFS on small graphs).
+// Cons: Dequeue is O(n). Removing the first element forces ALL other elements to shift left in memory.
+// Analogy: If the person at the front of a line leaves, everyone else must physically take a step forward.
 queue := []int{}
 
-// Enqueue
+// Enqueue (Add to back) -> O(1)
 queue = append(queue, value)
 
-// Dequeue
+// Dequeue (Remove from front) -> O(n) - SLOW for large data!
 front := queue[0]
-queue = queue[1:]  // O(n) - shifts all elements!
+queue = queue[1:] // Slicing merely moves the "window", but eventually the underlying array grows huge.
+// (In some languages/cases, this triggers a full memory copy).
+
+// Recommendation: For heavy queue usage (1000+ ops), use a Linked List (O(1) pop).
 
 // Better: Use container/list or circular buffer for large queues
 ```
@@ -713,6 +733,20 @@ value := front.Value.(int)  // type assertion
 // IsEmpty
 queue.Len() == 0
 ```
+
+> **Note: Type Assertion Required**
+>
+> The `container/list` package stores values as `interface{}` (any type), so you must assert the type when retrieving:
+> ```go
+> value := front.Value.(int)  // Convert interface{} back to int
+> ```
+> If you're unsure of the type, use the safe form to avoid panics:
+> ```go
+> if num, ok := front.Value.(int); ok {
+>     // num is an int, safe to use
+> }
+> ```
+> See [01-syntax-quick-reference.md#type-assertions--type-switches](01-syntax-quick-reference.md#type-assertions--type-switches) for full explanation.
 
 ### BFS Pattern (Most Common Queue Use)
 
@@ -799,6 +833,18 @@ func (h *MinHeap) Pop() any {
     return x
 }
 ```
+
+> **Why `x.(int)`?**
+>
+> The `heap.Interface` requires `Push(x any)` and `Pop() any` signatures. Since `any` (alias for `interface{}`) can hold any type, we must assert back to our expected type:
+> ```go
+> func (h *MinHeap) Push(x any) {
+>     *h = append(*h, x.(int))  // x is interface{}, assert to int
+> }
+>
+> min := heap.Pop(h).(int)  // Pop returns interface{}, assert to int
+> ```
+> This is a pre-generics pattern required by the standard library. For type-safe alternatives, see the generic Stack in [Modern Generic Helpers](#modern-generic-helpers) or [06-generics.md](06-generics.md).
 
 ### Using the Heap
 

@@ -23,6 +23,7 @@
 13. [Concurrency](#13-concurrency)
 14. [Shadowing](#14-shadowing)
 15. [Numeric Types](#15-numeric-types)
+16. [Type Assertions](#16-type-assertions)
 
 ---
 
@@ -1573,6 +1574,235 @@ fmt.Println(0.0 / 0)   // NaN
 
 ---
 
+## 16. Type Assertions
+
+### Q50: Unsafe Type Assertion Panic
+
+**What happens?**
+
+```go
+var x interface{} = "hello"
+n := x.(int)
+fmt.Println(n)
+```
+
+<details>
+<summary>Answer</summary>
+
+**Result:** `panic: interface conversion: interface {} is string, not int`
+
+**Why:** The single-value form `x.(T)` panics when the dynamic type doesn't match `T`. The interface holds a `string`, not an `int`.
+
+**Fix:** Use the comma-ok idiom:
+```go
+if n, ok := x.(int); ok {
+    fmt.Println(n)
+} else {
+    fmt.Println("not an int")
+}
+```
+
+**Key insight:** Always use the comma-ok form unless you're absolutely certain of the type (e.g., right after a type switch).
+
+</details>
+
+---
+
+### Q51: Asserting on Nil Interface
+
+**What's the output?**
+
+```go
+var x interface{}
+s, ok := x.(string)
+fmt.Printf("%q %v\n", s, ok)
+```
+
+<details>
+<summary>Answer</summary>
+
+**Output:** `"" false`
+
+**Why:** When `x` is nil (not holding any value), any type assertion fails safely with the comma-ok form. The zero value of the asserted type is returned with `ok = false`.
+
+**Key insight:** The comma-ok form is safe. But the unsafe form would panic:
+```go
+var x interface{}
+s := x.(string)  // PANIC: interface conversion: interface is nil, not string
+```
+
+**Rule:** A nil interface cannot be asserted to any type with the single-value form.
+
+</details>
+
+---
+
+### Q52: Typed Nil vs Nil Interface in Assertions
+
+**What does this print?**
+
+```go
+var p *int = nil
+var x interface{} = p
+
+if _, ok := x.(int); ok {
+    fmt.Println("int")
+} else if ptr, ok := x.(*int); ok {
+    fmt.Println("*int, is nil:", ptr == nil)
+} else {
+    fmt.Println("neither")
+}
+```
+
+<details>
+<summary>Answer</summary>
+
+**Output:** `*int, is nil: true`
+
+**Why:** The interface `x` holds a typed nil pointer (`*int`).
+- Asserting to `int` fails (it's a pointer, not an int)
+- Asserting to `*int` succeeds and returns the nil pointer
+
+**Key insight:** Type assertions check the dynamic type exactly. A `*int` is not an `int`, even when the pointer value is nil.
+
+This relates to Q14-Q16 (Interface Nil Trap): `x != nil` is true here because the interface has a type (`*int`), even though the underlying value is nil.
+
+```go
+fmt.Println(x == nil)  // false! Interface has type info
+```
+
+</details>
+
+---
+
+### Q53: Type Switch Fallthrough
+
+**Does this compile?**
+
+```go
+switch v := x.(type) {
+case int:
+    fmt.Println("int:", v)
+    fallthrough
+case string:
+    fmt.Println("string:", v)
+}
+```
+
+<details>
+<summary>Answer</summary>
+
+**Result:** Compile error!
+
+```
+cannot fallthrough in type switch
+```
+
+**Why:** Unlike regular switches, type switches don't allow `fallthrough`. Each case has a different type for `v`, so falling through would change `v`'s type mid-execution, which is not allowed.
+
+**Key insight:** In a type switch, `v` is rebound to the matched type in each case. If fallthrough were allowed:
+- `case int`: `v` is `int`
+- `case string`: `v` would need to be `string`
+
+There's no safe way to "fall" from one type to another.
+
+</details>
+
+---
+
+### Q54: Multiple Types in One Case
+
+**What's the type of `v` here?**
+
+```go
+var x interface{} = 42
+
+switch v := x.(type) {
+case int, int64:
+    fmt.Printf("Type: %T, Value: %v\n", v, v)
+}
+```
+
+<details>
+<summary>Answer</summary>
+
+**Output:** `Type: int, Value: 42`
+
+But here's the catch: **`v` is `interface{}`**, not `int` or `int64`!
+
+**Why:** When a case lists multiple types, `v` cannot be narrowed to a single type. It remains the original interface type. The `%T` shows `int` because that's the dynamic type, but `v` is still an interface.
+
+```go
+switch v := x.(type) {
+case int, int64:
+    // v is interface{}, NOT int or int64
+    // This won't compile:
+    // doubled := v * 2  // Error: operator * not defined on interface{}
+
+    // You need another assertion:
+    if i, ok := v.(int); ok {
+        fmt.Println(i * 2)
+    }
+case string:
+    // v is string here (single type in case)
+    fmt.Println(len(v))  // This works!
+}
+```
+
+**Key insight:** Use separate cases if you need to work with the concrete type directly.
+
+</details>
+
+---
+
+### Q55: Asserting Interface to Interface
+
+**Does this work?**
+
+```go
+var x interface{} = os.Stdout  // *os.File
+
+w, ok := x.(io.Writer)
+fmt.Println(ok)
+```
+
+<details>
+<summary>Answer</summary>
+
+**Output:** `true`
+
+**Why:** Type assertions can assert to interface types too! The assertion checks if the concrete value implements the target interface.
+
+`*os.File` implements `io.Writer` (it has a `Write` method), so the assertion succeeds.
+
+**Use cases:**
+
+```go
+// 1. Discovering optional capabilities
+if closer, ok := reader.(io.Closer); ok {
+    defer closer.Close()
+}
+
+// 2. Checking for specific error interfaces
+type Temporary interface {
+    Temporary() bool
+}
+if temp, ok := err.(Temporary); ok && temp.Temporary() {
+    // Retry the operation
+}
+
+// 3. Upgrading interfaces
+if rw, ok := conn.(io.ReadWriter); ok {
+    // Connection supports both read and write
+}
+```
+
+**Key insight:** Interface-to-interface assertions are powerful for checking capabilities at runtime without knowing the concrete type.
+
+</details>
+
+---
+
 ## Quick Reference: Danger Zones
 
 | Category | Trap | Safe Alternative |
@@ -1588,6 +1818,7 @@ fmt.Println(0.0 / 0)   // NaN
 | Methods | Value receiver mutation | Pointer receiver |
 | Sync | Mutex copy | Pointer receiver |
 | Comparison | Slice/map in struct | `reflect.DeepEqual` |
+| Type Assertions | Unsafe `x.(T)` panics | Use comma-ok `v, ok := x.(T)` |
 
 ---
 

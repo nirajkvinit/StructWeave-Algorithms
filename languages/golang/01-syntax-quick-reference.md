@@ -14,10 +14,11 @@ This is a concentrated reference for Go syntax. Print it, bookmark it, or review
 4. [Pointers](#pointers)
 5. [Structs & Methods](#structs--methods)
 6. [Interfaces](#interfaces)
-7. [Generics](#generics)
-8. [Error Handling](#error-handling)
-9. [String Operations](#string-operations)
-10. [Type Conversions](#type-conversions)
+7. [Type Assertions & Type Switches](#type-assertions--type-switches)
+8. [Generics](#generics)
+9. [Error Handling](#error-handling)
+10. [String Operations](#string-operations)
+11. [Type Conversions](#type-conversions)
 
 ---
 
@@ -668,6 +669,189 @@ func Process(r io.Reader) *Result {
     return &Result{}
 }
 ```
+
+---
+
+## Type Assertions & Type Switches
+
+### What is a Type Assertion?
+
+**Definition**: A type assertion extracts the concrete value from an interface variable.
+
+**Why it exists**: Interface variables can hold any type that implements the interface. When you need to access the underlying concrete value or call methods specific to that type, you use a type assertion.
+
+**Analogy**: Think of an interface as a gift-wrapped box. You know it contains something (the interface is satisfied), but to use the actual gift, you need to unwrap it (type assertion).
+
+### Basic Syntax
+
+```go
+// Interface variable holding a concrete value
+var x interface{} = "hello"
+
+// UNSAFE Type Assertion (single value)
+s := x.(string)  // s = "hello"
+fmt.Println(s)
+
+// PANIC: If the assertion is wrong
+// n := x.(int)  // PANIC: interface conversion: interface {} is string, not int
+
+// SAFE Type Assertion (comma-ok idiom)
+s, ok := x.(string)
+if ok {
+    fmt.Println(s)  // "hello"
+}
+
+// Pattern: Check before using
+if s, ok := x.(string); ok {
+    fmt.Println("It's a string:", s)
+} else {
+    fmt.Println("Not a string")
+}
+```
+
+### Unsafe vs Safe Type Assertions
+
+| Form | Syntax | On Failure | Use Case |
+|------|--------|------------|----------|
+| Unsafe | `v := x.(T)` | **PANIC** | When you're 100% certain of the type |
+| Safe | `v, ok := x.(T)` | ok=false, v=zero value | When type might vary |
+
+```go
+// When to use unsafe (rare)
+// - You've just checked the type in a type switch
+// - The code path guarantees the type
+// - You want to fail fast on programmer error
+func processString(x interface{}) {
+    // Only called when we know x is a string
+    s := x.(string)  // Safe here because caller guarantees type
+    fmt.Println(strings.ToUpper(s))
+}
+
+// When to use safe (most cases)
+func tryGetInt(x interface{}) (int, bool) {
+    if num, ok := x.(int); ok {
+        return num, true
+    }
+    return 0, false  // Graceful fallback
+}
+```
+
+### Type Switch
+
+A type switch is a cleaner alternative when handling multiple possible types:
+
+```go
+func describe(x interface{}) string {
+    switch v := x.(type) {  // Note: .(type) is ONLY valid inside a switch
+    case int:
+        return fmt.Sprintf("int: %d (doubled: %d)", v, v*2)
+    case string:
+        return fmt.Sprintf("string of length %d: %q", len(v), v)
+    case bool:
+        if v {
+            return "boolean: true"
+        }
+        return "boolean: false"
+    case nil:
+        return "nil value"
+    default:
+        return fmt.Sprintf("unknown type: %T", v)
+    }
+}
+
+// Key insight: In each case, 'v' automatically has the matched type.
+// - In 'case int': v is int (can do v*2)
+// - In 'case string': v is string (can call len(v))
+// No additional type assertion needed inside each case!
+```
+
+### Real-World Examples
+
+```go
+// 1. Extracting values from container/heap (returns interface{})
+min := heap.Pop(h).(int)  // Heap returns interface{}, must assert
+
+// 2. Working with JSON data (parsed as map[string]interface{})
+var data map[string]interface{}
+json.Unmarshal(jsonBytes, &data)
+
+// RISKY: panics if "name" is missing or not a string
+name := data["name"].(string)
+
+// SAFE: check before using
+if name, ok := data["name"].(string); ok {
+    fmt.Println("Name:", name)
+}
+
+// 3. Context values (ctx.Value returns interface{})
+if userID, ok := ctx.Value("userID").(int); ok {
+    fmt.Println("User ID:", userID)
+}
+
+// 4. Custom error handling (check for specific error types)
+if pathErr, ok := err.(*os.PathError); ok {
+    fmt.Println("Operation failed on path:", pathErr.Path)
+}
+
+// 5. Checking interface implementation at runtime
+if stringer, ok := x.(fmt.Stringer); ok {
+    fmt.Println(stringer.String())
+}
+```
+
+### Type Assertions vs Alternatives
+
+| Situation | Best Approach |
+|-----------|---------------|
+| Extract concrete type from `interface{}` | Type assertion |
+| Handle multiple possible types | Type switch |
+| Same logic for many types (Go 1.18+) | Generics |
+| Need behavior, not concrete type | Interface methods |
+
+```go
+// Avoid: Type assertion just to call a method
+if s, ok := x.(fmt.Stringer); ok {
+    fmt.Println(s.String())
+}
+
+// Better: Accept the interface directly in your function signature
+func printStringer(s fmt.Stringer) {
+    fmt.Println(s.String())
+}
+
+// Best (Go 1.18+): Use generics to avoid interface{} entirely
+func process[T any](value T) T {
+    // No type assertion needed - T is known at compile time
+    return value
+}
+```
+
+> [!CAUTION]
+> **Common Mistake: Asserting on nil interface**
+>
+> ```go
+> var x interface{} = nil
+> s := x.(string)  // PANIC: interface conversion: interface is nil, not string
+>
+> // Safe pattern: check for nil first, then assert
+> if x != nil {
+>     if s, ok := x.(string); ok {
+>         fmt.Println(s)
+>     }
+> }
+>
+> // Or use comma-ok (returns zero value and false for nil)
+> s, ok := x.(string)  // s = "", ok = false (no panic)
+> ```
+
+### Type Assertion Rules Summary
+
+1. **Syntax**: `value, ok := x.(T)` or `value := x.(T)`
+2. **The interface must not be nil** for unsafe assertions (panics otherwise)
+3. **The concrete type must match T exactly** (or implement T if T is an interface)
+4. **Comma-ok form never panics** - returns zero value and false on failure
+5. **Type switches use `.(type)`** which is only valid inside switch statements
+6. **In type switch with multiple types per case**, the variable keeps the original interface type
 
 ---
 
