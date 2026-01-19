@@ -28,7 +28,7 @@ This guide is designed for developers who want to learn TypeScript quickly, reta
 
 ---
 
-## Learning Path (6-Week Plan)
+## Learning Path (7-Week Plan)
 
 ```
 Week 1: Foundations
@@ -64,6 +64,12 @@ Week 6: Best Practices & Interview Prep
 ├── Day 3-4: Interview Trap Questions (14-interview-trap-questions.md)
 ├── Day 5: Timed problem solving
 └── Day 6-7: Mock interviews with trap questions
+
+Week 7: Standard Library & TDD Mastery
+├── Day 1-2: Standard Library Essentials (15-std-library-essentials.md)
+├── Day 3-4: Test-Driven Development (16-test-driven-development.md)
+├── Day 5: Practice TDD with algorithm problems
+└── Day 6-7: Build a small project using TDD
 ```
 
 ---
@@ -86,6 +92,8 @@ Week 6: Best Practices & Interview Prep
 | [12-design-patterns-behavioral.md](12-design-patterns-behavioral.md) | Observer, Strategy, State, Command, Iterator | 60 min |
 | [13-anti-patterns-best-practices.md](13-anti-patterns-best-practices.md) | Common mistakes and modern best practices | 60 min |
 | [14-interview-trap-questions.md](14-interview-trap-questions.md) | Deep TypeScript gotchas and trap questions | 60 min |
+| [15-std-library-essentials.md](15-std-library-essentials.md) | Built-in APIs, collections, async primitives | 90 min |
+| [16-test-driven-development.md](16-test-driven-development.md) | TDD methodology, QA mindset, testing patterns | 90 min |
 
 ---
 
