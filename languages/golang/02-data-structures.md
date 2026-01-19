@@ -12,12 +12,12 @@ This guide covers the data structures you'll use in 90% of coding interviews, wi
 2. [Maps](#maps)
 3. [Stacks](#stacks)
 4. [Queues](#queues)
-5. [Heaps (Priority Queues)](#heaps-priority-queues)
-6. [Linked Lists](#linked-lists)
-7. [Trees](#trees)
-8. [Graphs](#graphs)
-9. [Sets](#sets)
-10. [Modern Generic Helpers](#modern-generic-helpers)
+5. [Heaps (Priority Queues)](#heaps-priority-queues---the-vip-line)
+6. [Linked Lists](#linked-lists---the-scavenger-hunt)
+7. [Trees](#trees---the-file-system)
+8. [Graphs](#graphs---the-city-network)
+9. [Sets](#sets---the-exclusive-club)
+10. [Modern Generic Helpers](#modern-generic-helpers---the-swiss-army-knife)
 
 ---
 
@@ -504,11 +504,11 @@ if visited[next] {
 ### Complexity
 
 | Operation | Average | Worst |
-|-----------|---------|-------|
-| Insert | O(1) | O(n) |
-| Lookup | O(1) | O(n) |
-| Delete | O(1) | O(n) |
-| Iterate | O(n) | O(n) |
+| --------- | ------- | ----- |
+| Insert    | O(1)    | O(n)  |
+| Lookup    | O(1)    | O(n)  |
+| Delete    | O(1)    | O(n)  |
+| Iterate   | O(n)    | O(n)  |
 
 ---
 
@@ -737,42 +737,168 @@ queue.Len() == 0
 > **Note: Type Assertion Required**
 >
 > The `container/list` package stores values as `interface{}` (any type), so you must assert the type when retrieving:
+>
 > ```go
 > value := front.Value.(int)  // Convert interface{} back to int
 > ```
+>
 > If you're unsure of the type, use the safe form to avoid panics:
+>
 > ```go
 > if num, ok := front.Value.(int); ok {
 >     // num is an int, safe to use
 > }
 > ```
+>
 > See [01-syntax-quick-reference.md#type-assertions--type-switches](01-syntax-quick-reference.md#type-assertions--type-switches) for full explanation.
 
-### BFS Pattern (Most Common Queue Use)
+### Breadth-First Search (BFS) - The "Ripple" Effect
+
+**Definition**: BFS is a graph traversal algorithm that explores nodes layer-by-layer. It starts at a chosen node (the "root") and explores all its **immediate** neighbors before moving on to the neighbors' neighbors.
+
+**Analogy**: Think of dropping a stone into a calm pond.
+
+1. **Splash**: The stone hits the water (Start Node).
+2. **Ring 1**: A small ripple forms around the center (Immediate Neighbors).
+3. **Ring 2**: A larger ripple forms around the first ring (Neighbors of Neighbors).
+4. **Ring 3...**: The ripples expand outward evenly.
+
+BFS guarantees that you visit the **closest** nodes first.
+
+**Key Characteristics**:
+
+* **Data Structure**: Uses a **Queue** (FIFO) to keep track of what to visit next.
+* **Shortest Path**: In an unweighted graph (where all edges are equal), BFS *always* finds the shortest path between the start node and any other node.
+* **Completeness**: If a solution exists, BFS will find it (unlike DFS which might get lost in an infinite path).
+
+**Real-World Examples**:
+
+1. **GPS Navigation**: Finding the route with the fewest number of turns (unweighted).
+2. **Social Networks**: "People you may know" (Friends of Friends = 2nd layer connections).
+3. **Web Crawlers**: Google limits how deep it crawls a site; it explores the homepage links first before going deep.
+4. **Peer-to-Peer Networks**: Finding the closest available peer to download a file from.
+
+#### BFS Implementation Template
+
+This template works for general graphs using an adjacency list.
 
 ```go
-// BFS Template
-func bfs(start Node) {
-    queue := []Node{start}
-    visited := make(map[Node]bool)
+// BFS Graph Traversal
+// Input: 'start' node ID, 'graph' adjacency list containing connections
+func bfs(start int, graph map[int][]int) {
+    // 1. Initialize Queue with the starting node
+    queue := []int{start} // Slice acting as a FIFO queue
+
+    // 2. Keep track of visited nodes to avoid infinite loops (cycles)
+    visited := make(map[int]bool)
     visited[start] = true
 
-    for len(queue) > 0 {
-        // Dequeue
-        current := queue[0]
-        queue = queue[1:]
+    fmt.Println("BFS Starting from:", start)
 
-        // Process current
-        for _, neighbor := range current.Neighbors {
+    // 3. Loop until the queue is empty
+    for len(queue) > 0 {
+        // DEQUEUE: Remove the first element (front of line)
+        current := queue[0]
+        queue = queue[1:] // Shift slice window
+
+        fmt.Printf("Visited: %d\n", current)
+
+        // 4. Explore all immediate neighbors
+        for _, neighbor := range graph[current] {
+            // Only add neighbors we haven't seen yet
             if !visited[neighbor] {
-                visited[neighbor] = true
-                queue = append(queue, neighbor)
+                visited[neighbor] = true        // Mark as seen immediately!
+                queue = append(queue, neighbor) // Enqueue for later visit
             }
         }
     }
 }
+```
 
-// Level-order traversal
+#### Visualizing the Process (Trace)
+
+Seeing the code run step-by-step helps lock in the concept of the **Queue**.
+
+**The Scenario**:
+We start at **Node 1**.
+The graph looks like this:
+
+```mermaid
+graph TD
+    1((1: Start)) --> 2((2))
+    1 --> 3((3))
+    2 --> 4((4))
+    3 --> 5((5))
+    3 --> 6((6))
+    style 1 fill:#f9f,stroke:#333,stroke-width:2px
+```
+
+**Step-by-Step Execution**:
+
+| Step | Current Node | **Queue State** (Front ... Back) | Visited Set | Action |
+| ---- | :----------: | -------------------------------- | ----------- | ------ |
+| **Init** | - | `[1]` | `{1}` | **Splash!** Start with 1. |
+| **1** | **1** | `[]` | `{1}` | Dequeue 1. |
+| | | `[2, 3]` | `{1, 2, 3}` | Process 1's neighbors (2, 3). Enqueue them. |
+| **2** | **2** | `[3]` | `{1, 2, 3}` | Dequeue 2. |
+| | | `[3, 4]` | `{1, 2, 3, 4}` | Process 2's neighbors (4). Enqueue 4. |
+| **3** | **3** | `[4]` | `{1, 2, 3, 4}` | Dequeue 3. |
+| | | `[4, 5, 6]` | `{1...6}` | Process 3's neighbors (5, 6). Enqueue them. |
+| **4** | **4** | `[5, 6]` | `{1...6}` | Dequeue 4. No new neighbors. |
+| **5** | **5** | `[6]` | `{1...6}` | Dequeue 5. No new neighbors. |
+| **6** | **6** | `[]` | `{1...6}` | Dequeue 6. Queue empty. **Done.** |
+
+> **Visual Insight**:
+> Notice how we cleared both **2** and **3** (Level 1) before we even touched **4** (Level 2).
+> The **Queue** acts like a buffer, ensuring we don't jump ahead levels.
+
+#### Level-Order Traversal (BFS on Trees) - The "Scanner"
+
+**Concept**: Instead of following a path deep down (like a maze), we scan the tree **row by row**. We capture everyone on Level 0, then everyone on Level 1, and so on.
+
+**Why no `visited` map?**: Unlike graphs, trees point downwards only (Parent -> Child). There are no loops, so we don't need to track visited nodes.
+
+**Visualizing Rows**:
+
+```mermaid
+graph TD
+    3((3)) --> 9((9))
+    3 --> 20((20))
+    20 --> 15((15))
+    20 --> 7((7))
+    
+    subgraph Level 0
+    3
+    end
+    subgraph Level 1
+    9
+    20
+    end
+    subgraph Level 2
+    15
+    7
+    end
+    
+    style 3 fill:#f9f,stroke:#333
+    style 9 fill:#bbf,stroke:#333
+    style 20 fill:#bbf,stroke:#333
+```
+
+**The "Snapshot" Technique (Critical Logic)**:
+To keep levels separate in a single Queue, we use a simple trick: **Freeze the size**.
+
+1. **Snapshot**: At the start of the loop, we check `len(queue)`. Say it's **2**.
+2. **Process Batch**: We loop exactly **2** times. We dequeue the 2 nodes from the *current* level.
+3. **Queue Children**: If these nodes have children, we add them to the back. They represent the *next* level.
+
+**Analogy**: Think of a roller coaster loading area.
+
+1. The operator counts **4** people in the loading zone.
+2. Those 4 get on the ride (Processed).
+3. While they board, **6** new people arrive. They wait behind the gate for the *next* turn.
+
+```go
+// Binary Tree Level Order Traversal
 func levelOrder(root *TreeNode) [][]int {
     if root == nil {
         return nil
@@ -782,14 +908,20 @@ func levelOrder(root *TreeNode) [][]int {
     queue := []*TreeNode{root}
 
     for len(queue) > 0 {
-        levelSize := len(queue)
-        level := make([]int, levelSize)
+        // 1. FREEZE: Take a snapshot of the current level size
+        levelSize := len(queue) 
+        currentLevelValues := []int{}
 
+        // 2. PROCESS BATCH: Iterate exactly 'levelSize' times
         for i := 0; i < levelSize; i++ {
+            // Dequeue
             node := queue[0]
             queue = queue[1:]
-            level[i] = node.Val
 
+            // Collect Value
+            currentLevelValues = append(currentLevelValues, node.Val)
+
+            // Enqueue Children (Wait for next level processing)
             if node.Left != nil {
                 queue = append(queue, node.Left)
             }
@@ -797,155 +929,238 @@ func levelOrder(root *TreeNode) [][]int {
                 queue = append(queue, node.Right)
             }
         }
-        result = append(result, level)
+        // 3. ARCHIVE: Store the finished level
+        result = append(result, currentLevelValues)
     }
     return result
 }
 ```
 
+**Visual Trace (The "Snapshot" in Action)**:
+
+Using the tree from the diagram above: `[3, 9, 20, 15, 7]`
+
+| Round | Queue (Start) | LevelSize (Frozen) | Processing Nodes | Queue (End) (Children Added) | Result Added |
+| :---: | ------------- | :----------------: | ---------------- | ---------------------------- | ------------ |
+| **1** | `[3]` | **1** | Node 3 | `[9, 20]` | `[3]` |
+| **2** | `[9, 20]` | **2** | Node 9, Node 20 | `[15, 7]` | `[9, 20]` |
+| **3** | `[15, 7]` | **2** | Node 15, Node 7 | `[]` | `[15, 7]` |
+| **4** | `[]` | **0** | - | - | (Stop) |
+
+> **Key Takeaway**: By using `levelSize`, we ensure we never mix nodes from Level 1 with Level 2, even though they technically live in the same Queue slice!
+
+**Real-World Usage**:
+
+1. **Organizational Charts**: Printing an employee hierarchy layer-by-layer (CEO first, then all VPs, then all Directors).
+2. **Product Categories**: Displaying main categories (Electronics, Clothing) before subcategories (Phones, Shirts).
+3. **Skill Trees in Games**: You must unlock all "Level 1" skills before accessing "Level 2" powerful skills.
+4. **Version Control**: Searching for a bug in the immediate history (Level 1 commits) before looking at ancient history (Level 100 commits).
+
 ---
 
-## Heaps (Priority Queues)
+## Heaps (Priority Queues) - The "VIP" Line
 
-Go provides `container/heap` — you implement the interface, the package handles the algorithm.
+**Definition**: A Heap (specifically a Priority Queue) is a data structure where the "most important" element is always at the front.
 
-### Implementing heap.Interface
+* **Min Heap**: Smallest number is the VIP (First out).
+* **Max Heap**: Largest number is the VIP (First out).
+
+**Analogy**: Think of an Emergency Room Triage.
+
+* Patients don't see the doctor based on when they arrived (Queue).
+* They see the doctor based on **Severity** (Heap).
+* A heart attack (Severity 10) cuts in front of a broken finger (Severity 3), even if the finger arrived an hour earlier.
+
+**Real-World Usage**:
+
+1. **Task Scheduling**: The CPU picks the "High Priority" task to run next, not just the oldest one.
+2. **Bandwidth Management**: Routers prioritize Voice/Video packets over Email/Downloads to prevent lag.
+3. **Dijkstra's Algorithm**: Finding the shortest path requires constantly picking the "closest" node to explore next.
+4. **Top K Items**: Finding the "10 Trending Topics" out of millions of tweets.
+
+---
+
+### Implementing heap.Interface (The "Boilerplate")
+
+Go's specific quirk: It doesn't have a built-in Heap class. Instead, it has a "Contract" (Interface). You bring your own Slice, teach it how to swap and compare, and Go handles the magic complex logic.
+
+> **Note**: This boilerplate is standard in Go. You usually just copy-paste it and adjust the `Less` function.
 
 ```go
 import "container/heap"
 
-// Min heap of integers
+// 1. Define your type (it's just a slice!)
 type MinHeap []int
 
+// 2. Implement sort.Interface (Len, Less, Swap)
 func (h MinHeap) Len() int           { return len(h) }
-func (h MinHeap) Less(i, j int) bool { return h[i] < h[j] } // Min: <, Max: >
+func (h MinHeap) Less(i, j int) bool { return h[i] < h[j] } // < for MinHeap, > for MaxHeap
 func (h MinHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
 
+// 3. Implement heap.Interface (Push, Pop)
+// Note: These use POINTER receivers (*h) because they modify the slice length.
+
 func (h *MinHeap) Push(x any) {
+    // Append to the list (The library handles re-ordering)
     *h = append(*h, x.(int))
 }
 
 func (h *MinHeap) Pop() any {
     old := *h
     n := len(old)
-    x := old[n-1]
-    *h = old[:n-1]
-    return x
+    x := old[n-1]     // Get the last item
+    *h = old[:n-1]    // Shrink the slice
+    return x          // Return the item
 }
 ```
 
-> **Why `x.(int)`?**
->
-> The `heap.Interface` requires `Push(x any)` and `Pop() any` signatures. Since `any` (alias for `interface{}`) can hold any type, we must assert back to our expected type:
-> ```go
-> func (h *MinHeap) Push(x any) {
->     *h = append(*h, x.(int))  // x is interface{}, assert to int
-> }
->
-> min := heap.Pop(h).(int)  // Pop returns interface{}, assert to int
-> ```
-> This is a pre-generics pattern required by the standard library. For type-safe alternatives, see the generic Stack in [Modern Generic Helpers](#modern-generic-helpers) or [06-generics.md](06-generics.md).
+### Visualizing Heap Operations
 
-### Using the Heap
+A Heap is just an Array, but we *hallucinate* a Tree structure.
+
+**The Rule**: Parent is always smaller than Children (MinHeap).
+
+**Scenario**: Inserting `5` into existing heap `[10, 20]`.
+
+**Step 1: Add to End**
+We blindly append `5` to the array.
+
+* Array: `[10, 20, 5]`
+* Tree View:
+
+    ```mermaid
+    graph TD
+        10((10)) --> 20((20))
+        10 --> 5((5: NEW))
+        style 5 fill:#f96,stroke:#333,stroke-width:2px
+    ```
+
+    *Uh oh! 10 > 5. The Board Member (5) is reporting to a Middle Manager (10). Violation!*
+
+**Step 2: Bubble Up (Correction)**
+We swap `5` with its parent `10`.
+
+* Array: `[5, 20, 10]`
+* Tree View:
+
+    ```mermaid
+    graph TD
+        5((5)) --> 20((20))
+        5 --> 10((10))
+        style 5 fill:#9f9,stroke:#333,stroke-width:2px
+    ```
+
+    *Fixed! The VIP (5) is now at the top.*
+
+**Array <-> Tree Mapping Guide**:
+Since it's actually an array, how do we find parents/children?
+
+* **Left Child**: `2*i + 1`
+* **Right Child**: `2*i + 2`
+* **Parent**: `(i-1) / 2`
+
+### Common Usage Patterns
+
+#### 1. The "Basics"
 
 ```go
-// Create and initialize
-h := &MinHeap{3, 1, 4, 1, 5}
-heap.Init(h)
+// 1. Initialize
+h := &MinHeap{3, 1, 4}
+heap.Init(h) // Crucial! Turns a random slice into a valid heap. O(n)
 
-// Push
-heap.Push(h, 2)
+// 2. Add Item
+heap.Push(h, 2) // O(log n)
 
-// Pop minimum
-min := heap.Pop(h).(int)
+// 3. Get VIP (Smallest)
+min := heap.Pop(h).(int) // Returns 1. O(log n)
 
-// Peek minimum (don't pop)
-min := (*h)[0]
-
-// Remove at index
-heap.Remove(h, i)
+// 4. Peek (Look at VIP without removing)
+peek := (*h)[0] // Always at index 0. O(1)
 ```
 
-### Heap Applications
+#### 2. The "Top K" Pattern (Very Popular Interview Question)
+
+**Goal**: Find the 3rd largest number in a stream.
+**Trick**: Use a **MinHeap** of size K (3).
+Why? If you keep the "Top 3 Candidates", the *smallest* of those candidates is the one on the bubble. If a new, bigger number comes in, it beats the smallest candidate.
 
 ```go
-// 1. Kth Largest Element (use min heap of size k)
 func findKthLargest(nums []int, k int) int {
     h := &MinHeap{}
     heap.Init(h)
 
     for _, num := range nums {
+        // 1. Add number to our "Elite Club"
         heap.Push(h, num)
+        
+        // 2. If the club is too big, kick out the "weakest" member.
+        // In a Top-K problem, the "weakest" of the large numbers is the smallest one.
         if h.Len() > k {
             heap.Pop(h)
         }
     }
+    // The club has exactly k members. The "smallest" of them is the k-th largest overall.
     return (*h)[0]
-}
-
-// 2. Custom Heap (priority queue with struct)
-type Item struct {
-    Value    string
-    Priority int
-    Index    int  // needed for update
-}
-
-type PriorityQueue []*Item
-
-func (pq PriorityQueue) Len() int { return len(pq) }
-func (pq PriorityQueue) Less(i, j int) bool {
-    return pq[i].Priority > pq[j].Priority // Max heap
-}
-func (pq PriorityQueue) Swap(i, j int) {
-    pq[i], pq[j] = pq[j], pq[i]
-    pq[i].Index = i
-    pq[j].Index = j
-}
-func (pq *PriorityQueue) Push(x any) {
-    item := x.(*Item)
-    item.Index = len(*pq)
-    *pq = append(*pq, item)
-}
-func (pq *PriorityQueue) Pop() any {
-    old := *pq
-    n := len(old)
-    item := old[n-1]
-    old[n-1] = nil
-    item.Index = -1
-    *pq = old[:n-1]
-    return item
-}
-
-// Update priority
-func (pq *PriorityQueue) Update(item *Item, priority int) {
-    item.Priority = priority
-    heap.Fix(pq, item.Index)
 }
 ```
 
-### Complexity
+### Complexity Recap
 
-| Operation | Time |
-|-----------|------|
-| Push | O(log n) |
-| Pop | O(log n) |
-| Peek | O(1) |
-| Init | O(n) |
-| Fix | O(log n) |
+| Operation | Time | Why? |
+| --------- | ---- | ---- |
+| **Push** | `O(log n)` | Adds to end, then "swaps" up the height of tree. |
+| **Pop** | `O(log n)` | Removes top, moves last to top, then "swaps" down. |
+| **Peek** | `O(1)` | The winner is always at Index 0. |
+| **Init** | `O(n)` | Faster than sorting `O(n log n)`! |
 
 ---
 
-## Linked Lists
+## Linked Lists - The "Scavenger Hunt"
+
+**Definition**: A Linked List is a chain of nodes. Each node holds **Data** and a **Pointer** (clue) to the next node. Unlike Arrays, they are NOT stored in one contiguous block of memory.
+
+**Analogy**: A **Scavenger Hunt**.
+
+* **Array**: A row of lockers. You know exactly where Locker #5 is (Math = Index lookup).
+* **Linked List**: You find a clue at the park. It says "Go to the Library". At the Library, a note says "Go to the Coffee Shop". You *must* visit the locations in order; you can't skip ahead.
+
+**Visualizing the Chain**:
+
+```mermaid
+graph LR
+    1((Head: 10)) -- "Next" --> 2((20))
+    2 -- "Next" --> 3((30))
+    3 -- "Next" --> 4[Null]
+    
+    style 1 fill:#f96,stroke:#333
+    style 2 fill:#bbf,stroke:#333
+    style 3 fill:#bbf,stroke:#333
+```
+
+**Real-World Usage**:
+
+1. **Music Playlist**: "Play Next" adds a song to the list. You can easily drag a song to a new position (swapping pointers) without rewriting the whole playlist file.
+2. **Browser History**: (Doubly Linked List) `Back` goes to `Prev`, `Forward` goes to `Next`.
+3. **Undo/Redo Functionality**: Maintaining a chain of states.
+
+**Comparison**:
+
+| Feature | Array | Linked List |
+| :--- | :--- | :--- |
+| **Memory** | Contiguous (One block) | Scattered (Nodes anywhere) |
+| **Access** | O(1) Instant (Jump) | O(n) Slow (Travel) |
+| **Insert/Delete** | O(n) Slow (Shift everyone) | O(1) Fast (Rewire pointers) |
 
 ### Node Definition
 
 ```go
 type ListNode struct {
     Val  int
-    Next *ListNode
+    Next *ListNode // The "Clue" to the next location
 }
 
-// Create
+// Creating a Chain: 1 -> 2 -> 3
+// Note: We use & (address) because Next expects a POINTER
 head := &ListNode{Val: 1}
 head.Next = &ListNode{Val: 2}
 head.Next.Next = &ListNode{Val: 3}
@@ -1042,7 +1257,29 @@ func reverseList(head *ListNode) *ListNode {
 
 ---
 
-## Trees
+## Trees - The "File System"
+
+**Definition**: A Tree is a hierarchy. It has a **Root** (top) and **Children** (sub-items). Unlike Linked Lists, a node can point to multiple children.
+
+**Analogy**: Your Computer's **File System**.
+
+* **Root**: `C:/` or `/` directory.
+* **Branches**: Folders.
+* **Leaves**: Files (endpoints with no folders inside them).
+
+**Visualizing a Binary Tree** (Each node has at most 2 children):
+
+```mermaid
+graph TD
+    1((1: Root)) --> 2((2: Left))
+    1 --> 3((3: Right))
+    2 --> 4((4))
+    2 --> 5((5))
+    
+    style 1 fill:#f9f,stroke:#333
+    style 2 fill:#bbf,stroke:#333
+    style 3 fill:#bbf,stroke:#333
+```
 
 ### Binary Tree Node
 
@@ -1054,45 +1291,57 @@ type TreeNode struct {
 }
 
 // Create
+//       1
+//      / \
+//     2   3
 root := &TreeNode{Val: 1}
 root.Left = &TreeNode{Val: 2}
 root.Right = &TreeNode{Val: 3}
 ```
 
-### Tree Traversals
+### Tree Traversals (The "Walk")
+
+How do we walk through the museum?
+
+**1. Inorder (Left -> Root -> Right)**:
+
+* **Use**: Prints sorted values if it's a BST (Binary Search Tree).
+* **Route**: Visit Left Child, then Self, then Right Child.
+
+**2. Preorder (Root -> Left -> Right)**:
+
+* **Use**: Cloning a tree. You need to create the Parent first before you can attach Children.
+* **Route**: Visit Self first, then Left Child, then Right Child.
+
+**3. Postorder (Left -> Right -> Root)**:
+
+* **Use**: Deleting a tree. You must delete Children before you can delete the Parent (otherwise you lose pointers).
+* **Route**: Visit Left Child, then Right Child, then Self (last).
 
 ```go
 // Inorder (Left, Root, Right)
 func inorder(root *TreeNode, result *[]int) {
-    if root == nil {
-        return
-    }
-    inorder(root.Left, result)
-    *result = append(*result, root.Val)
-    inorder(root.Right, result)
+    if root == nil { return }
+    inorder(root.Left, result)        // 1. Go Left
+    *result = append(*result, root.Val) // 2. Visit Self
+    inorder(root.Right, result)       // 3. Go Right
 }
 
 // Preorder (Root, Left, Right)
 func preorder(root *TreeNode, result *[]int) {
-    if root == nil {
-        return
-    }
-    *result = append(*result, root.Val)
-    preorder(root.Left, result)
-    preorder(root.Right, result)
+    if root == nil { return }
+    *result = append(*result, root.Val) // 1. Visit Self
+    preorder(root.Left, result)       // 2. Go Left
+    preorder(root.Right, result)      // 3. Go Right
 }
 
 // Postorder (Left, Right, Root)
 func postorder(root *TreeNode, result *[]int) {
-    if root == nil {
-        return
-    }
-    postorder(root.Left, result)
-    postorder(root.Right, result)
-    *result = append(*result, root.Val)
+    if root == nil { return }
+    postorder(root.Left, result)      // 1. Go Left
+    postorder(root.Right, result)     // 2. Go Right
+    *result = append(*result, root.Val) // 3. Visit Self
 }
-
-// Level order (BFS) - see Queue section
 ```
 
 ### Tree Patterns
@@ -1146,29 +1395,75 @@ func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 
 ---
 
-## Graphs
+1. [Heaps (Priority Queues)](#heaps-priority-queues---the-vip-line)
 
-### Representations
+...
+
+## Graphs - The "City Network"
+
+**Definition**: A collection of nodes (Cities) connected by edges (Roads).
+
+* **Directed**: One-way streets (A -> B).
+* **Undirected**: Two-way streets (A <-> B).
+* **Weighted**: Roads with tolls or distances (A --5km--> B).
+
+**Analogy**: An **Airline Network**.
+
+* **Node**: Airport (JFK, LHR).
+* **Edge**: Flight route.
+* **Weight**: Ticket price or Flight duration.
+
+**Visualizing Graph Types**:
+
+#### 1. Directed Graph (Social Network: Follows)
+
+```mermaid
+graph LR
+    A((Alice)) -- Follows --> B((Bob))
+    B -- Follows --> C((Charlie))
+    C -- Follows --> A
+    
+    style A fill:#f9f,stroke:#333
+    style B fill:#bbf,stroke:#333
+```
+
+#### 2. Weighted Graph (Google Maps)
+
+```mermaid
+graph LR
+    A((Home)) -- 5 min --> B((Store))
+    A -- 20 min --> C((Gym))
+    B -- 10 min --> C
+```
+
+### Representations (How to store them?)
+
+#### 1. Adjacency List (The "Phone Book")
+
+* **Best for**: Sparse graphs (Few roads per city).
+* **Concept**: Every city has a list of destinations.
+* **Memory**: Efficient. O(V + E).
 
 ```go
-// Adjacency List (most common)
+// Map: City ID -> List of Neighbors
 graph := make(map[int][]int)
-graph[0] = []int{1, 2}
-graph[1] = []int{0, 3}
+graph[1] = []int{2, 3} // City 1 connects to 2 and 3
+```
 
-// Edge List
-type Edge struct {
-    From, To, Weight int
-}
-edges := []Edge{{0, 1, 5}, {1, 2, 3}}
+#### 2. Adjacency Matrix (The "Grid")
 
-// Adjacency Matrix
-n := 5
-matrix := make([][]int, n)
-for i := range matrix {
-    matrix[i] = make([]int, n)
+* **Best for**: Dense graphs (Every city connects to everyone).
+* **Concept**: A giant generic grid. `matrix[i][j] = 1` means connection exists.
+* **Memory**: Heavy. O(V^2).
+
+```go
+// 2D Slice
+// 0: No connection, 1: Connection
+matrix := [][]int{
+    {0, 1, 1}, // City 0 connects to 1 and 2
+    {1, 0, 0}, // City 1 connects to 0
+    {1, 0, 0}, // City 2 connects to 0
 }
-matrix[0][1] = 1  // edge from 0 to 1
 ```
 
 ### Graph Traversals
@@ -1233,7 +1528,36 @@ func bfs(start int, graph map[int][]int) {
 
 ---
 
-## Sets
+## Sets - The "Exclusive Club"
+
+**Definition**: A collection of unique items. No duplicates allowed. If you try to add "Alice" twice, the second one is ignored.
+
+* **Search**: O(1) Instant.
+* **Add/Remove**: O(1) Instant.
+
+**Analogy**: A **Nightclub Bouncer**.
+
+* **List**: You write "Alice" on a paper 5 times.
+* **Set**: The bouncer checks the Guest List. "Alice is already inside. You can't enter twice."
+
+**Visualizing Set Operations (Venn Diagram)**:
+
+* `Union`: Everyone in Club A **OR** Club B.
+* `Intersection`: VIPs who are members of **BOTH** clubs.
+
+```mermaid
+graph TD
+    subgraph Union
+    A((A)) --- B((B))
+    end
+    subgraph Intersection
+    C((A)) -- "AND" --- D((B))
+    end
+    style A fill:#f9f
+    style B fill:#bbf
+    style C fill:#f9f
+    style D fill:#bbf
+```
 
 Go doesn't have a built-in set, but `map[T]struct{}` is idiomatic.
 
@@ -1329,7 +1653,14 @@ if seen[value] {
 
 ---
 
-## Modern Generic Helpers
+## Modern Generic Helpers - The "Swiss Army Knife"
+
+**Definition**: A set of powerful, type-safe utilities introduced in recent Go versions (1.21+). They allow you to write code that works with *any* type (int, string, struct) without rewriting it logic multiple times.
+
+**Analogy**: A **Swiss Army Knife**.
+
+* **Old Way**: You carry a screwdriver, a knife, and a bottle opener separately. If you need a *Phillips* screwdriver, you go back to the store (copy-paste code for a new type).
+* **New Way (Generics)**: One tool adjusts to fit the task. The same `slices.Sort` works for numbers, strings, or custom objects.
 
 ### maps Package (Go 1.21+)
 

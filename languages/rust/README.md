@@ -59,11 +59,16 @@ Week 5: Design Patterns & Interview Mastery
 ├── Day 5-6: Interview Trap Questions (13-interview-trap-questions.md)
 └── Day 7: Final review and mock interviews
 
-Week 6: Advanced Topics
-├── Day 1-2: Macros (14-macros.md)
-├── Day 3-4: Unsafe Rust & FFI (15-unsafe-ffi.md)
-├── Day 5: WebAssembly (16-webassembly.md)
-└── Day 6-7: Review and specialized practice
+Week 6: Advanced Topics & Testing
+├── Day 1-2: Standard Library Essentials (17-std-library-essentials.md)
+├── Day 3-4: Test-Driven Development (18-test-driven-development.md)
+├── Day 5: Macros (14-macros.md)
+└── Day 6-7: Unsafe Rust & FFI, WebAssembly (15, 16)
+
+Week 7: Specialization
+├── Day 1-2: Deep dive into areas of interest
+├── Day 3-4: Build a small project using TDD
+└── Day 5-7: Final review and mock interviews
 ```
 
 ---
@@ -88,6 +93,8 @@ Week 6: Advanced Topics
 | [14-macros.md](14-macros.md) | Declarative and procedural macros, metaprogramming | 60 min |
 | [15-unsafe-ffi.md](15-unsafe-ffi.md) | Unsafe Rust, FFI, interfacing with C | 75 min |
 | [16-webassembly.md](16-webassembly.md) | WebAssembly, WASI, Component Model | 45 min |
+| [17-std-library-essentials.md](17-std-library-essentials.md) | Collections, iterators, I/O, sync, formatting | 90 min |
+| [18-test-driven-development.md](18-test-driven-development.md) | TDD, QA mindset, proptest, mocking, coverage | 90 min |
 
 ---
 

@@ -38,10 +38,6 @@ Selective string manipulation with constraints is a common pattern in text proce
 - Input: `s = "a-bC-dEf-ghIj"`
 - Output: `"j-Ih-gfE-dCba"`
 
-**Example 3:**
-- Input: `s = "Test1ng-Leet=code-Q!"`
-- Output: `"Qedo1ct-eeLg=ntse-T!"`
-
 ## Constraints
 
 - 1 <= s.length <= 100
