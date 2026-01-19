@@ -80,6 +80,8 @@ Week 5: System Design & Interview
 | [11-design-patterns-behavioral.md](11-design-patterns-behavioral.md) | Strategy, Observer, State, Command, Iterator | 75-90 min |
 | [12-anti-patterns.md](12-anti-patterns.md) | Anti-patterns, code smells, detection tools | 75-90 min |
 | [13-system-design.md](13-system-design.md) | Project layout, Clean/Hexagonal architecture, DDD | 90-100 min |
+| [14-standard-library-essentials.md](14-standard-library-essentials.md) | Standard library packages, I/O, encoding, networking | 90-120 min |
+| [15-test-driven-development.md](15-test-driven-development.md) | TDD cycle, QA mindset, test patterns, anti-patterns | 90-120 min |
 
 ---
 

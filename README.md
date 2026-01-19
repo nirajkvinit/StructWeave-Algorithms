@@ -25,18 +25,34 @@ Just refreshing?       → Jump to strategies/patterns/
 
 ## Table of Contents
 
-- [Quick Start](#quick-start)
-- [Features](#features)
-- [The 17 Patterns](#the-17-patterns)
-- [Learning Paths](#learning-paths)
-- [Language Guides](#language-guides)
-- [Quick Reference](#quick-reference)
-- [How to Use](#how-to-use-this-repository)
-- [Directory Structure](#directory-structure)
-- [Tips for Success](#tips-for-success)
-- [FAQ](#faq)
-- [Philosophy](#philosophy)
-- [Contributing](#contributing)
+- [StructWeave](#structweave)
+  - [Choose Your Path](#choose-your-path)
+  - [Table of Contents](#table-of-contents)
+  - [Quick Start](#quick-start)
+    - [5-Minute First Problem](#5-minute-first-problem)
+    - [Recommended First Problems](#recommended-first-problems)
+    - [Detailed Walkthroughs](#detailed-walkthroughs)
+  - [Features](#features)
+  - [The 17 Patterns](#the-17-patterns)
+  - [Learning Paths](#learning-paths)
+  - [Language Guides](#language-guides)
+  - [Quick Reference](#quick-reference)
+  - [How to Use This Repository](#how-to-use-this-repository)
+    - [For Daily Practice](#for-daily-practice)
+    - [For Interview Prep](#for-interview-prep)
+    - [For Targeted Learning](#for-targeted-learning)
+  - [Directory Structure](#directory-structure)
+  - [Tips for Success](#tips-for-success)
+  - [FAQ](#faq)
+  - [Philosophy](#philosophy)
+    - [The Three Pillars](#the-three-pillars)
+    - [Guiding Principles](#guiding-principles)
+    - [It's Not Talent. It's Practice](#its-not-talent-its-practice)
+    - [What Deliberate Practice Actually Means](#what-deliberate-practice-actually-means)
+    - [Why It Matters](#why-it-matters)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -83,7 +99,7 @@ Work through step-by-step problem solutions:
 - **3-Tier Hint System** — Nudge → Direction → Skeleton (learn without spoilers)
 - **Spaced Repetition Support** — Built-in review schedules and practice checklists
 - **Self-Assessment System** — Entry assessment + 4 phase assessments to track progress
-- **No Platform Lock-in** — Pure markdown, works anywhere, forever
+- **Pure Markdown** — Pure markdown, works anywhere, forever
 
 ---
 
@@ -143,6 +159,7 @@ Master algorithms in your preferred language with comprehensive, language-specif
 | **Rust** | 17 | 5-6 weeks | Ownership, concurrency, macros, unsafe FFI, WebAssembly | [Rust Guide](languages/rust/README.md) |
 
 Each guide follows the **80/20 principle** and includes:
+
 - Syntax quick reference and data structures
 - 17 algorithm patterns with language-specific idioms
 - SOLID principles and design patterns
@@ -227,16 +244,19 @@ Each guide follows the **80/20 principle** and includes:
 ## Tips for Success
 
 **Consistency Over Intensity**
+
 - 30 minutes daily beats 3 hours on Sunday
 - Use spaced repetition to retain patterns
 - Review problems 1 week, 1 month, and 3 months later
 
 **Focus on Understanding, Not Memorization**
+
 - Don't memorize solutions — understand the pattern
 - Ask "why this approach?" not "what is the solution?"
 - Explain your thinking process out loud
 
 **When You Get Stuck**
+
 1. Read the "Think About" section
 2. Review the pattern guide referenced
 3. Try solving a simpler version first
@@ -311,6 +331,7 @@ Your brain physically changes through practice. [Neuroscience research](https://
 Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 **Ways to help:**
+
 - Improve problem explanations for clarity
 - Add alternative solution approaches
 - Fix typos and broken links

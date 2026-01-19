@@ -61,6 +61,11 @@ Week 5: Design Patterns & Deep Knowledge
 ├── Day 5: Anti-Patterns & Best Practices (13-anti-patterns-best-practices.md)
 ├── Day 6: Trap Questions Review (14-interview-trap-questions.md)
 └── Day 7: System Design (15-system-design.md) + mock interviews
+
+Week 6 (Optional): Production Mastery
+├── Day 1-2: Standard Library Essentials (16-standard-library-essentials.md)
+├── Day 3-5: Test-Driven Development (17-test-driven-development.md)
+└── Day 6-7: Practice and review
 ```
 
 ---
@@ -91,6 +96,13 @@ Week 5: Design Patterns & Deep Knowledge
 | [13-anti-patterns-best-practices.md](13-anti-patterns-best-practices.md) | Common mistakes, code smells, production best practices | 75-90 min |
 | [14-interview-trap-questions.md](14-interview-trap-questions.md) | Gotchas, tricky questions, deep knowledge tests | 60-75 min |
 | [15-system-design.md](15-system-design.md) | WSGI/ASGI, FastAPI vs Django, Celery, project architecture | 90-100 min |
+
+### Production Mastery (Week 6)
+
+| File | Focus | Time |
+|------|-------|------|
+| [16-standard-library-essentials.md](16-standard-library-essentials.md) | pathlib, datetime, json, logging, dataclasses, regex | 60-90 min |
+| [17-test-driven-development.md](17-test-driven-development.md) | TDD methodology, QA mindset, mocking, property-based testing, anti-patterns | 90-120 min |
 
 ---
 

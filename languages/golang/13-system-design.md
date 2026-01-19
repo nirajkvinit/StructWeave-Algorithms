@@ -1976,6 +1976,8 @@ Simplest                                                          Most Complex
 
 **Previous**: [12-anti-patterns.md](12-anti-patterns.md) — Anti-Patterns and Code Smells
 
+**Next:** [14-standard-library-essentials.md](14-standard-library-essentials.md) — Standard Library Packages for Production Go
+
 ---
 
 <p align="center">
