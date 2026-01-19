@@ -74,6 +74,30 @@ flowchart LR
 
 ---
 
+## Pattern Definitions
+
+Understanding what each pattern is helps you recognize when to apply it:
+
+**Two Pointers Pattern**: An algorithmic technique using two index variables that traverse a data structure from different positions or at different speeds to solve problems in O(n) time with O(1) space.
+
+**Sliding Window Pattern**: A technique for processing contiguous subarrays or substrings by maintaining a "window" that expands and contracts while sliding through the data, typically achieving O(n) time complexity.
+
+**Binary Search Pattern**: A divide-and-conquer search algorithm that repeatedly divides a sorted search space in half, achieving O(log n) time complexity.
+
+**Dynamic Programming Pattern**: An optimization technique that solves complex problems by breaking them into overlapping subproblems, storing results to avoid redundant computation (memoization or tabulation).
+
+**Backtracking Pattern**: A systematic exploration technique that builds solutions incrementally and abandons partial solutions ("backtracks") when they cannot lead to valid complete solutions.
+
+**Greedy Pattern**: An algorithmic approach that makes locally optimal choices at each step with the goal of finding a global optimum, applicable when local choices lead to global optimal solutions.
+
+**Topological Sort Pattern**: An algorithm for linearly ordering vertices of a directed acyclic graph (DAG) such that for every directed edge (u, v), vertex u comes before v.
+
+**BFS (Breadth-First Search) Pattern**: A graph traversal algorithm that explores all vertices at the current depth before moving to vertices at the next depth level, optimal for shortest path in unweighted graphs.
+
+**DFS (Depth-First Search) Pattern**: A graph traversal algorithm that explores as far as possible along each branch before backtracking, useful for path finding and connected components.
+
+---
+
 ## Quick Pattern Lookup
 
 | If you see... | Consider... | Guide |

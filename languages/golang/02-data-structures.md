@@ -514,28 +514,57 @@ if visited[next] {
 
 ## Stacks
 
-Go doesn't have a built-in stack, but slices work perfectly.
+**Definition**: A Stack is a **LIFO** (Last-In, First-Out) data structure.
+Think of a stack of plates in a cafeteria:
+
+1. **Push**: You put a new plate on top.
+2. **Pop**: You take the top plate off.
+You can't grab the bottom plate without removing the top ones first!
+
+**Real-World Use Cases**:
+
+1. **Undo/Redo**: Editors store your actions in a stack. Ctrl+Z pops the last action.
+2. **Browser History**: The "Back" button pops the current page to return to the previous one.
+3. **Call Stack**: Programming languages use stacks to track function calls (recursion).
+4. **Syntax Parsing**: Compilers check matching brackets `(( ))` using stacks.
+
+Go doesn't have a built-in stack type, but **Slices** are perfect for this.
 
 ### Stack Implementation
 
 ```go
 // Stack using slice
+// Defines 'Stack' as a nickname for an integer slice.
 type Stack []int
 
+// PUSH
+// Receiver '(s *Stack)' is a POINTER because we need to modify the actual slice.
+// If we used '(s Stack)', we would modify a copy, and the original stack wouldn't change.
 func (s *Stack) Push(v int) {
     *s = append(*s, v)
 }
 
+// POP
 func (s *Stack) Pop() int {
+    // 1. Safety Check: Don't pop from an empty stack!
     if len(*s) == 0 {
-        panic("empty stack")
+        panic("Stack Empty: Cannot Pop")
     }
-    v := (*s)[len(*s)-1]
-    *s = (*s)[:len(*s)-1]
+
+    // 2. Get the last element (Top of stack)
+    // Note on (*s): We must "dereference" the pointer to get the actual slice.
+    lastIndex := len(*s) - 1
+    v := (*s)[lastIndex]
+
+    // 3. Remove the last element (Shrink the slice)
+    *s = (*s)[:lastIndex]
+
     return v
 }
 
+// PEEK (Look at top without removing)
 func (s *Stack) Peek() int {
+    if len(*s) == 0 { return 0 } // Handle empty case gracefully or panic
     return (*s)[len(*s)-1]
 }
 
@@ -548,6 +577,10 @@ func (s *Stack) IsEmpty() bool {
 
 ```go
 // Just use a slice directly
+// Note: Why no pointers here?
+// In this pattern, we are using the 'stack' variable directly in the function.
+// We update it by REASSIGNING it: "stack = append(...)" or "stack = stack[...]".
+// We only need pointers involved when we want a separate Function/Method to modify our variable.
 stack := []int{}
 
 // Push
@@ -568,39 +601,75 @@ if len(stack) == 0 { }
 
 ```go
 // 1. Valid Parentheses
+// Problem: Check if string has valid open/close pairs: "()[]{}" is true, "(]" is false.
 func isValid(s string) bool {
+    // State: Use a stack to keep track of 'OPEN' brackets waiting for a match.
     stack := []rune{}
+    
+    // Map: Closing bracket -> Matching Open bracket
     pairs := map[rune]rune{')': '(', '}': '{', ']': '['}
 
     for _, c := range s {
+        // CASE 1: Opening Bracket? Push to stack.
+        // Logic: We expect to see the closing partner later.
         if c == '(' || c == '{' || c == '[' {
             stack = append(stack, c)
         } else {
+            // CASE 2: Closing Bracket? Check match.
+            // Check A: Is stack empty? (Means we have a closing bracket with NO opening partner)
+            // Check B: Does the top of stack NOT match? (Means Mismatch type, e.g. "{]")
             if len(stack) == 0 || stack[len(stack)-1] != pairs[c] {
-                return false
+                return false // Invalid!
             }
+            // Logic: Match found! Remove the opening bracket from stack (Problem solved for this pair).
             stack = stack[:len(stack)-1]
         }
     }
+    // Final Check: Stack must be empty.
+    // If not empty, we have leftover opening brackets like "(()" -> stack has "("
     return len(stack) == 0
 }
 
 // 2. Monotonic Stack (Next Greater Element)
+// Goal: For each number, find the FIRST number to its right that is larger.
+// Analogy: Think of it as people standing in line. You are looking for the first person taller than you behind you.
+
+// Input:  [2, 1, 5]
+// Result: [5, 5, -1]
+// - 2 sees 5 is taller.
+// - 1 sees 5 is taller.
+// - 5 sees no one.
+
 func nextGreater(nums []int) []int {
     n := len(nums)
     result := make([]int, n)
-    for i := range result {
-        result[i] = -1
-    }
-    stack := []int{} // indices
+    for i := range result { result[i] = -1 } // Default: if no greater element found
+
+    // Stack stores INDICES of numbers that are "waiting" for a greater element.
+    // Why indices? Because we need to update the 'result' array at that specific position.
+    stack := []int{} 
+
+    /*
+    Visual Trace: nums = [2, 1, 5]
+    -------------------------------------------------------------------------------
+    i | Val | Stack (Waitlist) | Action
+    -------------------------------------------------------------------------------
+    0 | 2   | [0(2)]           | 2 is unmatched. Wait. Push index 0.
+    1 | 1   | [0(2), 1(1)]     | 1 is NOT > 2. Wait. Push index 1.
+    2 | 5   | [0(2)]           | 5 > 1? YES! Pop 1. result[1] = 5 (1 found match!)
+      |     | []               | 5 > 2? YES! Pop 0. result[0] = 5 (2 found match!)
+      |     | [2(5)]           | 5 unmatched. Wait. Push index 2.
+    -------------------------------------------------------------------------------
+    */
 
     for i := 0; i < n; i++ {
+        // While stack not empty AND current number is BIGGER than the waiting number:
         for len(stack) > 0 && nums[i] > nums[stack[len(stack)-1]] {
-            idx := stack[len(stack)-1]
-            stack = stack[:len(stack)-1]
-            result[idx] = nums[i]
+            idx := stack[len(stack)-1] // Get the index of the waiting number
+            stack = stack[:len(stack)-1] // Pop it (It found a match!)
+            result[idx] = nums[i]        // Record the match
         }
-        stack = append(stack, i)
+        stack = append(stack, i) // Current number joins the waitlist
     }
     return result
 }

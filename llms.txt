@@ -1,0 +1,111 @@
+# StructWeave - Algorithm Learning & Interview Preparation
+
+> Weaving robust data structures with elegant algorithms — one carefully crafted solution at a time.
+
+## About
+
+StructWeave is a comprehensive, free, open-source algorithm course and coding interview preparation resource featuring 986 practice problems across 4 difficulty levels, 17 core algorithmic patterns, and language-specific guides for Python, Go, TypeScript, and Rust. Designed for steady, deliberate improvement with pattern-first learning and spaced repetition support.
+
+## Key Statistics
+
+- Total Problems: 986
+- Algorithmic Patterns: 17
+- Data Structure Guides: 8
+- Language Guides: 61
+- Difficulty Levels: Foundation (21), Easy (271), Medium (576), Hard (118)
+
+## Key Resources
+
+### Getting Started
+- [README](README.md): Overview and quick start guide
+- [Entry Assessment](assessments/entry-assessment.md): Skill evaluation to determine your starting point
+- [Learning Roadmap](tracks/roadmap.md): Structured 4-phase learning path
+- [Glossary](GLOSSARY.md): Key terminology and definitions
+
+### The 17 Algorithmic Patterns
+
+These patterns solve 90% of coding interview problems:
+
+- [Two Pointers](strategies/patterns/two-pointers.md): Sorted arrays, pair finding
+- [Sliding Window](strategies/patterns/sliding-window.md): Contiguous subarrays/substrings
+- [Binary Search](strategies/patterns/binary-search.md): Sorted data, monotonic functions
+- [Prefix Sum](strategies/patterns/prefix-sum.md): Range sum queries
+- [Monotonic Stack](strategies/patterns/monotonic-stack.md): Next greater/smaller element
+- [Cyclic Sort](strategies/patterns/cyclic-sort.md): Numbers 1-n, missing/duplicate
+- [Merge Intervals](strategies/patterns/merge-intervals.md): Overlapping ranges
+- [Two Heaps](strategies/patterns/two-heaps.md): Median, balanced partitions
+- [K-way Merge](strategies/patterns/k-way-merge.md): Merge K sorted sequences
+- [Graph Traversal (BFS/DFS)](strategies/patterns/graph-traversal.md): Traversal, shortest path
+- [Topological Sort](strategies/patterns/topological-sort.md): Dependencies, ordering
+- [Backtracking](strategies/patterns/backtracking.md): All combinations/permutations
+- [Dynamic Programming](strategies/patterns/dynamic-programming.md): Optimal substructure
+- [Greedy](strategies/patterns/greedy.md): Local optimal to global optimal
+- [Divide & Conquer](strategies/patterns/divide-and-conquer.md): Split, solve, combine
+- [Bitwise XOR](strategies/patterns/bitwise-xor.md): Find unique elements
+- [Pattern Selection Guide](strategies/patterns/README.md): Flowchart for choosing patterns
+
+### Data Structures
+
+- [Arrays](strategies/data-structures/arrays.md)
+- [Linked Lists](strategies/data-structures/linked-lists.md)
+- [Stacks & Queues](strategies/data-structures/stacks-and-queues.md)
+- [Trees](strategies/data-structures/trees.md)
+- [Graphs](strategies/data-structures/graphs.md)
+- [Hash Tables](strategies/data-structures/hash-tables.md)
+- [Heaps](strategies/data-structures/heaps.md)
+- [Tries](strategies/data-structures/tries.md)
+
+### Language Guides
+
+Comprehensive guides following the 80/20 principle:
+
+- [Python Guide](languages/python/README.md): 15 guides, 5 weeks - Idioms, async, SOLID, design patterns
+- [Go Guide](languages/golang/README.md): 14 guides, 5 weeks - Concurrency, generics, SOLID
+- [TypeScript Guide](languages/typescript/README.md): 15 guides, 6 weeks - Type system, generics, async
+- [Rust Guide](languages/rust/README.md): 17 guides, 5-6 weeks - Ownership, concurrency, WebAssembly
+
+### Practice Problems by Difficulty
+
+- [Foundation Problems](problems/foundation/): 21 computational thinking problems (F001-F021)
+- [Easy Problems](problems/easy/): 271 problems (E001-E271)
+- [Medium Problems](problems/medium/): 576 problems (M001-M576)
+- [Hard Problems](problems/hard/): 118 problems (H001-H118)
+- [Real-World Applications Index](problems/REAL_WORLD_APPLICATIONS.md): Problems mapped to industry domains
+
+### Learning Paths
+
+- **Beginner Track** (10-12 weeks): For complete beginners
+- **Foundation Track** (2-3 weeks): Build computational thinking first
+- **Interview Prep Track** (8-10 weeks): For experienced devs preparing for interviews
+- **Refresher Track** (4 weeks): For rusty engineers getting back in shape
+- **Maintenance Track** (3-5 hrs/week): For staying sharp long-term
+
+### Assessments
+
+- [Entry Assessment](assessments/entry-assessment.md): Determine starting point
+- [Phase Assessments](assessments/README.md): Track progress through learning phases
+- [Mock Interviews](assessments/mock_interviews/): Practice interview scenarios
+
+### Practice Resources
+
+- [Pattern Drills](practice/pattern-drills/): Focused exercises per pattern
+- [Mixed Practice](practice/mixed-practice/): Multi-pattern problem sets
+- [Review Schedules](practice/review-schedules/): Spaced repetition guides
+
+## Detailed Walkthroughs
+
+Step-by-step problem solutions:
+
+- [Two Sum Walkthrough](examples/two-sum-walkthrough.md): Hash Map pattern (Easy)
+- [Valid Parentheses Walkthrough](examples/valid-parentheses-walkthrough.md): Stack pattern (Easy)
+- [Merge Intervals Walkthrough](examples/merge-intervals-walkthrough.md): Intervals pattern (Medium)
+- [Course Schedule Walkthrough](examples/course-schedule-walkthrough.md): Topological Sort (Medium)
+- [LRU Cache Walkthrough](examples/lru-cache-walkthrough.md): Design pattern (Medium)
+
+## License
+
+MIT License - Free to use, modify, and distribute.
+
+## Repository
+
+https://github.com/nirajkvinit/StructWeave-Algorithms

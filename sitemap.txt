@@ -1,0 +1,70 @@
+# StructWeave Sitemap
+# Algorithm Learning & Interview Preparation Resource
+# https://github.com/nirajkvinit/StructWeave-Algorithms
+
+# Main Pages
+https://github.com/nirajkvinit/StructWeave-Algorithms
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/README.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/GLOSSARY.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/CONTRIBUTING.md
+
+# Algorithmic Patterns (17 Core Patterns)
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/README.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/two-pointers.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/sliding-window.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/binary-search.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/prefix-sum.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/monotonic-stack.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/cyclic-sort.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/merge-intervals.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/two-heaps.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/k-way-merge.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/graph-traversal.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/topological-sort.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/backtracking.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/dynamic-programming.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/greedy.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/divide-and-conquer.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/patterns/bitwise-xor.md
+
+# Data Structures
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/data-structures/arrays.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/data-structures/linked-lists.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/data-structures/stacks-and-queues.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/data-structures/trees.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/data-structures/graphs.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/data-structures/hash-tables.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/data-structures/heaps.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/strategies/data-structures/tries.md
+
+# Language Guides
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/languages/README.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/languages/python/README.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/languages/golang/README.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/languages/typescript/README.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/languages/rust/README.md
+
+# Problems Index
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/problems/README.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/problems/foundation/README.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/problems/easy/README.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/problems/medium/README.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/problems/hard/README.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/problems/REAL_WORLD_APPLICATIONS.md
+
+# Learning Paths & Assessments
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/tracks/roadmap.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/assessments/README.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/assessments/entry-assessment.md
+
+# Examples & Walkthroughs
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/examples/two-sum-walkthrough.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/examples/valid-parentheses-walkthrough.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/examples/merge-intervals-walkthrough.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/examples/course-schedule-walkthrough.md
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/examples/lru-cache-walkthrough.md
+
+# Practice Resources
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/practice/pattern-drills/
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/practice/mixed-practice/
+https://github.com/nirajkvinit/StructWeave-Algorithms/blob/main/practice/review-schedules/

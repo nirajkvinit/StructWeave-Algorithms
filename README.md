@@ -2,11 +2,22 @@
 
 > Weaving robust data structures with elegant algorithms — one carefully crafted solution at a time.
 
-![StructWeave](assets/structweave.jpg)
+![StructWeave - Algorithm Learning Platform with 986 Practice Problems and 17 Patterns](assets/structweave.jpg)
 
 **StructWeave** is an algorithm course and coding interview preparation resource featuring data structures and algorithms practice problems. Designed for steady, deliberate improvement, the focus is on solutions that are *correct*, *readable*, and *educational* — the kind that actually stick.
 
 Master DSA practice through pattern recognition — learn 17 patterns that solve 90% of interview problems.
+
+---
+
+## TL;DR
+
+- **986 practice problems** across 4 difficulty levels (Foundation, Easy, Medium, Hard)
+- **17 algorithmic patterns** that solve 90% of coding interview problems
+- **4 language guides** with 61 total guides (Python, Go, TypeScript, Rust)
+- **Pattern-first learning** approach with spaced repetition support
+- **Self-assessment system** with entry assessment and 4 phase assessments
+- **Free and open-source** under MIT License
 
 ---
 
@@ -103,6 +114,21 @@ Work through step-by-step problem solutions:
 
 ---
 
+## By The Numbers
+
+| Metric | Count |
+|--------|-------|
+| Total Practice Problems | 986 |
+| Algorithmic Patterns | 17 |
+| Data Structure Guides | 8 |
+| Language Guides | 61 |
+| Foundation Problems | 21 |
+| Easy Problems | 271 |
+| Medium Problems | 576 |
+| Hard Problems | 118 |
+
+---
+
 ## The 17 Patterns
 
 These patterns solve the vast majority of algorithm problems:
@@ -133,7 +159,7 @@ See the [Pattern Decision Guide](strategies/patterns/README.md) for a flowchart 
 
 ## Learning Paths
 
-![Competency Roadmap](assets/the_competency_roadmap.jpg)
+![StructWeave 4-Phase Competency Roadmap for Algorithm Mastery](assets/the_competency_roadmap.jpg)
 
 | Track | Duration | For Who | Start Here |
 |-------|----------|---------|------------|
@@ -267,6 +293,18 @@ Each guide follows the **80/20 principle** and includes:
 
 ## FAQ
 
+**Q: What is StructWeave?**
+A: StructWeave is a free, open-source algorithm learning resource and coding interview preparation course featuring 986 practice problems, 17 algorithmic patterns, and comprehensive guides for Python, Go, TypeScript, and Rust. It uses pattern-first learning with spaced repetition support.
+
+**Q: What are the 17 algorithmic patterns for coding interviews?**
+A: The 17 patterns are: Two Pointers, Sliding Window, Binary Search, Prefix Sum, Monotonic Stack, Cyclic Sort, Merge Intervals, Two Heaps, K-way Merge, Top K Elements, Graph BFS/DFS, Topological Sort, Backtracking, Dynamic Programming, Greedy, Divide & Conquer, and Bitwise XOR. These patterns solve approximately 90% of coding interview problems.
+
+**Q: Is StructWeave free?**
+A: Yes, StructWeave is completely free and open-source under the MIT License. All 986 problems, 17 pattern guides, and 61 language guides are freely available.
+
+**Q: What programming languages does StructWeave support?**
+A: StructWeave provides comprehensive guides for four languages: Python (15 guides), Go (14 guides), TypeScript (15 guides), and Rust (17 guides). Each guide covers language-specific idioms, data structure implementations, and algorithm patterns.
+
 **Q: Should I solve problems in order?**
 A: Not necessarily. Use the roadmap as a guide, but jump around based on your needs.
 
@@ -278,6 +316,12 @@ A: That's normal! Use the hints, review the pattern guide, and try again. Strugg
 
 **Q: How do I know when I'm ready for interviews?**
 A: Complete the [Phase Assessments](assessments/README.md). If you can solve 70%+ of medium problems across all patterns, you're ready.
+
+**Q: How long does it take to complete StructWeave?**
+A: It depends on your starting point. The Interview Prep track takes 8-10 weeks for experienced developers. Complete beginners should expect 10-12 weeks starting with prerequisites.
+
+**Q: What makes StructWeave different from other algorithm resources?**
+A: StructWeave emphasizes pattern-first learning (recognizing which pattern to apply) over problem memorization. It includes a 3-tier hint system, spaced repetition schedules, self-assessment tools, and maps problems to real-world industry applications.
 
 ---
 
