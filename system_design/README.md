@@ -50,6 +50,8 @@ Each system design directory contains 9 standardized documents:
 | 1.10 | Service Discovery System | Completed | [View](./1.10-service-discovery-system/00-index.md) |
 | 1.11 | Configuration Management System | Completed | [View](./1.11-configuration-management-system/00-index.md) |
 | 1.12 | Blob Storage System | Completed | [View](./1.12-blob-storage-system/00-index.md) |
+| 1.13 | High-Performance Reverse Proxy | Completed | [View](./1.13-high-performance-reverse-proxy/00-index.md) |
+| 1.14 | API Gateway Design | Completed | [View](./1.14-api-gateway-design/00-index.md) |
 
 ---
 

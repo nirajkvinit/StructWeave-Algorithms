@@ -79,7 +79,7 @@
 │  Consul Token (ACL):                                                 │
 │  ┌─────────────────────────────────────────────────────────────┐   │
 │  │                                                               │   │
-│  │  X-Consul-Token: 0bc6bc46-f25e-4262-b2d9-ffbe1d96be6f       │   │
+│  │  X-Consul-Token: <your-token-here>                            │   │
 │  │                                                               │   │
 │  │  Token properties:                                            │   │
 │  │  • SecretID: Unique identifier (UUID)                        │   │
