@@ -49,6 +49,7 @@ Each system design directory contains 9 standardized documents:
 | 1.9 | Consistent Hashing Ring | Completed | [View](./1.9-consistent-hashing-ring/00-index.md) |
 | 1.10 | Service Discovery System | Completed | [View](./1.10-service-discovery-system/00-index.md) |
 | 1.11 | Configuration Management System | Completed | [View](./1.11-configuration-management-system/00-index.md) |
+| 1.12 | Blob Storage System | Completed | [View](./1.12-blob-storage-system/00-index.md) |
 
 ---
 
