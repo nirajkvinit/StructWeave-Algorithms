@@ -39,6 +39,7 @@ Each system design directory contains 9 standardized documents:
 | # | Topic | Status | Link |
 |---|-------|--------|------|
 | 1.1 | Distributed Rate Limiter | Completed | [View](./1.1-distributed-rate-limiter/00-index.md) |
+| 1.2 | Distributed Load Balancer | Completed | [View](./1.2-distributed-load-balancer/00-index.md) |
 
 ---
 
