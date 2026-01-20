@@ -54,6 +54,7 @@ Each system design directory contains 9 standardized documents:
 | 1.14 | API Gateway Design | Completed | [View](./1.14-api-gateway-design/00-index.md) |
 | 1.15 | Content Delivery Network (CDN) | Completed | [View](./1.15-content-delivery-network-cdn/00-index.md) |
 | 1.16 | DNS System Design | Completed | [View](./1.16-dns-system-design/00-index.md) |
+| 1.17 | Distributed Transaction Coordinator | Completed | [View](./1.17-distributed-transaction-coordinator/00-index.md) |
 
 ---
 
