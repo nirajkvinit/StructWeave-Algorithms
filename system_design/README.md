@@ -46,6 +46,7 @@ Each system design directory contains 9 standardized documents:
 | 1.6 | Distributed Message Queue | Completed | [View](./1.6-distributed-message-queue/00-index.md) |
 | 1.7 | Distributed Unique ID Generator | Completed | [View](./1.7-distributed-unique-id-generator/00-index.md) |
 | 1.8 | Distributed Lock Manager | Completed | [View](./1.8-distributed-lock-manager/00-index.md) |
+| 1.9 | Consistent Hashing Ring | Completed | [View](./1.9-consistent-hashing-ring/00-index.md) |
 
 ---
 
