@@ -44,6 +44,7 @@ Each system design directory contains 9 standardized documents:
 | 1.4 | Distributed LRU Cache | Completed | [View](./1.4-distributed-lru-cache/00-index.md) |
 | 1.5 | Distributed Log-Based Broker | Completed | [View](./1.5-distributed-log-based-broker/00-index.md) |
 | 1.6 | Distributed Message Queue | Completed | [View](./1.6-distributed-message-queue/00-index.md) |
+| 1.7 | Distributed Unique ID Generator | Completed | [View](./1.7-distributed-unique-id-generator/00-index.md) |
 
 ---
 
