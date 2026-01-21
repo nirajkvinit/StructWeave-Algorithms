@@ -65,13 +65,25 @@ Be careful: some numbers are divisible by both 3 AND 5 (like 15). Make sure you 
 <details>
 <summary>Hint 2: Key Insight</summary>
 
-For large limits (up to 10^9), looping through every number is too slow. Instead, use the mathematical formula for the sum of multiples.
+For really big numbers (like 1 billion), checking every single number is too slow. We can use math to skip the loop entirely!
 
-The sum of multiples of k below n is: k × (1 + 2 + ... + floor((n-1)/k))
+**1. The Pattern**
+The multiples of 3 are: 3, 6, 9, 12...
+Factor out the 3, and it looks like this:
+`3 × (1, 2, 3, 4...)`
 
-This is an arithmetic series: k × m × (m+1) / 2, where m = floor((n-1)/k).
+We know a formula to sum numbers from 1 to *m*: `m × (m + 1) / 2`.
+*(Example: `1+2+...+10 = 55`. Using formula: `10 × (10 + 1) / 2 = 55`)*
+So, the sum of multiples of 3 is just: `3 × (sum of 1 to m)`.
 
-Use the inclusion-exclusion principle: sum(3) + sum(5) - sum(15) to avoid double-counting multiples of 15.
+**2. The Overlap Problem**
+If we sum all multiples of 3 and all multiples of 5, we have a problem: numbers like **15, 30, 45** are counted twice (once for 3, once for 5).
+
+**3. The Solution**
+To fix this, we subtract the duplicates.
+`Final Answer = Sum(3) + Sum(5) - Sum(15)`
+
+*Note: Sum(15) represents the sum of multiples of 15 (because 3 × 5 = 15).*
 
 </details>
 
@@ -108,6 +120,7 @@ This runs in O(1) time instead of O(n)!
 **Modulo operator and arithmetic series**
 
 The modulo operator (%) gives the remainder after division. It's perfect for checking divisibility:
+
 - `n % 3 == 0` means n is divisible by 3
 - `n % 5 == 0` means n is divisible by 5
 
