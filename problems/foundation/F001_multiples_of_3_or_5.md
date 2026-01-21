@@ -24,6 +24,8 @@ This problem introduces fundamental programming concepts: iteration with loops, 
 
 In real-world applications, similar divisibility checks appear in scheduling systems (events every N days), data validation, and pagination logic. The optimization from O(n) to O(1) demonstrates the power of mathematical insight over brute force computation.
 
+> **For beginners:** Don't worry if the math formula seems intimidating at first. The brute force approach (simple loop) works perfectly fine for small inputs. Start there, understand why it works, and then learn the optimization when you're ready.
+
 ## Examples
 
 **Example 1:**
@@ -31,6 +33,36 @@ In real-world applications, similar divisibility checks appear in scheduling sys
 - Input: `limit = 10`
 - Output: `23`
 - Explanation: Numbers divisible by 3 or 5 below 10 are: 3, 5, 6, 9. Their sum is 3 + 5 + 6 + 9 = 23.
+
+<details>
+<summary>Step-by-step trace (click to expand)</summary>
+
+**Brute Force Approach:**
+
+```
+Check 1: 1%3≠0, 1%5≠0 → skip
+Check 2: 2%3≠0, 2%5≠0 → skip
+Check 3: 3%3=0        → add 3,  sum = 3
+Check 4: 4%3≠0, 4%5≠0 → skip
+Check 5: 5%5=0        → add 5,  sum = 8
+Check 6: 6%3=0        → add 6,  sum = 14
+Check 7: 7%3≠0, 7%5≠0 → skip
+Check 8: 8%3≠0, 8%5≠0 → skip
+Check 9: 9%3=0        → add 9,  sum = 23
+Final answer: 23 ✓
+```
+
+**Formula Approach:**
+
+```
+Sum(3):  m = 9÷3 = 3  →  3 × (3×4÷2) = 3 × 6 = 18
+Sum(5):  m = 9÷5 = 1  →  5 × (1×2÷2) = 5 × 1 = 5
+Sum(15): m = 9÷15 = 0 →  0
+
+Answer = 18 + 5 - 0 = 23 ✓
+```
+
+</details>
 
 **Example 2:**
 
@@ -58,7 +90,15 @@ In real-world applications, similar divisibility checks appear in scheduling sys
 
 Loop through all numbers from 1 to limit-1 and check divisibility. A number is divisible by n if `(number % n == 0)`. Keep a running sum of all numbers that are divisible by 3 OR divisible by 5.
 
-Be careful: some numbers are divisible by both 3 AND 5 (like 15). Make sure you don't count them twice!
+```python
+sum = 0
+for number in range(1, limit):  # 1 to limit-1
+    if number % 3 == 0 or number % 5 == 0:
+        sum = sum + number
+return sum
+```
+
+Be careful: some numbers are divisible by both 3 AND 5 (like 15). But the `or` condition handles this correctly — if a number passes either check, it gets added exactly once.
 
 </details>
 
@@ -67,37 +107,84 @@ Be careful: some numbers are divisible by both 3 AND 5 (like 15). Make sure you 
 
 For really big numbers (like 1 billion), checking every single number is too slow. We can use math to skip the loop entirely!
 
-**1. The Pattern**
-The multiples of 3 below 10 are: 3, 6, 9.
-Factor out the 3, and it becomes: `3 × (1 + 2 + 3)`.
+**Step 1: Spot the Pattern**
 
-Notice that concepts inside the parenthesis `(1 + 2 + 3)` are just numbers from 1 to *m*.
-Here, ***m* is the count of multiples**, not the limit itself!
+Write out the multiples of 3 below 10:
 
-**How to find *m*:**
-Subtract 1 from limit, divide by k, and **drop the decimal**.
+```
+3, 6, 9
+```
 
-- Python: `m = (limit - 1) // k`
-- JavaScript: `const m = Math.floor((limit - 1) / k)`
+Now rewrite each as a product:
 
-*Example:* For limit 10, m is 3.
+```
+3×1, 3×2, 3×3
+```
 
-**Formula:**
-Sum = `3 × (Sum of 1 to m)`
-Sum = `3 × (m × (m + 1) / 2)`
+Factor out the 3:
 
-*Example (Limit 10):*
-m = 3.
-Sum = `3 × (3 × 4 / 2) = 3 × 6 = 18`.
+```
+3 × (1 + 2 + 3) = 3 × 6 = 18
+```
 
-**2. The Overlap Problem**
-If we sum all multiples of 3 and all multiples of 5, we have a problem: numbers like **15, 30, 45** are counted twice (once for 3, once for 5).
+The sum of multiples of 3 equals **3 times the sum of consecutive integers from 1 to m**, where *m* is how many multiples exist.
 
-**3. The Solution**
-To fix this, we subtract the duplicates.
-`Final Answer = Sum(3) + Sum(5) - Sum(15)`
+**Step 2: Find m (the count of multiples)**
 
-*Note: Sum(15) represents the sum of multiples of 15 (because 3 × 5 = 15).*
+Ask: "How many multiples of 3 are below 10?"
+
+Count them: 3, 6, 9 → that's **3 multiples**.
+
+The formula: `m = floor((limit - 1) / k)`
+
+- Python: `m = (limit - 1) // 3`  →  `m = 9 // 3 = 3`
+- JavaScript: `Math.floor((10 - 1) / 3)`  →  `3`
+
+> **Why (limit - 1)?** The problem says "below limit", not "including limit". For limit=10, we check 1-9, not 1-10. So we use 9, not 10.
+
+**Step 3: Use the Arithmetic Series Formula**
+
+The sum 1 + 2 + 3 + ... + m equals `m × (m + 1) / 2`.
+
+Putting it together:
+
+```
+Sum of multiples of k = k × m × (m + 1) / 2
+```
+
+*Example for multiples of 3 below 10:*
+
+- m = 3
+- Sum = 3 × (3 × 4 / 2) = 3 × 6 = **18** ✓
+
+**Step 4: The Overlap Problem**
+
+If we add sum(multiples of 3) + sum(multiples of 5), we count some numbers twice:
+
+- 15 is divisible by both 3 and 5
+- 30 is divisible by both 3 and 5
+- etc.
+
+**Step 5: The Solution (Inclusion-Exclusion)**
+
+Subtract the overlap:
+
+```
+Answer = Sum(3) + Sum(5) - Sum(LCM(3,5))
+       = Sum(3) + Sum(5) - Sum(15)
+```
+
+*Note: We subtract multiples of 15 because 15 is the **Least Common Multiple (LCM)** of 3 and 5. For coprime numbers like 3 and 5, LCM equals their product. But for non-coprime numbers (e.g., 4 and 6), you must use LCM(4,6) = 12, not 4 × 6 = 24.*
+
+**Worked Example (limit = 10):**
+
+```
+Sum(3):  m = 9//3 = 3  →  3 × 3 × 4 / 2 = 18
+Sum(5):  m = 9//5 = 1  →  5 × 1 × 2 / 2 = 5
+Sum(15): m = 9//15 = 0 →  15 × 0 × 1 / 2 = 0
+
+Answer = 18 + 5 - 0 = 23 ✓
+```
 
 </details>
 
@@ -122,10 +209,10 @@ This runs in O(1) time instead of O(n)!
 
 ## Complexity Analysis
 
-| Approach | Time | Space | Trade-off |
-|----------|------|-------|-----------|
-| Brute Force (Loop) | O(n) | O(1) | Simple but slow for large n |
-| Optimal (Formula) | O(1) | O(1) | Fast for any n, requires math insight |
+| Approach | Time | Space | Trade-off | Real Impact (limit = 10⁹) |
+|----------|------|-------|-----------|---------------------------|
+| Brute Force (Loop) | O(n) | O(1) | Simple but slow for large n | ~1 billion iterations (~10+ seconds) |
+| Optimal (Formula) | O(1) | O(1) | Fast for any n, requires math insight | 3 calculations (instant) |
 
 ---
 
@@ -142,13 +229,32 @@ The arithmetic series formula: 1 + 2 + 3 + ... + n = n × (n+1) / 2 is one of th
 
 The inclusion-exclusion principle states: |A ∪ B| = |A| + |B| - |A ∩ B|. For our problem, we want multiples of 3 OR 5, so we add both but subtract their overlap (multiples of 15).
 
+**Visualizing Inclusion-Exclusion (for limit = 20):**
+
+```mermaid
+flowchart LR
+    subgraph U["Numbers below 20 divisible by 3 or 5"]
+        subgraph A["Multiples of 3"]
+            a["3, 6, 9, 12, 18"]
+        end
+        subgraph AB["Both"]
+            ab["15"]
+        end
+        subgraph B["Multiples of 5"]
+            b["5, 10"]
+        end
+    end
+```
+
+If we count A (3,6,9,12,15,18) and B (5,10,15) separately, we count 15 twice. Subtracting the overlap fixes this.
+
 ---
 
 ## Common Mistakes
 
 1. **Double-counting multiples of 15**: Numbers like 15, 30, 45 are divisible by both 3 and 5. If you simply add sum(3) + sum(5), you count these twice. Fix: subtract sum(15).
 
-2. **Off-by-one errors**: The problem says "below limit", not "up to and including limit". So for limit=10, check numbers 1 through 9, not 1 through 10.
+2. **Off-by-one errors**: The problem says "below limit", not "up to and including limit". So for limit=10, check numbers 1 through 9, not 1 through 10. This is why the formula uses `(limit - 1) // k` instead of `limit // k`.
 
 3. **Integer overflow**: For very large limits (near 10^9), intermediate calculations might overflow. Use appropriate data types (long in Java, no issue in Python).
 

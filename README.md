@@ -2,7 +2,7 @@
 
 > Weaving robust data structures with elegant algorithms — one carefully crafted solution at a time.
 
-![StructWeave - Algorithm Learning Platform with 986 Practice Problems and 17 Patterns](assets/structweave.jpg)
+![StructWeave - Algorithm Learning Platform with 994 Practice Problems and 17 Patterns](assets/structweave.jpg)
 
 **StructWeave** is an algorithm course and coding interview preparation resource featuring data structures and algorithms practice problems. Designed for steady, deliberate improvement, the focus is on solutions that are *correct*, *readable*, and *educational* — the kind that actually stick.
 
@@ -12,7 +12,7 @@ Master DSA practice through pattern recognition — learn 17 patterns that solve
 
 ## TL;DR
 
-- **986 practice problems** across 4 difficulty levels (Foundation, Easy, Medium, Hard)
+- **994 practice problems** across 4 difficulty levels (Foundation, Easy, Medium, Hard)
 - **17 algorithmic patterns** that solve 90% of coding interview problems
 - **4 language guides** with 61 total guides (Python, Go, TypeScript, Rust)
 - **Pattern-first learning** approach with spaced repetition support
@@ -101,7 +101,7 @@ Work through step-by-step problem solutions:
 
 ## Features
 
-- **986 Practice Problems** — Organized by difficulty (21 foundation, 271 easy, 576 medium, 118 hard)
+- **994 Practice Problems** — Organized by difficulty (29 foundation, 271 easy, 576 medium, 118 hard)
 - **4 Language Guides** — Comprehensive guides for Python, Go, TypeScript, and Rust
 - **17 Pattern Guides** — Master the core patterns that solve 90% of interview problems
 - **Foundation Tier** — Computational thinking problems for building mathematical intuition
@@ -118,11 +118,11 @@ Work through step-by-step problem solutions:
 
 | Metric | Count |
 |--------|-------|
-| Total Practice Problems | 986 |
+| Total Practice Problems | 994 |
 | Algorithmic Patterns | 17 |
 | Data Structure Guides | 8 |
 | Language Guides | 61 |
-| Foundation Problems | 21 |
+| Foundation Problems | 29 |
 | Easy Problems | 271 |
 | Medium Problems | 576 |
 | Hard Problems | 118 |
@@ -234,8 +234,8 @@ Each guide follows the **80/20 principle** and includes:
 ## Directory Structure
 
 ```
-├── problems/              # 986 practice problems by difficulty
-│   ├── foundation/        # F001-F021 (21 problems) - Computational thinking
+├── problems/              # 994 practice problems by difficulty
+│   ├── foundation/        # F001-F028 (29 problems) - Computational thinking
 │   ├── easy/              # E001-E271 (271 problems)
 │   ├── medium/            # M001-M576 (576 problems)
 │   └── hard/              # H001-H118 (118 problems)
@@ -294,13 +294,13 @@ Each guide follows the **80/20 principle** and includes:
 ## FAQ
 
 **Q: What is StructWeave?**
-A: StructWeave is a free, open-source algorithm learning resource and coding interview preparation course featuring 986 practice problems, 17 algorithmic patterns, and comprehensive guides for Python, Go, TypeScript, and Rust. It uses pattern-first learning with spaced repetition support.
+A: StructWeave is a free, open-source algorithm learning resource and coding interview preparation course featuring 994 practice problems, 17 algorithmic patterns, and comprehensive guides for Python, Go, TypeScript, and Rust. It uses pattern-first learning with spaced repetition support.
 
 **Q: What are the 17 algorithmic patterns for coding interviews?**
 A: The 17 patterns are: Two Pointers, Sliding Window, Binary Search, Prefix Sum, Monotonic Stack, Cyclic Sort, Merge Intervals, Two Heaps, K-way Merge, Top K Elements, Graph BFS/DFS, Topological Sort, Backtracking, Dynamic Programming, Greedy, Divide & Conquer, and Bitwise XOR. These patterns solve approximately 90% of coding interview problems.
 
 **Q: Is StructWeave free?**
-A: Yes, StructWeave is completely free and open-source under the MIT License. All 986 problems, 17 pattern guides, and 61 language guides are freely available.
+A: Yes, StructWeave is completely free and open-source under the MIT License. All 994 problems, 17 pattern guides, and 61 language guides are freely available.
 
 **Q: What programming languages does StructWeave support?**
 A: StructWeave provides comprehensive guides for four languages: Python (15 guides), Go (14 guides), TypeScript (15 guides), and Rust (17 guides). Each guide covers language-specific idioms, data structure implementations, and algorithm patterns.

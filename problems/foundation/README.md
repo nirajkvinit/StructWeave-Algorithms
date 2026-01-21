@@ -60,6 +60,19 @@
 | [F019](F019_largest_prime_factor.md) | Largest Prime Factor | Prime factorization | 12 min |
 | [F020](F020_highly_divisible_triangular_number.md) | Highly Divisible Triangular | Divisor counting | 15 min |
 
+### Advanced Number Theory (F021-F028)
+
+| ID | Title | Key Concept | Time |
+|----|-------|-------------|------|
+| [F021](F021_gcd_of_array.md) | GCD of Array | Iterative GCD, reduction | 12 min |
+| [F022](F022_coprime_pairs.md) | Coprime Pairs | Euler's φ, GCD=1 | 15 min |
+| [F023](F023_digital_root.md) | Digital Root | Repeated digit sum, mod 9 | 10 min |
+| [F024](F024_happy_numbers.md) | Happy Numbers | Cycle detection, digit squares | 12 min |
+| [F025](F025_collatz_conjecture.md) | Collatz Conjecture | Sequence generation | 12 min |
+| [F026](F026_perfect_numbers.md) | Perfect Numbers | Divisor sum, σ(n)=2n | 12 min |
+| [F027](F027_armstrong_numbers.md) | Armstrong Numbers | Digit powers | 12 min |
+| [F028](F028_counting_divisors.md) | Counting Divisors | Prime factorization, τ(n) | 15 min |
+
 ---
 
 ## Learning Path
@@ -88,6 +101,18 @@ Week 4: Number Theory
 ├── F019: Largest Prime Factor
 ├── F018: Summation of Primes
 └── F020: Highly Divisible Triangular
+
+Week 5: Advanced Number Theory
+├── F021: GCD of Array
+├── F022: Coprime Pairs
+├── F023: Digital Root
+└── F024: Happy Numbers
+
+Week 6: Special Numbers
+├── F025: Collatz Conjecture
+├── F026: Perfect Numbers
+├── F027: Armstrong Numbers
+└── F028: Counting Divisors
 ```
 
 ---
@@ -128,9 +153,9 @@ After completing Foundation problems, you're ready for:
 
 | Metric | Value |
 |--------|-------|
-| Total Problems | 20 |
-| Estimated Time | 4-5 hours |
-| Recommended Pace | 4 weeks (5 problems/week) |
+| Total Problems | 28 |
+| Estimated Time | 6-7 hours |
+| Recommended Pace | 6 weeks (4-5 problems/week) |
 | Success Criteria | 80%+ solved without hints |
 
 ---

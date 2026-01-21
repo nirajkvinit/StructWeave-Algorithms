@@ -1,6 +1,6 @@
 # Problem Index
 
-> 982 carefully curated algorithm problems organized by difficulty
+> 990 carefully curated algorithm problems organized by difficulty
 
 ---
 
@@ -12,7 +12,7 @@
 
 | Difficulty | Count | Description |
 |------------|-------|-------------|
-| Foundation | 20 | Computational thinking, number theory, mathematical insight |
+| Foundation | 28 | Computational thinking, number theory, mathematical insight |
 | Easy | 270 | Fundamental concepts, single data structures |
 | Medium | 575 | Combined techniques, moderate complexity |
 | Hard | 117 | Advanced algorithms, complex optimizations |
@@ -21,7 +21,7 @@
 
 ## Quick Navigation
 
-- [Foundation Problems (F001-F020)](#foundation-problems)
+- [Foundation Problems (F001-F028)](#foundation-problems)
 - [Easy Problems (E001-E270)](#easy-problems)
 - [Medium Problems (M001-M575)](#medium-problems)
 - [Hard Problems (H001-H117)](#hard-problems)
@@ -32,7 +32,7 @@
 ## Foundation Problems
 
 <details>
-<summary><strong>20 Foundation Problems</strong> (click to expand)</summary>
+<summary><strong>28 Foundation Problems</strong> (click to expand)</summary>
 
 | ID | Problem | Topics |
 |----|---------|--------|
@@ -56,6 +56,14 @@
 | [F018](foundation/F018_summation_of_primes.md) | Summation of Primes | math, primes, sieve |
 | [F019](foundation/F019_largest_prime_factor.md) | Largest Prime Factor | math, primes |
 | [F020](foundation/F020_highly_divisible_triangular_number.md) | Highly Divisible Triangular Number | math, divisors |
+| [F021](foundation/F021_gcd_of_array.md) | GCD of Array | math, gcd, reduction |
+| [F022](foundation/F022_coprime_pairs.md) | Coprime Pairs | math, gcd, euler-totient |
+| [F023](foundation/F023_digital_root.md) | Digital Root | math, digit-manipulation, modular-arithmetic |
+| [F024](foundation/F024_happy_numbers.md) | Happy Numbers | math, digit-manipulation, cycle-detection |
+| [F025](foundation/F025_collatz_conjecture.md) | Collatz Conjecture | math, sequences, iteration |
+| [F026](foundation/F026_perfect_numbers.md) | Perfect Numbers | math, divisors, number-theory |
+| [F027](foundation/F027_armstrong_numbers.md) | Armstrong Numbers | math, digit-manipulation |
+| [F028](foundation/F028_counting_divisors.md) | Counting Divisors | math, prime-factorization, divisors |
 
 </details>
 

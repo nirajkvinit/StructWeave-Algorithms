@@ -4,15 +4,15 @@
 
 ## About
 
-StructWeave is a comprehensive, free, open-source algorithm course and coding interview preparation resource featuring 986 practice problems across 4 difficulty levels, 17 core algorithmic patterns, and language-specific guides for Python, Go, TypeScript, and Rust. Designed for steady, deliberate improvement with pattern-first learning and spaced repetition support.
+StructWeave is a comprehensive, free, open-source algorithm course and coding interview preparation resource featuring 994 practice problems across 4 difficulty levels, 17 core algorithmic patterns, and language-specific guides for Python, Go, TypeScript, and Rust. Designed for steady, deliberate improvement with pattern-first learning and spaced repetition support.
 
 ## Key Statistics
 
-- Total Problems: 986
+- Total Problems: 994
 - Algorithmic Patterns: 17
 - Data Structure Guides: 8
 - Language Guides: 61
-- Difficulty Levels: Foundation (21), Easy (271), Medium (576), Hard (118)
+- Difficulty Levels: Foundation (29), Easy (271), Medium (576), Hard (118)
 
 ## Key Resources
 
@@ -66,7 +66,7 @@ Comprehensive guides following the 80/20 principle:
 
 ### Practice Problems by Difficulty
 
-- [Foundation Problems](problems/foundation/): 21 computational thinking problems (F001-F021)
+- [Foundation Problems](problems/foundation/): 29 computational thinking problems (F001-F028)
 - [Easy Problems](problems/easy/): 271 problems (E001-E271)
 - [Medium Problems](problems/medium/): 576 problems (M001-M576)
 - [Hard Problems](problems/hard/): 118 problems (H001-H118)

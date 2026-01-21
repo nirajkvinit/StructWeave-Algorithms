@@ -321,4 +321,4 @@ If n = p₁^a₁ × p₂^a₂ × ... × pₖ^aₖ:
 
 **Euler Reference:** [Problem 12](https://projecteuler.net/problem=12)
 
-**Next Step:** After mastering F001-F020, you're ready to explore [Easy problems](../easy/) or dive into [Two Pointers Pattern](../../strategies/patterns/two-pointers.md)
+**Next Step:** [F021 - GCD of Array](F021_gcd_of_array.md) — Apply iterative GCD to arrays with the reduction pattern
