@@ -68,13 +68,27 @@ Be careful: some numbers are divisible by both 3 AND 5 (like 15). Make sure you 
 For really big numbers (like 1 billion), checking every single number is too slow. We can use math to skip the loop entirely!
 
 **1. The Pattern**
-The multiples of 3 are: 3, 6, 9, 12...
-Factor out the 3, and it looks like this:
-`3 × (1, 2, 3, 4...)`
+The multiples of 3 below 10 are: 3, 6, 9.
+Factor out the 3, and it becomes: `3 × (1 + 2 + 3)`.
 
-We know a formula to sum numbers from 1 to *m*: `m × (m + 1) / 2`.
-*(Example: `1+2+...+10 = 55`. Using formula: `10 × (10 + 1) / 2 = 55`)*
-So, the sum of multiples of 3 is just: `3 × (sum of 1 to m)`.
+Notice that concepts inside the parenthesis `(1 + 2 + 3)` are just numbers from 1 to *m*.
+Here, ***m* is the count of multiples**, not the limit itself!
+
+**How to find *m*:**
+Subtract 1 from limit, divide by k, and **drop the decimal**.
+
+- Python: `m = (limit - 1) // k`
+- JavaScript: `const m = Math.floor((limit - 1) / k)`
+
+*Example:* For limit 10, m is 3.
+
+**Formula:**
+Sum = `3 × (Sum of 1 to m)`
+Sum = `3 × (m × (m + 1) / 2)`
+
+*Example (Limit 10):*
+m = 3.
+Sum = `3 × (3 × 4 / 2) = 3 × 6 = 18`.
 
 **2. The Overlap Problem**
 If we sum all multiples of 3 and all multiples of 5, we have a problem: numbers like **15, 30, 45** are counted twice (once for 3, once for 5).
