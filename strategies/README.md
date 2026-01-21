@@ -13,7 +13,7 @@ This directory contains everything you need to understand *how* algorithms work 
 │  FUNDAMENTALS   │────▶│  DATA STRUCTURES │────▶│    PATTERNS     │
 │                 │     │                  │     │                 │
 │ • Time/Space    │     │ • Arrays/Strings │     │ • Two Pointers  │
-│ • Complexity    │     │ • Trees/Graphs   │     │ • Sliding Window│
+│ • Number Theory │     │ • Trees/Graphs   │     │ • Sliding Window│
 │ • Probability   │     │ • Heaps/Tries    │     │ • DP/Greedy     │
 └─────────────────┘     └──────────────────┘     └─────────────────┘
      Week 1                  Weeks 2-3               Weeks 4-8
@@ -37,6 +37,7 @@ Core concepts every developer must master before tackling algorithms.
 | [Time Complexity](fundamentals/time-complexity.md) | Big-O notation, common complexities, how to analyze code | 30 min |
 | [Space Complexity](fundamentals/space-complexity.md) | Memory analysis, auxiliary vs input space, trade-offs | 25 min |
 | [Probability](fundamentals/probability.md) | Randomized algorithms, expected value, Monte Carlo methods | 35 min |
+| [Number Theory](fundamentals/number-theory.md) | GCD, LCM, primes, modular arithmetic, divisor functions | 45 min |
 
 ---
 
@@ -150,11 +151,11 @@ Each pattern guide links to practice problems. For structured practice:
 
 ## Quick Reference
 
-**Total Guides:** 33 files across 3 categories
+**Total Guides:** 34 files across 3 categories
 
 | Category | Files | Focus |
 |----------|-------|-------|
-| Fundamentals | 3 | Complexity analysis, probability |
+| Fundamentals | 4 | Complexity analysis, probability, number theory |
 | Data Structures | 8 | Core structures and operations |
 | Patterns | 22 | Algorithmic techniques |
 

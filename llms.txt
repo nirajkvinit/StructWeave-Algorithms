@@ -10,6 +10,7 @@ StructWeave is a comprehensive, free, open-source algorithm course and coding in
 
 - Total Problems: 990
 - Algorithmic Patterns: 17
+- Fundamentals Guides: 4
 - Data Structure Guides: 8
 - Language Guides: 61
 - Difficulty Levels: Foundation (28), Easy (270), Medium (575), Hard (117)
@@ -43,6 +44,15 @@ These patterns solve 90% of coding interview problems:
 - [Divide & Conquer](strategies/patterns/divide-and-conquer.md): Split, solve, combine
 - [Bitwise XOR](strategies/patterns/bitwise-xor.md): Find unique elements
 - [Pattern Selection Guide](strategies/patterns/README.md): Flowchart for choosing patterns
+
+### Fundamentals
+
+Core concepts for algorithm analysis and mathematical foundations:
+
+- [Time Complexity](strategies/fundamentals/time-complexity.md): Big-O notation, complexity analysis
+- [Space Complexity](strategies/fundamentals/space-complexity.md): Memory analysis, trade-offs
+- [Number Theory](strategies/fundamentals/number-theory.md): GCD, LCM, primes, modular arithmetic, divisors
+- [Probability](strategies/fundamentals/probability.md): Randomized algorithms, expected value
 
 ### Data Structures
 

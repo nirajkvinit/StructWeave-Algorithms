@@ -120,6 +120,7 @@ Work through step-by-step problem solutions:
 |--------|-------|
 | Total Practice Problems | 990 |
 | Algorithmic Patterns | 17 |
+| Fundamentals Guides | 4 |
 | Data Structure Guides | 8 |
 | Language Guides | 61 |
 | Foundation Problems | 28 |
@@ -241,7 +242,7 @@ Each guide follows the **80/20 principle** and includes:
 │   └── hard/              # H001-H117 (117 problems)
 │
 ├── strategies/            # Learning resources
-│   ├── fundamentals/      # Time/space complexity, problem-solving frameworks
+│   ├── fundamentals/      # Time/space complexity, number theory, probability
 │   ├── data-structures/   # Arrays, trees, graphs, heaps, etc.
 │   └── patterns/          # 17 core algorithmic patterns
 │
