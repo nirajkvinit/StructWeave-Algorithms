@@ -1,5 +1,5 @@
 ---
-id: F009
+id: F023
 euler_id: 28
 slug: number-spiral-diagonals
 title: Number Spiral Diagonals
@@ -277,4 +277,4 @@ This can be evaluated using arithmetic series formulas, yielding the closed-form
 
 **Euler Reference:** [Problem 28](https://projecteuler.net/problem=28)
 
-**Next Step:** After mastering this, try [F010: Distinct Powers](F010_distinct_powers.md)
+**Next Step:** After mastering this, try [F024: Distinct Powers](./F024_distinct_powers.md)

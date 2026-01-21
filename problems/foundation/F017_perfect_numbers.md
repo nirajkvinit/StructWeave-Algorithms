@@ -1,5 +1,5 @@
 ---
-id: F026
+id: F017
 slug: perfect-numbers
 title: Perfect Numbers
 difficulty: foundation
@@ -313,4 +313,4 @@ n/d:   36  18  12  9   6   4   3   2   1
 
 ---
 
-**Next Step:** [F027 - Armstrong Numbers](F027_armstrong_numbers.md) — Explore numbers equal to the sum of their own digit powers
+**Next Step:** After mastering this, try [F018: Digit Fifth Powers](./F018_digit_fifth_powers.md)

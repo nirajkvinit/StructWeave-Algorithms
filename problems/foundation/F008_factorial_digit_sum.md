@@ -1,5 +1,5 @@
 ---
-id: F007
+id: F008
 euler_id: 20
 slug: factorial-digit-sum
 title: Factorial Digit Sum
@@ -241,4 +241,4 @@ Understanding how to efficiently manipulate digits - whether through string oper
 
 **Euler Reference:** [Problem 20](https://projecteuler.net/problem=20)
 
-**Next Step:** After mastering this, try [F008: 1000-digit Fibonacci Number](F008_1000_digit_fibonacci_number.md)
+**Next Step:** After mastering this, try [F009: Smallest Multiple](./F009_smallest_multiple.md)

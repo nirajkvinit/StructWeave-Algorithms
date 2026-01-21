@@ -1,5 +1,5 @@
 ---
-id: F014
+id: F026
 euler_id: 40
 slug: champernownes-constant
 title: Champernowne's Constant
@@ -265,4 +265,4 @@ This pattern of mathematical indexing avoids expensive data structure constructi
 
 **Euler Reference:** [Problem 40](https://projecteuler.net/problem=40)
 
-**Next Step:** After mastering this, try [F015: Coded Triangle Numbers](F015_coded_triangle_numbers.md)
+**Next Step:** After mastering this, try [F027: Coded Triangle Numbers](./F027_coded_triangle_numbers.md)

@@ -1,5 +1,5 @@
 ---
-id: F012
+id: F019
 euler_id: 34
 slug: digit-factorials
 title: Digit Factorials
@@ -219,4 +219,4 @@ This pattern appears in:
 
 **Euler Reference:** [Problem 34](https://projecteuler.net/problem=34)
 
-**Next Step:** After mastering this, try [F013: Double-base Palindromes](F013_double_base_palindromes.md)
+**Next Step:** After mastering this, try [F020: Digital Root](./F020_digital_root.md)

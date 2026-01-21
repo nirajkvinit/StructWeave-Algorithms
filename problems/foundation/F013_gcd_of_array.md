@@ -1,5 +1,5 @@
 ---
-id: F021
+id: F013
 slug: gcd-of-array
 title: GCD of Array
 difficulty: foundation
@@ -296,4 +296,4 @@ For arrays: reduce with LCM, but watch for overflow!
 
 ---
 
-**Next Step:** [F022 - Coprime Pairs](F022_coprime_pairs.md) — Apply GCD to count pairs with no common factors
+**Next Step:** After mastering this, try [F014: Coprime Pairs](./F014_coprime_pairs.md)

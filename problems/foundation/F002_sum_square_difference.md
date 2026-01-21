@@ -1,5 +1,5 @@
 ---
-id: F004
+id: F002
 euler_id: 6
 slug: sum-square-difference
 title: Sum Square Difference
@@ -204,4 +204,4 @@ The difference captures the "interaction terms": when you square a sum, you get 
 
 **Euler Reference:** [Problem 6](https://projecteuler.net/problem=6)
 
-**Next Step:** After mastering this, try [F005: Large Sum](./F005_large_sum.md)
+**Next Step:** After mastering this, try [F003: Collatz Conjecture](./F003_collatz_conjecture.md)

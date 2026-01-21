@@ -1,5 +1,5 @@
 ---
-id: F010
+id: F024
 euler_id: 29
 slug: distinct-powers
 title: Distinct Powers
@@ -276,4 +276,4 @@ The number of distinct values for large n approaches n² but grows slightly slow
 
 **Euler Reference:** [Problem 29](https://projecteuler.net/problem=29)
 
-**Next Step:** After mastering this, explore more Foundation problems or move to [Easy Problems](../easy/README.md)
+**Next Step:** After mastering this, try [F025: Double-base Palindromes](./F025_double_base_palindromes.md)

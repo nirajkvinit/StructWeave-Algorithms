@@ -1,5 +1,5 @@
 ---
-id: F015
+id: F027
 euler_id: 42
 slug: coded-triangle-numbers
 title: Coded Triangle Numbers
@@ -294,4 +294,4 @@ Is 27 triangular?
 
 **Euler Reference:** [Problem 42](https://projecteuler.net/problem=42)
 
-**Next Step:** After mastering this, try [F016: Self Powers](F016_self_powers.md) or explore [Pattern Guides](../../strategies/patterns/)
+**Next Step:** After mastering this, try [F028: Self Powers](./F028_self_powers.md)

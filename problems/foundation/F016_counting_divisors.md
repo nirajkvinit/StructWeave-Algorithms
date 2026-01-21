@@ -1,5 +1,5 @@
 ---
-id: F028
+id: F016
 slug: counting-divisors
 title: Counting Divisors
 difficulty: foundation
@@ -329,4 +329,4 @@ We only need to know f on prime powers!
 
 ---
 
-**Next Step:** After mastering F021-F028, you're ready to explore [Easy problems](../easy/) or dive deeper into [Number Theory patterns](../../strategies/patterns/number-theory.md).
+**Next Step:** After mastering this, try [F017: Perfect Numbers](./F017_perfect_numbers.md)

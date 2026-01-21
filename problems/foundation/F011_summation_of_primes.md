@@ -1,5 +1,5 @@
 ---
-id: F018
+id: F011
 euler_id: 10
 slug: summation-of-primes
 title: Summation of Primes
@@ -250,4 +250,4 @@ The sieve is a **marking algorithm**: instead of testing primality, it marks com
 
 **Euler Reference:** [Problem 10](https://projecteuler.net/problem=10)
 
-**Next Step:** After mastering this, try [F019: Largest Prime Factor](F019_largest_prime_factor.md) to learn prime factorization
+**Next Step:** After mastering this, try [F012: Largest Prime Factor](./F012_largest_prime_factor.md)

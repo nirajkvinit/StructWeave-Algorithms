@@ -1,5 +1,5 @@
 ---
-id: F003
+id: F009
 euler_id: 5
 slug: smallest-multiple
 title: Smallest Multiple
@@ -190,4 +190,4 @@ The Euclidean algorithm for GCD is based on the principle: GCD(a, b) = GCD(b, a 
 
 **Euler Reference:** [Problem 5](https://projecteuler.net/problem=5)
 
-**Next Step:** After mastering this, try [F004: Sum Square Difference](./F004_sum_square_difference.md)
+**Next Step:** After mastering this, try [F010: 10001st Prime](./F010_10001st_prime.md)

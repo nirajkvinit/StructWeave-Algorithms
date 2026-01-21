@@ -1,5 +1,5 @@
 ---
-id: F024
+id: F021
 slug: happy-numbers
 title: Happy Numbers
 difficulty: foundation
@@ -324,4 +324,4 @@ Leads to different numbers like 153 (1³ + 5³ + 3³ = 153) — Armstrong number
 
 ---
 
-**Next Step:** [F025 - Collatz Conjecture](F025_collatz_conjecture.md) — Explore another famous sequence with unpredictable behavior
+**Next Step:** After mastering this, try [F022: Armstrong Numbers](./F022_armstrong_numbers.md)

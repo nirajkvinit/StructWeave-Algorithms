@@ -1,5 +1,5 @@
 ---
-id: F013
+id: F025
 euler_id: 36
 slug: double-base-palindromes
 title: Double-base Palindromes
@@ -267,4 +267,4 @@ This insight allows us to skip all even numbers, reducing search space by 50%.
 
 **Euler Reference:** [Problem 36](https://projecteuler.net/problem=36)
 
-**Next Step:** After mastering this, try [F014: Champernowne's Constant](F014_champernownes_constant.md)
+**Next Step:** After mastering this, try [F026: Champernowne's Constant](./F026_champernownes_constant.md)

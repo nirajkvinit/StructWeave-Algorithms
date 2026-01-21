@@ -1,5 +1,5 @@
 ---
-id: F022
+id: F014
 slug: coprime-pairs
 title: Coprime Pairs
 difficulty: foundation
@@ -324,4 +324,4 @@ Sum = n × φ(n) / 2
 
 ---
 
-**Next Step:** [F023 - Digital Root](F023_digital_root.md) — Explore repeated digit sums and modular arithmetic
+**Next Step:** After mastering this, try [F015: Highly Divisible Triangular Number](./F015_highly_divisible_triangular_number.md)

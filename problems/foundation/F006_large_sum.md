@@ -1,5 +1,5 @@
 ---
-id: F005
+id: F006
 euler_id: 13
 slug: large-sum
 title: Large Sum
@@ -222,4 +222,4 @@ For larger numbers, we need:
 
 **Euler Reference:** [Problem 13](https://projecteuler.net/problem=13)
 
-**Next Step:** After mastering this, try [F006: Power Digit Sum](./F006_power_digit_sum.md) for more big integer practice!
+**Next Step:** After mastering this, try [F007: Power Digit Sum](./F007_power_digit_sum.md)

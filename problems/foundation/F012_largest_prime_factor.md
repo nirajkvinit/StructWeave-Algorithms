@@ -1,5 +1,5 @@
 ---
-id: F019
+id: F012
 euler_id: 3
 slug: largest-prime-factor
 title: Largest Prime Factor
@@ -267,4 +267,4 @@ Result: [2, 2, 3, 5] or [(2, 2), (3, 1), (5, 1)]
 
 **Euler Reference:** [Problem 3](https://projecteuler.net/problem=3)
 
-**Next Step:** After mastering this, try [F020: Highly Divisible Triangular Number](F020_highly_divisible_triangular_number.md) to learn about divisor counting
+**Next Step:** After mastering this, try [F013: GCD of Array](./F013_gcd_of_array.md)

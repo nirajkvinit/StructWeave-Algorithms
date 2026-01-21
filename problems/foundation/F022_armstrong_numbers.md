@@ -1,5 +1,5 @@
 ---
-id: F027
+id: F022
 slug: armstrong-numbers
 title: Armstrong Numbers
 difficulty: foundation
@@ -323,4 +323,4 @@ Numbers equal to sum of digit factorials:
 
 ---
 
-**Next Step:** [F028 - Counting Divisors](F028_counting_divisors.md) — Learn efficient divisor counting via prime factorization
+**Next Step:** After mastering this, try [F023: Number Spiral Diagonals](./F023_number_spiral_diagonals.md)

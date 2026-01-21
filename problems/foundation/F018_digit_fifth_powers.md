@@ -1,5 +1,5 @@
 ---
-id: F011
+id: F018
 euler_id: 30
 slug: digit-fifth-powers
 title: Digit Fifth Powers
@@ -203,4 +203,4 @@ Search space: [10, 354,294]
 
 **Euler Reference:** [Problem 30](https://projecteuler.net/problem=30)
 
-**Next Step:** After mastering this, try [F012: Digit Factorials](F012_digit_factorials.md)
+**Next Step:** After mastering this, try [F019: Digit Factorials](./F019_digit_factorials.md)

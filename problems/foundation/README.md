@@ -20,99 +20,118 @@
 
 ## Problem Index
 
-### Arithmetic & Sequences (F001-F005)
+### Phase 1: Fundamentals (F001-F003)
 
 | ID | Title | Key Concept | Time |
 |----|-------|-------------|------|
 | [F001](F001_multiples_of_3_or_5.md) | Multiples of 3 or 5 | Loop + modulo | 10 min |
-| [F002](F002_even_fibonacci_numbers.md) | Even Fibonacci Numbers | Sequence generation | 10 min |
-| [F003](F003_smallest_multiple.md) | Smallest Multiple | LCM/GCD | 12 min |
-| [F004](F004_sum_square_difference.md) | Sum Square Difference | Arithmetic formulas | 8 min |
-| [F005](F005_large_sum.md) | Large Sum | Big integers | 15 min |
+| [F002](F002_sum_square_difference.md) | Sum Square Difference | Arithmetic formulas | 8 min |
+| [F003](F003_collatz_conjecture.md) | Collatz Conjecture | Sequence generation | 12 min |
 
-### Big Integers & Patterns (F006-F010)
+### Phase 2: Sequences (F004-F005)
 
 | ID | Title | Key Concept | Time |
 |----|-------|-------------|------|
-| [F006](F006_power_digit_sum.md) | Power Digit Sum | Big integers, digit extraction | 10 min |
-| [F007](F007_factorial_digit_sum.md) | Factorial Digit Sum | Factorial, big integers | 10 min |
-| [F008](F008_1000_digit_fibonacci_number.md) | 1000-digit Fibonacci | Sequence + big integers | 12 min |
-| [F009](F009_number_spiral_diagonals.md) | Number Spiral Diagonals | Pattern recognition | 15 min |
-| [F010](F010_distinct_powers.md) | Distinct Powers | Sets, uniqueness | 10 min |
+| [F004](F004_even_fibonacci_numbers.md) | Even Fibonacci Numbers | Fibonacci basics | 10 min |
+| [F005](F005_1000_digit_fibonacci_number.md) | 1000-digit Fibonacci | Big integer Fibonacci | 12 min |
 
-### Digit Manipulation (F011-F015)
+### Phase 3: Big Integers (F006-F008)
 
 | ID | Title | Key Concept | Time |
 |----|-------|-------------|------|
-| [F011](F011_digit_fifth_powers.md) | Digit Fifth Powers | Search bound analysis | 15 min |
-| [F012](F012_digit_factorials.md) | Digit Factorials | Precomputation | 12 min |
-| [F013](F013_double_base_palindromes.md) | Double-base Palindromes | Base conversion | 15 min |
-| [F014](F014_champernownes_constant.md) | Champernowne's Constant | Efficient indexing | 15 min |
-| [F015](F015_coded_triangle_numbers.md) | Coded Triangle Numbers | Triangular numbers | 12 min |
+| [F006](F006_large_sum.md) | Large Sum | Big integer basics | 15 min |
+| [F007](F007_power_digit_sum.md) | Power Digit Sum | Digit extraction | 10 min |
+| [F008](F008_factorial_digit_sum.md) | Factorial Digit Sum | Factorial + digits | 10 min |
 
-### Number Theory Introduction (F016-F020)
+### Phase 4: Number Theory (F009-F012)
 
 | ID | Title | Key Concept | Time |
 |----|-------|-------------|------|
-| [F016](F016_self_powers.md) | Self Powers | Modular arithmetic | 10 min |
-| [F017](F017_10001st_prime.md) | 10001st Prime | Prime generation | 12 min |
-| [F018](F018_summation_of_primes.md) | Summation of Primes | Sieve of Eratosthenes | 15 min |
-| [F019](F019_largest_prime_factor.md) | Largest Prime Factor | Prime factorization | 12 min |
-| [F020](F020_highly_divisible_triangular_number.md) | Highly Divisible Triangular | Divisor counting | 15 min |
+| [F009](F009_smallest_multiple.md) | Smallest Multiple | GCD/LCM fundamentals | 12 min |
+| [F010](F010_10001st_prime.md) | 10001st Prime | Trial division | 12 min |
+| [F011](F011_summation_of_primes.md) | Summation of Primes | Sieve algorithm | 15 min |
+| [F012](F012_largest_prime_factor.md) | Largest Prime Factor | Factorization | 12 min |
 
-### Advanced Number Theory (F021-F028)
+### Phase 5: GCD/LCM (F013-F014)
 
 | ID | Title | Key Concept | Time |
 |----|-------|-------------|------|
-| [F021](F021_gcd_of_array.md) | GCD of Array | Iterative GCD, reduction | 12 min |
-| [F022](F022_coprime_pairs.md) | Coprime Pairs | Euler's φ, GCD=1 | 15 min |
-| [F023](F023_digital_root.md) | Digital Root | Repeated digit sum, mod 9 | 10 min |
-| [F024](F024_happy_numbers.md) | Happy Numbers | Cycle detection, digit squares | 12 min |
-| [F025](F025_collatz_conjecture.md) | Collatz Conjecture | Sequence generation | 12 min |
-| [F026](F026_perfect_numbers.md) | Perfect Numbers | Divisor sum, σ(n)=2n | 12 min |
-| [F027](F027_armstrong_numbers.md) | Armstrong Numbers | Digit powers | 12 min |
-| [F028](F028_counting_divisors.md) | Counting Divisors | Prime factorization, τ(n) | 15 min |
+| [F013](F013_gcd_of_array.md) | GCD of Array | Reduction pattern | 12 min |
+| [F014](F014_coprime_pairs.md) | Coprime Pairs | Euler's totient | 15 min |
+
+### Phase 6: Divisors (F015-F017)
+
+| ID | Title | Key Concept | Time |
+|----|-------|-------------|------|
+| [F015](F015_highly_divisible_triangular_number.md) | Highly Divisible Triangular | Divisor formula | 15 min |
+| [F016](F016_counting_divisors.md) | Counting Divisors | τ(n) formula | 15 min |
+| [F017](F017_perfect_numbers.md) | Perfect Numbers | σ(n), divisor sum | 12 min |
+
+### Phase 7: Digit Manipulation (F018-F022)
+
+| ID | Title | Key Concept | Time |
+|----|-------|-------------|------|
+| [F018](F018_digit_fifth_powers.md) | Digit Fifth Powers | Bound analysis | 15 min |
+| [F019](F019_digit_factorials.md) | Digit Factorials | Precomputation | 12 min |
+| [F020](F020_digital_root.md) | Digital Root | Mod 9 formula | 10 min |
+| [F021](F021_happy_numbers.md) | Happy Numbers | Cycle detection | 12 min |
+| [F022](F022_armstrong_numbers.md) | Armstrong Numbers | Digit powers | 12 min |
+
+### Phase 8: Special Patterns (F023-F028)
+
+| ID | Title | Key Concept | Time |
+|----|-------|-------------|------|
+| [F023](F023_number_spiral_diagonals.md) | Number Spiral Diagonals | Pattern recognition | 15 min |
+| [F024](F024_distinct_powers.md) | Distinct Powers | Sets, deduplication | 10 min |
+| [F025](F025_double_base_palindromes.md) | Double-base Palindromes | Base conversion | 15 min |
+| [F026](F026_champernownes_constant.md) | Champernowne's Constant | Efficient indexing | 15 min |
+| [F027](F027_coded_triangle_numbers.md) | Coded Triangle Numbers | Triangular numbers | 12 min |
+| [F028](F028_self_powers.md) | Self Powers | Modular arithmetic | 10 min |
 
 ---
 
 ## Learning Path
 
 ```
-Week 1: Arithmetic & Sequences
+Week 1: Fundamentals & Sequences
 ├── F001: Multiples of 3 or 5
-├── F002: Even Fibonacci Numbers
-├── F004: Sum Square Difference
-└── F003: Smallest Multiple (LCM/GCD intro)
+├── F002: Sum Square Difference
+├── F003: Collatz Conjecture
+├── F004: Even Fibonacci Numbers
+└── F005: 1000-digit Fibonacci
 
 Week 2: Big Integers
-├── F005: Large Sum
-├── F006: Power Digit Sum
-├── F007: Factorial Digit Sum
-└── F008: 1000-digit Fibonacci
+├── F006: Large Sum
+├── F007: Power Digit Sum
+└── F008: Factorial Digit Sum
 
-Week 3: Patterns & Digits
-├── F009: Number Spiral Diagonals
-├── F010: Distinct Powers
-├── F011: Digit Fifth Powers
-└── F012: Digit Factorials
+Week 3: Number Theory Basics
+├── F009: Smallest Multiple (GCD/LCM)
+├── F010: 10001st Prime
+├── F011: Summation of Primes
+└── F012: Largest Prime Factor
 
-Week 4: Number Theory
-├── F017: 10001st Prime
-├── F019: Largest Prime Factor
-├── F018: Summation of Primes
-└── F020: Highly Divisible Triangular
+Week 4: GCD/LCM & Divisors
+├── F013: GCD of Array
+├── F014: Coprime Pairs
+├── F015: Highly Divisible Triangular
+├── F016: Counting Divisors
+└── F017: Perfect Numbers
 
-Week 5: Advanced Number Theory
-├── F021: GCD of Array
-├── F022: Coprime Pairs
-├── F023: Digital Root
-└── F024: Happy Numbers
+Week 5: Digit Manipulation
+├── F018: Digit Fifth Powers
+├── F019: Digit Factorials
+├── F020: Digital Root
+├── F021: Happy Numbers
+└── F022: Armstrong Numbers
 
-Week 6: Special Numbers
-├── F025: Collatz Conjecture
-├── F026: Perfect Numbers
-├── F027: Armstrong Numbers
-└── F028: Counting Divisors
+Week 6: Special Patterns
+├── F023: Number Spiral Diagonals
+├── F024: Distinct Powers
+├── F025: Double-base Palindromes
+├── F026: Champernowne's Constant
+├── F027: Coded Triangle Numbers
+└── F028: Self Powers
 ```
 
 ---

@@ -1,5 +1,5 @@
 ---
-id: F016
+id: F028
 euler_id: 48
 slug: self-powers
 title: Self Powers
@@ -189,4 +189,4 @@ For this problem:
 
 **Euler Reference:** [Problem 48](https://projecteuler.net/problem=48)
 
-**Next Step:** After mastering this, try [F017: 10001st Prime](F017_10001st_prime.md)
+**Next Step:** After mastering Foundation problems, explore [Easy Problems](../easy/README.md)

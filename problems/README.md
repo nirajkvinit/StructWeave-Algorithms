@@ -37,33 +37,33 @@
 | ID | Problem | Topics |
 |----|---------|--------|
 | [F001](foundation/F001_multiples_of_3_or_5.md) | Multiples of 3 or 5 | math, loops, modulo |
-| [F002](foundation/F002_even_fibonacci_numbers.md) | Even Fibonacci Numbers | math, sequences |
-| [F003](foundation/F003_smallest_multiple.md) | Smallest Multiple | math, lcm, gcd |
-| [F004](foundation/F004_sum_square_difference.md) | Sum Square Difference | math, formulas |
-| [F005](foundation/F005_large_sum.md) | Large Sum | math, big-integers |
-| [F006](foundation/F006_power_digit_sum.md) | Power Digit Sum | math, big-integers |
-| [F007](foundation/F007_factorial_digit_sum.md) | Factorial Digit Sum | math, factorial |
-| [F008](foundation/F008_1000_digit_fibonacci_number.md) | 1000-digit Fibonacci Number | math, fibonacci |
-| [F009](foundation/F009_number_spiral_diagonals.md) | Number Spiral Diagonals | math, patterns |
-| [F010](foundation/F010_distinct_powers.md) | Distinct Powers | math, sets |
-| [F011](foundation/F011_digit_fifth_powers.md) | Digit Fifth Powers | math, digit-manipulation |
-| [F012](foundation/F012_digit_factorials.md) | Digit Factorials | math, factorial |
-| [F013](foundation/F013_double_base_palindromes.md) | Double-base Palindromes | math, palindromes |
-| [F014](foundation/F014_champernownes_constant.md) | Champernowne's Constant | math, indexing |
-| [F015](foundation/F015_coded_triangle_numbers.md) | Coded Triangle Numbers | math, triangular-numbers |
-| [F016](foundation/F016_self_powers.md) | Self Powers | math, modular-arithmetic |
-| [F017](foundation/F017_10001st_prime.md) | 10001st Prime | math, primes |
-| [F018](foundation/F018_summation_of_primes.md) | Summation of Primes | math, primes, sieve |
-| [F019](foundation/F019_largest_prime_factor.md) | Largest Prime Factor | math, primes |
-| [F020](foundation/F020_highly_divisible_triangular_number.md) | Highly Divisible Triangular Number | math, divisors |
-| [F021](foundation/F021_gcd_of_array.md) | GCD of Array | math, gcd, reduction |
-| [F022](foundation/F022_coprime_pairs.md) | Coprime Pairs | math, gcd, euler-totient |
-| [F023](foundation/F023_digital_root.md) | Digital Root | math, digit-manipulation, modular-arithmetic |
-| [F024](foundation/F024_happy_numbers.md) | Happy Numbers | math, digit-manipulation, cycle-detection |
-| [F025](foundation/F025_collatz_conjecture.md) | Collatz Conjecture | math, sequences, iteration |
-| [F026](foundation/F026_perfect_numbers.md) | Perfect Numbers | math, divisors, number-theory |
-| [F027](foundation/F027_armstrong_numbers.md) | Armstrong Numbers | math, digit-manipulation |
-| [F028](foundation/F028_counting_divisors.md) | Counting Divisors | math, prime-factorization, divisors |
+| [F002](foundation/F002_sum_square_difference.md) | Sum Square Difference | math, formulas |
+| [F003](foundation/F003_collatz_conjecture.md) | Collatz Conjecture | math, sequences, iteration |
+| [F004](foundation/F004_even_fibonacci_numbers.md) | Even Fibonacci Numbers | math, sequences |
+| [F005](foundation/F005_1000_digit_fibonacci_number.md) | 1000-digit Fibonacci Number | math, fibonacci |
+| [F006](foundation/F006_large_sum.md) | Large Sum | math, big-integers |
+| [F007](foundation/F007_power_digit_sum.md) | Power Digit Sum | math, big-integers |
+| [F008](foundation/F008_factorial_digit_sum.md) | Factorial Digit Sum | math, factorial |
+| [F009](foundation/F009_smallest_multiple.md) | Smallest Multiple | math, lcm, gcd |
+| [F010](foundation/F010_10001st_prime.md) | 10001st Prime | math, primes |
+| [F011](foundation/F011_summation_of_primes.md) | Summation of Primes | math, primes, sieve |
+| [F012](foundation/F012_largest_prime_factor.md) | Largest Prime Factor | math, primes |
+| [F013](foundation/F013_gcd_of_array.md) | GCD of Array | math, gcd, reduction |
+| [F014](foundation/F014_coprime_pairs.md) | Coprime Pairs | math, gcd, euler-totient |
+| [F015](foundation/F015_highly_divisible_triangular_number.md) | Highly Divisible Triangular Number | math, divisors |
+| [F016](foundation/F016_counting_divisors.md) | Counting Divisors | math, prime-factorization, divisors |
+| [F017](foundation/F017_perfect_numbers.md) | Perfect Numbers | math, divisors, number-theory |
+| [F018](foundation/F018_digit_fifth_powers.md) | Digit Fifth Powers | math, digit-manipulation |
+| [F019](foundation/F019_digit_factorials.md) | Digit Factorials | math, factorial |
+| [F020](foundation/F020_digital_root.md) | Digital Root | math, digit-manipulation, modular-arithmetic |
+| [F021](foundation/F021_happy_numbers.md) | Happy Numbers | math, digit-manipulation, cycle-detection |
+| [F022](foundation/F022_armstrong_numbers.md) | Armstrong Numbers | math, digit-manipulation |
+| [F023](foundation/F023_number_spiral_diagonals.md) | Number Spiral Diagonals | math, patterns |
+| [F024](foundation/F024_distinct_powers.md) | Distinct Powers | math, sets |
+| [F025](foundation/F025_double_base_palindromes.md) | Double-base Palindromes | math, palindromes |
+| [F026](foundation/F026_champernownes_constant.md) | Champernowne's Constant | math, indexing |
+| [F027](foundation/F027_coded_triangle_numbers.md) | Coded Triangle Numbers | math, triangular-numbers |
+| [F028](foundation/F028_self_powers.md) | Self Powers | math, modular-arithmetic |
 
 </details>
 

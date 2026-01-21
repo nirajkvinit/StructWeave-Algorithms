@@ -1,5 +1,5 @@
 ---
-id: F025
+id: F003
 slug: collatz-conjecture
 title: Collatz Conjecture
 difficulty: foundation
@@ -345,4 +345,4 @@ Answer: 837799 with a stopping time of 524.
 
 ---
 
-**Next Step:** [F026 - Perfect Numbers](F026_perfect_numbers.md) — Explore numbers whose divisors reveal special properties
+**Next Step:** After mastering this, try [F004: Even Fibonacci Numbers](./F004_even_fibonacci_numbers.md)

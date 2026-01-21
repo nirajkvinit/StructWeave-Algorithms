@@ -1,5 +1,5 @@
 ---
-id: F008
+id: F005
 euler_id: 25
 slug: 1000-digit-fibonacci-number
 title: 1000-digit Fibonacci Number
@@ -263,4 +263,4 @@ For very large numbers, string conversion `len(str(n))` is often more reliable t
 
 **Euler Reference:** [Problem 25](https://projecteuler.net/problem=25)
 
-**Next Step:** After mastering this, try [F009: Number Spiral Diagonals](F009_number_spiral_diagonals.md)
+**Next Step:** After mastering this, try [F006: Large Sum](./F006_large_sum.md)

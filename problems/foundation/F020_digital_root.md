@@ -1,5 +1,5 @@
 ---
-id: F023
+id: F020
 slug: digital-root
 title: Digital Root
 difficulty: foundation
@@ -299,4 +299,4 @@ For base b, similar rules apply for divisibility by (b-1).
 
 ---
 
-**Next Step:** [F024 - Happy Numbers](F024_happy_numbers.md) — Apply repeated digit operations with cycle detection
+**Next Step:** After mastering this, try [F021: Happy Numbers](./F021_happy_numbers.md)

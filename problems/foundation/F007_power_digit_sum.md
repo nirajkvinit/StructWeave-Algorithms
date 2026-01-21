@@ -1,5 +1,5 @@
 ---
-id: F006
+id: F007
 euler_id: 16
 slug: power-digit-sum
 title: Power Digit Sum
@@ -197,4 +197,4 @@ Understanding digit manipulation is fundamental for many algorithmic problems, i
 
 **Euler Reference:** [Problem 16](https://projecteuler.net/problem=16)
 
-**Next Step:** After mastering this, try [F007: Factorial Digit Sum](F007_factorial_digit_sum.md)
+**Next Step:** After mastering this, try [F008: Factorial Digit Sum](./F008_factorial_digit_sum.md)

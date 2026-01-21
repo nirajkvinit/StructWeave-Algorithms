@@ -301,4 +301,4 @@ If we count A (3,6,9,12,15,18) and B (5,10,15) separately, we count 15 twice. Su
 
 **Euler Reference:** [Problem 1](https://projecteuler.net/problem=1)
 
-**Next Step:** After mastering this, try [F002: Even Fibonacci Numbers](./F002_even_fibonacci_numbers.md)
+**Next Step:** After mastering this, try [F002: Sum Square Difference](./F002_sum_square_difference.md)

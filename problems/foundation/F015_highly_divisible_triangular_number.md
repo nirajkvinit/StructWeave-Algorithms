@@ -1,5 +1,5 @@
 ---
-id: F020
+id: F015
 euler_id: 12
 slug: highly-divisible-triangular-number
 title: Highly Divisible Triangular Number
@@ -321,4 +321,4 @@ If n = p₁^a₁ × p₂^a₂ × ... × pₖ^aₖ:
 
 **Euler Reference:** [Problem 12](https://projecteuler.net/problem=12)
 
-**Next Step:** [F021 - GCD of Array](F021_gcd_of_array.md) — Apply iterative GCD to arrays with the reduction pattern
+**Next Step:** After mastering this, try [F016: Counting Divisors](./F016_counting_divisors.md)
