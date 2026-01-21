@@ -58,6 +58,7 @@ Each system design directory contains 9 standardized documents:
 | 1.18 | Event Sourcing System | Completed | [View](./1.18-event-sourcing-system/00-index.md) |
 | 1.19 | CQRS Implementation | Completed | [View](./1.19-cqrs-implementation/00-index.md) |
 | 2.1 | Cloud Provider Architecture | Completed | [View](./2.1-cloud-provider-architecture/00-index.md) |
+| 2.2 | Container Orchestration System | Completed | [View](./2.2-container-orchestration-system/00-index.md) |
 
 ---
 
