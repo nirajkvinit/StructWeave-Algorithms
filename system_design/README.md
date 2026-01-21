@@ -56,6 +56,7 @@ Each system design directory contains 9 standardized documents:
 | 1.16 | DNS System Design | Completed | [View](./1.16-dns-system-design/00-index.md) |
 | 1.17 | Distributed Transaction Coordinator | Completed | [View](./1.17-distributed-transaction-coordinator/00-index.md) |
 | 1.18 | Event Sourcing System | Completed | [View](./1.18-event-sourcing-system/00-index.md) |
+| 1.19 | CQRS Implementation | Completed | [View](./1.19-cqrs-implementation/00-index.md) |
 
 ---
 
