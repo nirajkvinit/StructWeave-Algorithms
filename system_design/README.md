@@ -69,6 +69,7 @@ Each system design directory contains 9 standardized documents:
 | 2.10 | Zero Trust Security Architecture | Completed | [View](./2.10-zero-trust-security-architecture/00-index.md) |
 | 2.11 | Service Mesh Design | Completed | [View](./2.11-service-mesh-design/00-index.md) |
 | 2.12 | Edge-Native Application Platform | Completed | [View](./2.12-edge-native-application-platform/00-index.md) |
+| 2.13 | Edge AI/ML Inference | Completed | [View](./2.13-edge-ai-ml-inference/00-index.md) |
 
 ---
 
