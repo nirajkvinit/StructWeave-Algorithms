@@ -181,4 +181,4 @@ Store the original matrix to calculate deltas during updates. When updating, onl
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Binary Indexed Tree](../../strategies/data-structures/advanced-trees.md)
+**Strategy Reference:** [Binary Indexed Tree](../../prerequisites/advanced-trees.md)

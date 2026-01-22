@@ -8,7 +8,7 @@ category: medium
 topics: ["array", "linked-list", "union-find"]
 patterns: ["backtrack-combination"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Linked List Components
 
@@ -168,4 +168,4 @@ The set conversion is O(m) where m is the length of nums, and the traversal is O
 
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
-**Strategy**: See [Linked Lists](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked Lists](../prerequisites/linked-lists.md)

@@ -550,7 +550,7 @@ Each problem is scored individually:
 3. Study Phase 3 preview materials:
    - [Graph Traversal (BFS/DFS)](../strategies/patterns/graph-traversal.md)
    - [Topological Sort](../strategies/patterns/topological-sort.md)
-   - [Heap Patterns](../strategies/data-structures/heaps.md)
+   - [Heap Patterns](../prerequisites/heaps.md)
 4. Schedule [Phase 3 Assessment](./phase-3-assessment.md) in 1-2 weeks
 
 **Challenge Problems** (optional, for 7/7 scorers):

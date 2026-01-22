@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["M098", "E783", "M285"]
 prerequisites: ["binary-search-tree", "inorder-traversal", "tree-properties"]
-strategy_ref: ../strategies/data-structures/heaps.md
+strategy_ref: ../prerequisites/heaps.md
 ---
 # Kth Smallest Element in a BST
 
@@ -214,4 +214,4 @@ if count == k:
 - Day 14: Implement augmented BST approach
 - Day 30: Speed solve under 15 minutes
 
-**Strategy**: See [Heap Pattern](../strategies/data-structures/heaps.md)
+**Strategy**: See [Heap Pattern](../prerequisites/heaps.md)

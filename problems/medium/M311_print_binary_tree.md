@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: low
 related_problems: ["M102", "E111", "M987"]
 prerequisites: ["tree-height", "tree-traversal", "recursion"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Print Binary Tree
 
@@ -204,4 +204,4 @@ def fill(node, row, col):
 - [ ] Review after 1 week
 - [ ] Attempt variation: vertical order print
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

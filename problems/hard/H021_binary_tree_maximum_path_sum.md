@@ -8,7 +8,7 @@ category: hard
 topics: ["tree"]
 patterns: []
 estimated_time_minutes: 45
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Binary Tree Maximum Path Sum
 
@@ -54,7 +54,7 @@ Tree problems develop recursive thinking and hierarchical data navigation. Maste
 2. Can you identify any patterns in the examples?
 3. What data structure would help organize the information?
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)
 
 ## Approach Hints
 
@@ -145,4 +145,4 @@ When calculating the path that can be extended upward, ignore negative contribut
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Tree Patterns](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Tree Patterns](../../prerequisites/trees.md)

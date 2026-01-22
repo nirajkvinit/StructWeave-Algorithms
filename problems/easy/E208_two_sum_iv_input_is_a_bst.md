@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 prerequisites: ["tree-traversal", "hash-table", "two-sum"]
 related_problems: ["E001", "E167", "M653"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Two Sum IV - Input is a BST
 
@@ -162,4 +162,4 @@ Track your progress mastering this problem:
 - [ ] Revisit after 1 week (spaced repetition)
 - [ ] Solve for arbitrary binary tree (not BST)
 
-**Strategy**: See [Binary Search Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../prerequisites/trees.md)

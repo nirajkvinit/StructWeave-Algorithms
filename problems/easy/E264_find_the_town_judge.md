@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["E277", "M207", "M210"]
 prerequisites: ["arrays", "graph-basics"]
-strategy_ref: ../strategies/data-structures/graphs.md
+strategy_ref: ../prerequisites/graphs.md
 ---
 # Find the Town Judge
 
@@ -168,4 +168,4 @@ Track your progress mastering this problem:
 
 **Spaced Repetition Schedule**: Review on Day 1, Day 3, Day 7, Day 14, Day 30
 
-**Strategy**: See [Graphs](../strategies/data-structures/graphs.md)
+**Strategy**: See [Graphs](../prerequisites/graphs.md)

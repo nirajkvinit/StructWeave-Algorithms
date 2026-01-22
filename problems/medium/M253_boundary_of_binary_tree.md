@@ -17,7 +17,7 @@ prerequisites:
   - tree traversal (preorder, inorder, postorder)
   - DFS recursion
   - identifying leaf nodes
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Boundary of Binary Tree
 
@@ -199,4 +199,4 @@ Track your progress with spaced repetition:
 - [ ] After 1 week: Solve in under 25 minutes
 - [ ] Before interview: Explain why we exclude leaves from boundaries
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

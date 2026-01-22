@@ -8,7 +8,7 @@ category: hard
 topics: ["string", "trie"]
 patterns: []
 estimated_time_minutes: 45
-strategy_ref: ../strategies/data-structures/tries.md
+strategy_ref: ../prerequisites/tries.md
 ---
 # Word Search II
 
@@ -56,7 +56,7 @@ String manipulation is essential for text processing and pattern matching. This 
 3. Would sorting or preprocessing help?
 4. Can you reduce this to a problem you've seen before?
 
-**Strategy**: See [String Pattern](../strategies/data-structures/tries.md)
+**Strategy**: See [String Pattern](../prerequisites/tries.md)
 
 ## Approach Hints
 
@@ -142,4 +142,4 @@ Remove found words from the Trie during search to avoid duplicates and reduce se
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Trie Data Structure](../../strategies/data-structures/tries.md)
+**Strategy Reference:** [Trie Data Structure](../../prerequisites/tries.md)

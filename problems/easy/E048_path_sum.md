@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E046", "E047", "M113"]
 prerequisites: ["binary-tree-traversal", "dfs", "recursion"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Path Sum
 
@@ -220,4 +220,4 @@ def hasPathSum(root, targetSum):
 
 ---
 
-**Strategy**: See [Tree Pattern](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../../prerequisites/trees.md)

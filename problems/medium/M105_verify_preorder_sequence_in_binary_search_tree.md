@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M094", "M098", "M331"]
 prerequisites: ["binary-search-trees", "preorder-traversal", "stack", "bst-properties"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Verify Preorder Sequence in Binary Search Tree
 
@@ -239,4 +239,4 @@ while stack and stack[-1] < val:
 - [ ] Can code O(1) space version (Day 30)
 - [ ] Interview-ready confidence (Day 30)
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Array Pattern](../prerequisites/trees.md)

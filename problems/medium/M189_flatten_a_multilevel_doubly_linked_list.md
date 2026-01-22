@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E206", "M002", "M024"]
 prerequisites: ["linked-list", "dfs", "pointer-manipulation"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Flatten a Multilevel Doubly Linked List
 
@@ -266,4 +266,4 @@ Use spaced repetition to master this problem:
 - [ ] Day 14: Solve variations (single-linked, clone)
 - [ ] Day 30: Speed test - solve in under 15 minutes
 
-**Strategy**: See [Linked List Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../prerequisites/linked-lists.md)

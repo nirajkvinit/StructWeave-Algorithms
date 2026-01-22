@@ -8,7 +8,7 @@ category: medium
 topics: ["array", "tree"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # All Nodes Distance K in Binary Tree
 

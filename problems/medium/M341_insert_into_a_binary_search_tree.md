@@ -17,7 +17,7 @@ prerequisites:
   - binary-search-trees
   - tree-traversal
   - recursion
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Insert into a Binary Search Tree
 
@@ -257,4 +257,4 @@ class Solution:
 - [ ] **Week 1:** Solve delete node problem
 - [ ] **Week 2:** Study self-balancing trees (AVL, Red-Black)
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

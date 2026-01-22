@@ -161,4 +161,4 @@ The re-rooting formula is key: answer[child] = answer[parent] - count[child] + (
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Tree DP and Re-rooting](../../strategies/patterns/tree-dp.md) | [DFS Traversal](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Tree DP and Re-rooting](../../strategies/patterns/tree-dp.md) | [DFS Traversal](../../prerequisites/trees.md)

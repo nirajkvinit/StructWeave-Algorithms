@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 prerequisites: ["2d-array", "matrix-navigation"]
 related_problems: ["E054", "E048", "M073"]
-strategy_ref: ../strategies/data-structures/matrix.md
+strategy_ref: ../prerequisites/matrix.md
 ---
 # Toeplitz Matrix
 
@@ -181,4 +181,4 @@ def isToeplitzMatrix(matrix):
 - [ ] Review after 1 week
 - [ ] Can explain approach to someone else
 
-**Strategy**: See [Matrix Traversal Patterns](../strategies/data-structures/matrix.md)
+**Strategy**: See [Matrix Traversal Patterns](../prerequisites/matrix.md)

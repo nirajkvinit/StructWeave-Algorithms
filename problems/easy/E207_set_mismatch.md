@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 prerequisites: ["array-traversal", "hash-table", "summation"]
 related_problems: ["E041", "M287", "M442"]
-strategy_ref: ../strategies/data-structures/hash-tables.md
+strategy_ref: ../prerequisites/hash-tables.md
 ---
 # Set Mismatch
 
@@ -140,4 +140,4 @@ Track your progress mastering this problem:
 - [ ] Revisit after 1 week (spaced repetition)
 - [ ] Solve the "find all duplicates" variation
 
-**Strategy**: See [Hash Table Patterns](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Table Patterns](../prerequisites/hash-tables.md)

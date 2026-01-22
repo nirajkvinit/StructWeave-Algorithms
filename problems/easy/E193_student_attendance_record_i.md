@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: low
 prerequisites: ["string-iteration", "counter", "consecutive-elements"]
 related_problems: ["E020", "M003", "M552"]
-strategy_ref: ../strategies/data-structures/strings.md
+strategy_ref: ../prerequisites/strings.md
 ---
 # Student Attendance Record I
 
@@ -159,4 +159,4 @@ Track your progress on mastering this problem:
 **Pattern**: String Validation with Multiple Conditions
 **Key Insight**: Check two independent conditions: total count of one character and consecutive occurrences of another.
 
-See [String Manipulation](../strategies/data-structures/strings.md) for more on character counting and pattern detection.
+See [String Manipulation](../prerequisites/strings.md) for more on character counting and pattern detection.

@@ -8,7 +8,7 @@ category: medium
 topics: ["array", "tree"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Binary Trees With Factors
 
@@ -152,4 +152,4 @@ Use a hash map/dictionary to store dp values for O(1) lookup when checking if a 
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Dynamic Programming](../../strategies/patterns/dynamic-programming.md) | [Tree Structures](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Dynamic Programming](../../strategies/patterns/dynamic-programming.md) | [Tree Structures](../../prerequisites/trees.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E242", "E383", "E126"]
 prerequisites: ["hash-table", "string-manipulation"]
-strategy_ref: ../strategies/data-structures/hash-table.md
+strategy_ref: ../prerequisites/hash-table.md
 ---
 # Ransom Note
 
@@ -180,4 +180,4 @@ Track your progress and spaced repetition:
 - [ ] Revisit after 1 week
 - [ ] Can explain frequency counting clearly
 
-**Strategy Guide:** For pattern recognition and detailed techniques, see [Hash Table Pattern](../strategies/data-structures/hash-table.md)
+**Strategy Guide:** For pattern recognition and detailed techniques, see [Hash Table Pattern](../prerequisites/hash-table.md)

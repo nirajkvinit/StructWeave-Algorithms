@@ -495,4 +495,4 @@ Result: horse → rorse → rose → ros
 
 ---
 
-**Strategy**: See [2D Dynamic Programming](../../strategies/patterns/dynamic-programming.md) | [String Algorithms](../../strategies/data-structures/strings.md)
+**Strategy**: See [2D Dynamic Programming](../../strategies/patterns/dynamic-programming.md) | [String Algorithms](../../prerequisites/strings.md)

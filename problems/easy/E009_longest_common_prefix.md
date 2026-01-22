@@ -287,4 +287,4 @@ def longestCommonPrefix(strs):
 
 ---
 
-**Strategy**: See [String Processing](../../strategies/data-structures/strings.md) | [Two Pointers Pattern](../../strategies/patterns/two-pointers.md)
+**Strategy**: See [String Processing](../../prerequisites/strings.md) | [Two Pointers Pattern](../../strategies/patterns/two-pointers.md)

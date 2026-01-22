@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M004", "M025", "E141"]
 prerequisites: ["linked-list-basics", "pointer-manipulation"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Swap Nodes in Pairs
 
@@ -410,4 +410,4 @@ Result: 2 → 1 → 3 → NULL  (3 stays in place)
 
 ---
 
-**Strategy**: See [Linked List Pattern](../../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../../prerequisites/linked-lists.md)

@@ -8,7 +8,7 @@ category: medium
 topics: ["tree", "two-pointers"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Flip Equivalent Binary Trees
 
@@ -169,4 +169,4 @@ You can optimize by checking both trees' structures simultaneously. Early termin
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Tree Patterns](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Tree Patterns](../../prerequisites/trees.md)

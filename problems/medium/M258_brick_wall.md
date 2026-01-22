@@ -148,4 +148,4 @@ return len(wall) - max(edge_count.values())
 - [ ] **Week 1**: Implement horizontal line variation
 - [ ] **Week 2**: Solve from memory in under 20 minutes
 
-**Strategy**: See [Hash Table Patterns](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Table Patterns](../prerequisites/hash-tables.md)

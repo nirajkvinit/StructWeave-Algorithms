@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M297", "E100", "M652"]
 prerequisites: ["tree-traversal", "hash-maps", "recursion"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Find Duplicate Subtrees
 
@@ -235,4 +235,4 @@ def serialize(node):
 - [ ] Review after 1 week
 - [ ] Attempt variation: largest duplicate subtree
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

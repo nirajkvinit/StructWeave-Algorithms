@@ -157,4 +157,4 @@ Use coordinate compression or segment tree for better performance with many squa
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Intervals](../../strategies/patterns/intervals.md) | [Segment Tree](../../strategies/data-structures/segment-tree.md)
+**Strategy Reference:** [Intervals](../../strategies/patterns/intervals.md) | [Segment Tree](../../prerequisites/segment-tree.md)

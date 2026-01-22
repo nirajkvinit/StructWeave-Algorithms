@@ -235,4 +235,4 @@ def candyCrush(board):
 - [ ] Handled gravity correctly for all columns
 - [ ] Tested until board reaches stable state
 
-**Strategy**: See [Matrix Manipulation](../strategies/data-structures/arrays-and-matrices.md)
+**Strategy**: See [Matrix Manipulation](../prerequisites/arrays-and-matrices.md)

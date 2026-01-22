@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["M072", "M077", "E001"]
 prerequisites: ["binary-tree", "bfs", "dfs", "level-order-traversal"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Binary Tree Right Side View
 
@@ -205,4 +205,4 @@ def dfs(node, depth):
 
 ---
 
-**Strategy**: See [Tree Pattern](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../../prerequisites/trees.md)

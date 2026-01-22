@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["E113", "M129", "M257"]
 prerequisites: ["binary-tree", "dfs", "recursion"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Binary Tree Paths
 
@@ -238,4 +238,4 @@ def binaryTreePaths(root):
 - [ ] Day 14: Explain backtracking concept (5 min)
 - [ ] Day 30: Code from memory (10 min)
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: low
 related_problems: ["E014", "E066", "M073"]
 prerequisites: ["arrays", "strings", "nested-loops"]
-strategy_ref: ../strategies/data-structures/arrays.md
+strategy_ref: ../prerequisites/arrays.md
 ---
 # Delete Columns to Make Sorted
 
@@ -181,4 +181,4 @@ Track your progress mastering this problem:
 
 **Spaced Repetition Schedule**: Review on Day 1, Day 3, Day 7, Day 14, Day 30
 
-**Strategy**: See [Arrays](../strategies/data-structures/arrays.md)
+**Strategy**: See [Arrays](../prerequisites/arrays.md)

@@ -8,7 +8,7 @@ category: medium
 topics: ["string", "binary-search-tree", "binary-search"]
 patterns: ["inorder-traversal"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 frequency: high
 related_problems: ["M096", "H001", "M105"]
 prerequisites: ["binary-search-tree", "tree-traversal", "string-manipulation"]
@@ -214,4 +214,4 @@ def build(min_val, max_val):
 - [ ] Could explain solution to others
 - [ ] Comfortable with variations
 
-**Strategy**: See [String Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [String Pattern](../prerequisites/trees.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M039", "M043", "E026"]
 prerequisites: ["bfs", "queue", "tree-traversal"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Binary Tree Zigzag Level Order Traversal
 
@@ -170,4 +170,4 @@ left_to_right = True  # Level 0 goes left to right
 
 ---
 
-**Strategy**: See [Tree Pattern](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../../prerequisites/trees.md)

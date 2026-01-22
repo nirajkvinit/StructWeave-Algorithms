@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 prerequisites: ["hash-table", "array-traversal"]
 related_problems: ["E001", "E242", "M049"]
-strategy_ref: ../strategies/data-structures/hash-table.md
+strategy_ref: ../prerequisites/hash-table.md
 ---
 # Find Anagram Mappings
 
@@ -155,4 +155,4 @@ def anagramMappings(nums1, nums2):
 - [ ] Review after 1 week
 - [ ] Can explain approach to someone else
 
-**Strategy**: See [Hash Table Patterns](../strategies/data-structures/hash-table.md)
+**Strategy**: See [Hash Table Patterns](../prerequisites/hash-table.md)

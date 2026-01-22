@@ -8,7 +8,7 @@ category: medium
 topics: ["tree"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Check Completeness of a Binary Tree
 
@@ -192,4 +192,4 @@ Alternative approach: assign indices to nodes as if it were a complete binary tr
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Tree Patterns](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Tree Patterns](../../prerequisites/trees.md)

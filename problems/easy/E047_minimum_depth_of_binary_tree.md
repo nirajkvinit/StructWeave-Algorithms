@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["E046", "E034", "E048"]
 prerequisites: ["binary-tree-traversal", "bfs", "dfs"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Minimum Depth of Binary Tree
 
@@ -213,4 +213,4 @@ def minDepth(root):
 
 ---
 
-**Strategy**: See [Tree Pattern](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../../prerequisites/trees.md)

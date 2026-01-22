@@ -144,4 +144,4 @@ The similarity check can be optimized: count positions where strings differ. If 
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Union-Find](../../strategies/data-structures/union-find.md)
+**Strategy Reference:** [Union-Find](../../prerequisites/union-find.md)

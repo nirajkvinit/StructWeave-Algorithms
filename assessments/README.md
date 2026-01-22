@@ -223,9 +223,9 @@ Based on entry assessment score:
 - Week 5-6: Complexity analysis, basic patterns
 
 **Resources:**
-- [Fundamentals Guide](../strategies/fundamentals/README.md)
-- [Time Complexity](../strategies/fundamentals/time-complexity.md)
-- [Data Structures Basics](../strategies/data-structures/README.md)
+- [Prerequisites](../prerequisites/)
+- [Time Complexity](../prerequisites/time-complexity.md)
+- [Data Structures](../prerequisites/) (arrays, hash tables, trees, etc.)
 
 **Goal:** Score 7+ on Entry Assessment
 
@@ -375,8 +375,8 @@ All assessment problems reference actual problems in:
 ### Strategy Guides
 Each assessment links to pattern guides in:
 - `/strategies/patterns/` - Pattern-specific deep dives
-- `/strategies/fundamentals/` - Core concepts
-- `/strategies/data-structures/` - Data structure guides
+- `/strategies/fundamentals/` - Probability and specialized topics
+- `/prerequisites/` - Data structures, time/space complexity, number theory
 
 ### Learning Tracks
 Assessments integrate with:

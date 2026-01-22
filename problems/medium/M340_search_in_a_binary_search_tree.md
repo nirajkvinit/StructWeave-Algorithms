@@ -17,7 +17,7 @@ prerequisites:
   - binary-search-trees
   - tree-traversal
   - recursion
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Search in a Binary Search Tree
 
@@ -224,4 +224,4 @@ class Solution:
 - [ ] **Week 1:** Solve insert and delete node problems
 - [ ] **Week 2:** Apply BST traversal to range search problems
 
-**Strategy**: See [Binary Search Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../prerequisites/trees.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M002", "M148", "E021"]
 prerequisites: ["linked-list-traversal", "dummy-node"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Partition List
 
@@ -173,4 +173,4 @@ before = before_dummy  # No special case needed
 
 ---
 
-**Strategy**: See [Linked List Pattern](../../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../../prerequisites/linked-lists.md)

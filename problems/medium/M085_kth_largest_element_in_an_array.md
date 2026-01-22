@@ -8,7 +8,7 @@ category: medium
 topics: ["array", "heap", "sorting"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/heaps.md
+strategy_ref: ../prerequisites/heaps.md
 frequency: high
 related_problems: ["M215", "M347", "M692"]
 prerequisites: ["heap-data-structure", "quickselect", "sorting-algorithms"]
@@ -205,4 +205,4 @@ def partition(left, right):
 - [ ] Day 14: Implement median-of-three pivot selection for QuickSelect
 - [ ] Day 30: Explain when to use heap vs QuickSelect vs sorting
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/heaps.md)
+**Strategy**: See [Array Pattern](../prerequisites/heaps.md)

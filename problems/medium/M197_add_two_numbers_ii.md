@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M002", "E021", "E445"]
 prerequisites: ["linked-list", "stack", "recursion"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Add Two Numbers II
 
@@ -308,4 +308,4 @@ Use spaced repetition to master this problem:
 - [ ] Day 14: Solve variations (Add Two Numbers I, multiply)
 - [ ] Day 30: Speed test - solve in under 10 minutes
 
-**Strategy**: See [Linked List Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../prerequisites/linked-lists.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: low
 related_problems: ["E021", "M002", "M143"]
 prerequisites: ["linked-list-traversal", "basic-math"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Split Linked List in Parts
 
@@ -185,4 +185,4 @@ for i in range(k):
 - [ ] Optimize to single-pass if possible
 - [ ] Explain approach to someone else
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Array Pattern](../prerequisites/linked-lists.md)

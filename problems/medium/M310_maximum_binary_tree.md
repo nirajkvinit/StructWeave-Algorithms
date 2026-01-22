@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: low
 related_problems: ["M105", "M106", "E654"]
 prerequisites: ["tree-construction", "recursion", "arrays"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Maximum Binary Tree
 
@@ -235,4 +235,4 @@ def build(nums, left, right):
 - [ ] Review after 1 week
 - [ ] Attempt optimization: monotonic stack solution
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Array Pattern](../prerequisites/trees.md)

@@ -771,7 +771,7 @@ Try these coding challenges:
 Once you're comfortable with these basics:
 
 1. Read [Computational Thinking](./computational-thinking.md) to develop problem-solving skills
-2. Learn [Big O Introduction](./big-o-introduction.md) to understand algorithm efficiency
+2. Learn [Time Complexity](./time-complexity.md) to understand algorithm efficiency
 3. Review [Debugging Strategies](./debugging-strategies.md) for systematic problem-solving
 4. Start with [Easy Problems](../problems/easy/) in the question bank
 

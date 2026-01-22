@@ -17,7 +17,7 @@ prerequisites:
   - String manipulation
   - Set operations
   - Hash table
-strategy_ref: ../strategies/data-structures/hash-table.md
+strategy_ref: ../prerequisites/hash-table.md
 ---
 # Keyboard Row
 
@@ -170,4 +170,4 @@ Track your progress on this problem:
 - [ ] Can extend to custom keyboard layouts
 - [ ] Can solve in under 10 minutes
 
-**Strategy**: See [Hash Table Patterns](../strategies/data-structures/hash-table.md)
+**Strategy**: See [Hash Table Patterns](../prerequisites/hash-table.md)

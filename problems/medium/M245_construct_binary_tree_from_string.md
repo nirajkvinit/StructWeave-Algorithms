@@ -8,7 +8,7 @@ category: medium
 topics: ["tree"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 frequency: medium
 related_problems:
   - id: E001
@@ -214,4 +214,4 @@ def parse(s, idx):
 - [ ] Review after 1 week - solve serialize/deserialize tree
 - [ ] Review after 1 month - implement for n-ary tree
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

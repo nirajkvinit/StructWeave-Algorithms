@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: low
 related_problems: ["E226", "M114", "M116"]
 prerequisites: ["binary-tree", "recursion", "tree-traversal"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Binary Tree Upside Down
 
@@ -206,4 +206,4 @@ def upsideDownBinaryTree(root):
 
 ---
 
-**Strategy**: See [Tree Pattern](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../../prerequisites/trees.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: low
 related_problems: ["M188", "M085", "H001"]
 prerequisites: ["tree-traversal", "serialization", "tree-encoding"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Encode N-ary Tree to Binary Tree
 
@@ -251,4 +251,4 @@ Use spaced repetition to master this problem:
 - [ ] Day 14: Solve variations (string serialization)
 - [ ] Day 30: Speed test - solve in under 20 minutes
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

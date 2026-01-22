@@ -282,4 +282,4 @@ return scores[:k]
 
 ---
 
-**Strategy Reference:** See [Sorting Fundamentals](../../strategies/fundamentals/sorting.md) | [String Processing](../../strategies/data-structures/strings.md)
+**Strategy Reference:** See [Sorting Fundamentals](../../strategies/fundamentals/sorting.md) | [String Processing](../../prerequisites/strings.md)

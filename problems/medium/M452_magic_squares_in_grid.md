@@ -138,4 +138,4 @@ There are only 8 possible 3x3 magic squares (rotations and reflections of one pa
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Matrix Traversal](../../strategies/data-structures/matrix.md)
+**Strategy Reference:** [Matrix Traversal](../../prerequisites/matrix.md)

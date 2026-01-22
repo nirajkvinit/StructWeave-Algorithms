@@ -8,7 +8,7 @@ category: hard
 topics: ["linked-list"]
 patterns: []
 estimated_time_minutes: 45
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Reverse Nodes in k-Group
 
@@ -63,7 +63,7 @@ Linked lists teach pointer manipulation and in-place modifications. Understandin
 2. Can you identify any patterns in the examples?
 3. What data structure would help organize the information?
 
-**Strategy**: See [Linked List Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../prerequisites/linked-lists.md)
 
 ## Approach Hints
 
@@ -175,4 +175,4 @@ The reversal can be done in-place with O(1) space by carefully manipulating poin
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Linked List Patterns](../../strategies/data-structures/linked-lists.md)
+**Strategy Reference:** [Linked List Patterns](../../prerequisites/linked-lists.md)

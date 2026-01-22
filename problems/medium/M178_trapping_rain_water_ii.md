@@ -176,4 +176,4 @@ heapq.heappush(heap, (height, x, y))
 - [ ] Day 14: Compare with 1D trapping rain water problem (15 min)
 - [ ] Day 30: Explain the boundary-inward approach to someone (10 min)
 
-**Strategy**: See [Priority Queue Pattern](../strategies/data-structures/heaps.md)
+**Strategy**: See [Priority Queue Pattern](../prerequisites/heaps.md)

@@ -155,4 +155,4 @@ Since words consist only of lowercase letters, you can use a fixed-size array of
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Hash Table](../../strategies/data-structures/hash-table.md)
+**Strategy Reference:** [Hash Table](../../prerequisites/hash-table.md)

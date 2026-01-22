@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E104_maximum_depth_of_binary_tree", "E559_minimum_depth_of_n_ary_tree", "M102_binary_tree_level_order_traversal"]
 prerequisites: ["tree-traversal", "recursion", "bfs"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Maximum Depth of N-ary Tree
 
@@ -196,4 +196,4 @@ return 1 + max(maxDepth(child) for child in root.children)
 - [ ] **Week 1**: Implement minimum depth variation
 - [ ] **Week 2**: Solve both approaches from memory in under 15 minutes
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

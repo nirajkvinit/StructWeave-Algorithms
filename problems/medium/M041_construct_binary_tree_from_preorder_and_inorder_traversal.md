@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["M042", "M044", "E026"]
 prerequisites: ["tree-traversal", "recursion", "hash-map"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Construct Binary Tree from Preorder and Inorder Traversal
 
@@ -169,4 +169,4 @@ self.pre_idx += 1
 
 ---
 
-**Strategy**: See [Tree Reconstruction Pattern](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Reconstruction Pattern](../../prerequisites/trees.md)

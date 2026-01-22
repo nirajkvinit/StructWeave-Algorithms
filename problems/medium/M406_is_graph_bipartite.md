@@ -8,7 +8,7 @@ category: medium
 topics: ["array", "graph"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/graphs.md
+strategy_ref: ../prerequisites/graphs.md
 ---
 # Is Graph Bipartite
 
@@ -102,7 +102,7 @@ Understanding bipartiteness also deepens your knowledge of graph properties. The
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/graphs.md)
+**Strategy**: See [Array Pattern](../prerequisites/graphs.md)
 
 ## Approach Hints
 
@@ -208,4 +208,4 @@ Use an array to track colors instead of a dictionary for better performance (-1 
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Graph Traversal](../../strategies/data-structures/graphs.md)
+**Strategy Reference:** [Graph Traversal](../../prerequisites/graphs.md)

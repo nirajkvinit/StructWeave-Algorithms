@@ -8,7 +8,7 @@ category: medium
 topics: ["linked-list"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 frequency: medium
 related_problems: ["E066", "E002", "M445"]
 prerequisites: ["linked-list-traversal", "carry-propagation", "list-reversal"]
@@ -176,4 +176,4 @@ def plusOne(head):
 - [ ] Attempted again after 1 week
 - [ ] Attempted again after 2 weeks
 
-**Strategy**: See [Linked List Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../prerequisites/linked-lists.md)

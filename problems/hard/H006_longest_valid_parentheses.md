@@ -11,7 +11,7 @@ estimated_time_minutes: 45
 frequency: high
 related_problems: ["E020", "M022", "M032"]
 prerequisites: ["stack-basics", "string-traversal", "dynamic-programming-basics"]
-strategy_ref: ../strategies/data-structures/stacks-and-queues.md
+strategy_ref: ../prerequisites/stacks-and-queues.md
 ---
 
 # Longest Valid Parentheses
@@ -489,4 +489,4 @@ Result: max(dp) = 4
 
 ---
 
-**Strategy**: See [Stack-Based Tracking](../../strategies/data-structures/stacks-and-queues.md) | [Dynamic Programming](../../strategies/patterns/dynamic-programming.md)
+**Strategy**: See [Stack-Based Tracking](../../prerequisites/stacks-and-queues.md) | [Dynamic Programming](../../strategies/patterns/dynamic-programming.md)

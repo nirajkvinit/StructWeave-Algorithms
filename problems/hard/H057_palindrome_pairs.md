@@ -150,4 +150,4 @@ For a word of length L, there are L+1 split positions. For each split, checking 
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Hash Map](../../strategies/data-structures/hash-table.md)
+**Strategy Reference:** [Hash Map](../../prerequisites/hash-table.md)

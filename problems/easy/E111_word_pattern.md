@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["E001", "E205", "M890"]
 prerequisites: ["hash-map", "string-split", "bijection"]
-strategy_ref: ../strategies/data-structures/hash-table.md
+strategy_ref: ../prerequisites/hash-table.md
 ---
 # Word Pattern
 
@@ -245,4 +245,4 @@ Set size comparison doesn't verify the actual mapping relationships.
 - [ ] Review after 1 week
 - [ ] Compare with Isomorphic Strings problem
 
-**Strategy**: See [Hash Table Pattern](../strategies/data-structures/hash-table.md)
+**Strategy**: See [Hash Table Pattern](../prerequisites/hash-table.md)

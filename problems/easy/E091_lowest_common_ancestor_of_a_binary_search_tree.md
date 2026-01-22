@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E086", "E090", "M020"]
 prerequisites: ["binary-search-tree", "tree-traversal", "ancestor-relationship"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Lowest Common Ancestor of a Binary Search Tree
 
@@ -229,4 +229,4 @@ def lowestCommonAncestor(root, p, q):
 - [ ] **Day 14:** Solve in under 10 minutes
 - [ ] **Day 30:** Explain why BST property enables O(h) solution
 
-**Strategy**: See [Binary Search Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../prerequisites/trees.md)

@@ -8,7 +8,7 @@ category: medium
 topics: ["tree"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 frequency: medium
 related_problems: ["M051", "E194", "M132"]
 prerequisites: ["bfs", "tree-traversal", "hash-map", "queue"]
@@ -276,4 +276,4 @@ def verticalOrder(root):
 - [ ] Day 14: Speed test - solve in 15 minutes
 - [ ] Day 30: Solve diagonal traversal
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

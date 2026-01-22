@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E007", "E001", "M015"]
 prerequisites: ["hash-map", "string-traversal"]
-strategy_ref: ../../strategies/data-structures/hash-table.md
+strategy_ref: ../../prerequisites/hash-table.md
 ---
 # Roman to Integer
 
@@ -204,4 +204,4 @@ for i in range(len(s)):
 
 ---
 
-**Strategy**: See [Hash Table Patterns](../../strategies/data-structures/hash-table.md)
+**Strategy**: See [Hash Table Patterns](../../prerequisites/hash-table.md)

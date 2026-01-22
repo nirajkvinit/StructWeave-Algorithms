@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["M049", "E637", "M199"]
 prerequisites: ["binary-tree", "bfs", "queue"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Populating Next Right Pointers in Each Node
 
@@ -205,4 +205,4 @@ def connect_level(node):
 
 ---
 
-**Strategy**: See [Tree Traversal Patterns](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Traversal Patterns](../../prerequisites/trees.md)

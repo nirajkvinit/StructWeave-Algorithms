@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 prerequisites: ["binary-tree-basics", "dfs-traversal", "recursion"]
 related_problems: ["E100", "E104", "M102"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Leaf-Similar Trees
 
@@ -171,4 +171,4 @@ def get_leaves(root, leaves):
 - Learn leaf node identification
 - Understand traversal order impact on results
 
-See [Tree Pattern](../strategies/data-structures/trees.md) for the complete strategy guide.
+See [Tree Pattern](../prerequisites/trees.md) for the complete strategy guide.

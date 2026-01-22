@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["M045", "E026", "M041"]
 prerequisites: ["binary-search", "recursion", "bst-properties"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Convert Sorted Array to Binary Search Tree
 
@@ -182,4 +182,4 @@ root.right = helper(mid + 1, right)
 
 ---
 
-**Strategy**: See [Divide and Conquer Pattern](../../strategies/data-structures/trees.md)
+**Strategy**: See [Divide and Conquer Pattern](../../prerequisites/trees.md)

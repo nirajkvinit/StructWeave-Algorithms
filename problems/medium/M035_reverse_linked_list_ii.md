@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["E206", "M025", "M092"]
 prerequisites: ["linked-list-traversal", "pointer-reversal"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Reverse Linked List II
 
@@ -181,4 +181,4 @@ for _ in range(right - left + 1):
 
 ---
 
-**Strategy**: See [Linked List Pattern](../../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../../prerequisites/linked-lists.md)

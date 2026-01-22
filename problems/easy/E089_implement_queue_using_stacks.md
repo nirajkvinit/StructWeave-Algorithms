@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E086", "E092", "M005"]
 prerequisites: ["stack-operations", "queue-operations", "data-structure-design"]
-strategy_ref: ../strategies/data-structures/stacks-and-queues.md
+strategy_ref: ../prerequisites/stacks-and-queues.md
 ---
 # Implement Queue using Stacks
 
@@ -196,4 +196,4 @@ class MyQueue:
 - [ ] **Day 14:** Implement without looking at previous solution
 - [ ] **Day 30:** Explain amortized analysis to someone else
 
-**Strategy**: See [Queue Pattern](../strategies/data-structures/stacks-and-queues.md)
+**Strategy**: See [Queue Pattern](../prerequisites/stacks-and-queues.md)

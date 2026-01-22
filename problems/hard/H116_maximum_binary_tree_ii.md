@@ -8,7 +8,7 @@ category: hard
 topics: ["tree", "recursion"]
 patterns: []
 estimated_time_minutes: 45
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Maximum Binary Tree II
 
@@ -180,4 +180,4 @@ You can solve this iteratively by traversing down the right spine until you find
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Tree Patterns](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Tree Patterns](../../prerequisites/trees.md)

@@ -139,4 +139,4 @@ The substring check using s + s is already optimal for most cases. If you want t
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [String Manipulation](../../strategies/data-structures/strings.md)
+**Strategy Reference:** [String Manipulation](../../prerequisites/strings.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E110", "M098", "M102"]
 prerequisites: ["binary-search", "tree-traversal", "complete-binary-tree"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Count Complete Tree Nodes
 
@@ -190,4 +190,4 @@ return (1 << height) - 1
 - Day 14: Solve similar tree structure problems
 - Day 30: Speed solve under 15 minutes
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

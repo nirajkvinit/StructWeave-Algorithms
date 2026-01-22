@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 prerequisites: ["binary-tree", "tree-height", "dfs", "recursion"]
 related_problems: ["E104", "E110", "M124"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Diameter of Binary Tree
 
@@ -189,4 +189,4 @@ Track your progress on mastering this problem:
 **Pattern**: Post-Order Tree Traversal with Global State
 **Key Insight**: At each node, diameter = left_height + right_height. Track maximum across all nodes while computing heights bottom-up.
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

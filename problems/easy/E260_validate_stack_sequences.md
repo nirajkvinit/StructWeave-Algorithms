@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["E020", "E155", "M032"]
 prerequisites: ["stack", "arrays"]
-strategy_ref: ../strategies/data-structures/stacks-and-queues.md
+strategy_ref: ../prerequisites/stacks-and-queues.md
 ---
 # Validate Stack Sequences
 
@@ -174,4 +174,4 @@ Track your progress mastering this problem:
 
 **Spaced Repetition Schedule**: Review on Day 1, Day 3, Day 7, Day 14, Day 30
 
-**Strategy**: See [Stacks and Queues](../strategies/data-structures/stacks-and-queues.md)
+**Strategy**: See [Stacks and Queues](../prerequisites/stacks-and-queues.md)

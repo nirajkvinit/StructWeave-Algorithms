@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: low
 related_problems: ["M037", "M095", "M098"]
 prerequisites: ["binary-search-tree", "recursion", "tree-construction"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Unique Binary Search Trees II
 
@@ -218,4 +218,4 @@ for left_tree in left_trees:
 
 ---
 
-**Strategy**: See [Binary Search Tree Pattern](../../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../../prerequisites/trees.md)

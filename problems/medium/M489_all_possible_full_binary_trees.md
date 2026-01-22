@@ -8,7 +8,7 @@ category: medium
 topics: ["tree"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # All Possible Full Binary Trees
 
@@ -73,7 +73,7 @@ Generating all valid tree structures is fundamental to understanding recursive t
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)
 
 ## Approach Hints
 
@@ -172,4 +172,4 @@ Where C_n ≈ 4^n / (n^(3/2) * sqrt(π)) - exponential but with memoization reus
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Tree Patterns](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Tree Patterns](../../prerequisites/trees.md)

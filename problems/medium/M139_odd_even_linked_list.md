@@ -8,7 +8,7 @@ category: medium
 topics: ["linked-list"]
 patterns: ["two-pointers", "linked-list-rearrangement"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 frequency: high
 related_problems: ["E206", "M024", "M143"]
 prerequisites: ["linked-list-basics", "pointer-manipulation", "in-place-algorithms"]
@@ -268,4 +268,4 @@ return head
 - Fourth review: 2 weeks
 - Fifth review: 1 month
 
-**Strategy**: See [Linked List Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../prerequisites/linked-lists.md)

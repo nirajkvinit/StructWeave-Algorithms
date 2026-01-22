@@ -181,4 +181,4 @@ def kEmptySlots(bulbs, k):
 - [ ] **Variations**: Solve at least 2 related problems
 - [ ] **Final review**: Solve again after 1 week without hints
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/arrays.md)
+**Strategy**: See [Array Pattern](../prerequisites/arrays.md)

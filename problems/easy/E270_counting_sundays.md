@@ -310,4 +310,4 @@ for year in ...:
 
 ---
 
-**Strategy Reference:** See [Modular Arithmetic](../../strategies/fundamentals/number-theory.md) | [Date/Time Algorithms](../../strategies/fundamentals/math-basics.md)
+**Strategy Reference:** See [Modular Arithmetic](../../prerequisites/number-theory.md) | [Date/Time Algorithms](../../strategies/fundamentals/math-basics.md)

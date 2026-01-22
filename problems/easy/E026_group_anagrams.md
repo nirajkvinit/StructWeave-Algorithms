@@ -273,4 +273,4 @@ def groupAnagrams(strings):
 
 ---
 
-**Strategy**: See [Hash Map Grouping](../../strategies/patterns/hash-map-grouping.md) | [String Processing](../../strategies/data-structures/strings.md)
+**Strategy**: See [Hash Map Grouping](../../strategies/patterns/hash-map-grouping.md) | [String Processing](../../prerequisites/strings.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["E044", "E042", "M027"]
 prerequisites: ["tree-traversal", "recursion"]
-strategy_ref: ../../strategies/data-structures/trees.md
+strategy_ref: ../../prerequisites/trees.md
 ---
 # Same Tree
 
@@ -261,4 +261,4 @@ def isSameTree(p, q):
 
 ---
 
-**Strategy**: See [Tree Traversal](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Traversal](../../prerequisites/trees.md)

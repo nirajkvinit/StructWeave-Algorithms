@@ -132,4 +132,4 @@ Handle parentheses recursively or use a separate stack for operators and operand
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Stack Applications](../../strategies/data-structures/stack.md)
+**Strategy Reference:** [Stack Applications](../../prerequisites/stack.md)

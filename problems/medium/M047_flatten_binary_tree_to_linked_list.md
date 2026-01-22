@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M038", "E094", "M114"]
 prerequisites: ["tree-traversal", "preorder", "pointer-manipulation"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Flatten Binary Tree to Linked List
 
@@ -233,4 +233,4 @@ def flatten(root):
 
 ---
 
-**Strategy**: See [Tree Traversal Pattern](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Traversal Pattern](../../prerequisites/trees.md)

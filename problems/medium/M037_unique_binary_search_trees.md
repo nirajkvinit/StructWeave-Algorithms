@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M036", "M095", "M894"]
 prerequisites: ["binary-search-tree", "dynamic-programming", "catalan-numbers"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Unique Binary Search Trees
 
@@ -208,4 +208,4 @@ for i in range(2, n + 1):
 
 ---
 
-**Strategy**: See [Binary Search Tree Pattern](../../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../../prerequisites/trees.md)

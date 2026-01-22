@@ -134,4 +134,4 @@ Use dummy head and tail nodes to simplify edge cases when adding/removing nodes 
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Hash Map + Linked List Pattern](../../strategies/data-structures/linked-lists.md)
+**Strategy Reference:** [Hash Map + Linked List Pattern](../../prerequisites/linked-lists.md)

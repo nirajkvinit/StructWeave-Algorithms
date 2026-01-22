@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E041", "E043", "M028"]
 prerequisites: ["tree-traversal", "recursion", "dfs-bfs"]
-strategy_ref: ../../strategies/data-structures/trees.md
+strategy_ref: ../../prerequisites/trees.md
 ---
 # Maximum Depth of Binary Tree
 
@@ -283,4 +283,4 @@ def maxDepth(root):
 
 ---
 
-**Strategy**: See [Tree Traversal](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Traversal](../../prerequisites/trees.md)

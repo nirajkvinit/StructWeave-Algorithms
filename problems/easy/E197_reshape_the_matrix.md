@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["E118", "M045", "M133"]
 prerequisites: ["2d-arrays", "index-arithmetic", "row-major-order"]
-strategy_ref: ../strategies/data-structures/arrays.md
+strategy_ref: ../prerequisites/arrays.md
 ---
 # Reshape the Matrix
 
@@ -167,4 +167,4 @@ Practice this problem until you can confidently complete these tasks:
 - [ ] Day 14: Explain the index arithmetic formula to someone else
 - [ ] Day 30: Solve a variation (column-major order reshape)
 
-**Strategy**: See [Array Fundamentals](../strategies/data-structures/arrays.md)
+**Strategy**: See [Array Fundamentals](../prerequisites/arrays.md)

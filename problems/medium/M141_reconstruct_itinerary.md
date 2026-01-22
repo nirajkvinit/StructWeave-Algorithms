@@ -264,4 +264,4 @@ def find_itinerary(tickets):
 - Fourth review: 2 weeks
 - Fifth review: 1 month
 
-**Strategy**: See [Graph Traversal Patterns](../strategies/data-structures/graphs.md)
+**Strategy**: See [Graph Traversal Patterns](../prerequisites/graphs.md)

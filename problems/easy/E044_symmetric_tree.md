@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E043", "E041", "M027"]
 prerequisites: ["tree-traversal", "recursion", "mirror-trees"]
-strategy_ref: ../../strategies/data-structures/trees.md
+strategy_ref: ../../prerequisites/trees.md
 ---
 # Symmetric Tree
 
@@ -268,4 +268,4 @@ def isSymmetric(root):
 
 ---
 
-**Strategy**: See [Tree Traversal](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Traversal](../../prerequisites/trees.md)

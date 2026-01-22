@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["E001", "E020", "E028"]
 prerequisites: ["hash-set", "string-manipulation"]
-strategy_ref: ../strategies/data-structures/hash-tables.md
+strategy_ref: ../prerequisites/hash-tables.md
 ---
 # Unique Email Addresses
 
@@ -152,4 +152,4 @@ Track your progress mastering this problem:
 
 **Spaced Repetition Schedule**: Review on Day 1, Day 3, Day 7, Day 14, Day 30
 
-**Strategy**: See [Hash Tables](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Tables](../prerequisites/hash-tables.md)

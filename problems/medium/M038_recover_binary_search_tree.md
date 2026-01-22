@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E026", "M017", "M141"]
 prerequisites: ["binary-search-tree", "inorder-traversal", "morris-traversal"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Recover Binary Search Tree
 
@@ -188,4 +188,4 @@ def inorder(node):
 
 ---
 
-**Strategy**: See [Binary Search Tree Pattern](../../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../../prerequisites/trees.md)

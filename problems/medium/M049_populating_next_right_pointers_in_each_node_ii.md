@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["M048", "E637", "M102"]
 prerequisites: ["binary-tree", "bfs", "linked-list"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Populating Next Right Pointers in Each Node II
 
@@ -195,4 +195,4 @@ for child in [node.left, node.right]:
 
 ---
 
-**Strategy**: See [Tree Traversal Patterns](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Traversal Patterns](../../prerequisites/trees.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: low
 related_problems: ["M261_maximum_depth_of_n_ary_tree", "M427_construct_quad_tree", "E100_same_tree"]
 prerequisites: ["tree-traversal", "recursion", "bitwise-operations"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Logical OR of Two Binary Grids Represented as Quad-Trees
 
@@ -167,4 +167,4 @@ return Node(True, True, None, None, None, None)
 - [ ] **Week 1**: Implement AND operation variation
 - [ ] **Week 2**: Solve from memory in under 25 minutes
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

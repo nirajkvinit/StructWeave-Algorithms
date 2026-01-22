@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E084", "E136", "E217"]
 prerequisites: ["hash-set", "array-traversal"]
-strategy_ref: ../strategies/data-structures/hash-tables.md
+strategy_ref: ../prerequisites/hash-tables.md
 ---
 # Contains Duplicate
 
@@ -190,4 +190,4 @@ def containsDuplicate(nums):
 - [ ] Week 2: Explain when to use each approach
 - [ ] Month 1: Apply hash set pattern to other problems
 
-**Strategy**: See [Hash Table Pattern](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Table Pattern](../prerequisites/hash-tables.md)

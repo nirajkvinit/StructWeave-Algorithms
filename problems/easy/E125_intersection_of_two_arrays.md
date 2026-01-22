@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E001", "E123", "E124"]
 prerequisites: ["arrays", "hash-tables", "sets", "two-pointers"]
-strategy_ref: ../strategies/data-structures/hash-tables.md
+strategy_ref: ../prerequisites/hash-tables.md
 ---
 # Intersection of Two Arrays
 
@@ -135,4 +135,4 @@ Key Mastery Indicators:
 - Handle duplicate values correctly
 - Recognize when to use hash table vs. two pointers
 
-**Strategy**: See [Hash Tables](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Tables](../prerequisites/hash-tables.md)

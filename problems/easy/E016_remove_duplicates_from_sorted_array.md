@@ -282,4 +282,4 @@ def moveZeros(nums):
 
 ---
 
-**Strategy**: See [Two Pointers Pattern](../../strategies/patterns/two-pointers.md) | [Array Manipulation](../../strategies/data-structures/arrays.md)
+**Strategy**: See [Two Pointers Pattern](../../strategies/patterns/two-pointers.md) | [Array Manipulation](../../prerequisites/arrays.md)

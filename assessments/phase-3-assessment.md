@@ -408,7 +408,7 @@ Each problem is scored individually:
 - K-way merge using heap for efficiency
 
 **If you struggled:**
-- Review [Heap Data Structure](../strategies/data-structures/heaps.md)
+- Review [Heap Data Structure](../prerequisites/heaps.md)
 - Practice: Top K, scheduling problems
 - Understand: When heap is better than sorting
 
@@ -654,7 +654,7 @@ Each problem is scored individually:
 
 **Resources:**
 - [Graph Algorithms Guide](../strategies/patterns/graph-traversal.md)
-- [Heap Problems Collection](../strategies/data-structures/heaps.md)
+- [Heap Problems Collection](../prerequisites/heaps.md)
 - [Topological Sort Examples](../strategies/patterns/topological-sort.md)
 - Online courses: Coursera Algorithms, MIT 6.006
 
@@ -753,5 +753,5 @@ Phase 3 represents a significant step up in difficulty. These patterns are power
 - [Phase 4 - Expert Patterns](./phase-4-assessment.md)
 - [All Pattern Guides](../strategies/patterns/README.md)
 - [Graph Traversal Deep Dive](../strategies/patterns/graph-traversal.md)
-- [Heap Patterns Guide](../strategies/data-structures/heaps.md)
+- [Heap Patterns Guide](../prerequisites/heaps.md)
 - [Learning Roadmap](../tracks/roadmap.md)

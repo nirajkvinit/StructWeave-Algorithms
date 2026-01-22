@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["M388", "M385", "E020"]
 prerequisites: ["stacks", "string-splitting"]
-strategy_ref: ../../strategies/data-structures/stack.md
+strategy_ref: ../../prerequisites/stack.md
 ---
 # Simplify Path
 
@@ -202,4 +202,4 @@ return '/' + '/'.join(stack)
 
 ---
 
-**Strategy**: See [Stack](../../strategies/data-structures/stack.md)
+**Strategy**: See [Stack](../../prerequisites/stack.md)

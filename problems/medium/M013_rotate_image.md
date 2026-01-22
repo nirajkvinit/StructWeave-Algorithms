@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M016", "E050", "M054"]
 prerequisites: ["2d-array-basics", "in-place-algorithms"]
-strategy_ref: ../strategies/data-structures/arrays.md
+strategy_ref: ../prerequisites/arrays.md
 ---
 
 # Rotate Image
@@ -454,4 +454,4 @@ def rotateNonSquare(matrix):
 
 ---
 
-**Strategy**: See [Matrix Manipulation Patterns](../../strategies/data-structures/arrays.md)
+**Strategy**: See [Matrix Manipulation Patterns](../../prerequisites/arrays.md)

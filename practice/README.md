@@ -292,9 +292,9 @@ Each practice file includes checkboxes. Track your progress:
 | If You Struggle With... | Review This Strategy |
 |-------------------------|----------------------|
 | Choosing the right approach | [Pattern Decision Flowchart](../strategies/patterns/README.md) |
-| Time complexity analysis | [Time Complexity Guide](../strategies/fundamentals/time-complexity.md) |
+| Time complexity analysis | [Time Complexity Guide](../prerequisites/time-complexity.md) |
 | A specific pattern | Pattern guide in [strategies/patterns/](../strategies/patterns/) |
-| Data structure operations | [Data Structures](../strategies/data-structures/) |
+| Data structure operations | [Data Structures](../prerequisites/) |
 
 ---
 

@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E020", "M071", "M227"]
 prerequisites: ["stack", "array-manipulation", "time-interval-calculation"]
-strategy_ref: ../strategies/data-structures/stack.md
+strategy_ref: ../prerequisites/stack.md
 ---
 # Exclusive Time of Functions
 
@@ -190,4 +190,4 @@ def exclusiveTime(n, logs):
 - [ ] **Review in 1 week**: Solve without hints
 - [ ] **Review in 2 weeks**: Implement inclusive time variation
 
-**Strategy**: See [Stack Pattern](../strategies/data-structures/stack.md)
+**Strategy**: See [Stack Pattern](../prerequisites/stack.md)

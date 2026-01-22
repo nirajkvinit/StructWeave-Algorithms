@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E108", "M098", "M109"]
 prerequisites: ["binary-search-tree", "recursion", "tree-traversal"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Trim a Binary Search Tree
 
@@ -184,4 +184,4 @@ def trimBST(root, low, high):
 - [ ] Practiced again after 1 week
 - [ ] Could explain solution to others
 
-**Strategy**: See [Binary Search Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../prerequisites/trees.md)

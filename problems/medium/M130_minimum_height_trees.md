@@ -8,7 +8,7 @@ category: medium
 topics: ["array", "graph"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/graphs.md
+strategy_ref: ../prerequisites/graphs.md
 frequency: medium
 related_problems: ["M136", "E201", "M130"]
 prerequisites: ["graph-theory", "bfs", "tree-properties", "topological-sort"]
@@ -258,4 +258,4 @@ def findMinHeightTrees(n, edges):
 - [ ] Day 14: Speed test - solve in 20 minutes
 - [ ] Day 30: Solve tree diameter problem
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/graphs.md)
+**Strategy**: See [Array Pattern](../prerequisites/graphs.md)

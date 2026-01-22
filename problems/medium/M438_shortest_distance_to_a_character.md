@@ -129,4 +129,4 @@ Instead of using infinity, you can initialize with a large number like len(s) si
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Array Processing](../../strategies/data-structures/arrays.md)
+**Strategy Reference:** [Array Processing](../../prerequisites/arrays.md)

@@ -126,4 +126,4 @@ Use a set to store "banned" numbers (those appearing on both sides of the same c
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Set Operations](../../strategies/data-structures/hash-table.md)
+**Strategy Reference:** [Set Operations](../../prerequisites/hash-table.md)

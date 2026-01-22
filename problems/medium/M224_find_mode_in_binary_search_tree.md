@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E098", "M230", "M173"]
 prerequisites: ["bst-properties", "inorder-traversal", "tree-traversal"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Find Mode in Binary Search Tree
 
@@ -298,4 +298,4 @@ def findMode(root):
 
 **Completion Status**: ⬜ Not Started | 🟨 In Progress | ✅ Mastered
 
-**Strategy**: See [Binary Search Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../prerequisites/trees.md)

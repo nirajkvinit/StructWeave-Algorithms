@@ -24,7 +24,7 @@ prerequisites:
   - String Manipulation
   - Hash Maps
   - Design Patterns
-strategy_ref: ../strategies/data-structures/trie.md
+strategy_ref: ../prerequisites/trie.md
 ---
 # Prefix and Suffix Search
 
@@ -222,4 +222,4 @@ def f(self, pref, suff):
 - [ ] Can explain space-time tradeoffs
 - [ ] Attempted wildcard variation
 
-**Strategy**: See [Trie Pattern](../strategies/data-structures/trie.md)
+**Strategy**: See [Trie Pattern](../prerequisites/trie.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["E290", "E242", "E205"]
 prerequisites: ["hash-map", "string-traversal"]
-strategy_ref: ../strategies/data-structures/hash-tables.md
+strategy_ref: ../prerequisites/hash-tables.md
 ---
 # Isomorphic Strings
 
@@ -224,4 +224,4 @@ def isIsomorphic(s, t):
 - [ ] Week 2: Explain bijective mapping concept clearly
 - [ ] Month 1: Apply to more complex pattern matching problems
 
-**Strategy**: See [Hash Table Pattern](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Table Pattern](../prerequisites/hash-tables.md)

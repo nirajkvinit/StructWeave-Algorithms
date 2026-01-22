@@ -8,7 +8,7 @@ category: hard
 topics: ["array", "string", "binary-search-tree"]
 patterns: ["inorder-traversal"]
 estimated_time_minutes: 45
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Minimum Unique Word Abbreviation
 

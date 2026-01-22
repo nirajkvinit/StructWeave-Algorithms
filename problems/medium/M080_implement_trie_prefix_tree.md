@@ -8,7 +8,7 @@ category: medium
 topics: ["trie"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/tries.md
+strategy_ref: ../prerequisites/tries.md
 frequency: high
 related_problems: ["M083", "M211", "M212"]
 prerequisites: ["tree-data-structures", "hash-tables", "object-oriented-design"]
@@ -222,4 +222,4 @@ class TrieNode:
 - [ ] Day 14: Solve "Add and Search Word" using trie with wildcards
 - [ ] Day 30: Implement additional methods (delete, countWords, countPrefixes)
 
-**Strategy**: See [Trie Pattern](../strategies/data-structures/tries.md)
+**Strategy**: See [Trie Pattern](../prerequisites/tries.md)

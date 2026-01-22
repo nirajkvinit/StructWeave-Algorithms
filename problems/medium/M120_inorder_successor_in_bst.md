@@ -8,7 +8,7 @@ category: medium
 topics: ["tree", "binary-search-tree", "binary-search"]
 patterns: ["inorder-traversal"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 frequency: high
 related_problems: ["M118", "E258", "M127"]
 prerequisites: ["binary-search-tree", "inorder-traversal", "tree-properties"]
@@ -266,4 +266,4 @@ def inorderSuccessor(root, p):
 - [ ] **Week 2**: Explain BST property approach to someone else
 - [ ] **Month 1**: Solve successor in regular binary tree
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

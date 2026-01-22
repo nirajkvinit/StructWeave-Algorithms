@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E232", "E622", "M641"]
 prerequisites: ["E232", "E622"]
-strategy_ref: ../strategies/data-structures/stacks-and-queues.md
+strategy_ref: ../prerequisites/stacks-and-queues.md
 ---
 # Design Circular Deque
 
@@ -200,4 +200,4 @@ Track your progress mastering this problem:
 - [ ] Review after 1 week: Implement without looking at notes
 - [ ] Review after 1 month: Solve the dynamic resizing variation
 
-**Strategy**: See [Queue Pattern](../strategies/data-structures/stacks-and-queues.md)
+**Strategy**: See [Queue Pattern](../prerequisites/stacks-and-queues.md)

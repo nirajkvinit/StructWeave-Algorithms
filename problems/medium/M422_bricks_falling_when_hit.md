@@ -159,4 +159,4 @@ Use Union-Find with path compression and union by rank for near O(1) operations.
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Union-Find](../../strategies/data-structures/union-find.md)
+**Strategy Reference:** [Union-Find](../../prerequisites/union-find.md)

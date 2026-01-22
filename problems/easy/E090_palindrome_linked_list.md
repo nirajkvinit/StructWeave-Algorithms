@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E091", "E092", "E095"]
 prerequisites: ["linked-list-traversal", "two-pointers", "linked-list-reversal"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Palindrome Linked List
 
@@ -213,4 +213,4 @@ def isPalindrome(head):
 - [ ] **Day 14:** Handle all edge cases in under 20 minutes
 - [ ] **Day 30:** Solve "Longest Palindromic Substring" variation
 
-**Strategy**: See [String Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [String Pattern](../prerequisites/linked-lists.md)

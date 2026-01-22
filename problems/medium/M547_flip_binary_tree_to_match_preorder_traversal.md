@@ -8,7 +8,7 @@ category: medium
 topics: ["tree", "two-pointers"]
 patterns: ["preorder-traversal"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Flip Binary Tree To Match Preorder Traversal
 
@@ -68,7 +68,7 @@ Tree manipulation with structural constraints appears throughout software engine
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)
 
 ## Approach Hints
 
@@ -167,4 +167,4 @@ Use a list to store flipped nodes and a global/nonlocal index variable to track 
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Trees](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Trees](../../prerequisites/trees.md)

@@ -166,4 +166,4 @@ To avoid duplicate work, iterate through pairs where point1 comes before point2 
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Hash Set Pattern](../../strategies/data-structures/hash-tables.md)
+**Strategy Reference:** [Hash Set Pattern](../../prerequisites/hash-tables.md)

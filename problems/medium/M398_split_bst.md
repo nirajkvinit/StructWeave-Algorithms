@@ -8,7 +8,7 @@ category: medium
 topics: ["array", "binary-search-tree", "binary-search"]
 patterns: ["inorder-traversal"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Split BST
 
@@ -46,7 +46,7 @@ This problem teaches advanced tree manipulation techniques essential for buildin
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Array Pattern](../prerequisites/trees.md)
 
 ## Approach Hints
 
@@ -132,4 +132,4 @@ The recursive solution is already optimal with O(n) time complexity since you vi
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Binary Search Trees](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Binary Search Trees](../../prerequisites/trees.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["E001", "E032", "M128"]
 prerequisites: ["hash-maps", "frequency-counting", "array-traversal"]
-strategy_ref: ../strategies/data-structures/hash-tables.md
+strategy_ref: ../prerequisites/hash-tables.md
 ---
 # Longest Harmonious Subsequence
 
@@ -157,4 +157,4 @@ Practice this problem until you can confidently complete these tasks:
 - [ ] Day 14: Explain why order doesn't matter for subsequences
 - [ ] Day 30: Solve a variation (harmonious with difference k)
 
-**Strategy**: See [Hash Table Patterns](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Table Patterns](../prerequisites/hash-tables.md)

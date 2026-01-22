@@ -413,7 +413,7 @@ After mastering these warmups:
 - Pattern-Specific Drills (pattern-drills/)
 
 **Strategy References:**
-- [Arrays and Strings](../../strategies/data-structures/arrays-and-strings.md)
-- [Hash Tables](../../strategies/data-structures/hash-tables.md)
+- [Arrays and Strings](../../prerequisites/arrays-and-strings.md)
+- [Hash Tables](../../prerequisites/hash-tables.md)
 - [Binary Search](../../strategies/patterns/binary-search.md)
 - [Two Pointers](../../strategies/patterns/two-pointers.md)

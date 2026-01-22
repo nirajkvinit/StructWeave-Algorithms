@@ -8,7 +8,7 @@ category: medium
 topics: ["tree"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Univalued Binary Tree
 
@@ -159,4 +159,4 @@ Early termination: as soon as you find any node with a different value, return f
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Tree Traversal](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Tree Traversal](../../prerequisites/trees.md)

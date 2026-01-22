@@ -169,4 +169,4 @@ Instead of maintaining a max heap of size k, you can use Python's heapq.nsmalles
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Heap](../../strategies/data-structures/heap.md)
+**Strategy Reference:** [Heap](../../prerequisites/heap.md)

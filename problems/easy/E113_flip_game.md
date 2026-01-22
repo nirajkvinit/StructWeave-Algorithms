@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: low
 related_problems: ["M294", "M293", "E344"]
 prerequisites: ["string-manipulation", "list-generation", "iteration"]
-strategy_ref: ../strategies/data-structures/string.md
+strategy_ref: ../prerequisites/string.md
 ---
 # Flip Game
 
@@ -202,4 +202,4 @@ Loop should go to `len(currentState) - 1` since we're checking pairs.
 - [ ] Review after 1 week
 - [ ] Try Flip Game II for game theory practice
 
-**Strategy**: See [String Manipulation](../strategies/data-structures/string.md)
+**Strategy**: See [String Manipulation](../prerequisites/string.md)

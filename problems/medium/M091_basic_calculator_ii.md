@@ -174,4 +174,4 @@ if char in '+-*/' or i == len(s) - 1:
 - Day 14: Optimize space or implement two-pointer version
 - Day 30: Speed solve under 20 minutes
 
-**Strategy**: See [Stack Pattern](../strategies/data-structures/stacks.md)
+**Strategy**: See [Stack Pattern](../prerequisites/stacks.md)

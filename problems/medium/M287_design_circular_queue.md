@@ -8,7 +8,7 @@ category: medium
 topics: ["queue", "design", "array"]
 patterns: ["circular-buffer", "modular-arithmetic"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/stacks-and-queues.md
+strategy_ref: ../prerequisites/stacks-and-queues.md
 frequency: medium
 related_problems:
   - id: E232
@@ -266,4 +266,4 @@ Track your progress on mastering this problem:
 
 **Mastery Goal**: Solve in < 20 minutes with bug-free implementation.
 
-**Strategy**: See [Queue Pattern](../strategies/data-structures/stacks-and-queues.md)
+**Strategy**: See [Queue Pattern](../prerequisites/stacks-and-queues.md)

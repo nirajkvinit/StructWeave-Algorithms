@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E112", "M113", "M257"]
 prerequisites: ["binary-tree", "dfs", "recursion"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Sum Root to Leaf Numbers
 
@@ -198,4 +198,4 @@ def sumNumbers(root):
 
 ---
 
-**Strategy**: See [Tree DFS Patterns](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree DFS Patterns](../../prerequisites/trees.md)

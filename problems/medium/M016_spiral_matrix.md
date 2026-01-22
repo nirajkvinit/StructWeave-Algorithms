@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M013", "M059", "E118"]
 prerequisites: ["2d-array-basics", "boundary-tracking"]
-strategy_ref: ../strategies/data-structures/arrays.md
+strategy_ref: ../prerequisites/arrays.md
 ---
 
 # Spiral Matrix
@@ -552,4 +552,4 @@ def zigzagOrder(matrix):
 
 ---
 
-**Strategy**: See [Matrix Traversal Patterns](../../strategies/data-structures/arrays.md)
+**Strategy**: See [Matrix Traversal Patterns](../../prerequisites/arrays.md)

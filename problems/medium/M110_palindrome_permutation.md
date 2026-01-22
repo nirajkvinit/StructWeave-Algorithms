@@ -179,4 +179,4 @@ def canPermutePalindrome(s):
 - [ ] **Day 14**: Extend to handle Unicode characters (20 min)
 - [ ] **Day 30**: Speed run under time pressure (10 min)
 
-**Strategy**: See [Hash Table Patterns](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Table Patterns](../prerequisites/hash-tables.md)

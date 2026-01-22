@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: low
 related_problems: ["M030", "M028", "E001"]
 prerequisites: ["linked-list-traversal", "pointer-manipulation"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Remove Duplicates from Sorted List
 
@@ -164,4 +164,4 @@ while current and current.next:
 
 ---
 
-**Strategy**: See [Linked List Pattern](../../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../../prerequisites/linked-lists.md)

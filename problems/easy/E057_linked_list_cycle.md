@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["M142", "E160", "E234"]
 prerequisites: ["linked-list-basics", "two-pointers"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Linked List Cycle
 
@@ -205,4 +205,4 @@ if slow == fast:
 
 ---
 
-**Strategy**: See [Linked List Pattern](../../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../../prerequisites/linked-lists.md)

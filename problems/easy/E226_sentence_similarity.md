@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 prerequisites: ["hash-table", "array-traversal"]
 related_problems: ["E001", "E229", "M001"]
-strategy_ref: ../strategies/data-structures/hash-table.md
+strategy_ref: ../prerequisites/hash-table.md
 ---
 # Sentence Similarity
 
@@ -159,4 +159,4 @@ for i in range(len(s1)):
 - [ ] Review after 1 week
 - [ ] Can explain approach to someone else
 
-**Strategy**: See [Hash Table Patterns](../strategies/data-structures/hash-table.md)
+**Strategy**: See [Hash Table Patterns](../prerequisites/hash-table.md)

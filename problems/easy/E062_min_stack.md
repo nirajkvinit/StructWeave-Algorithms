@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["M716", "H895", "E232"]
 prerequisites: ["stack-basics", "data-structure-design"]
-strategy_ref: ../strategies/data-structures/stack.md
+strategy_ref: ../prerequisites/stack.md
 ---
 # Min Stack
 
@@ -243,4 +243,4 @@ def pop(self):
 
 ---
 
-**Strategy**: See [Stack Pattern](../../strategies/data-structures/stack.md)
+**Strategy**: See [Stack Pattern](../../prerequisites/stack.md)

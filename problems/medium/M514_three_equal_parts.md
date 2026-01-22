@@ -162,4 +162,4 @@ The trailing zeros after the last 1 must appear in all three parts. Use this to 
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Arrays](../../strategies/data-structures/arrays.md)
+**Strategy Reference:** [Arrays](../../prerequisites/arrays.md)

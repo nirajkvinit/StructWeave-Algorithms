@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M044", "E021", "M002"]
 prerequisites: ["linked-list", "two-pointers", "recursion", "bst-properties"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Convert Sorted List to Binary Search Tree
 
@@ -214,4 +214,4 @@ def sortedListToBST(head):
 
 ---
 
-**Strategy**: See [Linked List Pattern](../../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../../prerequisites/linked-lists.md)

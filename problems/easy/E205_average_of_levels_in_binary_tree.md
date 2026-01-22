@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E102", "E107", "M199"]
 prerequisites: ["binary-trees", "bfs", "queue-data-structure"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Average of Levels in Binary Tree
 
@@ -148,4 +148,4 @@ Practice this problem until you can confidently complete these tasks:
 - [ ] Day 14: Explain difference between BFS and DFS for this problem
 - [ ] Day 30: Solve a variation (level with max average)
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

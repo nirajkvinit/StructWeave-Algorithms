@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: low
 related_problems: ["M427", "M558", "E104"]
 prerequisites: ["recursion", "divide-and-conquer", "tree-construction"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Construct Quad Tree
 
@@ -192,4 +192,4 @@ def construct_correct(grid, row, col, size):
 - [ ] Day 14: Solve Quad Tree Intersection problem (M558) (40 min)
 - [ ] Day 30: Explain when quad-trees are useful in practice (10 min)
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

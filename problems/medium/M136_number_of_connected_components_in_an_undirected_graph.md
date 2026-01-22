@@ -8,7 +8,7 @@ category: medium
 topics: ["graph", "union-find"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/graphs.md
+strategy_ref: ../prerequisites/graphs.md
 frequency: high
 related_problems: ["M130", "M200", "E547"]
 prerequisites: ["union-find", "dfs", "bfs", "graph-theory"]
@@ -294,4 +294,4 @@ def countComponents(n, edges):
 - [ ] Day 14: Speed test - solve in 15 minutes
 - [ ] Day 30: Implement with path compression and union by rank
 
-**Strategy**: See [Graph Pattern](../strategies/data-structures/graphs.md)
+**Strategy**: See [Graph Pattern](../prerequisites/graphs.md)

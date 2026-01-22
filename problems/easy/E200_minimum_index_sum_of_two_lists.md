@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: low
 related_problems: ["E001", "E088", "M350"]
 prerequisites: ["hash-maps", "array-indexing", "string-comparison"]
-strategy_ref: ../strategies/data-structures/hash-tables.md
+strategy_ref: ../prerequisites/hash-tables.md
 ---
 # Minimum Index Sum of Two Lists
 
@@ -177,4 +177,4 @@ Practice this problem until you can confidently complete these tasks:
 - [ ] Day 14: Explain the difference from Two Sum problem
 - [ ] Day 30: Solve a variation (three lists intersection)
 
-**Strategy**: See [Hash Table Patterns](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Table Patterns](../prerequisites/hash-tables.md)

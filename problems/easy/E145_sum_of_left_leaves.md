@@ -17,7 +17,7 @@ prerequisites:
   - binary tree basics
   - DFS/BFS traversal
   - leaf node identification
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Sum of Left Leaves
 
@@ -169,4 +169,4 @@ Track your progress on this problem:
 - [ ] After 1 week: Solved in < 10 minutes
 - [ ] Explained leaf identification logic to someone
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

@@ -8,7 +8,7 @@ category: medium
 topics: ["array", "graph"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/graphs.md
+strategy_ref: ../prerequisites/graphs.md
 ---
 # Reachable Nodes In Subdivided Graph
 
@@ -76,7 +76,7 @@ This problem mirrors real-world network engineering challenges. Consider a telec
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/graphs.md)
+**Strategy**: See [Array Pattern](../prerequisites/graphs.md)
 
 ## Approach Hints
 
@@ -161,4 +161,4 @@ Use a priority queue for Dijkstra's algorithm to efficiently get the next closes
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Graphs - Dijkstra's Algorithm](../../strategies/data-structures/graphs.md)
+**Strategy Reference:** [Graphs - Dijkstra's Algorithm](../../prerequisites/graphs.md)

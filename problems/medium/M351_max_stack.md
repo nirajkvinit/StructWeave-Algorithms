@@ -197,4 +197,4 @@ class MaxStack:
 - [ ] Handled duplicates correctly
 - [ ] Tested popMax with multiple identical max values
 
-**Strategy**: See [Data Structure Design](../strategies/data-structures/advanced-structures.md)
+**Strategy**: See [Data Structure Design](../prerequisites/advanced-structures.md)

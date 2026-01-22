@@ -296,9 +296,9 @@ Based on your score, we recommend:
 - **Recommendation:** Start with fundamentals review
 - **Focus:** Data structures basics and time/space complexity
 - **Resources:**
-  - [Fundamentals Guide](../strategies/fundamentals/README.md)
-  - [Time Complexity](../strategies/fundamentals/time-complexity.md)
-  - [Space Complexity](../strategies/fundamentals/space-complexity.md)
+  - [Prerequisites](../prerequisites/)
+  - [Time Complexity](../prerequisites/time-complexity.md)
+  - [Space Complexity](../prerequisites/space-complexity.md)
 - **Next:** Retake Entry Assessment in 2 weeks
 
 ---

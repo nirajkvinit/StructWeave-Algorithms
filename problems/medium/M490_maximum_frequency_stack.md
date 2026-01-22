@@ -133,4 +133,4 @@ Where n = total number of elements pushed
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Stack Patterns](../../strategies/data-structures/stacks-queues.md)
+**Strategy Reference:** [Stack Patterns](../../prerequisites/stacks-queues.md)

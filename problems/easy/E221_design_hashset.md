@@ -17,7 +17,7 @@ prerequisites:
   - Hash function concepts
   - Collision resolution
   - Array/List operations
-strategy_ref: ../strategies/data-structures/hash-tables.md
+strategy_ref: ../prerequisites/hash-tables.md
 ---
 # Design HashSet
 
@@ -186,4 +186,4 @@ Track your progress on mastering this problem:
 - [ ] Solve in under 10 minutes
 - [ ] Implement without referring to notes
 
-**Strategy**: See [Hash Table Pattern](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Table Pattern](../prerequisites/hash-tables.md)

@@ -762,7 +762,7 @@ These skills improve with practice. Apply them to coding problems, work projects
 ### Next Steps
 
 1. Practice these concepts on small problems daily
-2. Learn [Big O Introduction](./big-o-introduction.md) to evaluate algorithm efficiency
+2. Learn [Time Complexity](./time-complexity.md) to evaluate algorithm efficiency
 3. Study [Debugging Strategies](./debugging-strategies.md) to apply these skills systematically
 4. Review [Programming Basics](./programming-basics.md) if needed
 5. Start solving [Easy Problems](../problems/easy/) using this framework

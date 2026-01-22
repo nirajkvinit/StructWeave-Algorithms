@@ -9,20 +9,21 @@ This directory contains everything you need to understand *how* algorithms work 
 ## Learning Path
 
 ```
-┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
-│  FUNDAMENTALS   │────▶│  DATA STRUCTURES │────▶│    PATTERNS     │
-│                 │     │                  │     │                 │
-│ • Time/Space    │     │ • Arrays/Strings │     │ • Two Pointers  │
-│ • Number Theory │     │ • Trees/Graphs   │     │ • Sliding Window│
-│ • Probability   │     │ • Heaps/Tries    │     │ • DP/Greedy     │
-└─────────────────┘     └──────────────────┘     └─────────────────┘
-     Week 1                  Weeks 2-3               Weeks 4-8
+┌───────────────────────────────────┐     ┌─────────────────┐
+│         PREREQUISITES             │────▶│    PATTERNS     │
+│                                   │     │                 │
+│ • Time/Space Complexity           │     │ • Two Pointers  │
+│ • Number Theory                   │     │ • Sliding Window│
+│ • Data Structures (Arrays, Trees) │     │ • DP/Greedy     │
+│                                   │     │                 │
+│ (see ../prerequisites/)           │     │ (this directory)│
+└───────────────────────────────────┘     └─────────────────┘
+         Weeks 1-3                             Weeks 4-8
 ```
 
 **Recommended order:**
-1. Start with **Fundamentals** to understand complexity analysis
-2. Review **Data Structures** you'll use most (arrays, hash tables, trees)
-3. Dive into **Patterns** — this is where the magic happens
+1. Start with **[Prerequisites](../prerequisites/)** to understand complexity analysis, math fundamentals, and data structures
+2. Dive into **Patterns** — this is where the problem-solving magic happens
 
 ---
 
@@ -30,31 +31,25 @@ This directory contains everything you need to understand *how* algorithms work 
 
 ### 📐 Fundamentals (`fundamentals/`)
 
-Core concepts every developer must master before tackling algorithms.
+Specialized intermediate topics. For foundational concepts (time/space complexity, number theory), see **[Prerequisites](../prerequisites/)**.
 
 | Guide | Description | Time |
 |-------|-------------|------|
-| [Time Complexity](fundamentals/time-complexity.md) | Big-O notation, common complexities, how to analyze code | 30 min |
-| [Space Complexity](fundamentals/space-complexity.md) | Memory analysis, auxiliary vs input space, trade-offs | 25 min |
 | [Probability](fundamentals/probability.md) | Randomized algorithms, expected value, Monte Carlo methods | 35 min |
-| [Number Theory](fundamentals/number-theory.md) | GCD, LCM, primes, modular arithmetic, divisor functions | 45 min |
 
 ---
 
-### 🗃️ Data Structures (`data-structures/`)
+### 🗃️ Data Structures
 
-Deep dives into each data structure with operations, use cases, and implementation tips.
-
-| Guide | Key Operations | When to Use |
-|-------|----------------|-------------|
-| [Arrays & Strings](data-structures/arrays-and-strings.md) | Index, slice, search | Sequential data, text processing |
-| [Hash Tables](data-structures/hash-tables.md) | O(1) lookup, insert | Fast lookups, counting, deduplication |
-| [Linked Lists](data-structures/linked-lists.md) | Insert, delete, traverse | Dynamic size, frequent insertions |
-| [Stacks & Queues](data-structures/stacks-and-queues.md) | Push, pop, peek | LIFO/FIFO processing, parsing |
-| [Trees](data-structures/trees.md) | Traverse, search, insert | Hierarchical data, BST operations |
-| [Heaps](data-structures/heaps.md) | Insert, extract-min/max | Priority queues, top-K problems |
-| [Graphs](data-structures/graphs.md) | BFS, DFS, shortest path | Networks, relationships, dependencies |
-| [Tries](data-structures/tries.md) | Insert, search, prefix | Autocomplete, spell check, IP routing |
+Data structure guides have moved to **[Prerequisites](../prerequisites/)**. See:
+- [Arrays & Strings](../prerequisites/arrays-and-strings.md)
+- [Hash Tables](../prerequisites/hash-tables.md)
+- [Linked Lists](../prerequisites/linked-lists.md)
+- [Stacks & Queues](../prerequisites/stacks-and-queues.md)
+- [Trees](../prerequisites/trees.md)
+- [Heaps](../prerequisites/heaps.md)
+- [Graphs](../prerequisites/graphs.md)
+- [Tries](../prerequisites/tries.md)
 
 ---
 
@@ -74,7 +69,7 @@ The 17+ algorithmic patterns that solve 90% of coding problems. Each guide inclu
 | Sliding Window | Contiguous subarray/substring | [sliding-window.md](patterns/sliding-window.md) |
 | Binary Search | Sorted data, monotonic function | [binary-search.md](patterns/binary-search.md) |
 | Prefix Sum | Range sum queries | [prefix-sum.md](patterns/prefix-sum.md) |
-| Hash Map | O(1) lookup needed | [See hash-tables](data-structures/hash-tables.md) |
+| Hash Map | O(1) lookup needed | [See hash-tables](../prerequisites/hash-tables.md) |
 
 #### Intermediate Patterns
 
@@ -115,14 +110,14 @@ The 17+ algorithmic patterns that solve 90% of coding problems. Each guide inclu
 ## Recommended Reading Order
 
 ### For Beginners (Weeks 1-4)
-1. `fundamentals/time-complexity.md` — Understand Big-O first
-2. `data-structures/arrays-and-strings.md` — Most common structure
-3. `data-structures/hash-tables.md` — Essential for O(1) lookups
+1. `../prerequisites/time-complexity.md` — Understand Big-O first
+2. `../prerequisites/arrays-and-strings.md` — Most common structure
+3. `../prerequisites/hash-tables.md` — Essential for O(1) lookups
 4. `patterns/two-pointers.md` — Your first pattern
 5. `patterns/sliding-window.md` — Builds on two pointers
 
 ### For Intermediate (Weeks 5-8)
-1. `data-structures/trees.md` + `patterns/graph-traversal.md`
+1. `../prerequisites/trees.md` + `patterns/graph-traversal.md`
 2. `patterns/binary-search.md` — Beyond simple search
 3. `patterns/dynamic-programming.md` — The big one
 4. `patterns/backtracking.md` — Generate all possibilities
@@ -151,15 +146,16 @@ Each pattern guide links to practice problems. For structured practice:
 
 ## Quick Reference
 
-**Total Guides:** 34 files across 3 categories
+**Total Guides:** 23 files across 2 categories
 
 | Category | Files | Focus |
 |----------|-------|-------|
-| Fundamentals | 4 | Complexity analysis, probability, number theory |
-| Data Structures | 8 | Core structures and operations |
+| Fundamentals | 1 | Probability and randomized algorithms |
 | Patterns | 22 | Algorithmic techniques |
 
-**Estimated Study Time:** 40-60 hours for complete coverage
+**Note:** Time/space complexity, number theory, and all data structures have moved to [Prerequisites](../prerequisites/).
+
+**Estimated Study Time:** 25-40 hours for pattern coverage
 
 ---
 

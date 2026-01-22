@@ -8,7 +8,7 @@ category: hard
 topics: ["tree"]
 patterns: []
 estimated_time_minutes: 45
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Binary Tree Longest Consecutive Sequence II
 
@@ -79,7 +79,7 @@ Tree problems develop recursive thinking and hierarchical data navigation. Maste
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)
 
 ## Approach Hints
 
@@ -172,4 +172,4 @@ Return a tuple (ascending_length, descending_length) from each recursive call. A
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Tree Patterns](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Tree Patterns](../../prerequisites/trees.md)

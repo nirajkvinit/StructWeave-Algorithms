@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M285", "M230", "E094"]
 prerequisites: ["bst-properties", "inorder-traversal", "parent-pointers"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Inorder Successor in BST II
 
@@ -236,4 +236,4 @@ def inorderSuccessor(node):
 
 **Completion Status**: ⬜ Not Started | 🟨 In Progress | ✅ Mastered
 
-**Strategy**: See [Binary Search Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../prerequisites/trees.md)

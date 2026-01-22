@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: low
 related_problems: ["M394", "E020", "M227"]
 prerequisites: ["stack", "recursion", "string-parsing"]
-strategy_ref: ../strategies/data-structures/stack.md
+strategy_ref: ../prerequisites/stack.md
 ---
 # Mini Parser
 
@@ -177,4 +177,4 @@ Track your progress and spaced repetition:
 - [ ] Revisit after 1 week
 - [ ] Can explain parsing strategy clearly
 
-**Strategy Guide:** For pattern recognition and detailed techniques, see [Stack Pattern](../strategies/data-structures/stack.md)
+**Strategy Guide:** For pattern recognition and detailed techniques, see [Stack Pattern](../prerequisites/stack.md)

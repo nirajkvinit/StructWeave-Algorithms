@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: low
 related_problems: ["E228", "M056", "M057"]
 prerequisites: ["arrays", "iteration"]
-strategy_ref: ../strategies/data-structures/arrays.md
+strategy_ref: ../prerequisites/arrays.md
 ---
 # Missing Ranges
 
@@ -206,4 +206,4 @@ if nums[i+1] - nums[i] > 1:
 
 ---
 
-**Strategy**: See [Array Fundamentals](../../strategies/data-structures/arrays.md)
+**Strategy**: See [Array Fundamentals](../../prerequisites/arrays.md)

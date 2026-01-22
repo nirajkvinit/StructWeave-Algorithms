@@ -246,4 +246,4 @@ def getImportance(employees, id):
 - [ ] **Variations**: Solve similar graph traversal problems
 - [ ] **Final review**: Solve again after 1 week without hints
 
-**Strategy**: See [Graph Traversal Pattern](../strategies/data-structures/graphs.md)
+**Strategy**: See [Graph Traversal Pattern](../prerequisites/graphs.md)

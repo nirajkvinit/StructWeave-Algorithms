@@ -221,4 +221,4 @@ class WordDictionary:
 - [ ] Day 14: Extend to support '*' wildcard (matches zero or more chars)
 - [ ] Day 30: Optimize by pruning impossible branches early
 
-**Strategy**: See [Trie with Backtracking Pattern](../strategies/data-structures/tries.md)
+**Strategy**: See [Trie with Backtracking Pattern](../prerequisites/tries.md)

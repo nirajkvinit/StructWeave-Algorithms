@@ -23,7 +23,7 @@ prerequisites:
   - Union-Find data structure
   - Graph traversal (DFS/BFS)
   - Tree properties
-strategy_ref: ../strategies/data-structures/graphs.md
+strategy_ref: ../prerequisites/graphs.md
 ---
 # Redundant Connection
 
@@ -200,4 +200,4 @@ def findRedundantConnection(edges):
 - [ ] **Variations**: Solve Redundant Connection II (directed version)
 - [ ] **Final review**: Solve again after 1 week without hints
 
-**Strategy**: See [Graph Pattern](../strategies/data-structures/graphs.md)
+**Strategy**: See [Graph Pattern](../prerequisites/graphs.md)

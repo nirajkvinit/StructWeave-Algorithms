@@ -8,7 +8,7 @@ category: medium
 topics: ["heap", "matrix", "sorting"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/heaps.md
+strategy_ref: ../prerequisites/heaps.md
 frequency: high
 related_problems: ["E378", "M373", "M668"]
 prerequisites: ["min-heap", "binary-search", "matrix-traversal"]
@@ -199,4 +199,4 @@ def countLessEqual(matrix, target):
 - [ ] Attempted again after 1 week
 - [ ] Attempted again after 2 weeks
 
-**Strategy**: See [Heap Pattern](../strategies/data-structures/heaps.md)
+**Strategy**: See [Heap Pattern](../prerequisites/heaps.md)

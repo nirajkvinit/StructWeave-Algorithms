@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M168", "M210", "E001"]
 prerequisites: ["linked-lists", "randomization", "probability"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Linked List Random Node
 
@@ -210,4 +210,4 @@ def getRandom(self):
 - [ ] Practice after 3 days
 - [ ] Practice after 1 week
 
-**Strategy**: See [Linked List Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../prerequisites/linked-lists.md)

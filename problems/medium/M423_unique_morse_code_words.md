@@ -139,4 +139,4 @@ Use a list for the Morse code lookup (indexed by ord(char) - ord('a')) rather th
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Hash Table](../../strategies/data-structures/hash-tables.md)
+**Strategy Reference:** [Hash Table](../../prerequisites/hash-tables.md)

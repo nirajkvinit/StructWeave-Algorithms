@@ -20,7 +20,7 @@ prerequisites:
   - Binary tree traversal
   - Recursive problem solving
   - Post-order traversal
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Longest Univalue Path
 
@@ -230,4 +230,4 @@ def longestUnivaluePath(root):
 - [ ] **Variations**: Solve Binary Tree Maximum Path Sum
 - [ ] **Final review**: Solve again after 1 week without hints
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

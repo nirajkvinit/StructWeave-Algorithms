@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["M208", "M211", "M677", "M642"]
 prerequisites: ["M208", "E703"]
-strategy_ref: ../strategies/data-structures/tries.md
+strategy_ref: ../prerequisites/tries.md
 ---
 # Design Search Autocomplete System
 
@@ -201,4 +201,4 @@ Track your progress mastering this problem:
 - [ ] Review after 1 week: Implement without looking at notes
 - [ ] Review after 1 month: Solve the typo-tolerant variation
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/tries.md)
+**Strategy**: See [Array Pattern](../prerequisites/tries.md)

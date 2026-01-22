@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["M113", "E700", "M230"]
 prerequisites: ["binary-search-tree", "tree-traversal", "binary-search"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Closest Binary Search Tree Value
 
@@ -205,4 +205,4 @@ def closestValue(root, target):
 - [ ] **Day 14**: Handle tie-breaking with custom comparator (20 min)
 - [ ] **Day 30**: Speed run under time pressure (10 min)
 
-**Strategy**: See [Binary Search Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../prerequisites/trees.md)

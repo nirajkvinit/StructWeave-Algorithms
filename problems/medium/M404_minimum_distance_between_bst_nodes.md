@@ -8,7 +8,7 @@ category: medium
 topics: ["binary-search-tree", "binary-search"]
 patterns: ["inorder-traversal"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Minimum Distance Between BST Nodes
 
@@ -84,7 +84,7 @@ In technical interviews, this problem tests whether you understand tree traversa
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [Binary Search Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../prerequisites/trees.md)
 
 ## Approach Hints
 
@@ -195,4 +195,4 @@ You can do this iteratively using a stack to avoid recursion overhead, or use Mo
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Binary Search Trees](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Binary Search Trees](../../prerequisites/trees.md)

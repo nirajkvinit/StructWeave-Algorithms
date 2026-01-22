@@ -8,7 +8,7 @@ category: medium
 topics: ["array", "linked-list"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Car Fleet
 

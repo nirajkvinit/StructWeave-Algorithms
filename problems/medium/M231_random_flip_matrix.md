@@ -16,7 +16,7 @@ related_problems:
 prerequisites:
   - E217_contains_duplicate
   - M054_spiral_matrix
-strategy_ref: ../strategies/data-structures/hash-tables.md
+strategy_ref: ../prerequisites/hash-tables.md
 ---
 # Random Flip Matrix
 
@@ -232,4 +232,4 @@ class Solution:
 - [ ] Solve without looking at notes (Day 14)
 - [ ] Teach the solution to someone else (Day 30)
 
-**Strategy**: See [Hash Tables Pattern](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Tables Pattern](../prerequisites/hash-tables.md)

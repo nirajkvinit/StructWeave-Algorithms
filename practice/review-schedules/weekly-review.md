@@ -228,7 +228,7 @@ Connect the dots between problems you solved this week.
 **Core Concept Review** (10 min)
 - When to use: Hierarchical data, recursive structure
 - Signatures: Preorder, inorder, postorder, level-order, recursive vs. iterative
-- Read: [Trees Guide](../../strategies/data-structures/trees.md)
+- Read: [Trees Guide](../../prerequisites/trees.md)
 
 **Problem Set** (35 min)
 1. [E044](../../problems/easy/E044_symmetric_tree.md) - Tree property checking

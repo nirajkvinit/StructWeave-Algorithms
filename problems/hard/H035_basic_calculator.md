@@ -136,4 +136,4 @@ Skip spaces while parsing. Handle multi-digit numbers by accumulating digits: nu
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Stack-Based Expression Evaluation](../../strategies/data-structures/stack.md)
+**Strategy Reference:** [Stack-Based Expression Evaluation](../../prerequisites/stack.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: low
 prerequisites: ["string-manipulation", "character-comparison"]
 related_problems: ["E058", "E125", "M539"]
-strategy_ref: ../strategies/data-structures/strings.md
+strategy_ref: ../prerequisites/strings.md
 ---
 # Detect Capital
 
@@ -146,4 +146,4 @@ Track your progress on mastering this problem:
 **Pattern**: String Validation with Case Rules
 **Key Insight**: Only three valid patterns exist. Check if input matches any one using simple character case tests.
 
-See [String Manipulation](../strategies/data-structures/strings.md) for more on character-level operations and validation patterns.
+See [String Manipulation](../prerequisites/strings.md) for more on character-level operations and validation patterns.

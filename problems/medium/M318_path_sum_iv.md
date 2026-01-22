@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: low
 related_problems: ["E111", "M114", "M118"]
 prerequisites: ["binary-tree-traversal", "depth-first-search", "encoding-schemes"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Path Sum IV
 
@@ -197,4 +197,4 @@ tree_map = {(d, p): v for num in nums
 - [ ] Practiced again after 1 week
 - [ ] Could explain solution to others
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Array Pattern](../prerequisites/trees.md)

@@ -182,4 +182,4 @@ Instead of finding GCD for all pairs (O(n² log max_val)), factorize each number
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Union-Find Pattern](../../strategies/data-structures/union-find.md)
+**Strategy Reference:** [Union-Find Pattern](../../prerequisites/union-find.md)

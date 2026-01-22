@@ -8,7 +8,7 @@ category: medium
 topics: ["tree"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Distribute Coins in Binary Tree
 
@@ -46,7 +46,7 @@ This problem models resource distribution in hierarchical systems. Consider clou
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)
 
 ## Approach Hints
 
@@ -132,4 +132,4 @@ The number of moves equals the sum of absolute values of excess coins in all sub
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Trees - Post-order Traversal](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Trees - Post-order Traversal](../../prerequisites/trees.md)

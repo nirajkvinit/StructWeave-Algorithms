@@ -195,4 +195,4 @@ def longestWord(words):
 - [ ] Handled lexicographic tie-breaking correctly
 - [ ] Tested with single-character words and empty result cases
 
-**Strategy**: See [Trie Pattern](../strategies/data-structures/trie.md)
+**Strategy**: See [Trie Pattern](../prerequisites/trie.md)

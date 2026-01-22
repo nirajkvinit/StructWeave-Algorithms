@@ -8,7 +8,7 @@ category: medium
 topics: ["array", "graph"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/graphs.md
+strategy_ref: ../prerequisites/graphs.md
 ---
 # Find Eventual Safe States
 
@@ -73,7 +73,7 @@ Cycle detection in directed graphs is fundamental to many real-world application
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/graphs.md)
+**Strategy**: See [Array Pattern](../prerequisites/graphs.md)
 
 ## Approach Hints
 
@@ -165,4 +165,4 @@ Instead of recalculating for each node, use memoization. Once you determine a no
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Graph Traversal - DFS](../../strategies/data-structures/graphs.md)
+**Strategy Reference:** [Graph Traversal - DFS](../../prerequisites/graphs.md)

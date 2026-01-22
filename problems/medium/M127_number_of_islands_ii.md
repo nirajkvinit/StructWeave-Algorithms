@@ -309,4 +309,4 @@ def numIslands2(m, n, positions):
 - [ ] **Week 2**: Explain Union-Find concept to someone
 - [ ] **Month 1**: Solve Number of Islands III with deletions
 
-**Strategy**: See [Union-Find Patterns](../strategies/data-structures/union-find.md)
+**Strategy**: See [Union-Find Patterns](../prerequisites/union-find.md)

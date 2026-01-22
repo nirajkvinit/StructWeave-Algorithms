@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 prerequisites: ["hash-set", "string-iteration"]
 related_problems: ["E242", "E383", "E387"]
-strategy_ref: ../strategies/data-structures/hash-table.md
+strategy_ref: ../prerequisites/hash-table.md
 ---
 # Jewels and Stones
 
@@ -144,4 +144,4 @@ return sum(1 for stone in stones if stone in jewel_set)
 - [ ] Review after 1 week
 - [ ] Can explain approach to someone else
 
-**Strategy**: See [Hash Table Patterns](../strategies/data-structures/hash-table.md)
+**Strategy**: See [Hash Table Patterns](../prerequisites/hash-table.md)

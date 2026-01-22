@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["M224", "M227", "H772"]
 prerequisites: ["stack-basics", "arithmetic-operations"]
-strategy_ref: ../strategies/data-structures/stack.md
+strategy_ref: ../prerequisites/stack.md
 ---
 # Evaluate Reverse Polish Notation
 
@@ -209,4 +209,4 @@ if token not in operators:
 
 ---
 
-**Strategy**: See [Stack Pattern](../../strategies/data-structures/stack.md)
+**Strategy**: See [Stack Pattern](../../prerequisites/stack.md)

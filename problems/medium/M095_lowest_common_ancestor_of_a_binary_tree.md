@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["E235", "M236", "M1644"]
 prerequisites: ["tree-traversal", "recursion", "binary-tree"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Lowest Common Ancestor of a Binary Tree
 
@@ -197,4 +197,4 @@ if root == p or root == q:
 - Day 14: Explain all three cases clearly
 - Day 30: Speed solve under 15 minutes
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

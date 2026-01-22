@@ -8,7 +8,7 @@ category: medium
 topics: ["string", "tree"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Smallest String Starting From Leaf
 
@@ -82,7 +82,7 @@ String comparison and path finding in trees appear in many real-world applicatio
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [String Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [String Pattern](../prerequisites/trees.md)
 
 ## Approach Hints
 
@@ -179,4 +179,4 @@ Pass the current string down during recursion and only create final strings at l
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Trees](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Trees](../../prerequisites/trees.md)

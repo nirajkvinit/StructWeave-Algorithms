@@ -127,4 +127,4 @@ Always maintain the invariant that max_heap.size() equals min_heap.size() or max
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Heap Pattern](../../strategies/data-structures/heaps.md)
+**Strategy Reference:** [Heap Pattern](../../prerequisites/heaps.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["M092", "E206", "M025"]
 prerequisites: ["linked-list-basics", "recursion"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Reverse Linked List
 
@@ -211,4 +211,4 @@ def reverseList(head):
 - [ ] Week 2: Practice reverse between positions variant
 - [ ] Month 1: Master reverse in k-groups (hard variant)
 
-**Strategy**: See [Linked List Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../prerequisites/linked-lists.md)

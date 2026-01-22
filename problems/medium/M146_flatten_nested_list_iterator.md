@@ -244,4 +244,4 @@ def next(self):
 - Fourth review: 2 weeks
 - Fifth review: 1 month
 
-**Strategy**: See [Stack Patterns](../strategies/data-structures/stacks.md)
+**Strategy**: See [Stack Patterns](../prerequisites/stacks.md)

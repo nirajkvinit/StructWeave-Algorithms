@@ -16,7 +16,7 @@ prerequisites:
   - "2D array traversal"
   - "Basic geometry concepts"
   - "Max value finding"
-strategy_ref: ../strategies/data-structures/arrays.md
+strategy_ref: ../prerequisites/arrays.md
 ---
 # Projection Area of 3D Shapes
 
@@ -177,4 +177,4 @@ for j in range(n):
 - [ ] Can explain the solution clearly to others
 - [ ] Solved all variations above
 
-**Strategy**: See [Array Fundamentals](../strategies/data-structures/arrays.md)
+**Strategy**: See [Array Fundamentals](../prerequisites/arrays.md)

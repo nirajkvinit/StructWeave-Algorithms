@@ -161,4 +161,4 @@ Don't rebuild frequency lists on every operation. Instead, maintain them increme
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Hash Table](../../strategies/data-structures/hash-tables.md)
+**Strategy Reference:** [Hash Table](../../prerequisites/hash-tables.md)

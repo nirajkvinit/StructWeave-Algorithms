@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["M023", "E001", "M378"]
 prerequisites: ["heap", "priority-queue", "sorted-arrays"]
-strategy_ref: ../strategies/data-structures/heap.md
+strategy_ref: ../prerequisites/heap.md
 ---
 # Find K Pairs with Smallest Sums
 
@@ -186,4 +186,4 @@ Track your progress and spaced repetition:
 - [ ] Revisit after 1 week
 - [ ] Can explain heap invariants clearly
 
-**Strategy Guide:** For pattern recognition and detailed techniques, see [Heap Pattern](../strategies/data-structures/heap.md)
+**Strategy Guide:** For pattern recognition and detailed techniques, see [Heap Pattern](../prerequisites/heap.md)

@@ -205,4 +205,4 @@ class Solution:
 - [ ] **Week 1:** Solve weighted random pick variation
 - [ ] **Week 2:** Apply virtual indexing to other problems
 
-**Strategy**: See [Hash Table Pattern](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Table Pattern](../prerequisites/hash-tables.md)

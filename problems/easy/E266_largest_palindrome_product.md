@@ -268,4 +268,4 @@ for i from max down to min:
 
 ---
 
-**Strategy Reference:** See [Number Theory Guide](../../strategies/fundamentals/number-theory.md) | [String Manipulation](../../strategies/data-structures/strings.md)
+**Strategy Reference:** See [Number Theory Guide](../../prerequisites/number-theory.md) | [String Manipulation](../../prerequisites/strings.md)

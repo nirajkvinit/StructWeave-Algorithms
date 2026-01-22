@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E042", "E043", "M025"]
 prerequisites: ["tree-traversal", "recursion", "stack"]
-strategy_ref: ../../strategies/data-structures/trees.md
+strategy_ref: ../../prerequisites/trees.md
 ---
 # Binary Tree Inorder Traversal
 
@@ -250,4 +250,4 @@ def inorderTraversal(root):
 
 ---
 
-**Strategy**: See [Tree Traversal](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Traversal](../../prerequisites/trees.md)

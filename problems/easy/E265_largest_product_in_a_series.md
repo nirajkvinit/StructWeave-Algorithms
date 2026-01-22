@@ -248,4 +248,4 @@ for i in range(k, n):
 
 ---
 
-**Strategy Reference:** See [Sliding Window Pattern](../../strategies/patterns/sliding-window.md) | [Array Fundamentals](../../strategies/data-structures/arrays.md)
+**Strategy Reference:** See [Sliding Window Pattern](../../strategies/patterns/sliding-window.md) | [Array Fundamentals](../../prerequisites/arrays.md)

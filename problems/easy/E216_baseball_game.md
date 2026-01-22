@@ -17,7 +17,7 @@ prerequisites:
   - Stack data structure
   - Array iteration
   - String parsing
-strategy_ref: ../strategies/data-structures/stacks.md
+strategy_ref: ../prerequisites/stacks.md
 ---
 # Baseball Game
 
@@ -177,4 +177,4 @@ Track your progress on mastering this problem:
 - [ ] Solve in under 10 minutes
 - [ ] Implement without referring to notes
 
-**Strategy**: See [Stack Pattern](../strategies/data-structures/stacks.md)
+**Strategy**: See [Stack Pattern](../prerequisites/stacks.md)

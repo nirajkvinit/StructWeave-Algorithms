@@ -8,7 +8,7 @@ category: hard
 topics: ["string", "stack"]
 patterns: []
 estimated_time_minutes: 45
-strategy_ref: ../strategies/data-structures/stacks-and-queues.md
+strategy_ref: ../prerequisites/stacks-and-queues.md
 ---
 # Remove Invalid Parentheses
 
@@ -51,7 +51,7 @@ String manipulation is essential for text processing and pattern matching. This 
 3. Would sorting or preprocessing help?
 4. Can you reduce this to a problem you've seen before?
 
-**Strategy**: See [String Pattern](../strategies/data-structures/stacks-and-queues.md)
+**Strategy**: See [String Pattern](../prerequisites/stacks-and-queues.md)
 
 ## Approach Hints
 

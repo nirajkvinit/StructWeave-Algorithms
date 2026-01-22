@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E027", "E083", "M019"]
 prerequisites: ["linked-list-basics", "pointer-manipulation"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Remove Linked List Elements
 
@@ -239,4 +239,4 @@ def removeElements(head, val):
 - [ ] Week 2: Draw pointer diagrams for each step
 - [ ] Month 1: Apply to similar linked list modification problems
 
-**Strategy**: See [Linked List Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../prerequisites/linked-lists.md)

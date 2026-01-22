@@ -17,7 +17,7 @@ prerequisites:
   - linked-lists
   - circular-structures
   - edge-case-handling
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Insert into a Sorted Circular Linked List
 
@@ -237,4 +237,4 @@ def insert(head: 'Node', insertVal: int) -> 'Node':
 - [ ] **Week 1:** Solve circular list detection problem
 - [ ] **Week 2:** Implement merge for circular sorted lists
 
-**Strategy**: See [Linked List Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../prerequisites/linked-lists.md)

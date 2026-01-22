@@ -8,7 +8,7 @@ category: medium
 topics: ["tree"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 frequency: medium
 related_problems: ["M102", "E104", "M107"]
 prerequisites: ["tree-traversal", "post-order-dfs", "height-calculation"]
@@ -194,4 +194,4 @@ def getHeight(node):
 - [ ] Attempted again after 1 week
 - [ ] Attempted again after 2 weeks
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

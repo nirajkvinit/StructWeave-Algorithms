@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E112", "M113", "M560"]
 prerequisites: ["tree-traversal", "prefix-sum", "hash-table"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Path Sum III
 
@@ -275,4 +275,4 @@ Use spaced repetition to master this problem:
 - [ ] Day 14: Solve variations (subarray sum)
 - [ ] Day 30: Speed test - solve in under 12 minutes
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

@@ -982,17 +982,17 @@ Start with these problems in order:
 
 | Problem | Concept | Prerequisite |
 |---------|---------|--------------|
-| [F001](../../problems/foundation/F001_multiples_of_3_or_5.md) | Modulo, loops | None |
-| [F009](../../problems/foundation/F009_smallest_multiple.md) | LCM, GCD | Divisibility |
-| [F010](../../problems/foundation/F010_10001st_prime.md) | Prime testing | Primes concept |
-| [F011](../../problems/foundation/F011_summation_of_primes.md) | Sieve | F010 |
-| [F012](../../problems/foundation/F012_largest_prime_factor.md) | Factorization | F010 |
-| [F013](../../problems/foundation/F013_gcd_of_array.md) | GCD reduction | F009 |
-| [F014](../../problems/foundation/F014_coprime_pairs.md) | Totient | F013 |
-| [F015](../../problems/foundation/F015_highly_divisible_triangular_number.md) | Divisor formula | F012 |
-| [F016](../../problems/foundation/F016_counting_divisors.md) | τ(n) | F015 |
-| [F017](../../problems/foundation/F017_perfect_numbers.md) | σ(n) | F016 |
-| [F028](../../problems/foundation/F028_self_powers.md) | Modular exponentiation | F001 |
+| [F001](../problems/foundation/F001_multiples_of_3_or_5.md) | Modulo, loops | None |
+| [F009](../problems/foundation/F009_smallest_multiple.md) | LCM, GCD | Divisibility |
+| [F010](../problems/foundation/F010_10001st_prime.md) | Prime testing | Primes concept |
+| [F011](../problems/foundation/F011_summation_of_primes.md) | Sieve | F010 |
+| [F012](../problems/foundation/F012_largest_prime_factor.md) | Factorization | F010 |
+| [F013](../problems/foundation/F013_gcd_of_array.md) | GCD reduction | F009 |
+| [F014](../problems/foundation/F014_coprime_pairs.md) | Totient | F013 |
+| [F015](../problems/foundation/F015_highly_divisible_triangular_number.md) | Divisor formula | F012 |
+| [F016](../problems/foundation/F016_counting_divisors.md) | τ(n) | F015 |
+| [F017](../problems/foundation/F017_perfect_numbers.md) | σ(n) | F016 |
+| [F028](../problems/foundation/F028_self_powers.md) | Modular exponentiation | F001 |
 
 ### Recommended Learning Order
 
@@ -1059,9 +1059,9 @@ Master these concepts, and you'll have the tools to solve a wide range of proble
 
 **Next Steps:**
 
-* Start with [F009: Smallest Multiple](../../problems/foundation/F009_smallest_multiple.md) to apply GCD/LCM
-* Try [F010: 10001st Prime](../../problems/foundation/F010_10001st_prime.md) to practice primality testing
-* Explore [Number Theory Drill](../../practice/math-drills/number-theory-drill.md) for advanced challenges
+* Start with [F009: Smallest Multiple](../problems/foundation/F009_smallest_multiple.md) to apply GCD/LCM
+* Try [F010: 10001st Prime](../problems/foundation/F010_10001st_prime.md) to practice primality testing
+* Explore [Number Theory Drill](../practice/math-drills/number-theory-drill.md) for advanced challenges
 
 ---
 

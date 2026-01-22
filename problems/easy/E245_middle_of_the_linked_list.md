@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 prerequisites: ["linked-list-basics", "pointer-manipulation"]
 related_problems: ["E021", "E141", "E160"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Middle of the Linked List
 
@@ -199,4 +199,4 @@ def middle_node(head):
 - Understand the mathematical relationship (fast = 2 * slow)
 - Learn to handle null pointer edge cases
 
-See [Linked List Pattern](../strategies/data-structures/linked-lists.md) for the complete strategy guide.
+See [Linked List Pattern](../prerequisites/linked-lists.md) for the complete strategy guide.

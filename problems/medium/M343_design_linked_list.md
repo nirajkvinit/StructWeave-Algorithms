@@ -17,7 +17,7 @@ prerequisites:
   - linked-lists
   - pointer-manipulation
   - object-oriented-design
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Design Linked List
 
@@ -217,4 +217,4 @@ class MyLinkedList:
 - [ ] **Week 1:** Implement LRU Cache using your linked list
 - [ ] **Week 2:** Study skip lists and advanced linked structures
 
-**Strategy**: See [Linked List Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../prerequisites/linked-lists.md)

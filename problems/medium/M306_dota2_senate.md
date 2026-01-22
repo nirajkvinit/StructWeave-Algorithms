@@ -232,4 +232,4 @@ Track your progress mastering this problem:
 - [ ] Review after 1 week: Implement without looking at notes
 - [ ] Review after 1 month: Solve a variation with k factions
 
-**Strategy**: See [Queue Pattern](../strategies/data-structures/stacks-and-queues.md)
+**Strategy**: See [Queue Pattern](../prerequisites/stacks-and-queues.md)

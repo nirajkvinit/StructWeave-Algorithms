@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M013", "M015", "E186"]
 prerequisites: ["2d-arrays", "boundary-tracking"]
-strategy_ref: ../strategies/data-structures/arrays.md
+strategy_ref: ../prerequisites/arrays.md
 ---
 
 # Spiral Matrix II
@@ -402,4 +402,4 @@ Final matrix:
 
 ---
 
-**Strategy**: See [Matrix Traversal Pattern](../../strategies/data-structures/arrays.md)
+**Strategy**: See [Matrix Traversal Pattern](../../prerequisites/arrays.md)

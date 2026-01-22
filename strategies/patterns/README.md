@@ -65,7 +65,7 @@ flowchart LR
     click BFS "graph-traversal.md"
     click DFS "graph-traversal.md"
     click TOPO "topological-sort.md"
-    click TOPK "../data-structures/heaps.md"
+    click TOPK "../../prerequisites/heaps.md"
     click TWOHEAP "two-heaps.md"
     click BACK "backtracking.md"
     click DP "dynamic-programming.md"
@@ -115,7 +115,7 @@ Understanding what each pattern is helps you recognize when to apply it:
 | Level-order tree traversal | **BFS** | [graph-traversal.md](graph-traversal.md) |
 | All paths, connected components | **DFS** | [graph-traversal.md](graph-traversal.md) |
 | Task dependencies, ordering | **Topological Sort** | [topological-sort.md](topological-sort.md) |
-| Top K elements, kth largest | **Heaps** | [../data-structures/heaps.md](../data-structures/heaps.md) |
+| Top K elements, kth largest | **Heaps** | [../../prerequisites/heaps.md](../../prerequisites/heaps.md) |
 | Median from stream | **Two Heaps** | [two-heaps.md](two-heaps.md) |
 | All combinations/permutations | **Backtracking** | [backtracking.md](backtracking.md) |
 | Optimal solution, overlapping subproblems | **Dynamic Programming** | [dynamic-programming.md](dynamic-programming.md) |
@@ -144,7 +144,7 @@ Understanding what each pattern is helps you recognize when to apply it:
 | Pattern | Key Signal | Time | Space |
 |---------|------------|------|-------|
 | [Fast & Slow](two-pointers.md#fast-slow) | Cycle detection | O(n) | O(1) |
-| [In-place Reversal](../data-structures/linked-lists.md) | Reverse portion | O(n) | O(1) |
+| [In-place Reversal](../../prerequisites/linked-lists.md) | Reverse portion | O(n) | O(1) |
 | [K-way Merge](k-way-merge.md) | Merge K sorted | O(N log k) | O(k) |
 
 ### Tree & Graph Patterns
@@ -160,7 +160,7 @@ Understanding what each pattern is helps you recognize when to apply it:
 
 | Pattern | Key Signal | Time | Space |
 |---------|------------|------|-------|
-| [Heaps / Top K](../data-structures/heaps.md) | Kth largest/smallest | O(n log k) | O(k) |
+| [Heaps / Top K](../../prerequisites/heaps.md) | Kth largest/smallest | O(n log k) | O(k) |
 | [Two Heaps](two-heaps.md) | Running median | O(log n) per op | O(n) |
 | [Dynamic Programming](dynamic-programming.md) | Optimal substructure | Varies | Varies |
 | [Greedy](greedy.md) | Local → global optimal | O(n log n) | O(1) |
@@ -175,7 +175,7 @@ Understanding what each pattern is helps you recognize when to apply it:
 **Finding Elements:**
 - One unique → [Bitwise XOR](bitwise-xor.md)
 - Missing number in 1-n → [Cyclic Sort](cyclic-sort.md)
-- Kth largest → [Heaps](../data-structures/heaps.md)
+- Kth largest → [Heaps](../../prerequisites/heaps.md)
 - Next greater → [Monotonic Stack](monotonic-stack.md)
 
 **Subarray/Substring:**
@@ -244,7 +244,7 @@ Some problems require combining multiple patterns:
 12. [Backtracking](backtracking.md)
 
 ### Week 9-10: Advanced Patterns
-13. [Heaps / Top K](../data-structures/heaps.md)
+13. [Heaps / Top K](../../prerequisites/heaps.md)
 14. [Two Heaps](two-heaps.md)
 15. [Greedy](greedy.md)
 

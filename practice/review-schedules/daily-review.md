@@ -110,7 +110,7 @@ Deep dive into one algorithmic pattern each week.
 | 4 | Backtracking | [M034](../../problems/medium/M034_subsets_ii.md), [M086](../../problems/medium/M086_combination_sum_iii.md) | [Backtracking](../../strategies/patterns/backtracking.md) |
 | 5 | Dynamic Programming | [M050](../../problems/medium/M050_triangle.md), [M062](../../problems/medium/M062_maximum_product_subarray.md) | [Dynamic Programming](../../strategies/patterns/dynamic-programming.md) |
 | 6 | Graph Traversal | [M055](../../problems/medium/M055_clone_graph.md), [M077](../../problems/medium/M077_number_of_islands.md) | [Graph Traversal](../../strategies/patterns/graph-traversal.md) |
-| 7 | Tree Algorithms | [M039](../../problems/medium/M039_binary_tree_level_order_traversal.md), [M095](../../problems/medium/M095_lowest_common_ancestor_of_a_binary_tree.md) | [Trees](../../strategies/data-structures/trees.md) |
+| 7 | Tree Algorithms | [M039](../../problems/medium/M039_binary_tree_level_order_traversal.md), [M095](../../problems/medium/M095_lowest_common_ancestor_of_a_binary_tree.md) | [Trees](../../prerequisites/trees.md) |
 | 8 | Greedy Algorithms | [M051](../../problems/medium/M051_best_time_to_buy_and_sell_stock_ii.md), [M085](../../problems/medium/M085_kth_largest_element_in_an_array.md) | [Greedy](../../strategies/patterns/greedy.md) |
 
 ### Daily Pattern Practice Flow

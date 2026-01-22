@@ -17,7 +17,7 @@ prerequisites:
   - graph representation
   - DFS/BFS traversal
   - union-find basics
-strategy_ref: ../strategies/data-structures/graphs.md
+strategy_ref: ../prerequisites/graphs.md
 ---
 # Evaluate Division
 
@@ -181,4 +181,4 @@ Track your progress on this problem:
 - [ ] After 1 week: Solved in < 15 minutes
 - [ ] Explained graph modeling to someone
 
-**Strategy**: See [Graph Traversal Pattern](../strategies/data-structures/graphs.md)
+**Strategy**: See [Graph Traversal Pattern](../prerequisites/graphs.md)

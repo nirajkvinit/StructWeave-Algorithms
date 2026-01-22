@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: low
 related_problems: ["E543", "M437", "M508"]
 prerequisites: ["tree-traversal", "subtree-sum", "hash-sets"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Equal Tree Partition
 
@@ -252,4 +252,4 @@ def dfs(node):
 - [ ] Review after 1 week
 - [ ] Attempt variation: count equal partitions
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

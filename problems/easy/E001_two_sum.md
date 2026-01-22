@@ -284,4 +284,4 @@ while left < right:
 
 ---
 
-**Strategy**: See [Two Pointers Pattern](../../strategies/patterns/two-pointers.md) | [Hash Table Guide](../../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Two Pointers Pattern](../../strategies/patterns/two-pointers.md) | [Hash Table Guide](../../prerequisites/hash-tables.md)

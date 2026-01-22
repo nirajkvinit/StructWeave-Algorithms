@@ -165,4 +165,4 @@ This can be solved in a single pass with O(1) space. No stack needed - just trac
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Stack](../../strategies/data-structures/stack.md)
+**Strategy Reference:** [Stack](../../prerequisites/stack.md)

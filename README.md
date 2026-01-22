@@ -145,7 +145,7 @@ These patterns solve the vast majority of algorithm problems:
 | Merge Intervals | Overlapping ranges | [merge-intervals.md](strategies/patterns/merge-intervals.md) |
 | Two Heaps | Median, balanced partitions | [two-heaps.md](strategies/patterns/two-heaps.md) |
 | K-way Merge | Merge K sorted sequences | [k-way-merge.md](strategies/patterns/k-way-merge.md) |
-| Top K Elements | Kth largest/smallest | [heaps.md](strategies/data-structures/heaps.md) |
+| Top K Elements | Kth largest/smallest | [heaps.md](prerequisites/heaps.md) |
 | Graph BFS/DFS | Traversal, shortest path | [graph-traversal.md](strategies/patterns/graph-traversal.md) |
 | Topological Sort | Dependencies, ordering | [topological-sort.md](strategies/patterns/topological-sort.md) |
 | Backtracking | All combinations/permutations | [backtracking.md](strategies/patterns/backtracking.md) |

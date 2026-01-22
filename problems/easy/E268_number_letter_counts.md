@@ -319,4 +319,4 @@ ordinal_tens = ["", "", "twentieth", "thirtieth", ...]
 
 ---
 
-**Strategy Reference:** See [String Processing](../../strategies/data-structures/strings.md) | [Recursion Patterns](../../strategies/patterns/recursion.md)
+**Strategy Reference:** See [String Processing](../../prerequisites/strings.md) | [Recursion Patterns](../../strategies/patterns/recursion.md)

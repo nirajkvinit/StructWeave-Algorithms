@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 prerequisites: ["stack", "simulation"]
 related_problems: ["E020", "E155", "M150"]
-strategy_ref: ../strategies/data-structures/stack.md
+strategy_ref: ../prerequisites/stack.md
 ---
 # Asteroid Collision
 
@@ -162,4 +162,4 @@ if abs(ast) > stack[-1]:
 - [ ] Review after 1 week
 - [ ] Can explain approach to someone else
 
-**Strategy**: See [Stack Patterns](../strategies/data-structures/stack.md)
+**Strategy**: See [Stack Patterns](../prerequisites/stack.md)

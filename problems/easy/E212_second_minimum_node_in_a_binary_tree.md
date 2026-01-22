@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: low
 prerequisites: ["tree-traversal", "recursion"]
 related_problems: ["E671", "M230", "M378"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Second Minimum Node In a Binary Tree
 
@@ -135,4 +135,4 @@ Track your progress mastering this problem:
 - [ ] Revisit after 1 week (spaced repetition)
 - [ ] Solve k-th smallest in BST variation
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["M055", "E234", "M138"]
 prerequisites: ["linked-list", "hash-map", "pointers"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Copy List with Random Pointer
 
@@ -218,4 +218,4 @@ def copyRandomList(head):
 
 ---
 
-**Strategy**: See [Linked List Deep Copy Patterns](../../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Deep Copy Patterns](../../prerequisites/linked-lists.md)

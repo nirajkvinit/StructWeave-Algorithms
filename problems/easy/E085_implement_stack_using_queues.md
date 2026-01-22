@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["E232", "E155", "E716"]
 prerequisites: ["queue-operations", "stack-operations"]
-strategy_ref: ../strategies/data-structures/stacks-and-queues.md
+strategy_ref: ../prerequisites/stacks-and-queues.md
 ---
 # Implement Stack using Queues
 
@@ -216,4 +216,4 @@ class MyStack:
 - [ ] Week 2: Explain tradeoffs between push-heavy vs pop-heavy
 - [ ] Month 1: Solve Min Stack and other design problems
 
-**Strategy**: See [Stack and Queue Pattern](../strategies/data-structures/stacks-and-queues.md)
+**Strategy**: See [Stack and Queue Pattern](../prerequisites/stacks-and-queues.md)

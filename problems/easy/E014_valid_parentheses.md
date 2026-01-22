@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: very-high
 related_problems: ["M022", "M032", "H301"]
 prerequisites: ["stack-basics", "string-basics"]
-strategy_ref: ../strategies/data-structures/stacks-and-queues.md
+strategy_ref: ../prerequisites/stacks-and-queues.md
 ---
 # Valid Parentheses
 
@@ -277,4 +277,4 @@ s = "(*)"  # Valid: '*' becomes ')'
 
 ---
 
-**Strategy**: See [Stack Pattern](../../strategies/data-structures/stacks-and-queues.md)
+**Strategy**: See [Stack Pattern](../../prerequisites/stacks-and-queues.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E572", "M508", "E687"]
 prerequisites: ["binary-trees", "recursion", "post-order-traversal"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Count Univalue Subtrees
 
@@ -252,4 +252,4 @@ def is_univalue(node):
 - [ ] Can code without references (Day 30)
 - [ ] Interview-ready confidence (Day 30)
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

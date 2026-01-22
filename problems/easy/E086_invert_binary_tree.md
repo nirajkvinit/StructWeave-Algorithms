@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E087", "E091", "M001"]
 prerequisites: ["binary-tree-traversal", "recursion", "tree-structure"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Invert Binary Tree
 
@@ -239,4 +239,4 @@ def invertTree(root):
 - [ ] **Day 14:** Implement both recursive and iterative in under 10 minutes
 - [ ] **Day 30:** Explain the approach to someone else or write it out
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

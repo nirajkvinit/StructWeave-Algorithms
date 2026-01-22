@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E223", "M087", "M186"]
 prerequisites: ["binary-tree-traversal", "tree-construction", "bfs", "dfs"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Add One Row to Tree
 
@@ -196,4 +196,4 @@ def dfs(node, val, current_depth, target_depth):
 - [ ] **Review in 1 week**: Solve without hints
 - [ ] **Review in 2 weeks**: Implement all three approaches
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

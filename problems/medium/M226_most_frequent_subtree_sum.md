@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M508", "E543", "M437"]
 prerequisites: ["tree-traversal", "postorder-traversal", "hash-map"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Most Frequent Subtree Sum
 
@@ -257,4 +257,4 @@ def findFrequentTreeSum(root):
 
 **Completion Status**: ⬜ Not Started | 🟨 In Progress | ✅ Mastered
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

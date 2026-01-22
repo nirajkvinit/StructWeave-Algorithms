@@ -17,7 +17,7 @@ prerequisites:
   - Heap/Priority queue operations
   - Binary heap properties
   - Time complexity analysis
-strategy_ref: ../strategies/data-structures/heaps.md
+strategy_ref: ../prerequisites/heaps.md
 ---
 # Kth Largest Element in a Stream
 
@@ -185,4 +185,4 @@ Track your progress on mastering this problem:
 - [ ] Solve in under 10 minutes
 - [ ] Implement without referring to notes
 
-**Strategy**: See [Heap Pattern](../strategies/data-structures/heaps.md)
+**Strategy**: See [Heap Pattern](../prerequisites/heaps.md)

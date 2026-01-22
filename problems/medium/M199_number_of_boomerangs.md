@@ -201,4 +201,4 @@ for i in range(len(points)):
 - [ ] Could explain solution to others
 - [ ] Comfortable with variations
 
-**Strategy**: See [Hash Table Pattern](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Table Pattern](../prerequisites/hash-tables.md)

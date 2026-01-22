@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["E141", "M019", "E160"]
 prerequisites: ["linked-list-basics", "two-pointer-technique"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Remove Nth Node From End of List
 
@@ -354,4 +354,4 @@ Result: dummy.next = 2 → 3 → NULL (head successfully removed!)
 
 ---
 
-**Strategy**: See [Linked List Pattern](../../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../../prerequisites/linked-lists.md)

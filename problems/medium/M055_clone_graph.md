@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["M138", "M297", "M133"]
 prerequisites: ["graph", "dfs", "bfs", "hash-map"]
-strategy_ref: ../strategies/data-structures/graphs.md
+strategy_ref: ../prerequisites/graphs.md
 ---
 # Clone Graph
 
@@ -210,4 +210,4 @@ def cloneGraph(node):
 
 ---
 
-**Strategy**: See [Graph Traversal and Deep Copy Patterns](../../strategies/data-structures/graphs.md)
+**Strategy**: See [Graph Traversal and Deep Copy Patterns](../../prerequisites/graphs.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: low
 related_problems: ["E170", "E288", "M527"]
 prerequisites: ["hash-map", "string-manipulation", "class-design"]
-strategy_ref: ../strategies/data-structures/hash-table.md
+strategy_ref: ../prerequisites/hash-table.md
 ---
 # Unique Word Abbreviation
 
@@ -207,4 +207,4 @@ Use a set to automatically handle duplicate words in the dictionary.
 - [ ] Review after 24 hours
 - [ ] Review after 1 week
 
-**Strategy**: See [Hash Table Pattern](../strategies/data-structures/hash-table.md)
+**Strategy**: See [Hash Table Pattern](../prerequisites/hash-table.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: low
 prerequisites: ["2d-arrays", "matrix-traversal"]
 related_problems: ["E598", "M289", "M304"]
-strategy_ref: ../strategies/data-structures/arrays.md
+strategy_ref: ../prerequisites/arrays.md
 ---
 # Image Smoother
 
@@ -136,4 +136,4 @@ Track your progress mastering this problem:
 - [ ] Revisit after 1 week (spaced repetition)
 - [ ] Implement median filter variation
 
-**Strategy**: See [Array and Matrix Patterns](../strategies/data-structures/arrays.md)
+**Strategy**: See [Array and Matrix Patterns](../prerequisites/arrays.md)

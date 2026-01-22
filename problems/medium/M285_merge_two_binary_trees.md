@@ -8,7 +8,7 @@ category: medium
 topics: ["tree", "depth-first-search", "recursion"]
 patterns: ["tree-traversal", "simultaneous-recursion"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 frequency: medium
 related_problems:
   - id: E100
@@ -258,4 +258,4 @@ Track your progress on mastering this problem:
 
 **Mastery Goal**: Solve in < 15 minutes with clean recursive solution.
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

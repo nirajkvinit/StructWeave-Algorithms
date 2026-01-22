@@ -155,4 +155,4 @@ Use dictionary with variable-tuple keys to automatically combine like terms duri
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Recursion](../../strategies/patterns/recursion.md) | [HashMap](../../strategies/data-structures/hash-table.md)
+**Strategy Reference:** [Recursion](../../strategies/patterns/recursion.md) | [HashMap](../../prerequisites/hash-table.md)

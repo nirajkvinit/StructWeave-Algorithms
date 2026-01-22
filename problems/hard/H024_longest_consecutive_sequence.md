@@ -128,4 +128,4 @@ The key to O(n) time is the "sequence start" check. By only counting from number
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Hash Set Patterns](../../strategies/data-structures/hash-tables.md)
+**Strategy Reference:** [Hash Set Patterns](../../prerequisites/hash-tables.md)

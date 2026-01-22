@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M094", "M426", "M109"]
 prerequisites: ["inorder-traversal", "bst-properties", "linked-list"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Convert Binary Search Tree to Sorted Doubly Linked List
 
@@ -250,4 +250,4 @@ class Solution:
 - [ ] Day 14: Implement Morris traversal for O(1) space (40 min)
 - [ ] Day 30: Explain why inorder traversal gives sorted order for BST (10 min)
 
-**Strategy**: See [Linked List Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../prerequisites/linked-lists.md)

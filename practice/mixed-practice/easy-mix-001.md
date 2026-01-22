@@ -338,11 +338,11 @@ After completing all 10:
 ## Related Practice
 
 **If you struggled with specific patterns:**
-- **Hash Tables**: Review [Hash Tables](../../strategies/data-structures/hash-tables.md)
+- **Hash Tables**: Review [Hash Tables](../../prerequisites/hash-tables.md)
 - **Binary Search**: Review [Binary Search](../../strategies/patterns/binary-search.md)
-- **Trees**: Review [Trees](../../strategies/data-structures/trees.md)
+- **Trees**: Review [Trees](../../prerequisites/trees.md)
 - **DP**: Complete [DP Drill](../pattern-drills/dp-drill.md)
-- **Linked Lists**: Review [Linked Lists](../../strategies/data-structures/linked-lists.md)
+- **Linked Lists**: Review [Linked Lists](../../prerequisites/linked-lists.md)
 
 **Other Practice Sets:**
 - Warmup 5-Min (problem-sets/warmup-5min.md)

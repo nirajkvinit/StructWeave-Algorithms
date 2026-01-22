@@ -8,7 +8,7 @@ category: medium
 topics: ["tree"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Binary Tree Pruning
 
@@ -177,4 +177,4 @@ The recursive solution is already optimal at O(n) time and O(h) space for the ca
 
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

@@ -23,7 +23,7 @@ prerequisites:
   - 2D Array Traversal
   - Combinatorics (Choose 2 from N)
   - Hash Map for Pair Counting
-strategy_ref: ../strategies/data-structures/arrays.md
+strategy_ref: ../prerequisites/arrays.md
 ---
 # Number Of Corner Rectangles
 
@@ -257,4 +257,4 @@ for i in range(m):
 - [ ] Can explain time complexity tradeoffs
 - [ ] Attempted Maximal Rectangle variation
 
-**Strategy**: See [Array Fundamentals](../strategies/data-structures/arrays.md)
+**Strategy**: See [Array Fundamentals](../prerequisites/arrays.md)

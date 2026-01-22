@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["E089", "E090", "M008"]
 prerequisites: ["linked-list-traversal", "pointer-manipulation", "in-place-operations"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Delete Node in a Linked List
 
@@ -181,4 +181,4 @@ def deleteNode(node):
 - [ ] **Day 14:** Solve in under 5 minutes
 - [ ] **Day 30:** Explain the clever trick to someone else
 
-**Strategy**: See [Linked List Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../prerequisites/linked-lists.md)

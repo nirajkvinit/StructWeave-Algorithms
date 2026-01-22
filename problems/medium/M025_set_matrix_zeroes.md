@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: high
 related_problems: ["M048", "M054", "E118"]
 prerequisites: ["2d-array-basics", "in-place-algorithms"]
-strategy_ref: ../strategies/data-structures/matrices.md
+strategy_ref: ../prerequisites/matrices.md
 ---
 # Set Matrix Zeroes
 
@@ -389,4 +389,4 @@ Final:
 
 ---
 
-**Strategy**: See [Matrix Pattern](../../strategies/data-structures/matrices.md)
+**Strategy**: See [Matrix Pattern](../../prerequisites/matrices.md)

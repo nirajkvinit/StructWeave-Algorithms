@@ -16,7 +16,7 @@ prerequisites:
   - "Hash table operations"
   - "String splitting"
   - "Frequency counting"
-strategy_ref: ../strategies/data-structures/hash-tables.md
+strategy_ref: ../prerequisites/hash-tables.md
 ---
 # Uncommon Words from Two Sentences
 
@@ -140,4 +140,4 @@ return [w for w in freq if freq[w] == 1]
 - [ ] Can explain the solution clearly to others
 - [ ] Solved all variations above
 
-**Strategy**: See [Hash Table Patterns](../strategies/data-structures/hash-tables.md)
+**Strategy**: See [Hash Table Patterns](../prerequisites/hash-tables.md)

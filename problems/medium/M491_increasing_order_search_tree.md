@@ -8,7 +8,7 @@ category: medium
 topics: ["binary-search-tree", "binary-search"]
 patterns: ["backtrack-permutation"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Increasing Order Search Tree
 
@@ -80,7 +80,7 @@ In compiler design, abstract syntax trees (ASTs) are sometimes "linearized" into
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [Binary Search Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../prerequisites/trees.md)
 
 ## Approach Hints
 
@@ -184,4 +184,4 @@ Where n = number of nodes, h = tree height (O(log n) balanced, O(n) worst case)
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Binary Search Tree Patterns](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Binary Search Tree Patterns](../../prerequisites/trees.md)

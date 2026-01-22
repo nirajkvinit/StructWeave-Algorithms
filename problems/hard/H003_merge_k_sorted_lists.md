@@ -432,4 +432,4 @@ Step 4:        3           Step 5:        4           Step 6:        4
 
 ---
 
-**Strategy**: See [K-way Merge Pattern](../../strategies/patterns/k-way-merge.md) | [Heap/Priority Queue](../../strategies/data-structures/heap.md)
+**Strategy**: See [K-way Merge Pattern](../../strategies/patterns/k-way-merge.md) | [Heap/Priority Queue](../../prerequisites/heap.md)

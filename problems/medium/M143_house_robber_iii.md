@@ -8,7 +8,7 @@ category: medium
 topics: ["tree", "dynamic-programming"]
 patterns: ["dp-1d", "tree-dp", "postorder-dfs"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 frequency: high
 related_problems: ["E198", "M213", "M337"]
 prerequisites: ["tree-traversal", "dynamic-programming", "postorder-dfs"]
@@ -260,4 +260,4 @@ skip_current = max(rob_left, skip_left) + max(rob_right, skip_right)
 - Fourth review: 2 weeks
 - Fifth review: 1 month
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

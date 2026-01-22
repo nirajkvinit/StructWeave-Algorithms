@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: low
 prerequisites: ["string-slicing", "sorting", "array-traversal"]
 related_problems: ["E028", "E014", "M833"]
-strategy_ref: ../strategies/data-structures/string.md
+strategy_ref: ../prerequisites/string.md
 ---
 # Find And Replace in String
 
@@ -212,4 +212,4 @@ else:
 - [ ] Review after 1 week
 - [ ] Can explain approach to someone else
 
-**Strategy**: See [String Manipulation Patterns](../strategies/data-structures/string.md)
+**Strategy**: See [String Manipulation Patterns](../prerequisites/string.md)

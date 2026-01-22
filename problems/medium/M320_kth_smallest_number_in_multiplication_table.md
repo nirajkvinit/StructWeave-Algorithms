@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: low
 related_problems: ["M378", "H004", "M240"]
 prerequisites: ["binary-search", "heap", "matrix-properties"]
-strategy_ref: ../strategies/data-structures/heaps.md
+strategy_ref: ../prerequisites/heaps.md
 ---
 # Kth Smallest Number in Multiplication Table
 
@@ -217,4 +217,4 @@ else:
 - [ ] Practiced again after 1 week
 - [ ] Could explain solution to others
 
-**Strategy**: See [Heap Pattern](../strategies/data-structures/heaps.md)
+**Strategy**: See [Heap Pattern](../prerequisites/heaps.md)

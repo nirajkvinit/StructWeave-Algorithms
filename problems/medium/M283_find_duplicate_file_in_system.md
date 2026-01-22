@@ -243,4 +243,4 @@ Track your progress on mastering this problem:
 
 **Mastery Goal**: Solve in < 20 minutes with clean parsing logic.
 
-**Strategy**: See [Hash Table Patterns](../strategies/data-structures/hash-tables.md) and [String Parsing](../strategies/patterns/string-manipulation.md)
+**Strategy**: See [Hash Table Patterns](../prerequisites/hash-tables.md) and [String Parsing](../strategies/patterns/string-manipulation.md)

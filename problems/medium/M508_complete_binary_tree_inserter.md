@@ -8,7 +8,7 @@ category: medium
 topics: ["tree"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Complete Binary Tree Inserter
 
@@ -92,7 +92,7 @@ Complete binary trees are fundamental to heap data structures, which power prior
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)
 
 ## Approach Hints
 
@@ -191,4 +191,4 @@ Only store nodes with missing children in the queue. Complete nodes (with both c
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Trees](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Trees](../../prerequisites/trees.md)

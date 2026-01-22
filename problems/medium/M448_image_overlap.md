@@ -163,4 +163,4 @@ Use a hash map to count translation vectors. The key can be (delta_row, delta_co
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Hash Table](../../strategies/data-structures/hash-table.md)
+**Strategy Reference:** [Hash Table](../../prerequisites/hash-table.md)

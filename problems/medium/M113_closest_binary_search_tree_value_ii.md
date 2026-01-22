@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M112", "E703", "M230"]
 prerequisites: ["binary-search-tree", "heap", "inorder-traversal"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Closest Binary Search Tree Value II
 
@@ -225,4 +225,4 @@ def closestKValues(root, target, k):
 - [ ] **Day 14**: Handle edge cases (k=n, target outside range) (20 min)
 - [ ] **Day 30**: Speed run under time pressure (18 min)
 
-**Strategy**: See [Binary Search Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../prerequisites/trees.md)

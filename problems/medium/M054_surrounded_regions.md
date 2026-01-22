@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E733", "M200", "M130"]
 prerequisites: ["dfs", "bfs", "matrix-traversal"]
-strategy_ref: ../strategies/data-structures/graphs.md
+strategy_ref: ../prerequisites/graphs.md
 ---
 # Surrounded Regions
 
@@ -176,4 +176,4 @@ def dfs(board, i, j):
 
 ---
 
-**Strategy**: See [Graph DFS/BFS Patterns](../../strategies/data-structures/graphs.md)
+**Strategy**: See [Graph DFS/BFS Patterns](../../prerequisites/graphs.md)

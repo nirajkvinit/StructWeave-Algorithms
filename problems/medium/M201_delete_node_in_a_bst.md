@@ -8,7 +8,7 @@ category: medium
 topics: ["tree", "binary-search-tree", "binary-search"]
 patterns: ["inorder-traversal"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 frequency: high
 related_problems: ["E108", "M200", "M235"]
 prerequisites: ["binary-search-tree", "tree-traversal", "recursion"]
@@ -257,4 +257,4 @@ def deleteNode(root, key):
 - [ ] Could explain solution to others
 - [ ] Comfortable with variations
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

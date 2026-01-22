@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: low
 related_problems: ["E543_diameter_of_binary_tree", "E110_balanced_binary_tree", "M124_binary_tree_maximum_path_sum"]
 prerequisites: ["tree-traversal", "recursion", "post-order"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Binary Tree Tilt
 
@@ -225,4 +225,4 @@ return left_sum + right_sum + node.val
 - [ ] **Week 1**: Implement maximum tilt variation
 - [ ] **Week 2**: Solve from memory in under 15 minutes
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

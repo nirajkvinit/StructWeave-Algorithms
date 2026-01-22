@@ -136,4 +136,4 @@ The prefix constraint becomes more restrictive as you place more words. After pl
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Trie + Backtracking](../../strategies/data-structures/trie.md)
+**Strategy Reference:** [Trie + Backtracking](../../prerequisites/trie.md)

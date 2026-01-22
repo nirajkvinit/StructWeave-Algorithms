@@ -16,7 +16,7 @@ prerequisites:
   - "Array traversal"
   - "Comparison operations"
   - "Boolean logic"
-strategy_ref: ../strategies/data-structures/arrays.md
+strategy_ref: ../prerequisites/arrays.md
 ---
 # Monotonic Array
 
@@ -150,4 +150,4 @@ return True
 - [ ] Can explain the solution clearly to others
 - [ ] Solved all variations above
 
-**Strategy**: See [Array Fundamentals](../strategies/data-structures/arrays.md)
+**Strategy**: See [Array Fundamentals](../prerequisites/arrays.md)

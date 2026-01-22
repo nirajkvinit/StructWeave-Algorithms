@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 prerequisites: ["2d-arrays", "matrix-basics"]
 related_problems: ["E048", "M054", "M048"]
-strategy_ref: ../strategies/data-structures/arrays.md
+strategy_ref: ../prerequisites/arrays.md
 ---
 # Transpose Matrix
 
@@ -183,4 +183,4 @@ def transpose(matrix):
 - Understand row-column relationships
 - Learn dimension analysis for matrix operations
 
-See [Arrays Strategy](../strategies/data-structures/arrays.md) for the complete strategy guide.
+See [Arrays Strategy](../prerequisites/arrays.md) for the complete strategy guide.

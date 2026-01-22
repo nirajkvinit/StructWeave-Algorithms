@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["E242", "M100", "M652"]
 prerequisites: ["tree-traversal", "recursion"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Subtree of Another Tree
 
@@ -151,4 +151,4 @@ def isSubtree(root, subRoot):
 - [ ] Review after 2 weeks (Day 15)
 - [ ] Solve without looking at hints (Day 30)
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

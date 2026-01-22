@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: low
 related_problems: ["E036", "E048", "M054"]
 prerequisites: ["array-indexing", "boundary-checking", "matrix-operations"]
-strategy_ref: ../strategies/data-structures/arrays.md
+strategy_ref: ../prerequisites/arrays.md
 ---
 # Valid Word Square
 
@@ -183,4 +183,4 @@ Track your progress on this problem:
 - [ ] **Day 14**: Optimize with half-matrix check (20 min)
 - [ ] **Day 30**: Speed solve in under 12 minutes
 
-**Strategy**: See [Array Manipulation](../strategies/data-structures/arrays.md)
+**Strategy**: See [Array Manipulation](../prerequisites/arrays.md)

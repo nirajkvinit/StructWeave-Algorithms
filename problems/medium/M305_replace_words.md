@@ -226,4 +226,4 @@ Track your progress mastering this problem:
 - [ ] Review after 1 week: Implement without looking at notes
 - [ ] Review after 1 month: Solve M648 (Replace Words II) if available
 
-**Strategy**: See [Trie Pattern](../strategies/data-structures/tries.md)
+**Strategy**: See [Trie Pattern](../prerequisites/tries.md)

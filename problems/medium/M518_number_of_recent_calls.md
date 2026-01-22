@@ -132,4 +132,4 @@ Since timestamps are strictly increasing, older timestamps will always be at the
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Queue Pattern](../../strategies/data-structures/queues.md)
+**Strategy Reference:** [Queue Pattern](../../prerequisites/queues.md)

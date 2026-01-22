@@ -16,7 +16,7 @@ related_problems:
 prerequisites:
   - E144_binary_tree_level_order_traversal
   - E094_binary_tree_inorder_traversal
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Find Bottom Left Tree Value
 
@@ -250,4 +250,4 @@ def findBottomLeftValue(root):
 - [ ] Solve without looking at notes (Day 14)
 - [ ] Teach the solution to someone else (Day 30)
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

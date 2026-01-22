@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 related_problems: ["M326", "H037", "M074"]
 prerequisites: ["hash-sets", "2d-arrays"]
-strategy_ref: ../../strategies/data-structures/hash-table.md
+strategy_ref: ../../prerequisites/hash-table.md
 ---
 # Valid Sudoku
 
@@ -225,4 +225,4 @@ seen = set()
 
 ---
 
-**Strategy**: See [Hash Table](../../strategies/data-structures/hash-table.md)
+**Strategy**: See [Hash Table](../../prerequisites/hash-table.md)

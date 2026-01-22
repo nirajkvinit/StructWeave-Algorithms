@@ -8,7 +8,7 @@ category: medium
 topics: ["tree", "binary-search-tree", "binary-search"]
 patterns: ["inorder-traversal", "postorder-dfs"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 frequency: medium
 related_problems: ["E098", "M098", "M701"]
 prerequisites: ["bst-properties", "tree-traversal", "postorder-dfs"]
@@ -259,4 +259,4 @@ if left_bst and right_bst and left_max < node.val < right_min:
 - Fourth review: 2 weeks
 - Fifth review: 1 month
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

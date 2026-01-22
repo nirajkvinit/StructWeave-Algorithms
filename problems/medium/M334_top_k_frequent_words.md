@@ -20,7 +20,7 @@ prerequisites:
   - Hash map usage
   - Heap/Priority queue
   - Sorting with custom comparators
-strategy_ref: ../strategies/data-structures/heaps.md
+strategy_ref: ../prerequisites/heaps.md
 ---
 # Top K Frequent Words
 
@@ -198,4 +198,4 @@ def topKFrequent(words, k):
 - [ ] **Variations**: Solve Top K Frequent Elements with numbers
 - [ ] **Final review**: Solve again after 1 week without hints
 
-**Strategy**: See [Heap Pattern](../strategies/data-structures/heaps.md)
+**Strategy**: See [Heap Pattern](../prerequisites/heaps.md)

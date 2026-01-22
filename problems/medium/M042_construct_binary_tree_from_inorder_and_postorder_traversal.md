@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M041", "M044", "E026"]
 prerequisites: ["tree-traversal", "recursion", "hash-map"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Construct Binary Tree from Inorder and Postorder Traversal
 
@@ -170,4 +170,4 @@ right_size = in_end - root_idx
 
 ---
 
-**Strategy**: See [Tree Reconstruction Pattern](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Reconstruction Pattern](../../prerequisites/trees.md)

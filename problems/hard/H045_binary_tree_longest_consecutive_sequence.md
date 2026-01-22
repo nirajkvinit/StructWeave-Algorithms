@@ -8,7 +8,7 @@ category: hard
 topics: ["tree"]
 patterns: []
 estimated_time_minutes: 45
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Binary Tree Longest Consecutive Sequence
 
@@ -73,7 +73,7 @@ Tree problems develop recursive thinking and hierarchical data navigation. Maste
 3. Would sorting or preprocessing help?
 4. Can you reduce this to a problem you've seen before?
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)
 
 ## Approach Hints
 
@@ -172,4 +172,4 @@ You can solve this with a single DFS pass. Pass both the parent's value and curr
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Tree DFS Pattern](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Tree DFS Pattern](../../prerequisites/trees.md)

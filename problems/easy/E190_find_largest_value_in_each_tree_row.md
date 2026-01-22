@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: medium
 prerequisites: ["binary-tree", "bfs", "dfs", "queue"]
 related_problems: ["E102", "E107", "M199"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Find Largest Value in Each Tree Row
 
@@ -173,4 +173,4 @@ Track your progress on mastering this problem:
 **Pattern**: Level-Order Traversal (BFS on Trees)
 **Key Insight**: Use queue to process nodes level-by-level, tracking level boundaries to aggregate information per level.
 
-**Strategy**: See [Tree Traversal Patterns](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Traversal Patterns](../prerequisites/trees.md)

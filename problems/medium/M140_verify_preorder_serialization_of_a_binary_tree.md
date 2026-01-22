@@ -8,7 +8,7 @@ category: medium
 topics: ["string", "tree", "stack"]
 patterns: ["preorder-traversal", "degree-counting"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 frequency: medium
 related_problems: ["E297", "M105", "M106"]
 prerequisites: ["tree-traversal", "stack-operations", "string-parsing"]
@@ -246,4 +246,4 @@ def is_valid_serialization(preorder):
 - Fourth review: 2 weeks
 - Fifth review: 1 month
 
-**Strategy**: See [String Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [String Pattern](../prerequisites/trees.md)

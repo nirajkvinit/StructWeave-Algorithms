@@ -24,7 +24,7 @@ prerequisites:
   - BFS/DFS
   - Graph Construction from Tree
   - Parent Pointer Tracking
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Closest Leaf in a Binary Tree
 
@@ -240,4 +240,4 @@ def bfs(start, graph):
 - [ ] Can explain tree-to-graph transformation
 - [ ] Attempted "All Nodes Distance K" variation
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

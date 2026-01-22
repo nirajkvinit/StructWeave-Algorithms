@@ -8,7 +8,7 @@ category: medium
 topics: ["tree", "two-pointers"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Vertical Order Traversal of a Binary Tree
 
@@ -160,4 +160,4 @@ Use a dictionary mapping column → list of (row, value) pairs. During traversal
 
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)

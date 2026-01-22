@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E047", "E048", "E034"]
 prerequisites: ["binary-tree-traversal", "recursion", "height-calculation"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Balanced Binary Tree
 
@@ -207,4 +207,4 @@ def isBalanced(root):
 
 ---
 
-**Strategy**: See [Tree Pattern](../../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../../prerequisites/trees.md)

@@ -137,4 +137,4 @@ Track visited edges, not visited nodes (since we must visit all edges exactly on
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Graph Theory](../../strategies/data-structures/graphs.md)
+**Strategy Reference:** [Graph Theory](../../prerequisites/graphs.md)

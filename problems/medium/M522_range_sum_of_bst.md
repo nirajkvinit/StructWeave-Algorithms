@@ -8,7 +8,7 @@ category: medium
 topics: ["binary-search-tree", "binary-search"]
 patterns: ["inorder-traversal"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Range Sum of BST
 
@@ -161,4 +161,4 @@ The pruning optimization reduces average case significantly. In a balanced BST w
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Binary Search Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy Reference:** [Binary Search Tree Pattern](../prerequisites/trees.md)

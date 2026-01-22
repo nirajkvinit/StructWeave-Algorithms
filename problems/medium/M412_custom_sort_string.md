@@ -145,4 +145,4 @@ You can use Python's built-in sorted() with a custom key function. Create a mapp
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Hash Table Patterns](../../strategies/data-structures/hash-tables.md)
+**Strategy Reference:** [Hash Table Patterns](../../prerequisites/hash-tables.md)

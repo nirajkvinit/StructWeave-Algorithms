@@ -8,7 +8,7 @@ category: medium
 topics: ["array", "tree"]
 patterns: ["preorder-traversal", "postorder-traversal"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Construct Binary Tree from Preorder and Postorder Traversal
 
@@ -73,7 +73,7 @@ Tree reconstruction from traversals is fundamental to understanding how compiler
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Array Pattern](../prerequisites/trees.md)
 
 ## Approach Hints
 
@@ -158,4 +158,4 @@ Create a hash map of postorder values to indices for O(1) lookup instead of O(n)
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Tree Construction](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Tree Construction](../../prerequisites/trees.md)

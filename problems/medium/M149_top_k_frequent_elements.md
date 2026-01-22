@@ -8,7 +8,7 @@ category: medium
 topics: ["array", "heap"]
 patterns: []
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/heaps.md
+strategy_ref: ../prerequisites/heaps.md
 frequency: high
 related_problems: ["M148", "E001", "M020"]
 prerequisites: ["hash-map", "heap", "quickselect", "bucket-sort"]
@@ -179,4 +179,4 @@ def topKFrequent(nums, k):
 - [ ] Day 14: Solve Top K Frequent Words variation
 - [ ] Day 30: Solve without looking at hints
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/heaps.md)
+**Strategy**: See [Array Pattern](../prerequisites/heaps.md)

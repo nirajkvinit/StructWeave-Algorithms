@@ -8,7 +8,7 @@ category: hard
 topics: ["array", "tree", "graph"]
 patterns: []
 estimated_time_minutes: 45
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Redundant Connection II
 
@@ -57,7 +57,7 @@ Arrays are the foundation of algorithmic thinking. This problem develops your ab
 3. What invariants must be maintained?
 4. Is there a mathematical relationship to exploit?
 
-**Strategy**: See [Array Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Array Pattern](../prerequisites/trees.md)
 
 ## Approach Hints
 
@@ -153,4 +153,4 @@ Process edges sequentially with Union-Find. When you encounter a node with two p
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Union-Find](../../strategies/data-structures/union-find.md) | [Tree Algorithms](../../strategies/data-structures/trees.md)
+**Strategy Reference:** [Union-Find](../../prerequisites/union-find.md) | [Tree Algorithms](../../prerequisites/trees.md)

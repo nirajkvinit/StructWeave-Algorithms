@@ -352,4 +352,4 @@ Result: [1, 2, 9]
 
 ---
 
-**Strategy**: See [Array Manipulation](../../strategies/data-structures/arrays.md) | [Digit Processing](../../strategies/fundamentals/digit-processing.md)
+**Strategy**: See [Array Manipulation](../../prerequisites/arrays.md) | [Digit Processing](../../strategies/fundamentals/digit-processing.md)

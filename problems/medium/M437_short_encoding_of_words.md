@@ -141,4 +141,4 @@ Using a set: for each word, remove all its proper suffixes from the set. The rem
 **Spaced Repetition:** Review in 1 day → 3 days → 7 days → 14 days → 30 days
 
 ---
-**Strategy Reference:** [Trie](../../strategies/data-structures/trie.md)
+**Strategy Reference:** [Trie](../../prerequisites/trie.md)

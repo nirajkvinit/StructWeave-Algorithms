@@ -11,7 +11,7 @@ estimated_time_minutes: 25
 frequency: high
 related_problems: ["M066", "E030", "H002"]
 prerequisites: ["linked-list-basics", "basic-arithmetic"]
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 
 # Add Two Numbers
@@ -373,4 +373,4 @@ Final: 7 → 0 → 8  (represents 807)
 
 ---
 
-**Strategy**: See [Linked List Pattern](../../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../../prerequisites/linked-lists.md)

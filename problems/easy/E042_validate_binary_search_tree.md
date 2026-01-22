@@ -11,7 +11,7 @@ estimated_time_minutes: 15
 frequency: high
 related_problems: ["E041", "E043", "M026"]
 prerequisites: ["bst-properties", "inorder-traversal", "recursion"]
-strategy_ref: ../../strategies/data-structures/trees.md
+strategy_ref: ../../prerequisites/trees.md
 ---
 # Validate Binary Search Tree
 
@@ -259,4 +259,4 @@ def isValidBST(root):
 
 ---
 
-**Strategy**: See [Binary Search Trees](../../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Trees](../../prerequisites/trees.md)

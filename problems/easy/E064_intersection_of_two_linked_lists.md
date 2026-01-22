@@ -8,7 +8,7 @@ category: easy
 topics: ["linked-list"]
 patterns: []
 estimated_time_minutes: 15
-strategy_ref: ../strategies/data-structures/linked-lists.md
+strategy_ref: ../prerequisites/linked-lists.md
 ---
 # Intersection of Two Linked Lists
 
@@ -62,4 +62,4 @@ Beyond linked lists, this pattern of "catch-up" pointer movement is fundamental 
 2. Can you identify any patterns in the examples?
 3. What data structure would help organize the information?
 
-**Strategy**: See [Linked List Pattern](../strategies/data-structures/linked-lists.md)
+**Strategy**: See [Linked List Pattern](../prerequisites/linked-lists.md)

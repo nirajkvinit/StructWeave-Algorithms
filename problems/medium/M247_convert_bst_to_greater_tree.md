@@ -8,7 +8,7 @@ category: medium
 topics: ["binary-search-tree", "binary-search", "two-pointers"]
 patterns: ["inorder-traversal"]
 estimated_time_minutes: 30
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 frequency: medium
 related_problems:
   - id: M241
@@ -246,4 +246,4 @@ node.val = accumulated   # Then update node
 - [ ] Review after 1 week - solve "sum of smaller" variant
 - [ ] Review after 1 month - implement Morris traversal
 
-**Strategy**: See [Binary Search Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Binary Search Tree Pattern](../prerequisites/trees.md)

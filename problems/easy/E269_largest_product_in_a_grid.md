@@ -309,4 +309,4 @@ for each sequence:
 
 ---
 
-**Strategy Reference:** See [Matrix Traversal](../../strategies/data-structures/matrices.md) | [Array Fundamentals](../../strategies/data-structures/arrays.md)
+**Strategy Reference:** See [Matrix Traversal](../../prerequisites/matrices.md) | [Array Fundamentals](../../prerequisites/arrays.md)

@@ -11,7 +11,7 @@ estimated_time_minutes: 30
 frequency: medium
 related_problems: ["M102", "E104", "M662"]
 prerequisites: ["tree-traversal", "bfs", "binary-tree-properties"]
-strategy_ref: ../strategies/data-structures/trees.md
+strategy_ref: ../prerequisites/trees.md
 ---
 # Maximum Width of Binary Tree
 
@@ -265,4 +265,4 @@ if node.right:
 - [ ] Review after 1 week
 - [ ] Attempt DFS solution with level tracking
 
-**Strategy**: See [Tree Pattern](../strategies/data-structures/trees.md)
+**Strategy**: See [Tree Pattern](../prerequisites/trees.md)
