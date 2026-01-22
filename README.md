@@ -105,6 +105,7 @@ Work through step-by-step problem solutions:
 - **4 Language Guides** — Comprehensive guides for Python, Go, TypeScript, and Rust
 - **17 Pattern Guides** — Master the core patterns that solve 90% of interview problems
 - **Foundation Tier** — Computational thinking problems for building mathematical intuition
+- **[14 Prerequisite Guides](prerequisites/)** — Complexity analysis, data structures, and foundational skills for beginners
 - **[Real-World Applications Index](problems/REAL_WORLD_APPLICATIONS.md)** — Problems mapped to industry domains
 - **Multiple Solution Approaches** — From brute force to optimal, with complexity analysis
 - **3-Tier Hint System** — Nudge → Direction → Skeleton (learn without spoilers)
@@ -120,6 +121,7 @@ Work through step-by-step problem solutions:
 |--------|-------|
 | Total Practice Problems | 990 |
 | Algorithmic Patterns | 17 |
+| Prerequisite Guides | 14 |
 | Fundamentals Guides | 4 |
 | Data Structure Guides | 8 |
 | Language Guides | 61 |
@@ -169,6 +171,8 @@ See the [Pattern Decision Guide](strategies/patterns/README.md) for a flowchart 
 | **Interview Prep** | 8-10 weeks | Experienced devs preparing for interviews | [Entry Assessment](assessments/entry-assessment.md) |
 | **Refresher** | 4 weeks | Rusty engineers getting back in shape | [Pattern Guides](strategies/patterns/) |
 | **Maintenance** | 3-5 hrs/week | Staying sharp long-term | [Mixed Practice](practice/mixed-practice/) |
+
+**Prerequisites Track** covers 14 guides across: programming basics, computational thinking, debugging strategies, time/space complexity, 9 core data structures (arrays, linked lists, stacks, queues, hash tables, trees, graphs, heaps, tries), and number theory.
 
 See [tracks/roadmap.md](tracks/roadmap.md) for the complete 4-phase learning path.
 
@@ -261,7 +265,10 @@ Each guide follows the **80/20 principle** and includes:
 │   ├── typescript/        # 15 guides: type system mastery (6 weeks)
 │   └── rust/              # 17 guides: ownership → WebAssembly (5-6 weeks)
 │
-├── prerequisites/         # Foundational knowledge for beginners
+├── prerequisites/         # 14 foundational guides for beginners
+│   ├── complexity/        # Time and space complexity analysis
+│   ├── data-structures/   # Arrays, linked lists, trees, graphs, etc.
+│   └── foundations/       # Programming basics, computational thinking
 ├── examples/              # Worked problem walkthroughs
 └── tracks/                # Curated learning paths
 ```
