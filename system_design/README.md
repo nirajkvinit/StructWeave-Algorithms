@@ -62,6 +62,7 @@ Each system design directory contains 9 standardized documents:
 | 2.3 | Function-as-a-Service (FaaS) | Completed | [View](./2.3-function-as-a-service/00-index.md) |
 | 2.4 | CI/CD Pipeline Build System | Completed | [View](./2.4-cicd-pipeline-build-system/00-index.md) |
 | 2.5 | Identity & Access Management (IAM) | Completed | [View](./2.5-identity-access-management/00-index.md) |
+| 2.6 | Distributed Job Scheduler | Completed | [View](./2.6-distributed-job-scheduler/00-index.md) |
 
 ---
 
