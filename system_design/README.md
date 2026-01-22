@@ -67,6 +67,7 @@ Each system design directory contains 9 standardized documents:
 | 2.8 | Edge Computing Platform | Completed | [View](./2.8-edge-computing-platform/00-index.md) |
 | 2.9 | Multi-Region Active-Active Architecture | Completed | [View](./2.9-multi-region-active-active/00-index.md) |
 | 2.10 | Zero Trust Security Architecture | Completed | [View](./2.10-zero-trust-security-architecture/00-index.md) |
+| 2.11 | Service Mesh Design | Completed | [View](./2.11-service-mesh-design/00-index.md) |
 
 ---
 
