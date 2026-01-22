@@ -64,6 +64,7 @@ Each system design directory contains 9 standardized documents:
 | 2.5 | Identity & Access Management (IAM) | Completed | [View](./2.5-identity-access-management/00-index.md) |
 | 2.6 | Distributed Job Scheduler | Completed | [View](./2.6-distributed-job-scheduler/00-index.md) |
 | 2.7 | Feature Flag Management | Completed | [View](./2.7-feature-flag-management/00-index.md) |
+| 2.8 | Edge Computing Platform | Completed | [View](./2.8-edge-computing-platform/00-index.md) |
 
 ---
 
