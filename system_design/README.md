@@ -60,6 +60,7 @@ Each system design directory contains 9 standardized documents:
 | 2.1 | Cloud Provider Architecture | Completed | [View](./2.1-cloud-provider-architecture/00-index.md) |
 | 2.2 | Container Orchestration System | Completed | [View](./2.2-container-orchestration-system/00-index.md) |
 | 2.3 | Function-as-a-Service (FaaS) | Completed | [View](./2.3-function-as-a-service/00-index.md) |
+| 2.4 | CI/CD Pipeline Build System | Completed | [View](./2.4-cicd-pipeline-build-system/00-index.md) |
 
 ---
 
