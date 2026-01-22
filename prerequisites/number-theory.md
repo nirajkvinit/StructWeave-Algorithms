@@ -256,6 +256,19 @@ Step 4: GCD(6, 0) = 6  ✓
 Answer: GCD(48, 18) = 6
 ```
 
+#### Summary Table
+
+| Step | Dividend (a) | Divisor (b) | Remainder (a mod b) | Equation |
+|------|--------------|-------------|---------------------|----------|
+| 1    | 48           | 18          | 12                  | 48 = 18 × 2 + 12 |
+| 2    | 18           | 12          | 6                   | 18 = 12 × 1 + 6 |
+| 3    | 12           | 6           | 0                   | 12 = 6 × 2 + 0 |
+
+**Key Rule:** When the remainder becomes 0, the divisor in that step is the GCD.
+
+**The division equation:** Each step follows the form `a = b × q + r` where:
+- a = dividend, b = divisor, q = quotient, r = remainder
+
 #### Visual Trace
 
 ```text
