@@ -72,6 +72,7 @@ Each system design directory contains 9 standardized documents:
 | 2.13 | Edge AI/ML Inference | Completed | [View](./2.13-edge-ai-ml-inference/00-index.md) |
 | 2.14 | Edge Data Processing | Completed | [View](./2.14-edge-data-processing/00-index.md) |
 | 2.15 | Edge-Native Feature Flags | Completed | [View](./2.15-edge-native-feature-flags/00-index.md) |
+| 2.16 | Secret Management System | Completed | [View](./2.16-secret-management-system/00-index.md) |
 
 ---
 
