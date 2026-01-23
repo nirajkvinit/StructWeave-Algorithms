@@ -74,6 +74,7 @@ Each system design directory contains 9 standardized documents:
 | 2.15 | Edge-Native Feature Flags | Completed | [View](./2.15-edge-native-feature-flags/00-index.md) |
 | 2.16 | Secret Management System | Completed | [View](./2.16-secret-management-system/00-index.md) |
 | 2.17 | Highly Resilient Status Page System | Completed | [View](./2.17-highly-resilient-status-page/00-index.md) |
+| 2.18 | AI Native Cloud ERP SaaS | Completed | [View](./2.18-ai-native-cloud-erp-saas/00-index.md) |
 
 ---
 
