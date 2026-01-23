@@ -78,6 +78,7 @@ Each system design directory contains 9 standardized documents:
 | 2.19 | AI Native ATS Cloud SaaS | Completed | [View](./2.19-ai-native-ats-cloud-saas/00-index.md) |
 | 2.20 | Compliance-First AI-Native Payroll Engine | Completed | [View](./2.20-compliance-first-ai-native-payroll-engine/00-index.md) |
 | 2.21 | WhatsApp Native ERP for SMB | Completed | [View](./2.21-whatsapp-native-erp-smb/00-index.md) |
+| 2.22 | AI Native Offline First POS | Completed | [View](./2.22-ai-native-offline-first-pos/00-index.md) |
 
 ---
 
