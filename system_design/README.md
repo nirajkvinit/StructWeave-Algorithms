@@ -84,6 +84,7 @@ Each system design directory contains 9 standardized documents:
 | 2.25 | Compliance First AI Native Pharmacy OS | Completed | [View](./2.25-compliance-first-ai-native-pharmacy-os/00-index.md) |
 | 2.26 | Compliance First AI Native Hospital Management System | Completed | [View](./2.26-compliance-first-ai-native-hms/00-index.md) |
 | 3.1 | AI Interviewer System | Completed | [View](./3.1-ai-interviewer-system/00-index.md) |
+| 3.2 | ML Models Deployment System | Completed | [View](./3.2-ml-models-deployment-system/00-index.md) |
 
 ---
 
