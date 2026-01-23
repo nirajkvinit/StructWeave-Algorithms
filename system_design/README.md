@@ -81,6 +81,7 @@ Each system design directory contains 9 standardized documents:
 | 2.22 | AI Native Offline First POS | Completed | [View](./2.22-ai-native-offline-first-pos/00-index.md) |
 | 2.23 | Compliance First AI Native EMR/EHR/PHR | Completed | [View](./2.23-compliance-first-ai-native-emr-ehr-phr/00-index.md) |
 | 2.24 | AI-Powered Clinical Decision Support | Completed | [View](./2.24-ai-powered-clinical-decision-support/00-index.md) |
+| 2.25 | Compliance First AI Native Pharmacy OS | Completed | [View](./2.25-compliance-first-ai-native-pharmacy-os/00-index.md) |
 
 ---
 
