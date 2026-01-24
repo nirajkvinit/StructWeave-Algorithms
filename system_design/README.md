@@ -89,6 +89,7 @@ Each system design directory contains 9 standardized documents:
 | 3.4 | MLOps Platform | Completed | [View](./3.4-mlops-platform/00-index.md) |
 | 3.5 | Uber Michelangelo ML Platform | Completed | [View](./3.5-uber-michelangelo-ml-platform/00-index.md) |
 | 3.6 | Netflix Metaflow ML Workflow Platform | Completed | [View](./3.6-netflix-metaflow-ml-workflow-platform/00-index.md) |
+| 3.7 | Netflix Runway Model Lifecycle Management | Completed | [View](./3.7-netflix-runway-model-lifecycle/00-index.md) |
 
 ---
 
