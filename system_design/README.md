@@ -88,6 +88,7 @@ Each system design directory contains 9 standardized documents:
 | 3.3 | AI-Native Metadata-Driven Super Framework | Completed | [View](./3.3-ai-native-metadata-driven-super-framework/00-index.md) |
 | 3.4 | MLOps Platform | Completed | [View](./3.4-mlops-platform/00-index.md) |
 | 3.5 | Uber Michelangelo ML Platform | Completed | [View](./3.5-uber-michelangelo-ml-platform/00-index.md) |
+| 3.6 | Netflix Metaflow ML Workflow Platform | Completed | [View](./3.6-netflix-metaflow-ml-workflow-platform/00-index.md) |
 
 ---
 
