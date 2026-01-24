@@ -91,6 +91,7 @@ Each system design directory contains 9 standardized documents:
 | 3.6 | Netflix Metaflow ML Workflow Platform | Completed | [View](./3.6-netflix-metaflow-ml-workflow-platform/00-index.md) |
 | 3.7 | Netflix Runway Model Lifecycle Management | Completed | [View](./3.7-netflix-runway-model-lifecycle/00-index.md) |
 | 3.8 | Meta FBLearner Flow Declarative ML Platform | Completed | [View](./3.8-meta-fblearner-flow-ml-platform/00-index.md) |
+| 3.9 | Airbnb BigHead ML Platform | Completed | [View](./3.9-airbnb-bighead-ml-platform/00-index.md) |
 
 ---
 
