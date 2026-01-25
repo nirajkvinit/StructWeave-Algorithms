@@ -96,6 +96,7 @@ Each system design directory contains 9 standardized documents:
 | 3.11 | AIOps System | Completed | [View](./3.11-aiops-system/00-index.md) |
 | 3.12 | Recommendation Engine | Completed | [View](./3.12-recommendation-engine/00-index.md) |
 | 3.13 | LLM Training & Inference Architecture | Completed | [View](./3.13-llm-training-inference-architecture/00-index.md) |
+| 3.14 | Vector Database | Completed | [View](./3.14-vector-database/00-index.md) |
 
 ---
 
