@@ -94,6 +94,7 @@ Each system design directory contains 9 standardized documents:
 | 3.9 | Airbnb BigHead ML Platform | Completed | [View](./3.9-airbnb-bighead-ml-platform/00-index.md) |
 | 3.10 | Open-Source End-to-End ML Platform | Completed | [View](./3.10-open-source-ml-platform/00-index.md) |
 | 3.11 | AIOps System | Completed | [View](./3.11-aiops-system/00-index.md) |
+| 3.12 | Recommendation Engine | Completed | [View](./3.12-recommendation-engine/00-index.md) |
 
 ---
 
