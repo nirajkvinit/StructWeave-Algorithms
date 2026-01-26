@@ -98,6 +98,7 @@ Each system design directory contains 9 standardized documents:
 | 3.13 | LLM Training & Inference Architecture | Completed | [View](./3.13-llm-training-inference-architecture/00-index.md) |
 | 3.14 | Vector Database | Completed | [View](./3.14-vector-database/00-index.md) |
 | 3.15 | RAG System | Completed | [View](./3.15-rag-system/00-index.md) |
+| 3.16 | Feature Store | Completed | [View](./3.16-feature-store/00-index.md) |
 
 ---
 
