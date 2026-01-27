@@ -106,6 +106,7 @@ Each system design directory contains 9 standardized documents:
 | 3.21 | LLM Gateway / Prompt Management | Completed | [View](./3.21-llm-gateway-prompt-management/00-index.md) |
 | 3.22 | AI Guardrails & Safety System | Completed | [View](./3.22-ai-guardrails-safety-system/00-index.md) |
 | 3.23 | LLM Inference Engine | Completed | [View](./3.23-llm-inference-engine/00-index.md) |
+| 3.24 | Multi-Agent Orchestration Platform | Completed | [View](./3.24-multi-agent-orchestration-platform/00-index.md) |
 
 ---
 
