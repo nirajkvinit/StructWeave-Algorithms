@@ -104,6 +104,7 @@ Each system design directory contains 9 standardized documents:
 | 3.19 | AI Voice Assistant | Completed | [View](./3.19-ai-voice-assistant/00-index.md) |
 | 3.20 | AI Image Generation Platform | Completed | [View](./3.20-ai-image-generation-platform/00-index.md) |
 | 3.21 | LLM Gateway / Prompt Management | Completed | [View](./3.21-llm-gateway-prompt-management/00-index.md) |
+| 3.22 | AI Guardrails & Safety System | Completed | [View](./3.22-ai-guardrails-safety-system/00-index.md) |
 
 ---
 
