@@ -101,6 +101,7 @@ Each system design directory contains 9 standardized documents:
 | 3.16 | Feature Store | Completed | [View](./3.16-feature-store/00-index.md) |
 | 3.17 | AI Agent Orchestration Platform | Completed | [View](./3.17-ai-agent-orchestration-platform/00-index.md) |
 | 3.18 | AI Code Assistant | Completed | [View](./3.18-ai-code-assistant/00-index.md) |
+| 3.19 | AI Voice Assistant | Completed | [View](./3.19-ai-voice-assistant/00-index.md) |
 
 ---
 
