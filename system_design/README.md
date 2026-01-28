@@ -108,6 +108,7 @@ Each system design directory contains 9 standardized documents:
 | 3.23 | LLM Inference Engine | Completed | [View](./3.23-llm-inference-engine/00-index.md) |
 | 3.24 | Multi-Agent Orchestration Platform | Completed | [View](./3.24-multi-agent-orchestration-platform/00-index.md) |
 | 3.25 | AI Observability & LLMOps Platform | Completed | [View](./3.25-ai-observability-llmops-platform/00-index.md) |
+| 3.26 | AI Model Evaluation & Benchmarking Platform | Completed | [View](./3.26-ai-model-evaluation-benchmarking-platform/00-index.md) |
 
 ---
 
