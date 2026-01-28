@@ -112,6 +112,7 @@ Each system design directory contains 9 standardized documents:
 | 3.27 | Synthetic Data Generation Platform | Completed | [View](./3.27-synthetic-data-generation-platform/00-index.md) |
 | 3.28 | AI Memory Management System | Completed | [View](./3.28-ai-memory-management-system/00-index.md) |
 | 3.29 | AI-Native Hybrid Search Engine | Completed | [View](./3.29-ai-native-hybrid-search-engine/00-index.md) |
+| 3.30 | AI-Native Video Generation Platform | Completed | [View](./3.30-ai-native-video-generation-platform/00-index.md) |
 
 ---
 
