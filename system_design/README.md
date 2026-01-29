@@ -117,6 +117,7 @@ Each system design directory contains 9 standardized documents:
 | 3.32 | AI-Native Enterprise Knowledge Graph | Completed | [View](./3.32-ai-native-enterprise-knowledge-graph/00-index.md) |
 | 3.33 | AI-Native Customer Service Platform | Completed | [View](./3.33-ai-native-customer-service-platform/00-index.md) |
 | 3.34 | AI-Native Real-Time Personalization Engine | Completed | [View](./3.34-ai-native-real-time-personalization-engine/00-index.md) |
+| 3.35 | AI-Native Translation & Localization Platform | Completed | [View](./3.35-ai-native-translation-localization-platform/00-index.md) |
 
 ---
 
