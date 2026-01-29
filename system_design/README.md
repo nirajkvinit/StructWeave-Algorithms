@@ -120,6 +120,7 @@ Each system design directory contains 9 standardized documents:
 | 3.35 | AI-Native Translation & Localization Platform | Completed | [View](./3.35-ai-native-translation-localization-platform/00-index.md) |
 | 3.36 | AI-Native Data Pipeline (EAI) | Completed | [View](./3.36-ai-native-data-pipeline-eai/00-index.md) |
 | 3.37 | AI-Native Legal Tech Platform | Completed | [View](./3.37-ai-native-legal-tech-platform/00-index.md) |
+| 3.38 | AI-Native Autonomous Vehicle Platform | Completed | [View](./3.38-ai-native-autonomous-vehicle-platform/00-index.md) |
 
 ---
 
