@@ -122,6 +122,7 @@ Each system design directory contains 9 standardized documents:
 | 3.37 | AI-Native Legal Tech Platform | Completed | [View](./3.37-ai-native-legal-tech-platform/00-index.md) |
 | 3.38 | AI-Native Autonomous Vehicle Platform | Completed | [View](./3.38-ai-native-autonomous-vehicle-platform/00-index.md) |
 | 4.1 | Facebook | Completed | [View](./4.1-facebook/00-index.md) |
+| 4.2 | Twitter/X | Completed | [View](./4.2-twitter/00-index.md) |
 
 ---
 
