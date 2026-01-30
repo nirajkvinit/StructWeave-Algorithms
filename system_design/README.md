@@ -127,6 +127,7 @@ Each system design directory contains 9 standardized documents:
 | 4.4 | LinkedIn | Completed | [View](./4.4-linkedin/00-index.md) |
 | 4.5 | TikTok | Completed | [View](./4.5-tiktok/00-index.md) |
 | 4.6 | Tinder | Completed | [View](./4.6-tinder/00-index.md) |
+| 4.7 | WhatsApp | Completed | [View](./4.7-whatsapp/00-index.md) |
 
 ---
 
