@@ -124,6 +124,7 @@ Each system design directory contains 9 standardized documents:
 | 4.1 | Facebook | Completed | [View](./4.1-facebook/00-index.md) |
 | 4.2 | Twitter/X | Completed | [View](./4.2-twitter/00-index.md) |
 | 4.3 | Instagram | Completed | [View](./4.3-instagram/00-index.md) |
+| 4.4 | LinkedIn | Completed | [View](./4.4-linkedin/00-index.md) |
 
 ---
 
