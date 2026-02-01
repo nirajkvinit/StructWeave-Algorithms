@@ -131,6 +131,7 @@ Each system design directory contains 9 standardized documents:
 | 4.8 | Snapchat | Completed | [View](./4.8-snapchat/00-index.md) |
 | 4.9 | Telegram | Completed | [View](./4.9-telegram/00-index.md) |
 | 4.10 | Slack/Discord | Completed | [View](./4.10-slack-discord/00-index.md) |
+| 4.11 | Reddit | Completed | [View](./4.11-reddit/00-index.md) |
 
 ---
 
