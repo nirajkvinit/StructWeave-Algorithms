@@ -121,6 +121,7 @@ Each system design directory contains 9 standardized documents:
 | 3.36 | AI-Native Data Pipeline (EAI) | Completed | [View](./3.36-ai-native-data-pipeline-eai/00-index.md) |
 | 3.37 | AI-Native Legal Tech Platform | Completed | [View](./3.37-ai-native-legal-tech-platform/00-index.md) |
 | 3.38 | AI-Native Autonomous Vehicle Platform | Completed | [View](./3.38-ai-native-autonomous-vehicle-platform/00-index.md) |
+| 3.39 | AI-Native Proactive Observability Platform | Completed | [View](./3.39-ai-native-proactive-observability-platform/00-index.md) |
 | 4.1 | Facebook | Completed | [View](./4.1-facebook/00-index.md) |
 | 4.2 | Twitter/X | Completed | [View](./4.2-twitter/00-index.md) |
 | 4.3 | Instagram | Completed | [View](./4.3-instagram/00-index.md) |
@@ -132,6 +133,8 @@ Each system design directory contains 9 standardized documents:
 | 4.9 | Telegram | Completed | [View](./4.9-telegram/00-index.md) |
 | 4.10 | Slack/Discord | Completed | [View](./4.10-slack-discord/00-index.md) |
 | 4.11 | Reddit | Completed | [View](./4.11-reddit/00-index.md) |
+| 5.1 | YouTube | Completed | [View](./5.1-youtube/00-index.md) |
+
 
 ---
 
