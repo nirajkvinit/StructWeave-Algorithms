@@ -136,6 +136,7 @@ Each system design directory contains 9 standardized documents:
 | 5.1 | YouTube | Completed | [View](./5.1-youtube/00-index.md) |
 | 5.2 | Netflix | Completed | [View](./5.2-netflix/00-index.md) |
 | 5.3 | Netflix CDN (Open Connect) | Completed | [View](./5.3-netflix-cdn/00-index.md) |
+| 5.4 | Spotify | Completed | [View](./5.4-spotify/00-index.md) |
 
 
 ---
