@@ -134,6 +134,7 @@ Each system design directory contains 9 standardized documents:
 | 4.10 | Slack/Discord | Completed | [View](./4.10-slack-discord/00-index.md) |
 | 4.11 | Reddit | Completed | [View](./4.11-reddit/00-index.md) |
 | 5.1 | YouTube | Completed | [View](./5.1-youtube/00-index.md) |
+| 5.2 | Netflix | Completed | [View](./5.2-netflix/00-index.md) |
 
 
 ---
