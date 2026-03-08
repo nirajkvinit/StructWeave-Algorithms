@@ -141,6 +141,9 @@ Each system design directory contains 9 standardized documents:
 | 5.6 | Google Photos | Completed | [View](./5.6-google-photos/00-index.md) |
 | 5.7 | Twitch | Completed | [View](./5.7-twitch/00-index.md) |
 | 5.8 | Podcast Platform | Completed | [View](./5.8-podcast-platform/00-index.md) |
+| 6.1 | Cloud File Storage | Completed | [View](./6.1-cloud-file-storage/00-index.md) |
+| 6.2 | Document Collaboration Engine | Completed | [View](./6.2-document-collaboration-engine/00-index.md) |
+| 6.3 | Multi-Tenant SaaS Platform Architecture | Completed | [View](./6.3-multi-tenant-saas-platform-architecture/00-index.md) |
 
 
 ---
