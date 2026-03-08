@@ -164,6 +164,11 @@ Each system design directory contains 9 standardized documents:
 | 7.4 | Food Delivery System (DoorDash/Zomato - Order Routing, ETA, Driver Assignment) | Completed | [View](./7.4-food-delivery-system/00-index.md) |
 | 7.5 | Maps & Navigation Service (Google Maps - Tile System, Routing, Traffic) | Completed | [View](./7.5-maps-navigation-service/00-index.md) |
 | 7.6 | Flight Booking System (Expedia/Kayak - Aggregation, Inventory, Pricing) | Completed | [View](./7.6-flight-booking-system/00-index.md) |
+| 7.7 | Hotel Booking System (Booking.com - Availability, Rate Management) | Completed | [View](./7.7-hotel-booking-system/00-index.md) |
+| 8.1 | Amazon (Product Catalog, Cart, Checkout, Inventory) | Completed | [View](./8.1-amazon/00-index.md) |
+| 8.2 | Stripe / Razorpay (Payment Gateway, Idempotency, Webhooks) | Completed | [View](./8.2-stripe-razorpay/00-index.md) |
+| 8.3 | Zerodha (Stock Trading, High-speed Order Matching, Market Data) | Completed | [View](./8.3-zerodha/00-index.md) |
+| 8.4 | Digital Wallet (Apple Pay/Paytm - Ledger Consistency, P2P Transfers) | Completed | [View](./8.4-digital-wallet/00-index.md) |
 
 
 ---

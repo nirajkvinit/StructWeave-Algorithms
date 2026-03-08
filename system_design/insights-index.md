@@ -16,21 +16,21 @@ A cross-reference of key architectural insights extracted from each system desig
 | Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 57 |
 | Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 68 |
 | Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 16 |
-| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 88 |
-| Contention | Lock contention, hot keys, thundering herds, and resource competition | 69 |
-| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 49 |
-| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 91 |
+| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 94 |
+| Contention | Lock contention, hot keys, thundering herds, and resource competition | 74 |
+| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 50 |
+| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 93 |
 | Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 22 |
 | Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 21 |
 | External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 11 |
 | Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 24 |
 | Replication | Data replication, follower management, and cross-region synchronization | 8 |
-| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 91 |
-| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 96 |
+| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 99 |
+| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 102 |
 | Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 10 |
-| Security | Authentication, encryption, access control, and threat mitigation | 40 |
-| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 34 |
-| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 62 |
+| Security | Authentication, encryption, access control, and threat mitigation | 45 |
+| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 35 |
+| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 68 |
 | Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 53 |
 
 ---
@@ -2113,6 +2113,73 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
+### 7.7 Hotel Booking System [View](./7.7-hotel-booking-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Platform-Owned Inventory: The Consistency Buck Stops Here | Consistency |
+| 2 | Calendar Matrix: Multi-Dimensional Inventory as a Data Structure Problem | Data Structures |
+| 3 | Intentional Overbooking: Probabilistic Inventory Management | System Modeling |
+| 4 | Event-Driven Channel Synchronization: Consistency Across Independent Systems | Resilience |
+| 5 | Atomic Conditional Updates: Concurrency Without Distributed Locks | Contention |
+| 6 | Search Architecture: Discovery Then Verification | Scaling |
+| 7 | Soft Hold with TTL: Balancing Reservation Guarantees and Inventory Utilization | Contention |
+| 8 | Rate Management: The Yield Curve as a First-Class Architectural Concept | Cost Optimization |
+
+### 8.1 Amazon [View](./8.1-amazon/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | CQRS for Catalog at Scale: Separate Read and Write Paths | System Modeling |
+| 2 | Optimistic Locking for Inventory: Concurrency Without Serialization | Contention |
+| 3 | Pre-Sharded Counters for Flash Sale Contention | Scaling |
+| 4 | Cart as a Distributed Key-Value Object: Simplicity Over Relational | Data Structures |
+| 5 | Buy Box as Marketplace Arbitration: The Algorithm That Drives 80% of Sales | System Modeling |
+| 6 | Saga Pattern for Checkout: Coordinating Unreliable Steps | Resilience |
+| 7 | Cell-Based Architecture: Blast Radius Isolation at Planetary Scale | Resilience |
+| 8 | Two-Phase Inventory: Soft Check for UX, Hard Reserve for Correctness | Consistency |
+
+### 8.2 Stripe / Razorpay [View](./8.2-stripe-razorpay/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Idempotency Keys: The Foundation of Payment Safety | Resilience |
+| 2 | Payment State Machine: Making Financial State Transitions Explicit | System Modeling |
+| 3 | Double-Entry Ledger: Financial Integrity Through Algebraic Constraints | Consistency |
+| 4 | Webhook Delivery: Building a Reliable Notification System at Scale | Scaling |
+| 5 | Card Network Timeout: The Most Dangerous Failure Mode | Resilience |
+| 6 | PCI-DSS as Architecture: Compliance That Shapes System Design | Security |
+| 7 | Payment Path Isolation: Protecting Revenue-Critical Infrastructure | Resilience |
+| 8 | Settlement Reconciliation: Trust but Verify Across System Boundaries | Consistency |
+
+### 8.3 Zerodha [View](./8.3-zerodha/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Exchange as External Matching Authority: Route, Don't Match | System Modeling |
+| 2 | In-Process Risk Engine: When Microseconds Define Architecture | Contention |
+| 3 | Predictable Thundering Herd: Pre-Provision Over Auto-Scale | Scaling |
+| 4 | Binary WebSocket Fan-Out: Mode-Based Streaming at Scale | Streaming |
+| 5 | Event-Sourced Position State: Derived, Never Directly Written | Consistency |
+| 6 | Co-Located Gateway with Leased Line: Two-Tier Latency Architecture | Scaling |
+| 7 | Regulatory Audit as First-Class Architecture: Hash-Chained Immutable Logs | Security |
+| 8 | T+1 Settlement: Managing Three Temporal Views of Portfolio | System Modeling |
+
+### 8.4 Digital Wallet [View](./8.4-digital-wallet/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Double-Entry Ledger as the Fundamental Invariant | Consistency |
+| 2 | Atomic Balance-Check-and-Debit: The Double-Spend Firewall | Contention |
+| 3 | Saga Pattern for Cross-Shard P2P Transfers | Resilience |
+| 4 | Hot Wallet Problem: Write Contention on Popular Accounts | Scaling |
+| 5 | Custodial Fund Segregation: Not Your Money, Not Your Row | Security |
+| 6 | Tiered KYC as a Growth-Compliance Balance | Security |
+| 7 | Idempotency as Financial Infrastructure | Resilience |
+| 8 | Inline Fraud Scoring: The 100-Millisecond Tax Worth Paying | Security |
+
+---
+
 ## Cross-Reference: Insights by Category
 
 ### Atomicity
@@ -2408,6 +2475,12 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.8 Real-Time Collaborative Editor**: Composite CRDTs Are Harder Than Any Individual CRDT
 - **6.8 Real-Time Collaborative Editor**: Block Tree Conflicts Require Different Resolution Semantics Than Text Conflicts
 - **6.8 Real-Time Collaborative Editor**: Cursor Positions Must Be Anchored to CRDT Item IDs, Not Integer Offsets
+- **7.7 Hotel Booking System**: Platform-Owned Inventory: The Consistency Buck Stops Here
+- **8.1 Amazon**: Two-Phase Inventory: Soft Check for UX, Hard Reserve for Correctness
+- **8.2 Stripe / Razorpay**: Double-Entry Ledger: Financial Integrity Through Algebraic Constraints
+- **8.2 Stripe / Razorpay**: Settlement Reconciliation: Trust but Verify Across System Boundaries
+- **8.3 Zerodha**: Event-Sourced Position State: Derived, Never Directly Written
+- **8.4 Digital Wallet**: Double-Entry Ledger as the Fundamental Invariant
 
 ### Contention
 
@@ -2489,6 +2562,11 @@ A cross-reference of key architectural insights extracted from each system desig
 - **7.4 Food Delivery System**: Optimistic Lock on Driver Status for Assignment -- Lua Script Atomic GET-CHECK-SET Eliminates Blocking
 - **7.6 Flight Booking System**: Two-Phase Seat Hold with TTL Expiry -- Lease-Based Concurrency Control Delegates Authority to the GDS
 - **7.6 Flight Booking System**: Inventory Race Condition -- Optimistic Display for Search, Authoritative GDS Resolution at Booking
+- **7.7 Hotel Booking System**: Atomic Conditional Updates: Concurrency Without Distributed Locks
+- **7.7 Hotel Booking System**: Soft Hold with TTL: Balancing Reservation Guarantees and Inventory Utilization
+- **8.1 Amazon**: Optimistic Locking for Inventory: Concurrency Without Serialization
+- **8.3 Zerodha**: In-Process Risk Engine: When Microseconds Define Architecture
+- **8.4 Digital Wallet**: Atomic Balance-Check-and-Debit: The Double-Spend Firewall
 
 ### Cost Optimization
 
@@ -2551,6 +2629,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.4 HubSpot**: Monoglot Java Backend for 3,000+ Microservices
 - **6.5 Zoho Suite**: Full Vertical Stack Ownership -- From Silicon to SaaS
 - **6.7 Google Meet / Zoom**: TURN Relay Creates a 2x Bandwidth Tax That Scales With User Count
+- **7.7 Hotel Booking System**: Rate Management: The Yield Curve as a First-Class Architectural Concept
 
 ### Data Structures
 
@@ -2663,6 +2742,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.6 Ticketmaster**: Seat State Bitmaps for O(1) Availability
 - **6.8 Real-Time Collaborative Editor**: Eg-walker Achieves CRDT Correctness with OT Memory Efficiency
 - **6.8 Real-Time Collaborative Editor**: Tombstone Accumulation Is the Hidden Scalability Tax of CRDTs
+- **7.7 Hotel Booking System**: Calendar Matrix: Multi-Dimensional Inventory as a Data Structure Problem
+- **8.1 Amazon**: Cart as a Distributed Key-Value Object: Simplicity Over Relational
 
 ### Distributed Transactions
 
@@ -2893,6 +2974,14 @@ A cross-reference of key architectural insights extracted from each system desig
 - **7.5 Maps & Navigation Service**: Offline-First Navigation with On-Device Routing -- Full Navigation Without Network Connectivity
 - **7.6 Flight Booking System**: GDS as External Authoritative System -- Circuit Breaker Pattern When Inventory Truth Lives Outside the Platform
 - **7.6 Flight Booking System**: Saga Pattern for Multi-Step Booking with Compensating Transactions -- Four-System Transaction with No Distributed Lock
+- **7.7 Hotel Booking System**: Event-Driven Channel Synchronization: Consistency Across Independent Systems
+- **8.1 Amazon**: Saga Pattern for Checkout: Coordinating Unreliable Steps
+- **8.1 Amazon**: Cell-Based Architecture: Blast Radius Isolation at Planetary Scale
+- **8.2 Stripe / Razorpay**: Idempotency Keys: The Foundation of Payment Safety
+- **8.2 Stripe / Razorpay**: Card Network Timeout: The Most Dangerous Failure Mode
+- **8.2 Stripe / Razorpay**: Payment Path Isolation: Protecting Revenue-Critical Infrastructure
+- **8.4 Digital Wallet**: Saga Pattern for Cross-Shard P2P Transfers
+- **8.4 Digital Wallet**: Idempotency as Financial Infrastructure
 
 ### Scaling
 
@@ -3017,6 +3106,12 @@ A cross-reference of key architectural insights extracted from each system desig
 - **7.5 Maps & Navigation Service**: In-Memory Road Graph for Sub-Second Routing -- Disk-Based Graph Traversal Is 100× Too Slow
 - **7.5 Maps & Navigation Service**: Vector Tiles Enable Client-Side Rendering -- 60-75% Bandwidth Reduction
 - **7.6 Flight Booking System**: Fan-Out Search Aggregation with Timeout Isolation -- Per-Provider Timeouts Prevent Slowest Source from Penalizing All
+- **7.7 Hotel Booking System**: Search Architecture: Discovery Then Verification
+- **8.1 Amazon**: Pre-Sharded Counters for Flash Sale Contention
+- **8.2 Stripe / Razorpay**: Webhook Delivery: Building a Reliable Notification System at Scale
+- **8.3 Zerodha**: Predictable Thundering Herd: Pre-Provision Over Auto-Scale
+- **8.3 Zerodha**: Co-Located Gateway with Leased Line: Two-Tier Latency Architecture
+- **8.4 Digital Wallet**: Hot Wallet Problem: Write Contention on Popular Accounts
 
 ### Search
 
@@ -3091,6 +3186,11 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.5 Zoho Suite**: Fixed Immutable System Prompts for Agent Safety
 - **6.7 Google Meet / Zoom**: E2EE Disables Server-Side Intelligence -- A Fundamental Architectural Trade-off
 - **6.8 Real-Time Collaborative Editor**: Permission Changes and CRDT Merges Are Fundamentally at Odds
+- **8.2 Stripe / Razorpay**: PCI-DSS as Architecture: Compliance That Shapes System Design
+- **8.3 Zerodha**: Regulatory Audit as First-Class Architecture: Hash-Chained Immutable Logs
+- **8.4 Digital Wallet**: Custodial Fund Segregation: Not Your Money, Not Your Row
+- **8.4 Digital Wallet**: Tiered KYC as a Growth-Compliance Balance
+- **8.4 Digital Wallet**: Inline Fraud Scoring: The 100-Millisecond Tax Worth Paying
 
 ### Streaming
 
@@ -3143,6 +3243,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **7.2 Airbnb**: Contact Information Detection as a Revenue Protection Mechanism in Commission-Based Marketplaces
 - **7.3 Car Parking System**: Short-Lived QR Code Pattern for Physical Access -- Dynamic TOTP-Style Tokens Prevent Screenshot Replay Attacks
 - **7.4 Food Delivery System**: Server-Side GPS Trajectory Validation -- Physical Impossibility Detection Defeats GPS Spoofing Fraud
+- **8.3 Zerodha**: Binary WebSocket Fan-Out: Mode-Based Streaming at Scale
 
 ### System Modeling
 
@@ -3226,6 +3327,12 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.7 Google Meet / Zoom**: Signaling and Media Are Completely Decoupled Paths
 - **6.7 Google Meet / Zoom**: Recording and Live Delivery Are Architecturally Opposed
 - **6.8 Real-Time Collaborative Editor**: Block Identity Decouples Structure from Content
+- **7.7 Hotel Booking System**: Intentional Overbooking: Probabilistic Inventory Management
+- **8.1 Amazon**: CQRS for Catalog at Scale: Separate Read and Write Paths
+- **8.1 Amazon**: Buy Box as Marketplace Arbitration: The Algorithm That Drives 80% of Sales
+- **8.2 Stripe / Razorpay**: Payment State Machine: Making Financial State Transitions Explicit
+- **8.3 Zerodha**: Exchange as External Matching Authority: Route, Don't Match
+- **8.3 Zerodha**: T+1 Settlement: Managing Three Temporal Views of Portfolio
 
 ### Traffic Shaping
 
