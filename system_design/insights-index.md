@@ -16,21 +16,21 @@ A cross-reference of key architectural insights extracted from each system desig
 | Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 56 |
 | Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 57 |
 | Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 16 |
-| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 76 |
+| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 79 |
 | Contention | Lock contention, hot keys, thundering herds, and resource competition | 62 |
 | Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 48 |
-| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 78 |
+| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 80 |
 | Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 22 |
 | Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 21 |
 | External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 8 |
 | Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 24 |
 | Replication | Data replication, follower management, and cross-region synchronization | 8 |
-| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 74 |
-| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 75 |
+| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 76 |
+| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 77 |
 | Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 5 |
-| Security | Authentication, encryption, access control, and threat mitigation | 32 |
-| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 32 |
-| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 55 |
+| Security | Authentication, encryption, access control, and threat mitigation | 33 |
+| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 33 |
+| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 56 |
 | Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 50 |
 
 ---
@@ -1865,6 +1865,25 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
+### 6.8 Real-Time Collaborative Editor [View](./6.8-real-time-collaborative-editor/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Block Identity Decouples Structure from Content | System Modeling |
+| 2 | Composite CRDTs Are Harder Than Any Individual CRDT | Consistency |
+| 3 | Presence Must Be Architecturally Separated from Document Sync | Streaming |
+| 4 | Offline-First Is an Architecture, Not a Feature | Resilience |
+| 5 | Block Tree Conflicts Require Different Resolution Semantics Than Text Conflicts | Consistency |
+| 6 | State Vector Exchange Reduces Sync to O(k) Where k Is Missing Operations | Scaling |
+| 7 | Eg-walker Achieves CRDT Correctness with OT Memory Efficiency | Data Structures |
+| 8 | Tombstone Accumulation Is the Hidden Scalability Tax of CRDTs | Data Structures |
+| 9 | CRDT Architecture Inverts the Disaster Recovery Model | Resilience |
+| 10 | Cursor Positions Must Be Anchored to CRDT Item IDs, Not Integer Offsets | Consistency |
+| 11 | Block-Level Lazy Loading Transforms Document Size from a Memory Problem to an I/O Problem | Scaling |
+| 12 | Permission Changes and CRDT Merges Are Fundamentally at Odds | Security |
+
+---
+
 ## Cross-Reference: Insights by Category
 
 ### Atomicity
@@ -2149,6 +2168,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.1 Cloud File Storage**: Three-Tree Merge Model for Bidirectional Sync
 - **6.2 Document Collaboration Engine**: Optimistic Local Application with Server Reconciliation
 - **6.5 Zoho Suite**: Optimistic Locking with Field-Level Conflict Resolution
+- **6.8 Real-Time Collaborative Editor**: Composite CRDTs Are Harder Than Any Individual CRDT
+- **6.8 Real-Time Collaborative Editor**: Block Tree Conflicts Require Different Resolution Semantics Than Text Conflicts
+- **6.8 Real-Time Collaborative Editor**: Cursor Positions Must Be Anchored to CRDT Item IDs, Not Integer Offsets
 
 ### Contention
 
@@ -2396,6 +2418,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.3 Multi-Tenant SaaS Platform Architecture**: Skinny Tables for Hot Object Query Acceleration
 - **6.4 HubSpot**: Timer Service Database Polling for Delayed Workflow Actions
 - **6.6 Ticketmaster**: Seat State Bitmaps for O(1) Availability
+- **6.8 Real-Time Collaborative Editor**: Eg-walker Achieves CRDT Correctness with OT Memory Efficiency
+- **6.8 Real-Time Collaborative Editor**: Tombstone Accumulation Is the Hidden Scalability Tax of CRDTs
 
 ### Distributed Transactions
 
@@ -2611,6 +2635,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.6 Ticketmaster**: The Taylor Swift Lesson -- Reject with Intent
 - **6.6 Ticketmaster**: Bulkhead Isolation for On-Sale vs. Browsing
 - **6.7 Google Meet / Zoom**: UDP is Non-Negotiable for Real-Time Media -- TCP Head-of-Line Blocking Destroys Latency
+- **6.8 Real-Time Collaborative Editor**: Offline-First Is an Architecture, Not a Feature
+- **6.8 Real-Time Collaborative Editor**: CRDT Architecture Inverts the Disaster Recovery Model
 
 ### Scaling
 
@@ -2722,6 +2748,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.6 Ticketmaster**: Pre-Scaling for Known Spikes
 - **6.7 Google Meet / Zoom**: SFU Fan-Out is O(N) Not O(N²) -- That's the Entire Value Proposition
 - **6.7 Google Meet / Zoom**: Cascaded SFU Tree Topology Trades Latency for Scale
+- **6.8 Real-Time Collaborative Editor**: State Vector Exchange Reduces Sync to O(k) Where k Is Missing Operations
+- **6.8 Real-Time Collaborative Editor**: Block-Level Lazy Loading Transforms Document Size from a Memory Problem to an I/O Problem
 
 ### Search
 
@@ -2794,6 +2822,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.5 Zoho Suite**: Multi-Layer Tenant Data Isolation with RLS as Second Enforcement
 - **6.5 Zoho Suite**: Fixed Immutable System Prompts for Agent Safety
 - **6.7 Google Meet / Zoom**: E2EE Disables Server-Side Intelligence -- A Fundamental Architectural Trade-off
+- **6.8 Real-Time Collaborative Editor**: Permission Changes and CRDT Merges Are Fundamentally at Odds
 
 ### Streaming
 
@@ -2841,6 +2870,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **5.8 Podcast Platform**: Audio Stitching Cross-Fade and Loudness Normalization
 - **6.7 Google Meet / Zoom**: Simulcast Layer Switching Requires Keyframe Synchronization
 - **6.7 Google Meet / Zoom**: Active Speaker Detection Needs Debouncing to Prevent Layout Thrashing
+- **6.8 Real-Time Collaborative Editor**: Presence Must Be Architecturally Separated from Document Sync
 
 ### System Modeling
 
@@ -2923,6 +2953,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.6 Ticketmaster**: Finite, Non-Fungible Inventory Changes Everything
 - **6.7 Google Meet / Zoom**: Signaling and Media Are Completely Decoupled Paths
 - **6.7 Google Meet / Zoom**: Recording and Live Delivery Are Architecturally Opposed
+- **6.8 Real-Time Collaborative Editor**: Block Identity Decouples Structure from Content
 
 ### Traffic Shaping
 
