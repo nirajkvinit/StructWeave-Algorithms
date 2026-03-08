@@ -139,6 +139,8 @@ Each system design directory contains 9 standardized documents:
 | 5.4 | Spotify | Completed | [View](./5.4-spotify/00-index.md) |
 | 5.5 | Disney+ Hotstar | Completed | [View](./5.5-disney-hotstar/00-index.md) |
 | 5.6 | Google Photos | Completed | [View](./5.6-google-photos/00-index.md) |
+| 5.7 | Twitch | Completed | [View](./5.7-twitch/00-index.md) |
+| 5.8 | Podcast Platform | Completed | [View](./5.8-podcast-platform/00-index.md) |
 
 
 ---
