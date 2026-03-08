@@ -146,6 +146,7 @@ Each system design directory contains 9 standardized documents:
 | 6.3 | Multi-Tenant SaaS Platform Architecture | Completed | [View](./6.3-multi-tenant-saas-platform-architecture/00-index.md) |
 | 6.4 | HubSpot (Marketing Automation & CRM) | Completed | [View](./6.4-hubspot/00-index.md) |
 | 6.5 | Zoho Suite (Multi-Product Platform) | Completed | [View](./6.5-zoho-suite/00-index.md) |
+| 6.6 | Ticketmaster (High Contention Booking) | Completed | [View](./6.6-ticketmaster/00-index.md) |
 
 
 ---
