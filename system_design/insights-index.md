@@ -1948,6 +1948,66 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
+### 6.14 Customer Support Platform [View](./6.14-customer-support-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | SLA Timers as Distributed State -- Why Cron Jobs Fail and Timer Wheels Win | System Modeling |
+| 2 | The Knowledge Base Deflection Flywheel -- Pre-Ticket Search as a Data Engine | Scaling |
+| 3 | Multi-Tenant Isolation Depth -- Beyond tenant_id to Row-Level Security and Schema Partitioning | System Modeling |
+| 4 | AI Routing vs. Rule-Based Routing -- When ML Adds Value and When Rules Win | System Modeling |
+| 5 | WebSocket Connection Management at Scale -- Shard by Agent Session, Not by Server | Streaming |
+
+---
+
+### 6.15 Calendar & Scheduling System [View](./6.15-calendar-scheduling-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | RRULE Expansion -- Storing the Rule Is Correct, Expanding All Instances Is the Antipattern | Data Structures |
+| 2 | Timezone Ghost Meetings -- Why Wall-Clock Semantics and UTC Are Not Interchangeable Across DST | Consistency |
+| 3 | Free-Busy as a Separate Service -- Aggregating Availability Must Be Architecturally Isolated | System Modeling |
+| 4 | The External Booking Race -- Why Calendly-Style Booking Requires Optimistic Locking | Contention |
+| 5 | Notification Fan-Out for All-Hands Meetings -- Tiered Delivery Prevents 50K-Reminder Thundering Herds | Traffic Shaping |
+
+---
+
+### 6.16 Digital Signature Platform [View](./6.16-digital-signature-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Hash-Chained Audit Logs -- Why a Simple Audit Table Is Insufficient for Legal Non-Repudiation | Security |
+| 2 | eIDAS Qualification Levels -- Click-to-Sign and QES Are Architecturally Different Systems, Not UI Variants | External Dependencies |
+| 3 | PDF Sealing Semantics -- Embedding a Signature Into a PDF Is Not the Same as Signing the PDF Hash | System Modeling |
+| 4 | Signer Session Design -- Short-Lived, Single-Use, Envelope-Scoped Tokens Prevent Replay Attacks | Security |
+| 5 | Bulk Send Fan-Out -- Idempotent Envelope Generation Prevents Duplicate Documents at 10K-Recipient Scale | Scaling |
+
+---
+
+### 6.17 No-Code/Low-Code Platform [View](./6.17-no-code-low-code-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Metadata-Driven Runtime vs. Code Generation -- Why JSON-Rendered Apps Are More Secure and Portable | System Modeling |
+| 2 | The Reactive Formula Engine -- Spreadsheet Dependency Graphs Disguised as Component Bindings | Data Structures |
+| 3 | The Sandbox Dilemma -- V8 Isolates + Allowlisted Connector Proxy Is the Right Architecture for User Code | Security |
+| 4 | Connector as Security Perimeter -- Server-Side Proxy Is Non-Negotiable for Credential Protection | Security |
+| 5 | The Governance Gap -- No-Code Platforms Fail Enterprise Without Query Auditing and Row-Level Security | System Modeling |
+
+---
+
+### 7.1 Uber/Lyft [View](./7.1-uber-lyft/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | H3 Hexagonal Grid over Geohash -- Uniform Cell Size Eliminates Boundary Artifacts in Ride-Hail Matching | Data Structures |
+| 2 | Two-Phase Matching -- Nearest Driver ≠ Fastest Dispatch; Geo Filter and ETA Ranking Are Separate Problems | System Modeling |
+| 3 | Surge Pricing as a Market-Clearing Mechanism -- Sub-Neighborhood Granularity and Near-Real-Time Computation | System Modeling |
+| 4 | Location Pipeline at 875K Writes/Second -- Tiered Write Path Prevents Relational Database Collapse | Scaling |
+| 5 | Trip State Machine as Single Source of Truth -- Persistent State Machine Enables Idempotent Recovery | Resilience |
+
+---
+
 ## Cross-Reference: Insights by Category
 
 ### Atomicity

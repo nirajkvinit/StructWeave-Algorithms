@@ -154,6 +154,11 @@ Each system design directory contains 9 standardized documents:
 | 6.11 | WebRTC Collaborative Canvas (Miro/Excalidraw) | Completed | [View](./6.11-webrtc-collaborative-canvas/00-index.md) |
 | 6.12 | Document Management System (SharePoint/Box) | Completed | [View](./6.12-document-management-system/00-index.md) |
 | 6.13 | Enterprise Knowledge Management System (Confluence) | Completed | [View](./6.13-enterprise-knowledge-management-system/00-index.md) |
+| 6.14 | Customer Support Platform (Zendesk/Intercom) | Completed | [View](./6.14-customer-support-platform/00-index.md) |
+| 6.15 | Calendar & Scheduling System (Google Calendar/Calendly) | Completed | [View](./6.15-calendar-scheduling-system/00-index.md) |
+| 6.16 | Digital Signature Platform (DocuSign/HelloSign) | Completed | [View](./6.16-digital-signature-platform/00-index.md) |
+| 6.17 | No-Code/Low-Code Platform (Retool/Airtable) | Completed | [View](./6.17-no-code-low-code-platform/00-index.md) |
+| 7.1 | Uber/Lyft (Driver Matching, Location Tracking, Surge Pricing) | Completed | [View](./7.1-uber-lyft/00-index.md) |
 
 
 ---
