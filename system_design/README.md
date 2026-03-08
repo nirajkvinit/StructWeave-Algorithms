@@ -144,6 +144,7 @@ Each system design directory contains 9 standardized documents:
 | 6.1 | Cloud File Storage | Completed | [View](./6.1-cloud-file-storage/00-index.md) |
 | 6.2 | Document Collaboration Engine | Completed | [View](./6.2-document-collaboration-engine/00-index.md) |
 | 6.3 | Multi-Tenant SaaS Platform Architecture | Completed | [View](./6.3-multi-tenant-saas-platform-architecture/00-index.md) |
+| 6.4 | HubSpot (Marketing Automation & CRM) | Completed | [View](./6.4-hubspot/00-index.md) |
 
 
 ---
