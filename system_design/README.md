@@ -149,6 +149,11 @@ Each system design directory contains 9 standardized documents:
 | 6.6 | Ticketmaster (High Contention Booking) | Completed | [View](./6.6-ticketmaster/00-index.md) |
 | 6.7 | Google Meet / Zoom (Video Conferencing) | Completed | [View](./6.7-google-meet-zoom/00-index.md) |
 | 6.8 | Real-Time Collaborative Editor | Completed | [View](./6.8-real-time-collaborative-editor/00-index.md) |
+| 6.9 | GitHub (Git Hosting, Pull Requests, Actions, Code Search) | Completed | [View](./6.9-github/00-index.md) |
+| 6.10 | Figma (Real-time Design Collaboration, Multiplayer Cursors) | Completed | [View](./6.10-figma/00-index.md) |
+| 6.11 | WebRTC Collaborative Canvas (Miro/Excalidraw) | Completed | [View](./6.11-webrtc-collaborative-canvas/00-index.md) |
+| 6.12 | Document Management System (SharePoint/Box) | Completed | [View](./6.12-document-management-system/00-index.md) |
+| 6.13 | Enterprise Knowledge Management System (Confluence) | Completed | [View](./6.13-enterprise-knowledge-management-system/00-index.md) |
 
 
 ---

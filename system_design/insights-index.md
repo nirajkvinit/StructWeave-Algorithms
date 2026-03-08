@@ -13,25 +13,25 @@ A cross-reference of key architectural insights extracted from each system desig
 
 | Category | Description | Topics Count |
 |----------|-------------|:------------:|
-| Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 56 |
-| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 57 |
+| Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 57 |
+| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 58 |
 | Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 16 |
-| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 79 |
-| Contention | Lock contention, hot keys, thundering herds, and resource competition | 62 |
-| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 48 |
-| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 80 |
+| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 85 |
+| Contention | Lock contention, hot keys, thundering herds, and resource competition | 63 |
+| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 49 |
+| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 90 |
 | Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 22 |
 | Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 21 |
-| External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 8 |
+| External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 9 |
 | Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 24 |
 | Replication | Data replication, follower management, and cross-region synchronization | 8 |
-| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 76 |
-| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 77 |
-| Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 5 |
-| Security | Authentication, encryption, access control, and threat mitigation | 33 |
-| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 33 |
-| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 56 |
-| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 50 |
+| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 78 |
+| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 83 |
+| Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 9 |
+| Security | Authentication, encryption, access control, and threat mitigation | 36 |
+| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 34 |
+| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 62 |
+| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 53 |
 
 ---
 
@@ -1878,6 +1878,70 @@ A cross-reference of key architectural insights extracted from each system desig
 | 7 | Eg-walker Achieves CRDT Correctness with OT Memory Efficiency | Data Structures |
 | 8 | Tombstone Accumulation Is the Hidden Scalability Tax of CRDTs | Data Structures |
 | 9 | CRDT Architecture Inverts the Disaster Recovery Model | Resilience |
+
+### 6.9 GitHub [View](./6.9-github/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Content Addressing Makes Deduplication Free and Integrity Automatic | Data Structures |
+| 2 | Fork COW Semantics Turn a Storage Crisis into a Scaling Advantage | Scaling |
+| 3 | Compare-and-Swap on Refs Is the Entire Concurrency Model | Atomicity |
+| 4 | Actions Is a General-Purpose Distributed Task Execution System Disguised as CI/CD | System Modeling |
+| 5 | Trigram Indexing Is the Only Viable Approach for Code Search at Scale | Search |
+| 6 | The Push Event Is the Heartbeat of the Entire Platform | Streaming |
+| 7 | Ephemeral Runners Solve Security by Making State a Non-Issue | Security |
+| 8 | Git's Immutability Enables Aggressive Caching at Every Layer | Caching |
+
+### 6.10 Figma [View](./6.10-figma/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Property-Level LWW CRDTs Are the Right Abstraction for Design Tools | Consistency |
+| 2 | WebAssembly Enables a "Write Once, Render Identically Everywhere" Architecture | System Modeling |
+| 3 | Fractional Indexing Eliminates the Reorder Problem That Plagues Sequence CRDTs | Data Structures |
+| 4 | The Component/Instance Override Model Is a Specialized Merge Strategy | Consistency |
+| 5 | Spatial Multiplayer Requires Viewport-Aware Broadcasting | Traffic Shaping |
+| 6 | The Multiplayer Server Is a Relay, Not a Transformer | System Modeling |
+| 7 | Binary Scene Graph Format Trades Queryability for Load Speed | Data Structures |
+| 8 | Plugin Sandbox Design Mirrors Operating System Security Principles | Security |
+
+### 6.11 WebRTC Collaborative Canvas [View](./6.11-webrtc-collaborative-canvas/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Why Pure WebRTC Mesh Fails at Scale | Scaling |
+| 2 | Ephemeral vs Durable State -- The Core Architectural Split | System Modeling |
+| 3 | CRDTs for 2D Spatial Data vs Text | Consistency |
+| 4 | TURN Server Costs as an Architecture Driver | Cost Optimization |
+| 5 | Infinite Canvas as a Distributed Scaling Problem | Scaling |
+| 6 | CRDT Operation Log Compaction via Snapshotting | Data Structures |
+| 7 | Connector Routing as a Real-Time Consistency Problem | Consistency |
+| 8 | Freehand Drawing -- The High-Frequency Operation Problem | Traffic Shaping |
+
+### 6.12 Document Management System [View](./6.12-document-management-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Document Management Is File Storage Plus Governance -- and Governance Is the Harder Problem | System Modeling |
+| 2 | Check-In/Check-Out Is a Distributed Coordination Problem Disguised as a Feature | Contention |
+| 3 | Delta Versioning Trades Storage Cost for Reconstruction Complexity | Data Structures |
+| 4 | Searching Across Binary Formats Is a Content Extraction Problem, Not a Search Problem | Search |
+| 5 | The Metadata Explosion Problem -- Three Categories with Different Lifecycles | Data Structures |
+| 6 | Compliance Requirements Drive Architecture, Not the Other Way Around | External Dependencies |
+| 7 | Folder Hierarchy Permission Inheritance Is a Tree Data Structure Problem | Data Structures |
+| 8 | The Lock Service Is Small in Data, Critical in Availability | Resilience |
+
+### 6.13 Enterprise Knowledge Management System [View](./6.13-enterprise-knowledge-management-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Page Hierarchy -- A Solved Storage Problem with an Unsolved Permission Problem | Data Structures |
+| 2 | The 10:1 Read-Write Ratio Shapes Everything | Scaling |
+| 3 | Block-Based Content Storage as the Generational Shift | System Modeling |
+| 4 | Notification Fan-Out at Wiki Scale | Traffic Shaping |
+| 5 | Backlink Graph -- The Hidden Scaling Challenge | Consistency |
+| 6 | Search as the Primary Navigation Mechanism | Search |
+| 7 | Compliance Requirements Drive Immutability | Security |
 | 10 | Cursor Positions Must Be Anchored to CRDT Item IDs, Not Integer Offsets | Consistency |
 | 11 | Block-Level Lazy Loading Transforms Document Size from a Memory Problem to an I/O Problem | Scaling |
 | 12 | Permission Changes and CRDT Merges Are Fundamentally at Odds | Security |
