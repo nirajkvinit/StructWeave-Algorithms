@@ -169,6 +169,11 @@ Each system design directory contains 9 standardized documents:
 | 8.2 | Stripe / Razorpay (Payment Gateway, Idempotency, Webhooks) | Completed | [View](./8.2-stripe-razorpay/00-index.md) |
 | 8.3 | Zerodha (Stock Trading, High-speed Order Matching, Market Data) | Completed | [View](./8.3-zerodha/00-index.md) |
 | 8.4 | Digital Wallet (Apple Pay/Paytm - Ledger Consistency, P2P Transfers) | Completed | [View](./8.4-digital-wallet/00-index.md) |
+| 8.5 | Fraud Detection System (Real-time ML Scoring, Rules Engine) | Completed | [View](./8.5-fraud-detection-system/00-index.md) |
+| 8.6 | Distributed Ledger / Core Banking System (ACID at Scale, Double-entry) | Completed | [View](./8.6-distributed-ledger-core-banking/00-index.md) |
+| 8.7 | Cryptocurrency Exchange (Coinbase/Binance - Matching Engine, Wallet Management) | Completed | [View](./8.7-cryptocurrency-exchange/00-index.md) |
+| 8.8 | Blockchain Network (Ethereum/Bitcoin - Consensus, P2P, Smart Contracts) | Completed | [View](./8.8-blockchain-network/00-index.md) |
+| 8.9 | Buy Now Pay Later (BNPL) (Klarna/Affirm - Credit Decisioning, Installments) | Completed | [View](./8.9-buy-now-pay-later/00-index.md) |
 
 
 ---

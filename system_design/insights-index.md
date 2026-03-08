@@ -2178,6 +2178,67 @@ A cross-reference of key architectural insights extracted from each system desig
 | 7 | Idempotency as Financial Infrastructure | Resilience |
 | 8 | Inline Fraud Scoring: The 100-Millisecond Tax Worth Paying | Security |
 
+### 8.5 Fraud Detection System [View](./8.5-fraud-detection-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Dual-Speed Feature Engineering: The 100ms Constraint That Shapes Everything | Data Structures |
+| 2 | Fail-Open is a Business Requirement, Not an Engineering Preference | Resilience |
+| 3 | The Ensemble is Not About Accuracy—It's About Coverage | System Modeling |
+| 4 | Selection Bias is the Silent Model Killer | Consistency |
+| 5 | Adversarial Drift Makes Every Deployment a Moving Target | Security |
+| 6 | Graph Analysis Reveals What Transaction-Level Scoring Cannot | Data Structures |
+| 7 | Case Management is the Model's Training Data Factory | System Modeling |
+| 8 | Dynamic Thresholds Turn a Classifier Into a Risk Manager | Traffic Shaping |
+
+### 8.6 Distributed Ledger / Core Banking System [View](./8.6-distributed-ledger-core-banking/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The General Ledger Is the Beating Heart—Everything Else Is Plumbing | Data Structures |
+| 2 | Materialized Balance Is a Cache of the Ledger—Treat It as Such | Caching |
+| 3 | Sagas Over 2PC: Distributed Atomicity Without Distributed Locking | Resilience |
+| 4 | The Product Catalog Is a Domain-Specific Language for Banking | System Modeling |
+| 5 | Interest Accrual Reveals the True Complexity of "Simple" Banking | Contention |
+| 6 | Reconciliation Is Architecture, Not Afterthought | Consistency |
+| 7 | Legacy Modernization Is the Real Core Banking Challenge | System Modeling |
+
+### 8.7 Cryptocurrency Exchange [View](./8.7-cryptocurrency-exchange/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Deterministic Single-Threaded Matching: Trading Correctness for Throughput | Atomicity |
+| 2 | Event Sourcing as the Foundation of Financial Truth | Data Structures |
+| 3 | Tri-Tier Custody: Defense in Depth for Irreversible Assets | Security |
+| 4 | The Order Book Is a Real-Time Distributed Consistency Problem | Consistency |
+| 5 | Multi-Chain Is Multi-Everything: The Blockchain Abstraction Problem | System Modeling |
+| 6 | Proof of Reserves: Cryptographic Trust in a Trustless Era | Security |
+| 7 | Liquidation Cascades: The Feedback Loop That Breaks Markets | Resilience |
+
+### 8.8 Blockchain Network [View](./8.8-blockchain-network/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Economic Security Replaces Access Control | Security |
+| 2 | The Consensus-Execution Separation is the Key Architectural Pattern | System Modeling |
+| 3 | Deterministic State Machines Demand Extreme Discipline | Consistency |
+| 4 | The Scalability Trilemma is a Genuine Constraint, Not a Myth | Scaling |
+| 5 | The Mempool is a Transparent Adversarial Environment, Not a Simple Queue | Contention |
+| 6 | State Growth is the Existential Long-Term Challenge | Data Structures |
+| 7 | Client Diversity is a Non-Obvious but Critical Safety Requirement | Resilience |
+
+### 8.9 Buy Now Pay Later (BNPL) [View](./8.9-buy-now-pay-later/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Credit Decisioning at Checkout Speed: The 2-Second Lending Decision | Contention |
+| 2 | The Installment Plan as a Long-Lived State Machine | Data Structures |
+| 3 | Credit Reservation: Solving Concurrent Exposure Without Global Locks | Contention |
+| 4 | Intelligent Payment Retry: Not All Failures Are Created Equal | Resilience |
+| 5 | Merchant-Subsidized Credit: The Inverted Economics of BNPL | System Modeling |
+| 6 | Regulatory Compliance as a System Constraint, Not an Afterthought | Security |
+| 7 | Virtual Card Issuance: The Universal Compatibility Bridge | System Modeling |
+
 ---
 
 ## Cross-Reference: Insights by Category
