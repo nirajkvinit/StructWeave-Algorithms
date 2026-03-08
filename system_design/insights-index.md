@@ -14,21 +14,21 @@ A cross-reference of key architectural insights extracted from each system desig
 | Category | Description | Topics Count |
 |----------|-------------|:------------:|
 | Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 57 |
-| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 58 |
+| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 68 |
 | Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 16 |
-| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 85 |
-| Contention | Lock contention, hot keys, thundering herds, and resource competition | 63 |
+| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 88 |
+| Contention | Lock contention, hot keys, thundering herds, and resource competition | 69 |
 | Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 49 |
-| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 90 |
+| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 91 |
 | Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 22 |
 | Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 21 |
-| External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 9 |
+| External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 11 |
 | Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 24 |
 | Replication | Data replication, follower management, and cross-region synchronization | 8 |
-| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 78 |
-| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 83 |
-| Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 9 |
-| Security | Authentication, encryption, access control, and threat mitigation | 36 |
+| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 91 |
+| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 96 |
+| Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 10 |
+| Security | Authentication, encryption, access control, and threat mitigation | 40 |
 | Streaming | Real-time data processing, event streaming, and pub/sub architectures | 34 |
 | System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 62 |
 | Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 53 |
@@ -2008,6 +2008,111 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
+### 7.2 Airbnb [View](./7.2-airbnb/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Calendar Double-Booking Prevention Pattern -- Per-Date State + Distributed Lock Is the Only Viable Approach | Contention |
+| 2 | Authorize-Then-Capture Payment Hold -- Decoupling Authorization from Capture Creates a Multi-Day Distributed Transaction | Resilience |
+| 3 | Eventual vs. Strong Consistency Split by Domain -- The Consistency Boundary Is the Hardest Architecture Decision | Consistency |
+| 4 | Two-Sided Marketplace Trust Architecture -- Asymmetric Enforcement Between Supply and Demand | Security |
+| 5 | Geo + ML Hybrid Search Ranking -- Map Results Require a Fundamentally Different Ranking Theory Than List Results | Search |
+| 6 | iCal External Calendar Sync via Polling -- Poll-Based Synchronization Creates an Unavoidable Consistency Gap | Scaling |
+| 7 | Per-Date Status Modeling for Calendar -- Date-Level Granularity Outperforms Range-Based and Bitmap Approaches | Data Modeling |
+| 8 | Price Hold Window & Race Condition -- Lock TTL and Payment Authorization Timing Create a Narrow Correctness Window | Contention |
+| 9 | Review Gate via Booking Verification -- Structural Anti-Fraud Mechanism, Not Just a Policy Choice | Data Modeling |
+| 10 | Split Payout with Escrow Timing -- 24-Hour Delay Is an Architectural Safety Mechanism | Pricing |
+| 11 | Host Instant Book vs. Request Mode Flexibility -- Market Equilibrium Mechanism, Not Feature Bloat | Scaling |
+| 12 | Listing Indexing Freshness vs. Accuracy Trade-off -- Search Index and Source of Truth Must Be Decoupled | Consistency |
+| 13 | The Reservation Reaper Pattern -- Temporary States Require Automated Cleanup to Prevent State Leaks | Resilience |
+| 14 | Service Block Facade Pattern -- Domain-Aligned Blocks Solve the Microservice Coordination Problem | Scaling |
+| 15 | Contact Information Detection as a Revenue Protection Mechanism -- Message Scanning Is an Architectural Necessity | Security |
+
+---
+
+### 7.3 Car Parking System [View](./7.3-car-parking-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Hierarchical Object Model for Physical Systems -- Corporation → Lot → Floor → Zone → Spot Reflects Infrastructure Topology | Data Modeling |
+| 2 | Edge-First Gate Control for Physical Barrier Reliability -- Cloud-Only Design Creates Unacceptable Single Points of Failure | Resilience |
+| 3 | Spot Availability Bitmap for O(1) Lookups -- 10,000 Lots Compressed into ~6 MB of Redis with Microsecond Latency | Data Structures |
+| 4 | Optimistic Locking for Low-Contention Slot Allocation -- Contention Ratio Determines the Right Concurrency Control | Contention |
+| 5 | IoT Sensor Pipeline with Debouncing -- Requiring Two Consistent Readings Eliminates Phantom State Changes | IoT / Resilience |
+| 6 | Offline-First Gate with Reconciliation on Reconnect -- Transforms Availability Problem into Eventual Consistency Problem | Resilience |
+| 7 | Time-Window Reservation to Prevent Slot Squatting -- Balances User Flexibility Against Lot Utilization | Data Modeling |
+| 8 | Per-Lot Sharding for Operational Isolation -- Zero Cross-Shard Transactions for All Operational Flows | Scaling |
+| 9 | Short-Lived QR Code Pattern for Physical Access -- Dynamic TOTP-Style Tokens Prevent Screenshot Replay Attacks | Security |
+| 10 | Pricing Rule Engine with Period-Based Rates -- Composable Rules Handle Peak/Off-Peak, Daily Caps, and Surge | Pricing |
+| 11 | Fail-Open Exit Gates for Revenue vs Traffic Trade-off -- Traffic Backup Cost Far Exceeds Deferred Payment Cost | Resilience |
+| 12 | Sensor-Gate Cross-Validation as a Reliability Layer -- Each Source Compensates for the Other's Weaknesses | IoT / Consistency |
+| 13 | Physical State Always Overrides Logical State -- The Car Does Not Disappear Because the Booking Expired | Consistency |
+
+---
+
+### 7.4 Food Delivery System [View](./7.4-food-delivery-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Redis GEORADIUS for Sub-Second Driver Proximity Queries -- O(N+M) Geo Queries at Memory Speed | Geo / Scaling |
+| 2 | Three-Sided Marketplace Coordination Pattern -- Synchronizing Customer, Restaurant, and Driver in Real-Time | Marketplace |
+| 3 | Location Update Storm -- Batching and Pipeline Writes Absorb 100K Writes/Second | Scaling |
+| 4 | Multi-Stage ETA with ML Correction Loop -- Composition of Three Independent Uncertain Estimates | ML / ETA |
+| 5 | Optimistic Lock on Driver Status for Assignment -- Lua Script Atomic GET-CHECK-SET Eliminates Blocking | Contention |
+| 6 | Geo-Sharding by City for Operational Independence -- Natural Locality Eliminates Cross-City Dependencies | Scaling |
+| 7 | Smooth Surge Pricing with EWMA to Prevent Thrashing -- Gradual Multiplier Changes Prevent Destructive Oscillation | Marketplace |
+| 8 | Saga Pattern for Order-Assignment-Payment Coordination -- Compensating Transactions Handle Five-Service Rollback | Resilience |
+| 9 | Driver Stacking and Batching for Route Optimization -- Transforms Matching into a VRP with Time-Window Constraints | Scaling |
+| 10 | Server-Side GPS Trajectory Validation -- Physical Impossibility Detection Defeats GPS Spoofing Fraud | Security |
+| 11 | Real-Time Tracking with WebSocket and Dead Reckoning Client -- Decouples Visual Update Rate from Data Update Rate | Data Modeling |
+| 12 | Restaurant Prep Time Learning Per Historical Data -- Per-Restaurant per-Time-Slot Data Is the Highest-Leverage ETA Feature | ML / ETA |
+| 13 | Lazy Dispatch Timing -- Optimal Assignment Time Maximizes Driver Utilization and Food Freshness Simultaneously | Marketplace |
+| 14 | Event-Driven Order Lifecycle for Extensibility and Resilience -- State Transitions as Kafka Events Decouple Consumers | Resilience |
+| 15 | Hierarchical Circuit Breakers for Graceful Degradation -- Tier-Based Criticality Preserves Core Flow During Incidents | Resilience |
+
+---
+
+### 7.5 Maps & Navigation Service [View](./7.5-maps-navigation-service/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Contraction Hierarchies -- 1000× Speedup for Route Queries Through Node-Importance Preprocessing | Algorithms |
+| 2 | Tile Pyramid -- Quadtree-Based Geographic Decomposition Enables Efficient Rendering at Any Scale | Data Modeling |
+| 3 | CDN-First Tile Serving -- At 35M Req/Sec, the CDN IS the System, Not a Cache Layer | Caching |
+| 4 | Vector Tiles Enable Client-Side Rendering -- 60-75% Bandwidth Reduction and Runtime Style Customization | Scaling |
+| 5 | Map Matching with Hidden Markov Models -- HMM-Based Viterbi Decoding Snaps Noisy GPS to Road Segments | Algorithms |
+| 6 | Crowdsourced Probe Vehicle Traffic at Scale -- Millions of Navigation Sessions Provide Global Coverage | Scaling |
+| 7 | In-Memory Road Graph for Sub-Second Routing -- Disk-Based Graph Traversal Is 100× Too Slow for Production | Scaling |
+| 8 | Hierarchical Geocoding with Fuzzy Matching -- Country-Specific Parsing + Spatial Ranking for Diverse Address Formats | Data Modeling |
+| 9 | Geopolitical Sensitivity in Map Data -- Disputed Borders Require Multi-Version Tile Serving by User Country | Data Modeling |
+| 10 | Delta Tile Invalidation on Road Network Change -- Surgical Bounding-Box Invalidation Over Full Pyramid Rebuild | Caching |
+| 11 | Bidirectional Search for Faster Pathfinding -- Simultaneous Source + Destination Search Halves Explored Space | Algorithms |
+| 12 | Traffic Time-Slice Historical Profiles + Real-Time Blend -- Confidence-Weighted Blending Handles Sparse Live Data | Traffic |
+| 13 | Hybrid Tile Generation -- Pre-Render Low Zoom, On-Demand High Zoom Exploits Zipf Distribution of Requests | Caching |
+| 14 | Offline-First Navigation with On-Device Routing -- Downloaded Region Packages Enable Full Navigation Without Network | Resilience |
+
+---
+
+### 7.6 Flight Booking System [View](./7.6-flight-booking-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | GDS as External Authoritative System -- Circuit Breaker Pattern When Inventory Truth Lives Outside the Platform | Resilience |
+| 2 | Two-Phase Seat Hold with TTL Expiry -- Lease-Based Concurrency Control Delegates Authority to the GDS | Contention |
+| 3 | Aggressive Search Result Caching with Stale Re-Verification -- Cache Broadly for Browsing, Verify Narrowly at Booking | Caching |
+| 4 | Saga Pattern for Multi-Step Booking with Compensating Transactions -- Four-System Transaction with No Distributed Lock | Resilience |
+| 5 | Fare Rules as a Domain-Specific Rule Engine -- ATPCO's 31 Categories Require First-Class Architectural Treatment | Data Modeling |
+| 6 | Fan-Out Search Aggregation with Timeout Isolation -- Per-Provider Timeouts Prevent Slowest Source from Penalizing All | Scaling |
+| 7 | NDC vs. GDS: Direct vs. Intermediary Trade-off -- Mid-Transition Industry Requires Hybrid Architecture | External Dependencies |
+| 8 | Inventory Race Condition -- Optimistic Display for Search, Authoritative GDS Resolution at Booking | Contention |
+| 9 | PNR as Universal Aviation Record -- Distributed Synchronized Record Shared Across GDS, Airlines, and Agents | Data Modeling |
+| 10 | Revenue Management: Load Factor + Time-to-Departure Pricing -- Two Primary Signals for Perishable Inventory Pricing | Pricing |
+| 11 | APIS Compliance: Pre-Departure Passenger Data Reporting -- Regulatory Requirements Create Hard Architectural Constraints | External Dependencies |
+| 12 | Cache Stampede Prevention for Popular Routes -- Lock-Based Refresh Prevents Redundant GDS Calls on Expiry | Caching |
+| 13 | Interline Agreement Graph for Connection Validation -- Partnership Graph Required Beyond Schedule Data | Data Modeling |
+
+---
+
 ## Cross-Reference: Insights by Category
 
 ### Atomicity
@@ -2154,6 +2259,14 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.1 Cloud File Storage**: Edgestore's Linearizable Cache (Chrono) for Metadata Consistency
 - **6.2 Document Collaboration Engine**: Ephemeral Presence with Bandwidth Optimization
 - **6.3 Multi-Tenant SaaS Platform Architecture**: Singleflight Pattern for Metadata Cache Stampedes
+- **7.2 Airbnb**: Eventual vs. Strong Consistency Split by Domain -- Dual-Read Strategy Bridges CP Source of Truth and AP Search
+- **7.2 Airbnb**: Listing Indexing Freshness vs. Accuracy Trade-off -- Redis Availability Cache Bridges Elasticsearch and PostgreSQL
+- **7.3 Car Parking System**: Spot Availability Bitmap for O(1) Lookups -- 10,000 Lots in ~6 MB with Microsecond Latency
+- **7.5 Maps & Navigation Service**: CDN-First Tile Serving -- At 35M Req/Sec the CDN IS the System, Not a Cache Layer
+- **7.5 Maps & Navigation Service**: Delta Tile Invalidation on Road Network Change -- Surgical Bounding-Box Invalidation
+- **7.5 Maps & Navigation Service**: Hybrid Tile Generation -- Pre-Render Low Zoom, On-Demand High Zoom
+- **7.6 Flight Booking System**: Aggressive Search Result Caching with Stale Re-Verification
+- **7.6 Flight Booking System**: Cache Stampede Prevention for Popular Routes -- Lock-Based Refresh Prevents GDS Cost Explosions
 
 ### Consensus
 
@@ -2370,6 +2483,12 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.4 HubSpot**: Client-Side Request Deduplication with 100ms Window
 - **6.6 Ticketmaster**: Redis SETNX as the Contention Absorber
 - **6.7 Google Meet / Zoom**: Keyframe Caching Prevents Publisher Storm During Mass Joins
+- **7.2 Airbnb**: The Calendar Double-Booking Prevention Pattern -- Per-Date State + Distributed Lock Is the Only Viable Approach
+- **7.2 Airbnb**: Price Hold Window & Race Condition -- Lock TTL and Payment Authorization Timing Create a Narrow Correctness Window
+- **7.3 Car Parking System**: Optimistic Locking for Low-Contention Slot Allocation -- Contention Ratio Determines the Right Concurrency Control
+- **7.4 Food Delivery System**: Optimistic Lock on Driver Status for Assignment -- Lua Script Atomic GET-CHECK-SET Eliminates Blocking
+- **7.6 Flight Booking System**: Two-Phase Seat Hold with TTL Expiry -- Lease-Based Concurrency Control Delegates Authority to the GDS
+- **7.6 Flight Booking System**: Inventory Race Condition -- Optimistic Display for Search, Authoritative GDS Resolution at Booking
 
 ### Cost Optimization
 
@@ -2611,6 +2730,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.10 Open-Source ML Platform**: Composable Architecture Enables Best-of-Breed Tool Selection at the Cost of Integration Complexity
 - **3.39 AI-Native Proactive Observability Platform**: eBPF Instrumentation Provides Zero-Code Observability Without Application Modification
 - **6.6 Ticketmaster**: Payment Gateway as the True Bottleneck
+- **7.6 Flight Booking System**: NDC vs. GDS: Direct vs. Intermediary Trade-off -- Mid-Transition Industry Requires Hybrid Architecture
+- **7.6 Flight Booking System**: APIS Compliance: Pre-Departure Passenger Data Reporting -- Regulatory Requirements Create Hard Architectural Constraints
 
 ### Partitioning
 
@@ -2761,6 +2882,17 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.7 Google Meet / Zoom**: UDP is Non-Negotiable for Real-Time Media -- TCP Head-of-Line Blocking Destroys Latency
 - **6.8 Real-Time Collaborative Editor**: Offline-First Is an Architecture, Not a Feature
 - **6.8 Real-Time Collaborative Editor**: CRDT Architecture Inverts the Disaster Recovery Model
+- **7.2 Airbnb**: Authorize-Then-Capture Payment Hold -- Multi-Day Distributed Transaction with Re-Authorization Cycles
+- **7.2 Airbnb**: The Reservation Reaper Pattern -- Temporary States Require Automated Cleanup to Prevent State Leaks
+- **7.3 Car Parking System**: Edge-First Gate Control for Physical Barrier Reliability -- Physical Barriers Must Operate Independently of Cloud
+- **7.3 Car Parking System**: Offline-First Gate with Reconciliation on Reconnect -- Transforms Availability into Eventual Consistency Problem
+- **7.3 Car Parking System**: Fail-Open Exit Gates for Revenue vs Traffic Trade-off -- Traffic Backup Cost Far Exceeds Deferred Payment Cost
+- **7.4 Food Delivery System**: Saga Pattern for Order-Assignment-Payment Coordination -- Five-Service Rollback via Compensating Transactions
+- **7.4 Food Delivery System**: Event-Driven Order Lifecycle for Extensibility and Resilience -- State Transitions as Kafka Events Decouple Consumers
+- **7.4 Food Delivery System**: Hierarchical Circuit Breakers for Graceful Degradation -- Tier-Based Criticality Preserves Core Flow During Incidents
+- **7.5 Maps & Navigation Service**: Offline-First Navigation with On-Device Routing -- Full Navigation Without Network Connectivity
+- **7.6 Flight Booking System**: GDS as External Authoritative System -- Circuit Breaker Pattern When Inventory Truth Lives Outside the Platform
+- **7.6 Flight Booking System**: Saga Pattern for Multi-Step Booking with Compensating Transactions -- Four-System Transaction with No Distributed Lock
 
 ### Scaling
 
@@ -2874,6 +3006,17 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.7 Google Meet / Zoom**: Cascaded SFU Tree Topology Trades Latency for Scale
 - **6.8 Real-Time Collaborative Editor**: State Vector Exchange Reduces Sync to O(k) Where k Is Missing Operations
 - **6.8 Real-Time Collaborative Editor**: Block-Level Lazy Loading Transforms Document Size from a Memory Problem to an I/O Problem
+- **7.2 Airbnb**: iCal External Calendar Sync via Polling -- Poll-Based Sync Creates an Unavoidable Consistency Gap
+- **7.2 Airbnb**: Host Instant Book vs. Request Mode Flexibility -- Market Equilibrium Mechanism, Not Feature Bloat
+- **7.2 Airbnb**: Service Block Facade Pattern -- Domain-Aligned Blocks Solve the Microservice Coordination Problem
+- **7.3 Car Parking System**: Per-Lot Sharding for Operational Isolation -- Zero Cross-Shard Transactions for All Operational Flows
+- **7.4 Food Delivery System**: Location Update Storm -- Batching and Pipeline Writes Absorb 100K Location Writes/Second
+- **7.4 Food Delivery System**: Geo-Sharding by City for Operational Independence -- Natural Locality Eliminates Cross-City Dependencies
+- **7.4 Food Delivery System**: Driver Stacking and Batching for Route Optimization -- VRP with Time-Window Constraints
+- **7.5 Maps & Navigation Service**: Crowdsourced Probe Vehicle Traffic at Scale -- Coverage Scales with User Adoption
+- **7.5 Maps & Navigation Service**: In-Memory Road Graph for Sub-Second Routing -- Disk-Based Graph Traversal Is 100× Too Slow
+- **7.5 Maps & Navigation Service**: Vector Tiles Enable Client-Side Rendering -- 60-75% Bandwidth Reduction
+- **7.6 Flight Booking System**: Fan-Out Search Aggregation with Timeout Isolation -- Per-Provider Timeouts Prevent Slowest Source from Penalizing All
 
 ### Search
 
@@ -2887,6 +3030,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.15 RAG System**: Query Rewriting and HyDE Transform User Queries Into Better Retrieval Targets
 - **3.18 AI Code Assistant**: AST-Based Context Retrieval Provides Structural Understanding That Embedding Search Cannot
 - **4.10 Slack/Discord**: Search Scalability Through Workspace and Time-Based Sharding
+- **7.2 Airbnb**: Geo + ML Hybrid Search Ranking -- Map Results Require Fundamentally Different Ranking Theory Than List Results
 
 ### Security
 
@@ -2995,6 +3139,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.7 Google Meet / Zoom**: Simulcast Layer Switching Requires Keyframe Synchronization
 - **6.7 Google Meet / Zoom**: Active Speaker Detection Needs Debouncing to Prevent Layout Thrashing
 - **6.8 Real-Time Collaborative Editor**: Presence Must Be Architecturally Separated from Document Sync
+- **7.2 Airbnb**: Two-Sided Marketplace Trust Architecture -- Asymmetric Enforcement Between Supply and Demand Sides
+- **7.2 Airbnb**: Contact Information Detection as a Revenue Protection Mechanism in Commission-Based Marketplaces
+- **7.3 Car Parking System**: Short-Lived QR Code Pattern for Physical Access -- Dynamic TOTP-Style Tokens Prevent Screenshot Replay Attacks
+- **7.4 Food Delivery System**: Server-Side GPS Trajectory Validation -- Physical Impossibility Detection Defeats GPS Spoofing Fraud
 
 ### System Modeling
 

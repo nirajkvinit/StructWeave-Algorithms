@@ -159,6 +159,11 @@ Each system design directory contains 9 standardized documents:
 | 6.16 | Digital Signature Platform (DocuSign/HelloSign) | Completed | [View](./6.16-digital-signature-platform/00-index.md) |
 | 6.17 | No-Code/Low-Code Platform (Retool/Airtable) | Completed | [View](./6.17-no-code-low-code-platform/00-index.md) |
 | 7.1 | Uber/Lyft (Driver Matching, Location Tracking, Surge Pricing) | Completed | [View](./7.1-uber-lyft/00-index.md) |
+| 7.2 | Airbnb (Booking, Calendar Availability, Search Ranking) | Completed | [View](./7.2-airbnb/00-index.md) |
+| 7.3 | Car Parking System (Object Modeling, Slot Allocation, Payment) | Completed | [View](./7.3-car-parking-system/00-index.md) |
+| 7.4 | Food Delivery System (DoorDash/Zomato - Order Routing, ETA, Driver Assignment) | Completed | [View](./7.4-food-delivery-system/00-index.md) |
+| 7.5 | Maps & Navigation Service (Google Maps - Tile System, Routing, Traffic) | Completed | [View](./7.5-maps-navigation-service/00-index.md) |
+| 7.6 | Flight Booking System (Expedia/Kayak - Aggregation, Inventory, Pricing) | Completed | [View](./7.6-flight-booking-system/00-index.md) |
 
 
 ---
