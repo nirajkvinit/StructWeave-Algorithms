@@ -13,25 +13,25 @@ A cross-reference of key architectural insights extracted from each system desig
 
 | Category | Description | Topics Count |
 |----------|-------------|:------------:|
-| Atomicity | Ensuring operations are all-or-nothing across distributed boundaries | 56 |
-| Caching | Multi-tier caching, invalidation strategies, and cache consistency patterns | 56 |
-| Consensus | Leader election, Raft/Paxos, and distributed agreement protocols | 15 |
-| Consistency | Data consistency models, conflict resolution, and read-after-write guarantees | 73 |
-| Contention | Lock-free algorithms, hot key mitigation, and concurrency control | 60 |
-| Cost Optimization | Resource efficiency, compression, and infrastructure cost reduction | 45 |
-| Data Structures | Specialized data structures powering system internals | 78 |
-| Distributed Transactions | Saga patterns, 2PC, outbox, and cross-service coordination | 22 |
-| Edge Computing | Edge deployment, CDN logic, and client-side computation patterns | 20 |
-| External Dependencies | Third-party API integration, rate limits, and dependency management | 8 |
-| Partitioning | Data sharding, consistent hashing, and partition strategies | 22 |
-| Replication | Data replication, replica placement, and sync protocols | 8 |
-| Resilience | Fault tolerance, graceful degradation, and failure recovery | 73 |
-| Scaling | Horizontal and vertical scaling strategies and throughput optimization | 73 |
-| Search | Full-text search, vector search, and hybrid retrieval strategies | 4 |
+| Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 56 |
+| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 57 |
+| Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 16 |
+| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 76 |
+| Contention | Lock contention, hot keys, thundering herds, and resource competition | 61 |
+| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 47 |
+| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 78 |
+| Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 22 |
+| Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 20 |
+| External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 8 |
+| Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 24 |
+| Replication | Data replication, follower management, and cross-region synchronization | 8 |
+| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 73 |
+| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 73 |
+| Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 5 |
 | Security | Authentication, encryption, access control, and threat mitigation | 31 |
-| Streaming | Real-time data processing, event streaming, and pub/sub patterns | 30 |
-| System Modeling | Domain modeling, algorithm design, and architectural trade-offs | 53 |
-| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 48 |
+| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 30 |
+| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 53 |
+| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 49 |
 
 ---
 
@@ -763,19 +763,24 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
-### 2.26 Compliance First AI Native Hospital Management System [View](./2.26-compliance-first-ai-native-hms/09-insights.md)
+### 2.26 Compliance First, AI Native Hospital Management System [View](./2.26-compliance-first-ai-native-hms/09-insights.md)
 
 | # | Insight | Category |
 |---|---------|----------|
-| 1 | Fellegi-Sunter Probabilistic Matching with Blocking for EMPI | Data Structures |
-| 2 | PostgreSQL Exclusion Constraints for Double-Booking Prevention | Contention |
-| 3 | Redis as Hot Cache with PostgreSQL as Source of Truth for Bed State | Caching |
-| 4 | Constraint Programming with CP-SAT for OR Schedule Optimization | System Modeling |
-| 5 | ML-Predicted Case Duration as the Key Input to OR Scheduling | System Modeling |
-| 6 | Saga Pattern for ADT Workflow Orchestration | Distributed Transactions |
-| 7 | AI-Assisted Medical Coding with Human-in-the-Loop | System Modeling |
-| 8 | Bed Demand Prediction with XGBoost-Prophet Ensemble | Scaling |
-| 9 | FHIR R4 and HL7v2 Dual Integration for Legacy Compatibility | Resilience |
+| 1 | EMPI False Positives Are More Dangerous Than False Negatives | System Modeling |
+| 2 | Blocking Strategies Turn O(n) Patient Matching into O(b) Where b Is 4000x Smaller | Scaling |
+| 3 | PostgreSQL Exclusion Constraints Prevent Bed Double-Booking at the Database Level | Contention |
+| 4 | Redis and PostgreSQL Dual-Write for Bed State Requires Explicit Source-of-Truth Designation | Consistency |
+| 5 | Bed Demand Prediction Requires Fusing Scheduled Admissions with ED Census and LOS Models | System Modeling |
+| 6 | OR Scheduling Is a Constraint Satisfaction Problem, Not a Calendar Problem | System Modeling |
+| 7 | Case Duration Prediction Accuracy Varies Dramatically by Surgical Specialty | System Modeling |
+| 8 | Saga-Based ADT Workflows Replace Distributed Transactions with Compensating Actions | Distributed Transactions |
+| 9 | AI-Assisted Medical Coding Uses Human-in-the-Loop to Balance Automation with Accountability | System Modeling |
+| 10 | Integration Hub Message Prioritization Prevents ADT Delays from Lab Result Floods | Traffic Shaping |
+| 11 | HMS Complements Clinical Systems Rather Than Replacing Them | System Modeling |
+| 12 | Pre-Computed AI Predictions with Short TTL Enable Real-Time Dashboards Without Real-Time Inference | Caching |
+| 13 | FHIR R4 and HL7v2 Dual Integration Is a Pragmatic Necessity, Not a Design Flaw | Resilience |
+| 14 | Revenue Cycle AI Detects Documentation Gaps Before Claims Are Submitted | Cost Optimization |
 
 ---
 
@@ -834,16 +839,20 @@ A cross-reference of key architectural insights extracted from each system desig
 
 | # | Insight | Category |
 |---|---------|----------|
-| 1 | Weighted Multi-Factor Task Priority Prevents Scheduling Starvation | Traffic Shaping |
-| 2 | Node Scoring Balances GPU Fragmentation, Cost, and Data Locality | Cost Optimization |
-| 3 | Spot Preemption Handling Requires Coordinated Checkpoint-Then-Reschedule | Resilience |
-| 4 | Tiered Metric Storage Spans Three Temperature Layers | Streaming |
-| 5 | Client-Side Batching Reduces Metric Write API Calls by 100x | Traffic Shaping |
-| 6 | Atomic Alias Management Prevents Split-Brain Model Deployments | Atomicity |
-| 7 | Content-Addressable Artifact Deduplication Saves 30% Storage for Incremental Training | Cost Optimization |
-| 8 | Stage Transition Governance Enforces Model Cards and Bias Validation Before Production | Security |
-| 9 | Optimistic Concurrency Control Resolves Task State Race Conditions | Contention |
-| 10 | Leader-Standby Scheduler with 30-Second Failover Keeps Pipeline Orchestration Running | Consensus |
+| 1 | GPU Fragmentation Is the Hidden Cost of Naive Task Scheduling | Scaling |
+| 2 | Spot Instance Preemption Requires Checkpoint-Aware Scheduling | Cost Optimization |
+| 3 | Tiered Metric Storage Handles Billions of Data Points Through Hot-Warm-Cold Architecture | Data Structures |
+| 4 | Client-Side Batching Reduces API Calls by 100x During Distributed Training | Traffic Shaping |
+| 5 | Atomic Alias Updates Require Distributed Locks to Prevent Split-Brain | Consensus |
+| 6 | Checksum-Based Artifact Deduplication Saves 30% Storage for Iterative Training | Cost Optimization |
+| 7 | Stage Transition Governance Enforces Model Cards and Bias Checks Before Production | Security |
+| 8 | Optimistic Concurrency Resolves the Heartbeat Timeout vs. Task Completion Race | Contention |
+| 9 | ClickHouse ReplacingMergeTree Handles Concurrent Metric Writes Without Coordination | Data Structures |
+| 10 | Scheduler State Sharding Distributes Pipeline Ownership Across Multiple Instances | Partitioning |
+| 11 | Training-Serving Skew Prevention Requires Point-in-Time Feature Retrieval | Consistency |
+| 12 | Materialized Views Pre-Compute Metric Aggregations for Dashboard Queries | Caching |
+| 13 | Weighted Multi-Factor Priority Scoring Prevents Task Scheduling Starvation | Traffic Shaping |
+| 14 | Leader-Standby Scheduler with 30-Second Failover Keeps Pipeline Orchestration Running | Consensus |
 
 ---
 
@@ -968,14 +977,20 @@ A cross-reference of key architectural insights extracted from each system desig
 
 | # | Insight | Category |
 |---|---------|----------|
-| 1 | Two-Stage Architecture Is a Computational Necessity, Not a Design Preference | Scaling |
-| 2 | Multi-Source Retrieval with Reciprocal Rank Fusion | Data Structures |
-| 3 | Versioned Embeddings to Prevent Cross-Version Similarity Corruption | Consistency |
-| 4 | Training-Serving Skew Prevention Through Unified Feature Definitions | Consistency |
-| 5 | Two-Level Embeddings (Base + Session Delta) for Real-Time Personalization | Caching |
-| 6 | Dynamic Batching with Adaptive Sizing for GPU Inference | Cost Optimization |
-| 7 | Sticky Routing During Model Canary Deployment | Resilience |
-| 8 | Feature Importance Pruning to Meet the 10ms Feature Fetch Budget | Caching |
+| 1 | Two-Stage Architecture Makes Billion-Scale Personalization Computationally Feasible | Scaling |
+| 2 | Multi-Source Retrieval with Reciprocal Rank Fusion Prevents Single-Algorithm Blind Spots | Data Structures |
+| 3 | Sharded ANN Index with Scatter-Gather Scales Vector Search Beyond Single-Node Limits | Partitioning |
+| 4 | Dynamic Batching Maximizes GPU Utilization While Meeting Latency SLOs | Scaling |
+| 5 | Two-Level Embeddings (Base + Session Delta) Balance Long-Term Preferences with Real-Time Intent | Caching |
+| 6 | Pre-Ranker Stage Reduces GPU Load by 10x Through Lightweight Candidate Pruning | Cost Optimization |
+| 7 | Feature Importance Pruning Reduces Feature Fetch Volume While Preserving Model Quality | Cost Optimization |
+| 8 | Versioned Embeddings with Copy-on-Write Prevent Embedding Version Mismatch During Queries | Consistency |
+| 9 | Event-Time Based Idempotent Writes Reconcile Stream and Batch Feature Inconsistencies | Streaming |
+| 10 | Sticky Request Routing During Model Deployment Prevents Inconsistent Ranking Within a Session | Atomicity |
+| 11 | Multi-Objective Re-Ranking Balances Engagement, Diversity, and Freshness | System Modeling |
+| 12 | Graceful Degradation Across Retrieval Sources Maintains Recommendation Quality Under Partial Failures | Resilience |
+| 13 | Position Bias Correction Is Essential for Training Models on Implicit Feedback | Data Structures |
+| 14 | Index Update Latency Determines New Item Discoverability Window | Streaming |
 
 ---
 
@@ -1069,14 +1084,18 @@ A cross-reference of key architectural insights extracted from each system desig
 
 | # | Insight | Category |
 |---|---------|----------|
-| 1 | Hierarchical Context Pruning Maximizes Suggestion Quality Within Token Budgets | Data Structures |
-| 2 | Speculative Decoding Achieves 75% Latency Reduction Without Quality Loss | Scaling |
-| 3 | Three-Level Semantic Caching Absorbs 40%+ of Inference Load | Caching |
+| 1 | Context Assembly Must Complete in 20-30ms Within a 200ms End-to-End Budget | Contention |
+| 2 | Fill-in-the-Middle Training Transforms Code Completion From Append-Only to Edit-Aware | System Modeling |
+| 3 | Three-Level Semantic Caching Absorbs 40-80% of Inference Load | Caching |
 | 4 | Adaptive Debouncing Matches Request Cadence to Typing Speed | Traffic Shaping |
-| 5 | Defense-in-Depth Against Indirect Prompt Injection in Repository Context | Security |
-| 6 | Fill-in-the-Middle Training Makes Edit-Aware Completion Possible | System Modeling |
-| 7 | Dependency Validation Catches Hallucinated Package Names Before Supply Chain Attacks | Security |
-| 8 | 200ms End-to-End Budget Forces Radical Parallel Optimization | Scaling |
+| 5 | Speculative Decoding Achieves 75% Latency Reduction Because Code Is Highly Predictable | Cost Optimization |
+| 6 | Hierarchical Context Pruning Maximizes Value Within Token Budgets | Cost Optimization |
+| 7 | Indirect Prompt Injection Through Repository Files Is the Most Dangerous Attack Vector | Security |
+| 8 | Output Validation Must Scan for Secrets, Vulnerabilities, and Hallucinated Packages | Security |
+| 9 | Agent Mode Requires Strict Sandboxing Because LLM Actions Have Real-World Side Effects | Security |
+| 10 | AST-Based Context Retrieval Provides Structural Understanding That Embedding Search Cannot | Search |
+| 11 | Acceptance Rate Is the North Star Metric Capturing User-Perceived Quality | System Modeling |
+| 12 | Context Value Hierarchy Determines Token Budget Allocation Priority | Data Structures |
 
 ---
 
@@ -1085,13 +1104,19 @@ A cross-reference of key architectural insights extracted from each system desig
 | # | Insight | Category |
 |---|---------|----------|
 | 1 | Tiered Wake Word Detection Trades Power for Accuracy Across Hardware Stages | Edge Computing |
-| 2 | False Accept vs False Reject Is a Privacy-Usability Trade-off With No Perfect Operating Point | Security |
-| 3 | Contextual Biasing via Trie-Based Logit Boosting Solves the Personalization Problem for ASR | Data Structures |
-| 4 | Streaming RNN-T Architecture Enables Partial Transcripts Before Utterance Ends | Streaming |
+| 2 | False Accept vs. False Reject Is a Privacy-Usability Tradeoff With No Perfect Operating Point | Security |
+| 3 | Streaming RNN-T With Causal Attention Enables Real-Time Partial Transcripts | Streaming |
+| 4 | Contextual Biasing Solves ASR Personalization via Trie-Based Logit Boosting | Data Structures |
 | 5 | Hierarchical NLU Scales to 100K+ Skills Without Flat Classification Collapse | Partitioning |
-| 6 | LLM Routing by Intent Confidence Preserves Determinism Where It Matters | System Modeling |
-| 7 | Barge-In Detection Requires Coordinating Audio Capture, ASR, and TTS Simultaneously | Contention |
-| 8 | Adversarial Audio Attacks Exploit the Gap Between Human and Machine Hearing | Security |
+| 6 | LLM Routing Preserves Deterministic Paths for Safety-Critical Commands | Resilience |
+| 7 | The Six-Stage Pipeline Has a Hard 1-Second End-to-End Budget That Constrains Every Component | Contention |
+| 8 | Multi-Device Wake Word Conflicts Require Room-Level Leader Election | Consensus |
+| 9 | Barge-In Detection Requires Coordinating Echo Cancellation, ASR, and TTS Simultaneously | Streaming |
+| 10 | On-Device vs. Cloud Processing Is a Three-Way Tradeoff Between Privacy, Accuracy, and Latency | Edge Computing |
+| 11 | Streaming TTS With Filler Audio Masks LLM Latency in Conversational Mode | Streaming |
+| 12 | Adversarial Audio Attacks Exploit the Gap Between Human and Machine Hearing | Security |
+| 13 | Offline Mode Requires CRDT-Based State Synchronization | Consistency |
+| 14 | JointBERT Enables Simultaneous Intent and Slot Classification From a Single Encoder Pass | Data Structures |
 
 ---
 
@@ -1252,18 +1277,14 @@ A cross-reference of key architectural insights extracted from each system desig
 
 | # | Insight | Category |
 |---|---------|----------|
-| 1 | The 2D-to-3D Latent Shift Is the Fundamental Architectural Difference Between Image and Video Generation | System Modeling |
-| 2 | DiT Replaces UNet Because Transformers Scale Where UNets Plateau | Scaling |
-| 3 | Three Temporal Attention Strategies Span the Quality-Memory-Duration Trade-off Space | Data Structures |
-| 4 | Causal Convolutions in the 3D VAE Prevent Future Frame Leakage | Consistency |
-| 5 | TurboDiffusion Achieves 24x Speedup Through Progressive Step Distillation Plus Adversarial Training | Scaling |
-| 6 | Asymmetric Dual-Stream Architecture Allocates 4x Parameters to Video Over Text | System Modeling |
-| 7 | VRAM Growth Makes Long Videos Impossible Without Chunked Generation or Model Parallelism | Scaling |
-| 8 | Temporal Consistency Degrades Measurably Over Video Duration | Consistency |
-| 9 | Audio-Video Synchronization Requires Joint Latent Space Generation, Not Post-Hoc Alignment | System Modeling |
-| 10 | 3D VAE Decoding Is a Non-Parallelizable Bottleneck That Grows Linearly with Duration | Scaling |
-| 11 | Checkpoint Recovery Is Essential for Multi-Minute Generation Jobs | Resilience |
-| 12 | Multi-GPU Communication Overhead Caps Tensor Parallelism Efficiency at 75% for 8 GPUs | Scaling |
+| 1 | 3D Latent Space Fundamentally Changes the Scaling Equation Compared to Image Generation | Scaling |
+| 2 | Causal vs Full Temporal Attention is the Central Quality-Efficiency Trade-off | Data Structures |
+| 3 | TurboDiffusion Achieves 24x Speedup Through Progressive Step Distillation Plus Adversarial Fine-tuning | Scaling |
+| 4 | Asymmetric Dual-Stream Architecture Allocates 4x Parameters to Video Over Text | System Modeling |
+| 5 | 3D VAE Causal Convolutions Enable 96x Compression Without Future Frame Leakage | Data Structures |
+| 6 | Checkpoint Recovery Transforms Multi-Minute GPU Jobs from Fragile to Fault-Tolerant | Resilience |
+| 7 | Native Audio-Video Joint Generation Requires a Shared Latent Space, Not Post-Processing | Consistency |
+| 8 | Multi-GPU Tensor Parallelism Hits 75% Efficiency at 8 GPUs Due to Communication Overhead | Scaling |
 
 ---
 
@@ -1673,16 +1694,19 @@ A cross-reference of key architectural insights extracted from each system desig
 
 | # | Insight | Category |
 |---|---------|----------|
-| 1 | Origin Shield Request Coalescing for Thundering Herd Protection | Contention |
-| 2 | Demographic Ad Grouping -- Sacrificing Personalization for Cacheability | Caching |
-| 3 | Ladder-Based Pre-Scaling for Known Event Schedules | Scaling |
-| 4 | Shared Video Segments with Per-Language Audio Tracks | Cost Optimization |
-| 5 | Five-Level Graceful Degradation Ladder for Live Events | Resilience |
-| 6 | Server-Side Ad Insertion Over Client-Side | Security |
-| 7 | Auth Token Pre-Warming to Absorb Authentication Storms | Traffic Shaping |
-| 8 | Session Handoff Protocol for Cross-Device Live Continuity | Consistency |
-| 9 | DVR Ad-Break Skipping in Catch-Up Mode | Streaming |
-| 10 | Mobile-First Quality Optimization for Bandwidth-Constrained Markets | Edge Computing |
+| 1 | Ladder-Based Pre-Scaling for Predictable Traffic Spikes | Scaling |
+| 2 | Origin Shield Request Coalescing for Live Segments | Contention |
+| 3 | Demographic Grouping Over 1:1 Ad Personalization | Caching |
+| 4 | Multi-Level Graceful Degradation for Live Events | Resilience |
+| 5 | Separated Audio Tracks for Multi-Language Commentary | Cost Optimization |
+| 6 | Pre-Computed Ad Pods Before Break Signals | Caching |
+| 7 | Multi-CDN Orchestration with Weighted Traffic Steering | Resilience |
+| 8 | Session Handoff Protocol for Device Switching | Consistency |
+| 9 | Auth Token Pre-Warming to Absorb Login Storms | Traffic Shaping |
+| 10 | DVR Edge Case Handling for Live Streams | Streaming |
+| 11 | Live Segment Cache Dynamics | Caching |
+| 12 | SSAI Over CSAI for Ad-Blocker Resistance and Unified QoE | Security |
+| 13 | Mobile-First Architecture for Bandwidth-Constrained Users | Edge Computing |
 
 ---
 
@@ -1858,7 +1882,6 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.23 Compliance First, Consent Based, AI Native Cloud EMR/EHR/PHR Engine**: Blockchain-Anchored Consent Creates a Trust Chain, Not a Database
 - **2.25 Compliance First AI Native Pharmacy Operating System**: Hash-Chained Audit Logs Make Controlled Substance Records Tamper-Evident
 - **3.3 AI-Native Metadata-Driven Super Framework**: Optimistic Locking with Versioning Resolves Metadata Deployment Conflicts
-- **3.4 MLOps Platform**: Atomic Alias Management Prevents Split-Brain Model Deployments
 - **3.5 Uber Michelangelo ML Platform**: Atomic Model Alias Updates with Cache Invalidation Prevent Version Drift
 - **3.7 Netflix Runway Model Lifecycle Management**: Optimistic Locking Prevents Duplicate Retraining Jobs
 - **3.7 Netflix Runway Model Lifecycle Management**: Version Pinning Against Mid-Evaluation Model Swaps
@@ -1867,6 +1890,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.9 Airbnb BigHead ML Platform**: Blue-Green Deployment with Atomic Service Selector Switch Prevents Mixed-Version Serving
 - **3.9 Airbnb BigHead ML Platform**: Versioned DAG Isolation Prevents Partial Execution with Mixed Pipeline Versions
 - **3.10 Open-Source ML Platform**: Distributed Locking with Idempotent Writes Prevents Feature Materialization Overlap
+- **3.12 Recommendation Engine**: Sticky Request Routing During Model Deployment Prevents Inconsistent Ranking Within a Session
 - **3.13 LLM Training & Inference Architecture**: Inference Concurrency Requires Atomic Block Allocation and Reference Counting
 - **3.17 AI Agent Orchestration Platform**: Delta Checkpoints with Periodic Snapshots Solve the Durability-Latency Trade-off
 - **3.21 LLM Gateway / Prompt Management**: Atomic Lua Scripts for Token-Based Rate Limiting
@@ -1924,19 +1948,19 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.23 Compliance First, Consent Based, AI Native Cloud EMR/EHR/PHR Engine**: Consent Cache Invalidation Requires Distributed Pub/Sub, Not Just Local TTL
 - **2.24 AI-Powered Clinical Decision Support System**: Cache Stampede on Knowledge Base Updates Requires Probabilistic Early Refresh
 - **2.24 AI-Powered Clinical Decision Support System**: Multi-Level Caching Creates a Sub-Millisecond Fast Path for DDI Detection
-- **2.26 Compliance First AI Native Hospital Management System**: Redis as Hot Cache with PostgreSQL as Source of Truth for Bed State
+- **2.26 Compliance First, AI Native Hospital Management System**: Pre-Computed AI Predictions with Short TTL Enable Real-Time Dashboards Without Real-Time Inference
 - **3.1 AI Interviewer System**: Rolling Context with Summarization for Long Interviews
 - **3.3 AI-Native Metadata-Driven Super Framework**: Three-Layer Metadata Cache Handles 30K QPS Without Database Pressure
 - **3.3 AI-Native Metadata-Driven Super Framework**: Probabilistic Early Expiration Prevents Cache Stampedes
+- **3.4 MLOps Platform**: Materialized Views Pre-Compute Metric Aggregations for Dashboard Queries
 - **3.5 Uber Michelangelo ML Platform**: Multi-Layer Caching Tames Cassandra Tail Latency
 - **3.9 Airbnb BigHead ML Platform**: Multi-Level Caching with Tiered TTLs Tames Online Feature Store Latency
 - **3.10 Open-Source ML Platform**: Batch Feature Lookups Reduce Redis Round Trips by Orders of Magnitude
-- **3.12 Recommendation Engine**: Two-Level Embeddings (Base + Session Delta) for Real-Time Personalization
-- **3.12 Recommendation Engine**: Feature Importance Pruning to Meet the 10ms Feature Fetch Budget
+- **3.12 Recommendation Engine**: Two-Level Embeddings (Base + Session Delta) Balance Long-Term Preferences with Real-Time Intent
 - **3.14 Vector Database**: Contiguous Memory Layout Yields 30% Search Speedup Through Cache Prefetching
 - **3.15 RAG System**: RAGCache Reuses KV-Cache States for Overlapping Context Chunks Across Queries
 - **3.17 AI Agent Orchestration Platform**: Procedural Memory Turns Successful Traces into Reusable Skills
-- **3.18 AI Code Assistant**: Three-Level Semantic Caching Absorbs 40%+ of Inference Load
+- **3.18 AI Code Assistant**: Three-Level Semantic Caching Absorbs 40-80% of Inference Load
 - **3.20 AI Image Generation Platform**: Predictive Model Loading Turns Idle GPUs into Strategic Assets
 - **3.21 LLM Gateway / Prompt Management**: Semantic Caching with Two-Stage Verification
 - **3.21 LLM Gateway / Prompt Management**: Multi-Tier Cache with Prefix Sharing
@@ -1963,7 +1987,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **5.3 Netflix Open Connect CDN**: File-Level Popularity Prediction at Regional Granularity
 - **5.3 Netflix Open Connect CDN**: Proactive Caching Reframes Cache Misses as Design Failures
 - **5.4 Spotify**: CDN Pre-Warming for High-Profile Releases
-- **5.5 Disney+ Hotstar**: Demographic Ad Grouping -- Sacrificing Personalization for Cacheability
+- **5.5 Disney+ Hotstar**: Demographic Grouping Over 1:1 Ad Personalization
+- **5.5 Disney+ Hotstar**: Pre-Computed Ad Pods Before Break Signals
+- **5.5 Disney+ Hotstar**: Live Segment Cache Dynamics
 - **5.6 Google Photos**: Progressive Thumbnail Loading with Cache-Friendly URLs
 - **6.1 Cloud File Storage**: Edgestore's Linearizable Cache (Chrono) for Metadata Consistency
 - **6.2 Document Collaboration Engine**: Ephemeral Presence with Bandwidth Optimization
@@ -1982,10 +2008,12 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.13 Edge AI/ML Inference**: Federated Learning with FedProx to Handle Non-IID Data
 - **2.16 Secret Management System**: Shamir's Secret Sharing as Distributed Trust
 - **2.22 AI Native Offline First POS**: Raft Leader Election for Hierarchical Store Sync
+- **3.4 MLOps Platform**: Atomic Alias Updates Require Distributed Locks to Prevent Split-Brain
 - **3.4 MLOps Platform**: Leader-Standby Scheduler with 30-Second Failover Keeps Pipeline Orchestration Running
 - **3.6 Netflix Metaflow ML Workflow Platform**: Optimistic Locking via Unique ID Generation Instead of Coordination
 - **3.10 Open-Source ML Platform**: Canary Traffic Split Reconciliation Through Kubernetes Declarative State Prevents Controller Conflicts
 - **3.13 LLM Training & Inference Architecture**: Barrier-Based Distributed Checkpointing Prevents Inconsistent Recovery
+- **3.19 AI Voice Assistant**: Multi-Device Wake Word Conflicts Require Room-Level Leader Election
 - **3.38 AI-Native Autonomous Vehicle Platform**: Safety Envelope as a Formal Verification Layer
 - **4.9 Telegram**: Deterministic Tiebreaker for Simultaneous Secret Chat Initiation
 
@@ -2047,9 +2075,11 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.23 Compliance First, Consent Based, AI Native Cloud EMR/EHR/PHR Engine**: FHIR Subscriptions Must Re-Verify Consent at Notification Time
 - **2.24 AI-Powered Clinical Decision Support System**: Sticky Model Versions per Encounter Prevent Mid-Visit Prediction Drift
 - **2.25 Compliance First AI Native Pharmacy Operating System**: Controlled Substance Reconciliation Is a Daily Regulatory Obligation, Not an Inventory Best Practice
+- **2.26 Compliance First, AI Native Hospital Management System**: Redis and PostgreSQL Dual-Write for Bed State Requires Explicit Source-of-Truth Designation
 - **3.1 AI Interviewer System**: Multi-LLM Consensus with Cohen's Kappa Thresholding
 - **3.2 ML Models Deployment System**: Sequential Testing Solves the Peeking Problem in A/B Tests
 - **3.2 ML Models Deployment System**: Canary Rollouts for ML Models Require Statistical Guardrails Beyond Traditional Deployments
+- **3.4 MLOps Platform**: Training-Serving Skew Prevention Requires Point-in-Time Feature Retrieval
 - **3.5 Uber Michelangelo ML Platform**: Dual-Store Feature Architecture Solves Training-Serving Consistency
 - **3.5 Uber Michelangelo ML Platform**: Snapshot Isolation for Feature Reads Prevents Mid-Prediction Inconsistency
 - **3.7 Netflix Runway Model Lifecycle Management**: Lambda Architecture for Ground Truth with Tiered Trust
@@ -2059,19 +2089,18 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.10 Open-Source ML Platform**: Feature Store is the Foundation That Prevents the #1 ML Production Failure
 - **3.10 Open-Source ML Platform**: Point-in-Time Joins Are Non-Negotiable for Valid ML Training
 - **3.11 AIOps System**: Blue-Green Model Deployment to Avoid Inference Inconsistency
-- **3.12 Recommendation Engine**: Versioned Embeddings to Prevent Cross-Version Similarity Corruption
-- **3.12 Recommendation Engine**: Training-Serving Skew Prevention Through Unified Feature Definitions
+- **3.12 Recommendation Engine**: Versioned Embeddings with Copy-on-Write Prevent Embedding Version Mismatch During Queries
 - **3.14 Vector Database**: L0 Buffer Architecture Makes Vectors Searchable Immediately via Brute-Force
 - **3.14 Vector Database**: Copy-on-Write Segments Solve Read-Write Concurrency Without Fine-Grained Locking
 - **3.15 RAG System**: Document Version Mismatch Is the Hardest Race Condition in RAG
 - **3.15 RAG System**: Embedding Model Migration Requires Full Re-Embedding with Atomic Index Swap
 - **3.16 Feature Store**: Point-in-Time Joins Prevent Silent Model Degradation
+- **3.19 AI Voice Assistant**: Offline Mode Requires CRDT-Based State Synchronization
 - **3.22 AI Guardrails & Safety System**: Policy Version Snapshots for Concurrent Safety
 - **3.24 Multi-Agent Orchestration Platform**: CRDT-Based Shared Memory for Concurrent Agent Writes
 - **3.27 Synthetic Data Generation Platform**: Topological Sort Enables Multi-Table Generation with Referential Integrity
 - **3.28 AI Memory Management System**: Multi-Agent Memory Scopes Require Field-Level Conflict Resolution Policies
-- **3.30 AI-Native Video Generation Platform**: Causal Convolutions in the 3D VAE Prevent Future Frame Leakage
-- **3.30 AI-Native Video Generation Platform**: Temporal Consistency Degrades Measurably Over Video Duration
+- **3.30 AI-Native Video Generation Platform**: Native Audio-Video Joint Generation Requires a Shared Latent Space, Not Post-Processing
 - **3.32 AI-Native Enterprise Knowledge Graph**: Precision Over Recall in Entity Merging
 - **3.32 AI-Native Enterprise Knowledge Graph**: Multi-Hop Error Propagation and Verification
 - **3.35 AI-Native Translation & Localization Platform**: Embedding Drift After Model Updates Silently Degrades Fuzzy Match Quality
@@ -2096,7 +2125,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **5.2 Netflix**: Graceful License Expiry -- Never Interrupt an Active Session
 - **5.3 Netflix Open Connect CDN**: Manifest Versioning with Delta Updates and Grace Periods
 - **5.4 Spotify**: Spotify Connect's Last-Device-Wins Playback Model
-- **5.5 Disney+ Hotstar**: Session Handoff Protocol for Cross-Device Live Continuity
+- **5.5 Disney+ Hotstar**: Session Handoff Protocol for Device Switching
 - **5.6 Google Photos**: Spanner's TrueTime for Cross-Device Conflict Resolution
 - **5.7 Twitch**: Approximate Viewer Counts with Periodic Reconciliation
 - **5.8 Podcast Platform**: Playback Position Sync with Last-Write-Wins and Timestamp Comparison
@@ -2138,10 +2167,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.23 Compliance First, Consent Based, AI Native Cloud EMR/EHR/PHR Engine**: Drug Interaction Detection Requires Pessimistic Locking to Prevent Concurrent Order Blindness
 - **2.24 AI-Powered Clinical Decision Support System**: Draft Order Synchronization Solves the Concurrent Prescribing Blindness Problem
 - **2.25 Compliance First AI Native Pharmacy Operating System**: Pessimistic Locking for Controlled Substances Trades Performance for Correctness
-- **2.26 Compliance First AI Native Hospital Management System**: PostgreSQL Exclusion Constraints for Double-Booking Prevention
+- **2.26 Compliance First, AI Native Hospital Management System**: PostgreSQL Exclusion Constraints Prevent Bed Double-Booking at the Database Level
 - **3.1 AI Interviewer System**: Barge-In Protocol for Turn-Taking Contention
 - **3.3 AI-Native Metadata-Driven Super Framework**: Hot Tenant Isolation Requires Dedicated Cache Partitions
-- **3.4 MLOps Platform**: Optimistic Concurrency Control Resolves Task State Race Conditions
+- **3.4 MLOps Platform**: Optimistic Concurrency Resolves the Heartbeat Timeout vs. Task Completion Race
 - **3.5 Uber Michelangelo ML Platform**: Deployment Locking Prevents Mixed-Version Serving
 - **3.6 Netflix Metaflow ML Workflow Platform**: Content-Addressed Artifact Storage Eliminates Distributed Locking
 - **3.8 Meta FBLearner Flow ML Platform**: Monolithic Database is the Inevitable Bottleneck for Multi-Tenant ML Platforms
@@ -2152,7 +2181,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.15 RAG System**: LLM Generation Dominates RAG Latency at 83% of Total Request Time
 - **3.16 Feature Store**: Hot Entity Spreading Prevents Shard Overload
 - **3.17 AI Agent Orchestration Platform**: Dynamic Token Budgeting Prevents Context Window Starvation
-- **3.19 AI Voice Assistant**: Barge-In Detection Requires Coordinating Audio Capture, ASR, and TTS Simultaneously
+- **3.18 AI Code Assistant**: Context Assembly Must Complete in 20-30ms Within a 200ms End-to-End Budget
+- **3.19 AI Voice Assistant**: The Six-Stage Pipeline Has a Hard 1-Second End-to-End Budget That Constrains Every Component
 - **3.20 AI Image Generation Platform**: VRAM Fragmentation -- The Hidden OOM Killer
 - **3.20 AI Image Generation Platform**: Model Composition Memory Overhead Enforces Tier-Based Limits
 - **3.21 LLM Gateway / Prompt Management**: Request Coalescing to Eliminate Duplicate LLM Calls
@@ -2170,7 +2200,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **4.10 Slack/Discord**: Request Coalescing to Eliminate Hot-Partition Amplification
 - **5.2 Netflix**: Concurrent Stream Enforcement via Sorted Sets with TTL
 - **5.4 Spotify**: Origin Shield for Request Coalescing
-- **5.5 Disney+ Hotstar**: Origin Shield Request Coalescing for Thundering Herd Protection
+- **5.5 Disney+ Hotstar**: Origin Shield Request Coalescing for Live Segments
 - **6.2 Document Collaboration Engine**: Single-Threaded Per-Document Session as the Concurrency Model
 - **6.3 Multi-Tenant SaaS Platform Architecture**: Governor Limits as the Immune System of Multi-Tenancy
 - **6.3 Multi-Tenant SaaS Platform Architecture**: Pessimistic Locking for Metadata, Optimistic Locking for Records
@@ -2188,18 +2218,22 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.18 AI Native Cloud ERP SaaS**: LoRA Adapters Enable Per-Tenant Model Customization Without Per-Tenant GPU Cost
 - **2.19 AI Native ATS Cloud SaaS**: LLM Extraction Is a Fallback, Not the Primary Parser
 - **2.25 Compliance First AI Native Pharmacy Operating System**: Waste Prediction Integrates Demand Forecasting to Calculate Surplus Before It Becomes Waste
+- **2.26 Compliance First, AI Native Hospital Management System**: Revenue Cycle AI Detects Documentation Gaps Before Claims Are Submitted
 - **3.1 AI Interviewer System**: Recording Storage Tiering for Multi-Year Compliance Retention
 - **3.2 ML Models Deployment System**: KV Cache Memory Dominates Large Model Serving Costs
-- **3.4 MLOps Platform**: Node Scoring Balances GPU Fragmentation, Cost, and Data Locality
-- **3.4 MLOps Platform**: Content-Addressable Artifact Deduplication Saves 30% Storage for Incremental Training
+- **3.4 MLOps Platform**: Spot Instance Preemption Requires Checkpoint-Aware Scheduling
+- **3.4 MLOps Platform**: Checksum-Based Artifact Deduplication Saves 30% Storage for Iterative Training
 - **3.10 Open-Source ML Platform**: Scale-to-Zero Serverless Inference Trades Cold Start Latency for Cost Efficiency
 - **3.10 Open-Source ML Platform**: GPU Resource Sharing via MIG Partitioning Provides Isolation Without Waste
-- **3.12 Recommendation Engine**: Dynamic Batching with Adaptive Sizing for GPU Inference
+- **3.12 Recommendation Engine**: Pre-Ranker Stage Reduces GPU Load by 10x Through Lightweight Candidate Pruning
+- **3.12 Recommendation Engine**: Feature Importance Pruning Reduces Feature Fetch Volume While Preserving Model Quality
 - **3.13 LLM Training & Inference Architecture**: Speculative Decoding Trades Draft Model Accuracy for Latency Reduction
 - **3.13 LLM Training & Inference Architecture**: Flash Attention Trades Recomputation for Memory via IO-Aware Tiling
 - **3.14 Vector Database**: Product Quantization Achieves 32x Compression at 2-5% Recall Cost
 - **3.15 RAG System**: Token Budget Management Prevents Context Window Overflow
 - **3.16 Feature Store**: Freshness Tier Segmentation Avoids Over-Engineering
+- **3.18 AI Code Assistant**: Speculative Decoding Achieves 75% Latency Reduction Because Code Is Highly Predictable
+- **3.18 AI Code Assistant**: Hierarchical Context Pruning Maximizes Value Within Token Budgets
 - **3.20 AI Image Generation Platform**: Diminishing Returns in Diffusion Step Count
 - **3.21 LLM Gateway / Prompt Management**: Virtual Key Hierarchy for Multi-Tenant Cost Governance
 - **3.24 Multi-Agent Orchestration Platform**: Context Window Explosion is the Multi-Agent Scaling Wall
@@ -2227,7 +2261,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **5.3 Netflix Open Connect CDN**: Fill Window Bandwidth Budgeting
 - **5.4 Spotify**: Multi-CDN Strategy for Audio vs. Own CDN for Video
 - **5.4 Spotify**: Ogg Vorbis as a License-Free Codec Strategy
-- **5.5 Disney+ Hotstar**: Shared Video Segments with Per-Language Audio Tracks
+- **5.5 Disney+ Hotstar**: Separated Audio Tracks for Multi-Language Commentary
 - **5.6 Google Photos**: Content-Hash Dedup as a Storage Cost Lever
 - **5.7 Twitch**: Enhanced Broadcasting (ERTMP) -- Client-Side Transcoding
 - **6.1 Cloud File Storage**: Erasure Coding (6+3 Reed-Solomon) vs Triple Replication
@@ -2273,10 +2307,11 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.25 Compliance First AI Native Pharmacy Operating System**: Orange Book TE Code Hierarchies Are Not Simple Substitution Lists
 - **2.25 Compliance First AI Native Pharmacy Operating System**: FEFO Picking with Expiry Buffer Varies by Drug Category
 - **2.25 Compliance First AI Native Pharmacy Operating System**: Neo4j Drug Knowledge Graph Enables Multi-Hop Therapeutic Equivalence Traversal
-- **2.26 Compliance First AI Native Hospital Management System**: Fellegi-Sunter Probabilistic Matching with Blocking for EMPI
 - **3.1 AI Interviewer System**: SFU Topology for Compliance Recording
 - **3.2 ML Models Deployment System**: PagedAttention Eliminates GPU Memory Fragmentation
 - **3.3 AI-Native Metadata-Driven Super Framework**: Flex Columns Eliminate DDL for Schema Evolution
+- **3.4 MLOps Platform**: Tiered Metric Storage Handles Billions of Data Points Through Hot-Warm-Cold Architecture
+- **3.4 MLOps Platform**: ClickHouse ReplacingMergeTree Handles Concurrent Metric Writes Without Coordination
 - **3.5 Uber Michelangelo ML Platform**: Speculative Execution and Prepared Statements Optimize Cassandra Query Performance
 - **3.6 Netflix Metaflow ML Workflow Platform**: Large Artifact Transfer as a Step Startup Bottleneck
 - **3.7 Netflix Runway Model Lifecycle Management**: Dependency Graph Auto-Discovery from Pipeline Lineage
@@ -2284,7 +2319,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.9 Airbnb BigHead ML Platform**: Partition Pruning Plus Pre-Aggregation Plus Incremental Backfills Achieve 120x Point-in-Time Join Speedup
 - **3.10 Open-Source ML Platform**: High-Cardinality Metric Storage Requires Purpose-Built Solutions Beyond PostgreSQL
 - **3.11 AIOps System**: Materialized Topology Views for O(1) RCA Graph Queries
-- **3.12 Recommendation Engine**: Multi-Source Retrieval with Reciprocal Rank Fusion
+- **3.12 Recommendation Engine**: Multi-Source Retrieval with Reciprocal Rank Fusion Prevents Single-Algorithm Blind Spots
+- **3.12 Recommendation Engine**: Position Bias Correction Is Essential for Training Models on Implicit Feedback
 - **3.13 LLM Training & Inference Architecture**: PagedAttention Applies OS Virtual Memory Concepts to KV Cache
 - **3.13 LLM Training & Inference Architecture**: GQA/MQA Reduces KV Cache by 4-8x for Long Context Feasibility
 - **3.14 Vector Database**: HNSW's Parameter Trilemma -- M, ef_search, and Memory Cannot Be Optimized Simultaneously
@@ -2292,8 +2328,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.15 RAG System**: Hierarchical Parent-Child Chunking Gives the Retriever Precision and the Generator Context
 - **3.16 Feature Store**: Dual-Store Architecture Solves Incompatible Access Patterns
 - **3.17 AI Agent Orchestration Platform**: Memory Consolidation with Importance Scoring Prevents Unbounded State Growth
-- **3.18 AI Code Assistant**: Hierarchical Context Pruning Maximizes Suggestion Quality Within Token Budgets
-- **3.19 AI Voice Assistant**: Contextual Biasing via Trie-Based Logit Boosting Solves the Personalization Problem for ASR
+- **3.18 AI Code Assistant**: Context Value Hierarchy Determines Token Budget Allocation Priority
+- **3.19 AI Voice Assistant**: Contextual Biasing Solves ASR Personalization via Trie-Based Logit Boosting
+- **3.19 AI Voice Assistant**: JointBERT Enables Simultaneous Intent and Slot Classification From a Single Encoder Pass
 - **3.20 AI Image Generation Platform**: ControlNet Temporal Application as a Quality Knob
 - **3.22 AI Guardrails & Safety System**: Context-Aware PII Classification to Minimize False Positives
 - **3.23 LLM Inference Engine**: PagedAttention Trades 5% Latency for 4-10x Throughput
@@ -2308,7 +2345,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.29 AI-Native Hybrid Search Engine**: RRF Eliminates the Score Normalization Problem That Breaks Linear Fusion
 - **3.29 AI-Native Hybrid Search Engine**: HNSW Parameter Tuning is a Three-Way Trade-off That Must Be Profile-Specific
 - **3.29 AI-Native Hybrid Search Engine**: ColBERT's Late Interaction is the Middle Ground Between Bi-Encoder Speed and Cross-Encoder Quality
-- **3.30 AI-Native Video Generation Platform**: Three Temporal Attention Strategies Span the Quality-Memory-Duration Trade-off Space
+- **3.30 AI-Native Video Generation Platform**: Causal vs Full Temporal Attention is the Central Quality-Efficiency Trade-off
+- **3.30 AI-Native Video Generation Platform**: 3D VAE Causal Convolutions Enable 96x Compression Without Future Frame Leakage
 - **3.31 AI-Native Document Processing Platform**: OCR Engine Routing Based on Document Characteristics
 - **3.32 AI-Native Enterprise Knowledge Graph**: Leiden Over Louvain for Community Detection
 - **3.34 AI-Native Real-Time Personalization Engine**: Thompson Sampling with Contextual Features for Exploration
@@ -2351,7 +2389,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.22 AI Native Offline First POS**: Leader Failover During Cloud Sync Requires Idempotent Event IDs
 - **2.23 Compliance First, Consent Based, AI Native Cloud EMR/EHR/PHR Engine**: Consent Version Mismatch Reveals a Fundamental TOCTOU Race
 - **2.25 Compliance First AI Native Pharmacy Operating System**: CRDT-Based Inventory with Reservation Solves the Multi-Terminal Dispensing Race
-- **2.26 Compliance First AI Native Hospital Management System**: Saga Pattern for ADT Workflow Orchestration
+- **2.26 Compliance First, AI Native Hospital Management System**: Saga-Based ADT Workflows Replace Distributed Transactions with Compensating Actions
 - **3.3 AI-Native Metadata-Driven Super Framework**: Sharing Recalculation Must Be Incremental and Idempotent
 - **3.8 Meta FBLearner Flow ML Platform**: Optimistic Locking on DAG State Handles Concurrent Node Completions
 - **3.10 Open-Source ML Platform**: Optimistic Locking on Model Registry Prevents Concurrent Promotion Conflicts
@@ -2380,6 +2418,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.21 WhatsApp Native ERP for SMB**: Edge NLU with Tiered Processing for Sub-2-Second Responses
 - **2.25 Compliance First AI Native Pharmacy Operating System**: Offline POS Uses SQLite + CRDT Sync with Controlled Substance Limits
 - **3.19 AI Voice Assistant**: Tiered Wake Word Detection Trades Power for Accuracy Across Hardware Stages
+- **3.19 AI Voice Assistant**: On-Device vs. Cloud Processing Is a Three-Way Tradeoff Between Privacy, Accuracy, and Latency
 - **3.34 AI-Native Real-Time Personalization Engine**: Three-Tier Architecture (Edge / Streaming / Origin)
 - **4.3 Instagram**: Lazy CDN Invalidation with Client-Side Validation for Ephemeral Content
 - **4.3 Instagram**: Super Resolution as a Bandwidth Multiplier on Both Server and Client
@@ -2388,7 +2427,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **5.1 YouTube**: ISP Peering with Google Global Cache
 - **5.2 Netflix**: ISP-Embedded CDN with Free Hardware Economics
 - **5.3 Netflix Open Connect CDN**: ISP-Embedded Appliances as a Partnership Model
-- **5.5 Disney+ Hotstar**: Mobile-First Quality Optimization for Bandwidth-Constrained Markets
+- **5.5 Disney+ Hotstar**: Mobile-First Architecture for Bandwidth-Constrained Users
 - **5.7 Twitch**: Demand-Based Replication Tree with Push Propagation
 - **6.6 Ticketmaster**: Edge-Side Token Validation
 
@@ -2419,6 +2458,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.21 WhatsApp Native ERP for SMB**: Shared Database with Row-Level Security for Multi-Tenancy
 - **2.23 Compliance First, Consent Based, AI Native Cloud EMR/EHR/PHR Engine**: Cross-Region Data Access Is Constrained by Law, Not Just Latency
 - **3.2 ML Models Deployment System**: Tensor Parallelism vs Pipeline Parallelism Have Opposite Communication Profiles
+- **3.4 MLOps Platform**: Scheduler State Sharding Distributes Pipeline Ownership Across Multiple Instances
+- **3.12 Recommendation Engine**: Sharded ANN Index with Scatter-Gather Scales Vector Search Beyond Single-Node Limits
 - **3.13 LLM Training & Inference Architecture**: 4D Parallelism Maps Communication Patterns to Hardware Topology
 - **3.16 Feature Store**: Sort-Merge PIT Joins Scale Where ASOF Joins Cannot
 - **3.19 AI Voice Assistant**: Hierarchical NLU Scales to 100K+ Skills Without Flat Classification Collapse
@@ -2494,20 +2535,20 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.22 AI Native Offline First POS**: mDNS for Zero-Configuration Terminal Discovery
 - **2.23 Compliance First, Consent Based, AI Native Cloud EMR/EHR/PHR Engine**: Fail-Closed vs. Break-the-Glass -- The Patient Safety Paradox
 - **2.24 AI-Powered Clinical Decision Support System**: Circuit Breaker on Knowledge Graph Degrades to Direct Match Only
-- **2.26 Compliance First AI Native Hospital Management System**: FHIR R4 and HL7v2 Dual Integration for Legacy Compatibility
+- **2.26 Compliance First, AI Native Hospital Management System**: FHIR R4 and HL7v2 Dual Integration Is a Pragmatic Necessity, Not a Design Flaw
 - **3.1 AI Interviewer System**: Graceful Degradation Ladder for Component Failures
 - **3.2 ML Models Deployment System**: GPU Failure Cascades Require Multi-Stage Degradation
 - **3.2 ML Models Deployment System**: Model Corruption Detection Requires Multi-Layer Validation
 - **3.3 AI-Native Metadata-Driven Super Framework**: Workflow Cascade Prevention Requires Governor Limits
-- **3.4 MLOps Platform**: Spot Preemption Handling Requires Coordinated Checkpoint-Then-Reschedule
 - **3.5 Uber Michelangelo ML Platform**: Project Tiering Enables Differentiated SLAs Without Over-Provisioning
 - **3.5 Uber Michelangelo ML Platform**: Checkpointing Strategy Balances Recovery Speed Against Training Overhead
 - **3.6 Netflix Metaflow ML Workflow Platform**: Step-Level Checkpointing as the Unit of Fault Tolerance
 - **3.11 AIOps System**: Meta-Reliability -- The Monitor Must Be More Reliable Than the Monitored
-- **3.12 Recommendation Engine**: Sticky Routing During Model Canary Deployment
+- **3.12 Recommendation Engine**: Graceful Degradation Across Retrieval Sources Maintains Recommendation Quality Under Partial Failures
 - **3.14 Vector Database**: WAL + Snapshot Recovery Provides Durability Without Sacrificing Write Throughput
 - **3.14 Vector Database**: Index Rebuild Is a Multi-Hour Operation Requiring Background Build with Atomic Swap
 - **3.16 Feature Store**: Late-Arriving Data Requires Explicit Reprocessing Windows
+- **3.19 AI Voice Assistant**: LLM Routing Preserves Deterministic Paths for Safety-Critical Commands
 - **3.21 LLM Gateway / Prompt Management**: Multi-Provider Failover with Response Normalization
 - **3.22 AI Guardrails & Safety System**: Multi-Agent Consensus for Zero Attack Success Rate
 - **3.24 Multi-Agent Orchestration Platform**: Two-Phase Handoff with Timeout for Crash Recovery
@@ -2515,7 +2556,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.27 Synthetic Data Generation Platform**: GAN Mode Collapse Detection Requires Discriminator Accuracy Monitoring
 - **3.28 AI Memory Management System**: Consolidation Must Be Reversible Because LLM Summarization Loses Information
 - **3.29 AI-Native Hybrid Search Engine**: GPU Contention for Reranking Requires Graceful Degradation, Not Just Queuing
-- **3.30 AI-Native Video Generation Platform**: Checkpoint Recovery Is Essential for Multi-Minute Generation Jobs
+- **3.30 AI-Native Video Generation Platform**: Checkpoint Recovery Transforms Multi-Minute GPU Jobs from Fragile to Fault-Tolerant
 - **3.31 AI-Native Document Processing Platform**: Event-Driven Architecture with Checkpoints for Agentic Pipelines
 - **3.33 AI-Native Customer Service Platform**: Context Package for Zero-Repeat Human Handoff
 - **3.33 AI-Native Customer Service Platform**: Graceful Session Expiry with Context Preservation
@@ -2539,7 +2580,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **5.3 Netflix Open Connect CDN**: BGP Convergence Mitigation with Independent Health Checks
 - **5.3 Netflix Open Connect CDN**: Health-Augmented Steering with Real-Time Request Metrics
 - **5.3 Netflix Open Connect CDN**: Multiple IXP Presence for Regional Fault Tolerance
-- **5.5 Disney+ Hotstar**: Five-Level Graceful Degradation Ladder for Live Events
+- **5.5 Disney+ Hotstar**: Multi-Level Graceful Degradation for Live Events
+- **5.5 Disney+ Hotstar**: Multi-CDN Orchestration with Weighted Traffic Steering
 - **5.6 Google Photos**: Resumable Chunked Upload with Adaptive Sizing
 - **5.7 Twitch**: Circuit Breaker on Chat Moderation (Clue)
 - **5.8 Podcast Platform**: Crawler Politeness as Architecture
@@ -2592,11 +2634,12 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.20 Compliance First AI Native Payroll Engine**: Parallel Processing with Jurisdiction Clustering Meets Pay Run Deadlines
 - **2.23 Compliance First, Consent Based, AI Native Cloud EMR/EHR/PHR Engine**: Pre-Computation Transforms the AI Latency Problem from Request-Time to Background
 - **2.24 AI-Powered Clinical Decision Support System**: Polypharmacy Creates O(n-squared) Scaling in Drug Interaction Detection
-- **2.26 Compliance First AI Native Hospital Management System**: Bed Demand Prediction with XGBoost-Prophet Ensemble
+- **2.26 Compliance First, AI Native Hospital Management System**: Blocking Strategies Turn O(n) Patient Matching into O(b) Where b Is 4000x Smaller
 - **3.2 ML Models Deployment System**: Continuous Batching Decouples Request Lifecycles
 - **3.2 ML Models Deployment System**: Prefill vs Decode Are Fundamentally Different Compute Regimes
 - **3.3 AI-Native Metadata-Driven Super Framework**: AST Compilation Caching Delivers 10x Formula Evaluation Speedup
 - **3.3 AI-Native Metadata-Driven Super Framework**: Permission Evaluation Uses Fast-Path Short-Circuiting Before Expensive Checks
+- **3.4 MLOps Platform**: GPU Fragmentation Is the Hidden Cost of Naive Task Scheduling
 - **3.5 Uber Michelangelo ML Platform**: Virtual Model Sharding Makes Multi-Model Serving Economical
 - **3.5 Uber Michelangelo ML Platform**: Architecture Evolution from Mesos/Spark to Kubernetes/Ray Reflects Workload Diversification
 - **3.5 Uber Michelangelo ML Platform**: Model Loading Optimization Through Pre-warming and Quantization Reduces Cold Start Impact
@@ -2608,13 +2651,12 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.9 Airbnb BigHead ML Platform**: Kubernetes-Native Serving with HPA on Custom Metrics Enables Latency-Aware Autoscaling
 - **3.10 Open-Source ML Platform**: ModelMesh Multiplexes Models onto Shared Infrastructure with LRU Caching
 - **3.11 AIOps System**: Three-Tier Anomaly Detection as a Cost-Accuracy Funnel
-- **3.12 Recommendation Engine**: Two-Stage Architecture Is a Computational Necessity, Not a Design Preference
+- **3.12 Recommendation Engine**: Two-Stage Architecture Makes Billion-Scale Personalization Computationally Feasible
+- **3.12 Recommendation Engine**: Dynamic Batching Maximizes GPU Utilization While Meeting Latency SLOs
 - **3.13 LLM Training & Inference Architecture**: Pipeline Bubbles Create Irreducible Idle Time Proportional to Stage Count
 - **3.13 LLM Training & Inference Architecture**: ZeRO Sharding Progressively Trades Communication for Memory at Three Distinct Stages
 - **3.13 LLM Training & Inference Architecture**: Communication-Computation Overlap Hides AllReduce Latency
 - **3.14 Vector Database**: ef_search Is the Runtime Knob That Turns Recall Into Latency
-- **3.18 AI Code Assistant**: Speculative Decoding Achieves 75% Latency Reduction Without Quality Loss
-- **3.18 AI Code Assistant**: 200ms End-to-End Budget Forces Radical Parallel Optimization
 - **3.20 AI Image Generation Platform**: GPU Warm Pool as the Critical Latency Lever
 - **3.20 AI Image Generation Platform**: DistriFusion for Multi-GPU Parallelism on Single Images
 - **3.23 LLM Inference Engine**: Disaggregated Prefill/Decode Exploits the Compute-Memory Asymmetry
@@ -2626,11 +2668,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.27 Synthetic Data Generation Platform**: Quality Validation Must Be Tiered Like the Generation Itself
 - **3.28 AI Memory Management System**: Parallel Vector + Graph Retrieval Halves Latency via Independent Data Paths
 - **3.29 AI-Native Hybrid Search Engine**: Cross-Encoder Reranking is 1000x Slower but 20-35% Better -- Two Stages Get Both
-- **3.30 AI-Native Video Generation Platform**: DiT Replaces UNet Because Transformers Scale Where UNets Plateau
-- **3.30 AI-Native Video Generation Platform**: TurboDiffusion Achieves 24x Speedup Through Progressive Step Distillation Plus Adversarial Training
-- **3.30 AI-Native Video Generation Platform**: VRAM Growth Makes Long Videos Impossible Without Chunked Generation or Model Parallelism
-- **3.30 AI-Native Video Generation Platform**: 3D VAE Decoding Is a Non-Parallelizable Bottleneck That Grows Linearly with Duration
-- **3.30 AI-Native Video Generation Platform**: Multi-GPU Communication Overhead Caps Tensor Parallelism Efficiency at 75% for 8 GPUs
+- **3.30 AI-Native Video Generation Platform**: 3D Latent Space Fundamentally Changes the Scaling Equation Compared to Image Generation
+- **3.30 AI-Native Video Generation Platform**: TurboDiffusion Achieves 24x Speedup Through Progressive Step Distillation Plus Adversarial Fine-tuning
+- **3.30 AI-Native Video Generation Platform**: Multi-GPU Tensor Parallelism Hits 75% Efficiency at 8 GPUs Due to Communication Overhead
 - **3.31 AI-Native Document Processing Platform**: Weighted Multi-Factor HITL Queue Prioritization
 - **3.31 AI-Native Document Processing Platform**: GPU Batch Optimization with Model-Aware Scheduling
 - **3.32 AI-Native Enterprise Knowledge Graph**: Hierarchical Entity Resolution with Three-Tier Speed Paths
@@ -2653,7 +2693,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **5.3 Netflix Open Connect CDN**: BGP-Based Steering with Multi-Signal Scoring
 - **5.3 Netflix Open Connect CDN**: Control Plane / Data Plane Separation
 - **5.3 Netflix Open Connect CDN**: NVMe I/O as the True Bottleneck, Not Network
-- **5.5 Disney+ Hotstar**: Ladder-Based Pre-Scaling for Known Event Schedules
+- **5.5 Disney+ Hotstar**: Ladder-Based Pre-Scaling for Predictable Traffic Spikes
 - **5.6 Google Photos**: Async ML Pipeline with Priority Queuing
 - **5.7 Twitch**: Two-Level Chat Fanout (PubSub + Edge)
 - **6.1 Cloud File Storage**: Notification Fan-out Optimization for Shared Folders
@@ -2670,6 +2710,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.15 RAG System**: Hybrid Search (Dense + Sparse) Closes the Gap That Each Method Has Alone
 - **3.15 RAG System**: Cross-Encoder Reranking Provides 20-35% Accuracy Boost via Pair-Wise Attention
 - **3.15 RAG System**: Query Rewriting and HyDE Transform User Queries Into Better Retrieval Targets
+- **3.18 AI Code Assistant**: AST-Based Context Retrieval Provides Structural Understanding That Embedding Search Cannot
 - **4.10 Slack/Discord**: Search Scalability Through Workspace and Time-Based Sharding
 
 ### Security
@@ -2707,10 +2748,11 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.25 Compliance First AI Native Pharmacy Operating System**: OPA Policy Engine Enables Version-Controlled, Auditable Compliance Rules Across 50+ Jurisdictions
 - **2.25 Compliance First AI Native Pharmacy Operating System**: DAW Code 1 Is a Hard Regulatory Block on All Substitution
 - **3.1 AI Interviewer System**: Jurisdiction-Aware Evaluation Module Architecture
-- **3.4 MLOps Platform**: Stage Transition Governance Enforces Model Cards and Bias Validation Before Production
-- **3.18 AI Code Assistant**: Defense-in-Depth Against Indirect Prompt Injection in Repository Context
-- **3.18 AI Code Assistant**: Dependency Validation Catches Hallucinated Package Names Before Supply Chain Attacks
-- **3.19 AI Voice Assistant**: False Accept vs False Reject Is a Privacy-Usability Trade-off With No Perfect Operating Point
+- **3.4 MLOps Platform**: Stage Transition Governance Enforces Model Cards and Bias Checks Before Production
+- **3.18 AI Code Assistant**: Indirect Prompt Injection Through Repository Files Is the Most Dangerous Attack Vector
+- **3.18 AI Code Assistant**: Output Validation Must Scan for Secrets, Vulnerabilities, and Hallucinated Packages
+- **3.18 AI Code Assistant**: Agent Mode Requires Strict Sandboxing Because LLM Actions Have Real-World Side Effects
+- **3.19 AI Voice Assistant**: False Accept vs. False Reject Is a Privacy-Usability Tradeoff With No Perfect Operating Point
 - **3.19 AI Voice Assistant**: Adversarial Audio Attacks Exploit the Gap Between Human and Machine Hearing
 - **3.20 AI Image Generation Platform**: Dual-Layer Content Safety Creates an Asymmetric Error Problem
 - **3.22 AI Guardrails & Safety System**: Instruction Hierarchy Enforcement Against Jailbreaks
@@ -2723,7 +2765,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **4.8 Snapchat**: H3 Hexagonal Indexing with K-Anonymity for Snap Map
 - **4.11 Reddit**: Shadowbanning for Transparent Vote Manipulation Prevention
 - **5.4 Spotify**: Device-Bound DRM with Hierarchical Key Architecture
-- **5.5 Disney+ Hotstar**: Server-Side Ad Insertion Over Client-Side
+- **5.5 Disney+ Hotstar**: SSAI Over CSAI for Ad-Blocker Resistance and Unified QoE
 - **6.2 Document Collaboration Engine**: Permission Revocation During Active Editing Sessions
 - **6.5 Zoho Suite**: Proprietary Zia LLM with Private Inference and Deterministic Fallbacks
 - **6.5 Zoho Suite**: Multi-Layer Tenant Data Isolation with RLS as Second Enforcement
@@ -2741,15 +2783,18 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.14 Edge Data Processing**: Watermark-Based Window Closing for Out-of-Order Event Streams
 - **2.14 Edge Data Processing**: Idle Timeout Watermark Advancement to Prevent Window Stalls
 - **3.1 AI Interviewer System**: Speculative LLM Generation on Partial Transcripts
-- **3.4 MLOps Platform**: Tiered Metric Storage Spans Three Temperature Layers
 - **3.5 Uber Michelangelo ML Platform**: Lambda Architecture for Feature Computation Balances Freshness and Completeness
 - **3.7 Netflix Runway Model Lifecycle Management**: Bidirectional Buffering Solves Prediction-Outcome Event Reordering
 - **3.9 Airbnb BigHead ML Platform**: Streaming Feature Lag Requires Multi-Layered Mitigation Across Kafka, Flink, and RocksDB
 - **3.11 AIOps System**: Dynamic-X-Y Alert Correlation Compresses 10K Alerts into 300 Incidents
 - **3.11 AIOps System**: Kafka as a Spike-Absorbing Buffer Between Ingestion and Storage
+- **3.12 Recommendation Engine**: Event-Time Based Idempotent Writes Reconcile Stream and Batch Feature Inconsistencies
+- **3.12 Recommendation Engine**: Index Update Latency Determines New Item Discoverability Window
 - **3.13 LLM Training & Inference Architecture**: Continuous Batching with Preemption Maximizes GPU Utilization During Inference
 - **3.16 Feature Store**: Hybrid Materialization Balances Freshness, Cost, and Correctness
-- **3.19 AI Voice Assistant**: Streaming RNN-T Architecture Enables Partial Transcripts Before Utterance Ends
+- **3.19 AI Voice Assistant**: Streaming RNN-T With Causal Attention Enables Real-Time Partial Transcripts
+- **3.19 AI Voice Assistant**: Barge-In Detection Requires Coordinating Echo Cancellation, ASR, and TTS Simultaneously
+- **3.19 AI Voice Assistant**: Streaming TTS With Filler Audio Masks LLM Latency in Conversational Mode
 - **3.22 AI Guardrails & Safety System**: Streaming Moderation with Incremental Checkpoints
 - **3.25 AI Observability & LLMOps Platform**: Trace Assembly State Machine for Long-Running Agent Workflows
 - **3.33 AI-Native Customer Service Platform**: Multi-Modal Sentiment Fusion for Proactive Escalation
@@ -2765,7 +2810,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **5.4 Spotify**: Track-Boundary Quality Switching for Audio ABR
 - **5.4 Spotify**: Prefetch-at-30-Seconds for Gapless Playback
 - **5.4 Spotify**: Loudness Normalization at Ingest for Consistent Playback
-- **5.5 Disney+ Hotstar**: DVR Ad-Break Skipping in Catch-Up Mode
+- **5.5 Disney+ Hotstar**: DVR Edge Case Handling for Live Streams
 - **5.6 Google Photos**: Ask Photos RAG Architecture with Gemini
 - **5.7 Twitch**: IDR Frame Alignment Across Transcoding Variants
 - **5.8 Podcast Platform**: Server-Side Ad Insertion (SSAI) in the Critical Playback Path
@@ -2786,9 +2831,12 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.24 AI-Powered Clinical Decision Support System**: Confidence Calibration Transforms Probability Scores into Trustworthy Predictions
 - **2.24 AI-Powered Clinical Decision Support System**: SHAP Explainability Turns Black-Box Predictions into Auditable Clinical Reasoning
 - **2.25 Compliance First AI Native Pharmacy Operating System**: Learning-to-Rank Substitution Combines Safety, Economics, and Behavioral Signals
-- **2.26 Compliance First AI Native Hospital Management System**: Constraint Programming with CP-SAT for OR Schedule Optimization
-- **2.26 Compliance First AI Native Hospital Management System**: ML-Predicted Case Duration as the Key Input to OR Scheduling
-- **2.26 Compliance First AI Native Hospital Management System**: AI-Assisted Medical Coding with Human-in-the-Loop
+- **2.26 Compliance First, AI Native Hospital Management System**: EMPI False Positives Are More Dangerous Than False Negatives
+- **2.26 Compliance First, AI Native Hospital Management System**: Bed Demand Prediction Requires Fusing Scheduled Admissions with ED Census and LOS Models
+- **2.26 Compliance First, AI Native Hospital Management System**: OR Scheduling Is a Constraint Satisfaction Problem, Not a Calendar Problem
+- **2.26 Compliance First, AI Native Hospital Management System**: Case Duration Prediction Accuracy Varies Dramatically by Surgical Specialty
+- **2.26 Compliance First, AI Native Hospital Management System**: AI-Assisted Medical Coding Uses Human-in-the-Loop to Balance Automation with Accountability
+- **2.26 Compliance First, AI Native Hospital Management System**: HMS Complements Clinical Systems Rather Than Replacing Them
 - **3.1 AI Interviewer System**: Cascaded Pipeline Enables Compliance at the Cost of Latency Engineering
 - **3.3 AI-Native Metadata-Driven Super Framework**: Circular Dependency Detection Uses DFS with Recursion Stack
 - **3.6 Netflix Metaflow ML Workflow Platform**: The Two-Environment Model Solves the Dev-Prod Gap Without Code Changes
@@ -2798,21 +2846,20 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.9 Airbnb BigHead ML Platform**: Automatic DAG Generation from Decorated Python Code Reduces Pipeline Boilerplate by 80%
 - **3.10 Open-Source ML Platform**: InferenceGraph Enables Complex Multi-Model Pipelines as First-Class Abstractions
 - **3.11 AIOps System**: Causal Inference over Correlation for Root Cause Analysis
+- **3.12 Recommendation Engine**: Multi-Objective Re-Ranking Balances Engagement, Diversity, and Freshness
 - **3.14 Vector Database**: Distance Metric Must Match the Embedding Model's Training Objective
 - **3.15 RAG System**: Agentic RAG Decomposes Complex Queries Into Sub-Queries With Iterative Retrieval
 - **3.17 AI Agent Orchestration Platform**: Three-Tier Memory Architecture Enables Agents to Learn and Generalize
 - **3.17 AI Agent Orchestration Platform**: Graph-Based Orchestration with Conditional Routing Subsumes All Simpler Patterns
-- **3.18 AI Code Assistant**: Fill-in-the-Middle Training Makes Edit-Aware Completion Possible
-- **3.19 AI Voice Assistant**: LLM Routing by Intent Confidence Preserves Determinism Where It Matters
+- **3.18 AI Code Assistant**: Fill-in-the-Middle Training Transforms Code Completion From Append-Only to Edit-Aware
+- **3.18 AI Code Assistant**: Acceptance Rate Is the North Star Metric Capturing User-Perceived Quality
 - **3.20 AI Image Generation Platform**: Fixed VRAM vs Growing KV Cache -- The Fundamental Difference from LLM Inference
 - **3.20 AI Image Generation Platform**: CFG Scale as a Non-Linear Quality Control
 - **3.23 LLM Inference Engine**: Memory-Boundedness Makes Batching the Primary Optimization Lever
 - **3.23 LLM Inference Engine**: Speculative Decoding is Temperature-Gated
 - **3.24 Multi-Agent Orchestration Platform**: Blackboard Pattern for Iterative Multi-Agent Refinement
 - **3.28 AI Memory Management System**: The OS Memory Hierarchy Analogy is Architecturally Literal, Not Just Metaphorical
-- **3.30 AI-Native Video Generation Platform**: The 2D-to-3D Latent Shift Is the Fundamental Architectural Difference Between Image and Video Generation
 - **3.30 AI-Native Video Generation Platform**: Asymmetric Dual-Stream Architecture Allocates 4x Parameters to Video Over Text
-- **3.30 AI-Native Video Generation Platform**: Audio-Video Synchronization Requires Joint Latent Space Generation, Not Post-Hoc Alignment
 - **3.31 AI-Native Document Processing Platform**: Isotonic Regression for Confidence Calibration
 - **3.32 AI-Native Enterprise Knowledge Graph**: Bi-Temporal Modeling for Knowledge Evolution
 - **3.33 AI-Native Customer Service Platform**: Action-Taking Agents vs. Retrieval-Only Chatbots
@@ -2873,9 +2920,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.21 WhatsApp Native ERP for SMB**: Message Aggregation as a Compression Strategy
 - **2.23 Compliance First, Consent Based, AI Native Cloud EMR/EHR/PHR Engine**: Tiered CDS Processing Splits Synchronous Safety Checks from Async Intelligence
 - **2.24 AI-Powered Clinical Decision Support System**: Alert Fatigue Is the Real Failure Mode of Clinical Decision Support
+- **2.26 Compliance First, AI Native Hospital Management System**: Integration Hub Message Prioritization Prevents ADT Delays from Lab Result Floods
 - **3.2 ML Models Deployment System**: Batch Formation Wait Time Is the Core Latency-Throughput Knob
-- **3.4 MLOps Platform**: Weighted Multi-Factor Task Priority Prevents Scheduling Starvation
-- **3.4 MLOps Platform**: Client-Side Batching Reduces Metric Write API Calls by 100x
+- **3.4 MLOps Platform**: Client-Side Batching Reduces API Calls by 100x During Distributed Training
+- **3.4 MLOps Platform**: Weighted Multi-Factor Priority Scoring Prevents Task Scheduling Starvation
 - **3.6 Netflix Metaflow ML Workflow Platform**: Metadata Service Batching as the Critical Path Optimization
 - **3.16 Feature Store**: Streaming Backpressure Demands Multi-Layer Defense
 - **3.17 AI Agent Orchestration Platform**: Tiered Guardrail Checking Avoids Adding 450ms to Every Turn
@@ -2899,7 +2947,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **4.10 Slack/Discord**: Presence Storm Mitigation Through Batching and Debouncing
 - **4.11 Reddit**: Batch Score Updates with Priority and Debouncing
 - **5.4 Spotify**: Jittered Expiry to Prevent DRM Key Refresh Storms
-- **5.5 Disney+ Hotstar**: Auth Token Pre-Warming to Absorb Authentication Storms
+- **5.5 Disney+ Hotstar**: Auth Token Pre-Warming to Absorb Login Storms
 - **5.7 Twitch**: Randomized Greedy Routing to Prevent Herding
 - **5.7 Twitch**: Message Sampling for Ultra-Popular Channels
 - **5.8 Podcast Platform**: Three-Tier Adaptive Feed Polling with Push Augmentation
