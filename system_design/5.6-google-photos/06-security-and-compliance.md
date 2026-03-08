@@ -277,12 +277,15 @@ FUNCTION contentSafetyCheck(mediaItem):
 
 ### Biometric Privacy Laws (Illinois BIPA, Texas CUBI)
 
+> **Precedent:** Google paid a **$100 million BIPA settlement** (2022) for collecting biometric face data without informed consent from Illinois users between May 2015 and April 2022. This drove major changes to Google Photos' consent architecture.
+
 | Requirement | Implementation |
 |-------------|---------------|
-| **Written Consent** | Explicit opt-in for face grouping |
-| **Data Retention Policy** | Face data deleted on opt-out; no indefinite retention |
+| **Written Consent** | Explicit opt-in for face grouping (post-settlement, not default-on) |
+| **Data Retention Policy** | Face data deleted on opt-out; defined retention policy per Google support documentation |
 | **No Sale/Disclosure** | Face embeddings never shared with third parties |
 | **Secure Storage** | Encrypted, per-user isolation |
+| **Opt-Out Effect** | Turning off Face Groups deletes all face group data for the account |
 
 ### Content Safety Compliance
 

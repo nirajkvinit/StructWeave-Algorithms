@@ -2,7 +2,7 @@
 
 ## Overview
 
-Google Photos is the world's largest cloud photo and video management platform, serving **over 1 billion monthly active users** who collectively store **6+ trillion photos and videos**. The platform processes approximately **1.7 billion uploads daily**, running sophisticated ML pipelines for facial recognition, visual search, auto-curation, and generative AI editing — all backed by Google's planet-scale infrastructure (Colossus, Spanner, Bigtable, Borg).
+Google Photos is the world's largest cloud photo and video management platform, serving **1.5 billion monthly active users** who collectively store **9+ trillion photos and videos** (as of its 10th anniversary, May 2025). The platform processes approximately **4 billion uploads daily** (28 billion/week), running sophisticated ML pipelines for facial recognition, visual search, Gemini-powered "Ask Photos," auto-curation, and generative AI editing — all backed by Google's planet-scale infrastructure (Blobstore on Colossus, Spanner, Bigtable, Borg).
 
 This design focuses on four core challenges:
 1. **Image Backup & Storage** — Reliable upload, deduplication, compression, and multi-device sync at planetary scale
@@ -155,13 +155,15 @@ flowchart TB
 
 | Metric | Value | Context |
 |--------|-------|---------|
-| Monthly Active Users | 1B+ | As of 2024, across Android/iOS/Web |
-| Photos & Videos Stored | 6+ trillion | Growing ~1.7B/day |
-| Daily Uploads | ~1.7 billion | Photos + videos combined |
-| Storage Volume | Exabytes | Multi-region replicated |
-| Face Clusters | Billions | Across all user libraries |
-| Search Queries | Billions/month | Visual + text-based |
-| ML Models Run Per Photo | 10+ | Classification, detection, face, OCR, etc. |
+| Monthly Active Users | 1.5B | Confirmed May 2025 (10th anniversary) |
+| Photos & Videos Stored | 9+ trillion | Doubled from 4T in 2020 to 9T+ in 2025 |
+| Daily Uploads | ~4 billion | 28 billion/week (Google's public disclosure) |
+| Storage Volume | Exabytes | Colossus filesystems exceed 10 EB each |
+| Monthly Search Users | 370 million | People who search their photos monthly |
+| Monthly Sharing Users | 440 million | People who share memories monthly |
+| Monthly Editors | 210 million | People who edit photos monthly |
+| ML Models Run Per Photo | 10+ | Classification, detection, face, OCR, embeddings, quality |
+| Labels Applied | 2+ trillion | Total ML labels across all photos |
 | Supported Formats | 20+ | JPEG, HEIC, RAW (CR2/ARW/DNG), WebP, PNG, MP4, MOV, etc. |
 
 ---
@@ -186,17 +188,21 @@ flowchart TB
 | Layer | Technology | Purpose |
 |-------|------------|---------|
 | **Global Network** | Google Front End (GFE) | TLS termination, routing |
-| **CDN** | Google CDN (Edge POP) | Image/thumbnail serving |
-| **Orchestration** | Borg / Kubernetes | Container orchestration |
-| **Blob Storage** | Colossus (GFS v2) | Photo/video file storage |
-| **Metadata** | Spanner | Globally consistent metadata |
-| **ML Features** | Bigtable | Embeddings, face vectors |
-| **Cache** | Memcache / In-memory | Hot thumbnail cache |
+| **CDN** | Google CDN (Edge PoPs) | Image/thumbnail serving via `lh3.googleusercontent.com` |
+| **Orchestration** | Borg | Container orchestration (2B+ containers/week across Google) |
+| **Blob Storage** | Blobstore (on Colossus) | Photo/video binary storage, chunked and replicated across zones |
+| **Filesystem** | Colossus (GFS v2) | Exabyte-scale distributed filesystem (10+ EB per filesystem, 50 TB/s reads) |
+| **Metadata** | Spanner | Globally consistent metadata (confirmed by Google Cloud blog) |
+| **ML Features** | Bigtable | Embeddings, face vectors, ML labels |
+| **Cache** | Memcache / In-memory | Hot thumbnail and metadata cache |
 | **Event Bus** | Pub/Sub | Async processing triggers |
-| **ML Framework** | TensorFlow / JAX | Vision models, FaceNet |
-| **ML Serving** | TensorFlow Serving / TPU | Real-time inference |
-| **Search Index** | Custom (inverted + vector) | Visual + text search |
-| **Video Processing** | Borg-based pipeline | Transcoding, stabilization |
+| **Batch Processing** | Flume Pipelines | Dozens of large batch ML + data integrity pipelines |
+| **ML Framework** | TensorFlow / JAX / TFLite | Vision models, FaceNet, on-device inference |
+| **ML Serving** | TensorFlow Serving / TPU | Real-time inference on TPU pods |
+| **Vector Search** | ScaNN / SOAR | ANN search for visual embeddings (scales to 10B+ vectors) |
+| **Quality Scoring** | NIMA / MUSIQ | Aesthetic quality prediction for Memories curation |
+| **NL Search** | Gemini + RAG | "Ask Photos" — natural language photo search (2024-2025) |
+| **On-Device ML** | MediaPipe / BlazeFace / ML Kit | On-device face detection, image labeling (400+ categories) |
 
 ---
 
@@ -226,10 +232,11 @@ flowchart TB
 
 ## What Makes Google Photos Unique
 
-### 1. **World-Class Visual Search**
+### 1. **World-Class Visual Search & Ask Photos**
 - Natural language queries ("photos of my dog at the beach last summer")
+- **Ask Photos** (2024-2025): Gemini-powered RAG architecture — agent model selects retrieval tools, vector-based retrieval extends metadata search, answer model analyzes visual content with Gemini's long context window
 - Combines scene recognition, object detection, OCR, face recognition, temporal context
-- Powered by Google's Vision AI / Gemini multimodal models
+- 370 million people search their photos monthly
 
 ### 2. **FaceNet Face Clustering**
 - 128-dimensional face embeddings with triplet loss training
@@ -242,10 +249,12 @@ flowchart TB
 - Photo Unblur (deblurring using generative models)
 - Reimagine (generative scene editing with Gemini)
 
-### 4. **Memories & Auto-Curation**
-- ML-driven highlight reels from past photos
-- Automatic collages, animations, cinematic photos
-- Contextual surfacing based on date, location, people
+### 4. **Memories & Auto-Curation (NIMA/MUSIQ + Gemini)**
+- ML-driven highlight reels using **NIMA** (Neural Image Assessment) for aesthetic quality scoring
+- **MUSIQ** (Multi-Scale Image Quality Transformer) for resolution-agnostic quality prediction
+- Automatic collages with AI-matched color palettes, animations, cinematic photos
+- 2025 Recap uses **Gemini** to surface year-end highlights with personalized captions
+- Contextual surfacing based on date, location, people — multi-stage filtering with 0.7 confidence threshold
 
 ### 5. **Planet-Scale Infrastructure**
 - Google's own datacenter network, Colossus filesystem, Spanner database
@@ -271,13 +280,17 @@ flowchart TB
 
 ## References
 
-- [Google AI Blog - Image Search in Google Photos](https://ai.googleblog.com/)
-- [FaceNet: A Unified Embedding for Face Recognition and Clustering (Schroff et al., 2015)](https://arxiv.org/abs/1503.03832)
-- [Google Research - Advances in Image Understanding](https://research.google/pubs/)
-- [Google Photos Engineering - GCP Next talks](https://cloud.google.com/blog)
-- [Google Spanner: Globally-Distributed Database](https://research.google/pubs/pub39966/)
-- [Colossus: Successor to the Google File System](https://cloud.google.com/blog/products/storage-data-transfer/a-peek-behind-colossus-googles-file-system)
-- [Magic Eraser - Google AI Blog](https://blog.google/products/photos/)
+- [Google Photos builds user experience on Spanner (Google Cloud Blog)](https://cloud.google.com/blog/products/databases/google-photos-builds-user-experience-on-spanner) — Most authoritative source on Photos backend architecture
+- [Google Photos Turns 10, Hosts 9+ Trillion Photos (PetaPixel, May 2025)](https://petapixel.com/2025/05/28/google-photos-turns-10-now-hosts-over-9-trillion-photos-and-videos/)
+- [FaceNet: A Unified Embedding for Face Recognition and Clustering (Schroff et al., CVPR 2015)](https://arxiv.org/abs/1503.03832)
+- [A Peek Behind Colossus, Google's File System (Google Cloud Blog)](https://cloud.google.com/blog/products/storage-data-transfer/a-peek-behind-colossus-googles-file-system)
+- [Ask Photos: Gemini-powered AI Search (Google I/O 2024)](https://blog.google/products/photos/ask-photos-google-io-2024/)
+- [Announcing ScaNN: Efficient Vector Similarity Search (Google Research)](https://research.google/blog/announcing-scann-efficient-vector-similarity-search/)
+- [SOAR: New Algorithms for Even Faster Vector Search (Google Research)](https://research.google/blog/soar-new-algorithms-for-even-faster-vector-search-with-scann/)
+- [Introducing NIMA: Neural Image Assessment (Google AI Blog)](https://ai.googleblog.com/2017/12/introducing-nima-neural-image-assessment.html)
 - [Google Photos API Documentation](https://developers.google.com/photos)
-- [EfficientNet: Rethinking Model Scaling for CNNs (Tan & Le, 2019)](https://arxiv.org/abs/1905.11946)
-- [Google Vision AI Documentation](https://cloud.google.com/vision)
+- [Google Photos Compression Investigation (Zack Apiratitham)](https://vatthikorn.com/google-photos-compression/)
+- [MediaPipe Face Detection Guide](https://ai.google.dev/edge/mediapipe/solutions/vision/face_detector)
+- [Google BIPA Settlement — $100M (SecurityInfoWatch)](https://www.securityinfowatch.com/access-identity/biometrics/news/21265683/google-to-pay-100m-class-action-settlement-in-illinois-biometric-privacy-lawsuit)
+- [Google Photos 2025 Recap with Gemini (TechCrunch)](https://techcrunch.com/2025/12/03/google-photos-2025-recap-turns-to-gemini-to-find-your-highlights/)
+- [How Google Photos joined the billion-user club (Fast Company)](https://www.fastcompany.com/90380618/how-google-photos-joined-the-billion-user-club)

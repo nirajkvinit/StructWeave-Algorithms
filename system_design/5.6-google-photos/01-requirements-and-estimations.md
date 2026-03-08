@@ -83,67 +83,70 @@
 
 | Metric | Value | Calculation |
 |--------|-------|-------------|
-| Monthly Active Users (MAU) | 1 billion | Google's public disclosure |
-| Daily Active Users (DAU) | 500 million | ~50% of MAU (high engagement product) |
-| Photos per user (avg library) | ~6,000 | 6 trillion total / 1B users |
-| New photos/day per active user | ~3.4 | 1.7B daily uploads / 500M DAU |
+| Monthly Active Users (MAU) | 1.5 billion | Confirmed May 2025 (10th anniversary) |
+| Daily Active Users (DAU) | 750 million | ~50% of MAU (high engagement product) |
+| Photos per user (avg library) | ~6,000 | 9 trillion total / 1.5B users |
+| New photos/day per active user | ~5.3 | 4B daily uploads / 750M DAU |
 
 ### Upload Traffic
 
 | Metric | Value | Calculation |
 |--------|-------|-------------|
-| Daily uploads | 1.7 billion | Google public disclosure |
-| Uploads per second (avg) | ~20,000 | 1.7B / 86,400 |
-| Uploads per second (peak) | ~60,000 | 3x average (morning/evening spikes) |
+| Weekly uploads | 28 billion | Google public disclosure (2020; likely higher now) |
+| Daily uploads | ~4 billion | 28B / 7 |
+| Uploads per second (avg) | ~46,000 | 4B / 86,400 |
+| Uploads per second (peak) | ~140,000 | 3x average (morning/evening spikes) |
 | Average photo size (Original) | 5 MB | Mix of phone cameras (12-50 MP) |
 | Average photo size (Storage Saver) | 2 MB | Compressed to ≤16 MP |
-| Daily upload bandwidth | 8.5 PB | 1.7B × 5 MB (Original quality) |
+| Daily upload bandwidth | 20 PB | 4B × 5 MB (Original quality) |
 
 ### Read Traffic
 
 | Metric | Value | Calculation |
 |--------|-------|-------------|
 | Read:Write ratio | 10:1 | Users browse far more than upload |
-| Daily photo views | 17 billion | 10 × 1.7B uploads |
-| Views per second (avg) | ~200,000 | 17B / 86,400 |
-| Views per second (peak) | ~600,000 | 3x average |
+| Daily photo views | 40 billion | 10 × 4B uploads |
+| Views per second (avg) | ~460,000 | 40B / 86,400 |
+| Views per second (peak) | ~1.4M | 3x average |
 | Avg thumbnail served | 30 KB | 256×256 JPEG/WebP |
 | Avg full-res served | 2 MB | WebP-compressed serving copy |
-| Daily read bandwidth | ~34 PB | Mix of thumbnails and full-res |
+| Daily read bandwidth | ~80 PB | Mix of thumbnails and full-res |
 
 ### Storage
 
 | Metric | Value | Calculation |
 |--------|-------|-------------|
-| Total photos stored | 6 trillion | Google public disclosure |
+| Total photos stored | 9+ trillion | Google public disclosure (May 2025) |
 | Average stored size per photo | 3 MB | Mix of original, Storage Saver, thumbnails |
-| Total raw storage | ~18 EB | 6T × 3 MB |
-| With replication (3x) | ~54 EB | Erasure coding reduces this vs naive replication |
-| With erasure coding (1.5x) | ~27 EB | Reed-Solomon style coding |
-| Daily storage growth | ~8.5 PB | 1.7B × 5 MB/photo |
-| Annual storage growth | ~3.1 EB | 8.5 PB × 365 |
+| Total raw storage | ~27 EB | 9T × 3 MB |
+| With erasure coding (1.4x) | ~38 EB | Reed-Solomon (10,4) coding |
+| Colossus filesystem capacity | 10+ EB per filesystem | Multiple filesystems in use |
+| Daily storage growth | ~20 PB | 4B × 5 MB/photo |
+| Annual storage growth | ~7.3 EB | 20 PB × 365 |
 | Metadata per photo | ~2 KB | EXIF, ML labels, face vectors, album refs |
-| Total metadata | ~12 TB | 6T × 2 KB |
+| Total metadata | ~18 TB | 9T × 2 KB |
 
 ### ML Processing
 
 | Metric | Value | Calculation |
 |--------|-------|-------------|
 | ML models per photo | 10-15 | Classification, detection, face, OCR, quality, etc. |
-| Total ML inferences/day | ~20 billion | 1.7B uploads × ~12 models |
-| ML inferences/second (avg) | ~230,000 | 20B / 86,400 |
-| Face embeddings generated/day | ~3 billion | ~1.8 faces/photo × 1.7B photos |
+| Total ML inferences/day | ~48 billion | 4B uploads × ~12 models |
+| ML inferences/second (avg) | ~555,000 | 48B / 86,400 |
+| Face embeddings generated/day | ~7.2 billion | ~1.8 faces/photo × 4B photos |
 | Embedding storage per face | 512 bytes | 128-dim float32 vector |
+| Total labels applied | 2+ trillion | Across all stored photos |
 
 ### Search
 
 | Metric | Value | Calculation |
 |--------|-------|-------------|
-| Search queries per day | ~500 million | ~1 query/DAU (conservative estimate) |
-| Search QPS (avg) | ~6,000 | 500M / 86,400 |
-| Search QPS (peak) | ~18,000 | 3x average |
+| Monthly search users | 370 million | Google public disclosure (May 2025) |
+| Search queries per day | ~600 million | ~1.6 queries/day per search-active user |
+| Search QPS (avg) | ~7,000 | 600M / 86,400 |
+| Search QPS (peak) | ~21,000 | 3x average |
 | Visual embedding per photo | 2 KB | 512-dim float32 vector |
-| Total search index size | ~12 TB | 6T × 2 KB |
+| Total search index size | ~18 TB | 9T × 2 KB |
 
 ---
 

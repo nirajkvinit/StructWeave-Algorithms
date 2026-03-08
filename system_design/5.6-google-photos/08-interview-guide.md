@@ -70,13 +70,13 @@ Ask these questions to show structured thinking:
 
 Quick back-of-envelope:
 ```
-Users: 1B MAU, 500M DAU
-Uploads: ~2B/day → ~20K/s → 60K/s peak
+Users: 1.5B MAU, 750M DAU
+Uploads: ~4B/day (28B/week) → ~46K/s → 140K/s peak
 Average photo: 5 MB
-Daily ingress: 10 PB/day
-Read:Write: 10:1 → 200K reads/s
-Storage: 6 trillion photos × 3 MB avg = ~18 EB
-ML: 10 models/photo × 2B = 20B inferences/day
+Daily ingress: 20 PB/day
+Read:Write: 10:1 → 460K reads/s
+Storage: 9 trillion photos × 3 MB avg = ~27 EB
+ML: 10 models/photo × 4B = 48B inferences/day
 ```
 
 ### Step 3: Draw Architecture (8-10 minutes)
@@ -178,11 +178,11 @@ Pick the component the interviewer is most interested in and go deep:
 
 ### Key Numbers
 ```
-Users:     1B MAU, 500M DAU
-Uploads:   1.7B/day → 20K/s → 60K/s peak
-Storage:   6T photos, ~18 EB raw, ~27 EB with erasure coding
-ML:        10+ models/photo, 20B inferences/day
-Search:    ~500M queries/day, 6K QPS
+Users:     1.5B MAU, 750M DAU
+Uploads:   4B/day (28B/week) → 46K/s → 140K/s peak
+Storage:   9T+ photos, ~27 EB raw, ~38 EB with erasure coding
+ML:        10+ models/photo, 48B inferences/day, 2T+ labels total
+Search:    370M monthly search users, ~600M queries/day, 7K QPS
 Read:Write: 10:1
 Photo Size: 2-30 MB (original), 2 MB (serving copy)
 ```

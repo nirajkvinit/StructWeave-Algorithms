@@ -303,12 +303,21 @@ flowchart TB
 
 #### Embedding Model Architecture
 
-Google likely uses a variant of their **SigLIP / CoCa** model:
+Google uses variants of their **SigLIP / CoCa** models for traditional search, and **Gemini** for the newer "Ask Photos" feature:
+
+**Traditional Visual Search (Dual-Encoder):**
 - **Dual-encoder**: Separate image and text encoders that map to shared embedding space
 - **Image encoder**: Vision Transformer (ViT-L/14) producing 512-dim embeddings
 - **Text encoder**: Transformer that encodes search queries into same 512-dim space
 - **Training**: Contrastive learning on billions of image-text pairs
 - **Property**: cosine_similarity(image_embedding, text_embedding) indicates relevance
+
+**Ask Photos (Gemini-Powered RAG, 2024-2025):**
+- **Agent Model**: Gemini-based agent understands user intent and selects the best RAG retrieval tool
+- **Vector-Based Retrieval**: Updated vector search extends existing metadata search; supports natural language queries (e.g., "person smiling while riding a bike")
+- **Answer Model**: Gemini's long context window + multimodal capabilities analyze visual content, text, and metadata from retrieved photos
+- **Learning**: Users can correct responses; system remembers corrections for future queries
+- **Scale**: 370 million monthly search users
 
 #### Search Index Architecture
 
@@ -320,9 +329,11 @@ Per-User Search Index:
 │   ├── "sunset" → [m45, m234, ...]
 │   └── ...      → 1000+ labels per user library
 │
-├── Vector Index (ScaNN - Scalable Approximate Nearest Neighbors)
-│   ├── Quantized embeddings (512-dim → 64 bytes via PQ)
-│   ├── Partitioned into clusters for fast ANN
+├── Vector Index (ScaNN / SOAR - Google's ANN Search Library)
+│   ├── Quantized embeddings (512-dim → 64 bytes via learned quantization)
+│   ├── Clustering into tree-like structures for fast query-time pruning
+│   ├── SOAR: newer algorithms for even faster search (built on ScaNN)
+│   ├── Scales to 10B+ vectors in production (deployed in Spanner)
 │   └── Updated incrementally on new uploads
 │
 ├── Face Index (PersonName → ClusterIds → MediaIds)
@@ -432,7 +443,7 @@ COMMIT
 
 ### Bottleneck 1: ML Processing Throughput
 
-**Problem:** 1.7 billion photos/day × 10+ models = 17+ billion ML inferences/day. At peak (3x average), this is ~600K inferences/second.
+**Problem:** 4 billion photos/day × 10+ models = 48+ billion ML inferences/day. At peak (3x average), this is ~1.7M inferences/second.
 
 **Impact:** If ML pipeline falls behind, photos won't be searchable or face-clustered for hours.
 
@@ -449,7 +460,7 @@ COMMIT
 
 ### Bottleneck 2: Thumbnail Serving at Scale
 
-**Problem:** 200K-600K thumbnail requests/second. Each grid view loads 50-100 thumbnails. Hot photos (shared albums, Memories) get disproportionate traffic.
+**Problem:** 460K-1.4M thumbnail requests/second. Each grid view loads 50-100 thumbnails. Hot photos (shared albums, Memories) get disproportionate traffic.
 
 **Impact:** Slow thumbnail loading makes the entire app feel sluggish.
 
@@ -465,7 +476,7 @@ COMMIT
 
 ### Bottleneck 3: Storage Cost at Exabyte Scale
 
-**Problem:** ~27 EB of effective storage (with erasure coding). Storage is the single largest cost center. Most photos are rarely accessed after the first week.
+**Problem:** ~38 EB of effective storage (with erasure coding). Storage is the single largest cost center. Most photos are rarely accessed after the first week. Colossus filesystems each exceed 10 EB.
 
 **Impact:** Unsustainable cost growth at ~3 EB/year.
 
