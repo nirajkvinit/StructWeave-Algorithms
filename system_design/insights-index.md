@@ -17,21 +17,21 @@ A cross-reference of key architectural insights extracted from each system desig
 | Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 57 |
 | Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 16 |
 | Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 76 |
-| Contention | Lock contention, hot keys, thundering herds, and resource competition | 61 |
-| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 47 |
+| Contention | Lock contention, hot keys, thundering herds, and resource competition | 62 |
+| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 48 |
 | Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 78 |
 | Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 22 |
-| Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 20 |
+| Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 21 |
 | External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 8 |
 | Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 24 |
 | Replication | Data replication, follower management, and cross-region synchronization | 8 |
-| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 73 |
-| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 73 |
+| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 74 |
+| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 75 |
 | Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 5 |
-| Security | Authentication, encryption, access control, and threat mitigation | 31 |
-| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 30 |
-| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 53 |
-| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 49 |
+| Security | Authentication, encryption, access control, and threat mitigation | 32 |
+| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 32 |
+| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 55 |
+| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 50 |
 
 ---
 
@@ -1846,6 +1846,23 @@ A cross-reference of key architectural insights extracted from each system desig
 | 10 | Bulkhead Isolation for On-Sale vs. Browsing | Resilience |
 | 11 | Payment Gateway as the True Bottleneck | External Dependencies |
 
+### 6.7 Google Meet / Zoom [View](./6.7-google-meet-zoom/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | SFU Fan-Out is O(N) Not O(N²) -- That's the Entire Value Proposition | Scaling |
+| 2 | Signaling and Media Are Completely Decoupled Paths | System Modeling |
+| 3 | Keyframe Caching Prevents Publisher Storm During Mass Joins | Contention |
+| 4 | Congestion Control Must Be Per-Subscriber, Not Per-Room | Traffic Shaping |
+| 5 | TURN Relay Creates a 2x Bandwidth Tax That Scales With User Count | Cost Optimization |
+| 6 | Simulcast Layer Switching Requires Keyframe Synchronization | Streaming |
+| 7 | Recording and Live Delivery Are Architecturally Opposed | System Modeling |
+| 8 | E2EE Disables Server-Side Intelligence -- A Fundamental Architectural Trade-off | Security |
+| 9 | Active Speaker Detection Needs Debouncing to Prevent Layout Thrashing | Streaming |
+| 10 | Cascaded SFU Tree Topology Trades Latency for Scale | Scaling |
+| 11 | UDP is Non-Negotiable for Real-Time Media -- TCP Head-of-Line Blocking Destroys Latency | Resilience |
+| 12 | Geo-Routing Media Servers via Anycast Minimizes First-Hop Latency | Edge Computing |
+
 ---
 
 ## Cross-Reference: Insights by Category
@@ -2206,6 +2223,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.3 Multi-Tenant SaaS Platform Architecture**: Pessimistic Locking for Metadata, Optimistic Locking for Records
 - **6.4 HubSpot**: Client-Side Request Deduplication with 100ms Window
 - **6.6 Ticketmaster**: Redis SETNX as the Contention Absorber
+- **6.7 Google Meet / Zoom**: Keyframe Caching Prevents Publisher Storm During Mass Joins
 
 ### Cost Optimization
 
@@ -2267,6 +2285,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.1 Cloud File Storage**: Erasure Coding (6+3 Reed-Solomon) vs Triple Replication
 - **6.4 HubSpot**: Monoglot Java Backend for 3,000+ Microservices
 - **6.5 Zoho Suite**: Full Vertical Stack Ownership -- From Silicon to SaaS
+- **6.7 Google Meet / Zoom**: TURN Relay Creates a 2x Bandwidth Tax That Scales With User Count
 
 ### Data Structures
 
@@ -2430,6 +2449,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **5.5 Disney+ Hotstar**: Mobile-First Architecture for Bandwidth-Constrained Users
 - **5.7 Twitch**: Demand-Based Replication Tree with Push Propagation
 - **6.6 Ticketmaster**: Edge-Side Token Validation
+- **6.7 Google Meet / Zoom**: Geo-Routing Media Servers via Anycast Minimizes First-Hop Latency
 
 ### External Dependencies
 
@@ -2590,6 +2610,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.3 Multi-Tenant SaaS Platform Architecture**: Workflow Re-Entry Protection via Recursion Depth and Change Detection
 - **6.6 Ticketmaster**: The Taylor Swift Lesson -- Reject with Intent
 - **6.6 Ticketmaster**: Bulkhead Isolation for On-Sale vs. Browsing
+- **6.7 Google Meet / Zoom**: UDP is Non-Negotiable for Real-Time Media -- TCP Head-of-Line Blocking Destroys Latency
 
 ### Scaling
 
@@ -2699,6 +2720,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.1 Cloud File Storage**: Notification Fan-out Optimization for Shared Folders
 - **6.3 Multi-Tenant SaaS Platform Architecture**: Four-Layer Noisy Neighbor Isolation
 - **6.6 Ticketmaster**: Pre-Scaling for Known Spikes
+- **6.7 Google Meet / Zoom**: SFU Fan-Out is O(N) Not O(N²) -- That's the Entire Value Proposition
+- **6.7 Google Meet / Zoom**: Cascaded SFU Tree Topology Trades Latency for Scale
 
 ### Search
 
@@ -2770,6 +2793,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.5 Zoho Suite**: Proprietary Zia LLM with Private Inference and Deterministic Fallbacks
 - **6.5 Zoho Suite**: Multi-Layer Tenant Data Isolation with RLS as Second Enforcement
 - **6.5 Zoho Suite**: Fixed Immutable System Prompts for Agent Safety
+- **6.7 Google Meet / Zoom**: E2EE Disables Server-Side Intelligence -- A Fundamental Architectural Trade-off
 
 ### Streaming
 
@@ -2815,6 +2839,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **5.7 Twitch**: IDR Frame Alignment Across Transcoding Variants
 - **5.8 Podcast Platform**: Server-Side Ad Insertion (SSAI) in the Critical Playback Path
 - **5.8 Podcast Platform**: Audio Stitching Cross-Fade and Loudness Normalization
+- **6.7 Google Meet / Zoom**: Simulcast Layer Switching Requires Keyframe Synchronization
+- **6.7 Google Meet / Zoom**: Active Speaker Detection Needs Debouncing to Prevent Layout Thrashing
 
 ### System Modeling
 
@@ -2895,6 +2921,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.5 Zoho Suite**: AppOS as the Connective Tissue for 55+ Products
 - **6.5 Zoho Suite**: Deluge -- Domain-Specific Language for Cross-Product Automation
 - **6.6 Ticketmaster**: Finite, Non-Fungible Inventory Changes Everything
+- **6.7 Google Meet / Zoom**: Signaling and Media Are Completely Decoupled Paths
+- **6.7 Google Meet / Zoom**: Recording and Live Delivery Are Architecturally Opposed
 
 ### Traffic Shaping
 
@@ -2954,3 +2982,4 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.4 HubSpot**: Kafka Swimlane Routing for Workflow Noisy-Neighbor Isolation
 - **6.4 HubSpot**: ISP-Aware Email Throttling with IP Reputation Management
 - **6.6 Ticketmaster**: Virtual Waiting Room with Leaky Bucket Admission
+- **6.7 Google Meet / Zoom**: Congestion Control Must Be Per-Subscriber, Not Per-Room
