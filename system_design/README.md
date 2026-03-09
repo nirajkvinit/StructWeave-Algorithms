@@ -184,6 +184,11 @@ Each system design directory contains 9 standardized documents:
 | 9.3 | Tax Calculation Engine (Avalara/Vertex - Jurisdiction Rules, Real-time Calc, Compliance) | Completed | [View](./9.3-tax-calculation-engine/00-index.md) |
 | 9.4 | Inventory Management System (WMS - Stock Levels, FIFO/LIFO/FEFO, Multi-warehouse) | Completed | [View](./9.4-inventory-management-system/00-index.md) |
 | 9.5 | Procurement System (P2P - Purchase Orders, Approvals, Vendor Management, RFQ) | Completed | [View](./9.5-procurement-system/00-index.md) |
+| 9.6 | Invoice & Billing System (Recurring Billing, Proration, Revenue Recognition, Dunning) | Completed | [View](./9.6-invoice-billing-system/00-index.md) |
+| 9.7 | Human Capital Management (Workday/SAP SuccessFactors - Payroll, Benefits, Time Tracking) | Completed | [View](./9.7-human-capital-management/00-index.md) |
+| 9.8 | Supply Chain Management (Demand Forecasting, Order Management, Logistics Optimization) | Completed | [View](./9.8-supply-chain-management/00-index.md) |
+| 9.9 | CRM System Design (Salesforce/Zoho CRM - Lead Management, Pipeline, Custom Objects) | Completed | [View](./9.9-crm-system-design/00-index.md) |
+| 9.10 | Business Intelligence Platform (Tableau/Looker - OLAP Cubes, Semantic Layer, Dashboard Engine) | Completed | [View](./9.10-business-intelligence-platform/00-index.md) |
 
 
 ---
