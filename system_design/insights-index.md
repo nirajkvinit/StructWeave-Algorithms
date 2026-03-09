@@ -2660,6 +2660,101 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
+### 12.5 Design a URL Shortener [View](./12.5-url-shortener/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Base62 Encoding as a Bijective Function | Data Structures |
+| 2 | 301 vs 302 Redirect Is an Analytics-vs-Performance Trade-Off | System Modeling |
+| 3 | At 100:1 Read-Write Ratio, This Is a Caching Problem First | Caching |
+| 4 | Pre-Generated Key Pool Eliminates Write-Path Contention | Contention |
+| 5 | Custom Aliases Create a Dual-Key System with Different Collision Semantics | Consistency |
+| 6 | Link Expiration Is a Lazy Deletion Problem | Cost Optimization |
+| 7 | URL Shorteners Are Phishing Infrastructure by Design | Security |
+| 8 | Analytics Pipeline Decoupling — Synchronous Redirect, Asynchronous Tracking | Scaling |
+| 9 | Hot URL Problem — Viral Links Create Single-Key Contention | Traffic Shaping |
+| 10 | Idempotent URL Creation — Same Long URL, New Short Code, or Same One? | Atomicity |
+| 11 | Base62 Keyspace Exhaustion Math — Practically Infinite but Monitoring Matters | Scaling |
+| 12 | Geographic Redirect Optimization — Edge Caching for Sub-10ms Global Latency | Caching |
+
+---
+
+### 12.6 Design a Pastebin [View](./12.6-pastebin/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Immutable Content Is a Caching Superpower | Caching |
+| 2 | Content-Addressable Storage Turns Deduplication into a Free Side Effect | Data Structures |
+| 3 | The Expiration Problem Is Really Three Different Problems | System Modeling |
+| 4 | The URL Slug Is a Security Boundary, Not Just an Identifier | Security |
+| 5 | Separation of Storage and Presentation Unlocks Multi-Format Serving | System Modeling |
+| 6 | Reference Counting Is the Price of Deduplication | Consistency |
+| 7 | Rate Limiting Anonymous Services Requires Multi-Signal Identity | Traffic Shaping |
+| 8 | Burn-After-Reading Converts a Stateless Read into a Stateful Mutation | Atomicity |
+| 9 | CDN Cache TTL Is a Correctness Knob, Not Just a Performance Knob | Caching |
+| 10 | The Key Pool Is a Pre-Materialized Index of Future State | Contention |
+| 11 | Paste Size Limits Are an Abuse Surface Area Control | Security |
+| 12 | Eventual Consistency in View Counts Is a Feature, Not a Compromise | Cost Optimization |
+
+---
+
+### 12.7 Design a P2P File Sharing Network [View](./12.7-p2p-file-sharing-network/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Demand Adds Supply — The Anti-Fragile Bandwidth Property | Scaling |
+| 2 | XOR Distance Creates the Most Elegant Routing Structure in Distributed Systems | Data Structures |
+| 3 | Tit-for-Tat Is the Most Successful Real-World Application of Game Theory in Software | System Modeling |
+| 4 | Content-Addressing Eliminates the Naming Problem and Enables Zero-Trust Verification | Data Structures |
+| 5 | Rarest-First Is Emergent Distributed Replication Without a Coordinator | Resilience |
+| 6 | The Optimistic Unchoke Solves the Cold-Start Problem Through Controlled Randomness | System Modeling |
+| 7 | NAT Traversal Success Rate Determines the Effective Network Size | Scaling |
+| 8 | The k-Bucket "Prefer Old Nodes" Policy Is an Anti-Sybil Mechanism Disguised as Cache Management | Resilience |
+| 9 | Piece-Level Architecture Enables the Most Granular Fault Domain in Any Storage System | System Modeling |
+| 10 | The DHT Is a Database With No Administrator and No Schema Migration | System Modeling |
+| 11 | The Wire Protocol's Message Set Is a Minimal Viable Interface for Distributed Data Transfer | System Modeling |
+| 12 | Endgame Mode Reveals That the Optimal Strategy Changes Discontinuously at the Tail | System Modeling |
+
+---
+
+### 12.8 Design WebRTC Infrastructure [View](./12.8-webrtc-infrastructure/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | NAT Traversal Is a Distributed Discovery Problem Under Time Pressure | System Modeling |
+| 2 | The SFU Is a Router, Not a Processor — And That's the Key Architectural Insight | Scaling |
+| 3 | Congestion Control Is a Three-Party Feedback Loop, Not a Two-Party Handshake | System Modeling |
+| 4 | TURN Is the Expensive Safety Net That You Cannot Remove | Cost Optimization |
+| 5 | Simulcast Layer Switching Is a Bandwidth-for-Latency Trade-Off in Disguise | Scaling |
+| 6 | ICE Consent Is the Underappreciated DDoS Defense Mechanism | Security |
+| 7 | The Jitter Buffer Is a Real-Time Scheduling Problem | System Modeling |
+| 8 | WebSocket Signaling Is the Easiest Part to Build and the Hardest to Scale | Scaling |
+| 9 | E2EE with Insertable Streams Breaks the Trust Model Without Breaking the Media Pipeline | Security |
+| 10 | Cascaded SFU Mesh Turns a Room from a Physical Construct into a Logical One | Scaling |
+| 11 | The 85% of Sessions That Don't Need TURN Subsidize the Architecture for the 15% That Do | Cost Optimization |
+| 12 | Room Size Has Discontinuous Scaling Thresholds | Scaling |
+
+---
+
+### 12.9 Design a Code Execution Sandbox [View](./12.9-code-execution-sandbox/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Security Is an Architectural Constraint, Not a Feature | System Modeling |
+| 2 | Defense-in-Depth Transforms Probabilistic Safety into Near-Certainty | Security |
+| 3 | The Warm Pool Is a Security Problem Disguised as a Performance Optimization | Security |
+| 4 | cgroups Protect Stability, Not Security—But You Need Both | System Modeling |
+| 5 | Empty Network Namespace Beats Firewall Rules by Eliminating the Configuration Surface | Security |
+| 6 | Wall-Clock and CPU-Clock Enforce Different Invariants | System Modeling |
+| 7 | Language-Affinity Routing Transforms a Global Scheduling Problem into Independent Per-Language Problems | Scaling |
+| 8 | Verdict Correctness Is a 100% SLO Because Every Error Is Visible | Resilience |
+| 9 | Sandbox Scrubbing Must Be Atomic, Not Incremental | Security |
+| 10 | The Message Queue Is a Security Buffer, Not Just a Scaling Tool | System Modeling |
+| 11 | Elimination Is Safer Than Restriction | Security |
+| 12 | Pre-Scaling for Known Events Transforms Unpredictable Load into Predictable Capacity | Scaling |
+
+---
+
 ## Cross-Reference: Insights by Category
 
 ### Atomicity
@@ -2728,6 +2823,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.6 Ticketmaster**: All-or-Nothing Multi-Seat Holds
 - **12.2 Gaming: Multiplayer Game State Sync**: Fixed-Timestep Simulation as a Serialization Barrier
 - **12.3 Gaming: Live Leaderboard**: Seasonal Resets Are a Distributed Transaction Disguised as a Simple Operation
+- **12.5 URL Shortener**: Idempotent URL Creation — Same Long URL, New Short Code, or Same One?
+- **12.6 Pastebin**: Burn-After-Reading Converts a Stateless Read into a Stateful Mutation
 
 ### Caching
 
@@ -2819,6 +2916,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.14 Super App Payment Platform**: VPA as a Four-Layer Resolution Protocol
 - **12.1 AdTech: Real-Time Bidding (RTB) System**: The Feature Store Is the True Bottleneck, Not the ML Model
 - **12.3 Gaming: Live Leaderboard**: The "Around-Me" Query Breaks Every Caching Assumption
+- **12.5 URL Shortener**: At 100:1 Read-Write Ratio, This Is a Caching Problem First
+- **12.5 URL Shortener**: Geographic Redirect Optimization — Edge Caching for Sub-10ms Global Latency
+- **12.6 Pastebin**: Immutable Content Is a Caching Superpower
+- **12.6 Pastebin**: CDN Cache TTL Is a Correctness Knob, Not Just a Performance Knob
 
 ### Consensus
 
@@ -2990,6 +3091,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.2 Gaming: Multiplayer Game State Sync**: Peeker's Advantage as an Unavoidable Latency Artifact
 - **12.4 Gaming: Matchmaking System**: Queue State Is the One Place Where Eventual Consistency Is Unacceptable
 - **12.4 Gaming: Matchmaking System**: The Feedback Loop Between Rating Accuracy and Match Quality Is Self-Reinforcing
+- **12.5 URL Shortener**: Custom Aliases Create a Dual-Key System with Different Collision Semantics
+- **12.6 Pastebin**: Reference Counting Is the Price of Deduplication
 
 ### Contention
 
@@ -3081,6 +3184,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **11.3 Push Notification System**: Priority Isolation Requires Physical Queue Separation, Not Logical Priority Fields
 - **12.2 Gaming: Multiplayer Game State Sync**: Sendmmsg as a Syscall Batching Optimization
 - **12.4 Gaming: Matchmaking System**: Optimistic Concurrency Beats Locking for High-Throughput Queue Operations
+- **12.5 URL Shortener**: Pre-Generated Key Pool Eliminates Write-Path Contention
+- **12.6 Pastebin**: The Key Pool Is a Pre-Materialized Index of Future State
 
 ### Cost Optimization
 
@@ -3153,6 +3258,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.1 AdTech: Real-Time Bidding (RTB) System**: Bid Shading Transforms Auction Theory into an ML Problem
 - **12.2 Gaming: Multiplayer Game State Sync**: Dynamic Tick Rate as Phase-Aware Resource Allocation
 - **12.4 Gaming: Matchmaking System**: Server Selection Is Constrained Optimization Across Heterogeneous Preferences
+- **12.5 URL Shortener**: Link Expiration Is a Lazy Deletion Problem
+- **12.6 Pastebin**: Eventual Consistency in View Counts Is a Feature, Not a Compromise
+- **12.8 WebRTC Infrastructure**: TURN Is the Expensive Safety Net That You Cannot Remove
+- **12.8 WebRTC Infrastructure**: The 85% of Sessions That Don't Need TURN Subsidize the Architecture for the 15% That Do
 
 ### Data Structures
 
@@ -3286,6 +3395,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **11.2 Live Classroom System**: CRDTs Solve Whiteboard Convergence but Create a Monotonically Growing State Problem That Requires Application-Level Garbage Collection
 - **11.4 Email Delivery System**: The Multi-Stage Queue Is the Architecture's Defining Pattern
 - **11.5 SMS Gateway**: GSM-7 Encoding Is a Hidden Cost Multiplier That Shapes Product Decisions
+- **12.5 URL Shortener**: Base62 Encoding as a Bijective Function
+- **12.6 Pastebin**: Content-Addressable Storage Turns Deduplication into a Free Side Effect
+- **12.7 P2P File Sharing**: XOR Distance Creates the Most Elegant Routing Structure in Distributed Systems
+- **12.7 P2P File Sharing**: Content-Addressing Eliminates the Naming Problem and Enables Zero-Trust Verification
 
 ### Distributed Transactions
 
@@ -3563,6 +3676,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.3 Gaming: Live Leaderboard**: Event Sourcing Makes the Ranking Engine a Derived View, Not the Source of Truth
 - **12.4 Gaming: Matchmaking System**: Smurf Detection's Primary Weapon Is Convergence Speed, Not Punishment
 - **12.4 Gaming: Matchmaking System**: Graceful Degradation in Matchmaking Is Quality Reduction, Not Feature Shedding
+- **12.7 P2P File Sharing**: Rarest-First Is Emergent Distributed Replication Without a Coordinator
+- **12.7 P2P File Sharing**: The k-Bucket "Prefer Old Nodes" Policy Is an Anti-Sybil Mechanism Disguised as Cache Management
+- **12.9 Code Execution Sandbox**: Verdict Correctness Is a 100% SLO Because Every Error Is Visible
 
 ### Scaling
 
@@ -3711,6 +3827,17 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.2 Gaming: Multiplayer Game State Sync**: Edge Relay Fan-Out as Bandwidth Multiplier
 - **12.3 Gaming: Live Leaderboard**: Scatter-Gather Is the Tax You Pay for Horizontal Scaling of Ordered Data
 - **12.4 Gaming: Matchmaking System**: The Top 0.1% Problem Cannot Be Solved—Only Managed
+- **12.5 URL Shortener**: Analytics Pipeline Decoupling — Synchronous Redirect, Asynchronous Tracking
+- **12.5 URL Shortener**: Base62 Keyspace Exhaustion Math — Practically Infinite but Monitoring Matters
+- **12.7 P2P File Sharing**: Demand Adds Supply — The Anti-Fragile Bandwidth Property
+- **12.7 P2P File Sharing**: NAT Traversal Success Rate Determines the Effective Network Size
+- **12.8 WebRTC Infrastructure**: The SFU Is a Router, Not a Processor — And That's the Key Architectural Insight
+- **12.8 WebRTC Infrastructure**: Simulcast Layer Switching Is a Bandwidth-for-Latency Trade-Off in Disguise
+- **12.8 WebRTC Infrastructure**: WebSocket Signaling Is the Easiest Part to Build and the Hardest to Scale
+- **12.8 WebRTC Infrastructure**: Cascaded SFU Mesh Turns a Room from a Physical Construct into a Logical One
+- **12.8 WebRTC Infrastructure**: Room Size Has Discontinuous Scaling Thresholds
+- **12.9 Code Execution Sandbox**: Language-Affinity Routing Transforms a Global Scheduling Problem into Independent Per-Language Problems
+- **12.9 Code Execution Sandbox**: Pre-Scaling for Known Events Transforms Unpredictable Load into Predictable Capacity
 
 ### Search
 
@@ -3815,6 +3942,16 @@ A cross-reference of key architectural insights extracted from each system desig
 - **11.5 SMS Gateway**: Traffic Pumping Is an Economic Attack Exploiting the Billing Asymmetry Between Sender and Receiver
 - **12.1 AdTech: Real-Time Bidding (RTB) System**: The Multi-Party Trust Problem Requires Supply Chain Cryptography
 - **12.3 Gaming: Live Leaderboard**: Shadow Banning Exploits the Information Asymmetry Between Cheater and System
+- **12.5 URL Shortener**: URL Shorteners Are Phishing Infrastructure by Design
+- **12.6 Pastebin**: The URL Slug Is a Security Boundary, Not Just an Identifier
+- **12.6 Pastebin**: Paste Size Limits Are an Abuse Surface Area Control
+- **12.8 WebRTC Infrastructure**: ICE Consent Is the Underappreciated DDoS Defense Mechanism
+- **12.8 WebRTC Infrastructure**: E2EE with Insertable Streams Breaks the Trust Model Without Breaking the Media Pipeline
+- **12.9 Code Execution Sandbox**: Defense-in-Depth Transforms Probabilistic Safety into Near-Certainty
+- **12.9 Code Execution Sandbox**: The Warm Pool Is a Security Problem Disguised as a Performance Optimization
+- **12.9 Code Execution Sandbox**: Empty Network Namespace Beats Firewall Rules by Eliminating the Configuration Surface
+- **12.9 Code Execution Sandbox**: Sandbox Scrubbing Must Be Atomic, Not Incremental
+- **12.9 Code Execution Sandbox**: Elimination Is Safer Than Restriction
 
 ### Streaming
 
@@ -4006,6 +4143,22 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.4 Gaming: Matchmaking System**: Regionalization Is a Correctness Requirement, Not a Performance Optimization
 - **12.4 Gaming: Matchmaking System**: The Matching Quality Function Is the Product — Everything Else Is Infrastructure
 - **12.4 Gaming: Matchmaking System**: Rating Transparency Creates an Adversarial Relationship Between Players and the System
+- **12.5 URL Shortener**: 301 vs 302 Redirect Is an Analytics-vs-Performance Trade-Off
+- **12.6 Pastebin**: The Expiration Problem Is Really Three Different Problems
+- **12.6 Pastebin**: Separation of Storage and Presentation Unlocks Multi-Format Serving
+- **12.7 P2P File Sharing**: Tit-for-Tat Is the Most Successful Real-World Application of Game Theory in Software
+- **12.7 P2P File Sharing**: The Optimistic Unchoke Solves the Cold-Start Problem Through Controlled Randomness
+- **12.7 P2P File Sharing**: Piece-Level Architecture Enables the Most Granular Fault Domain in Any Storage System
+- **12.7 P2P File Sharing**: The DHT Is a Database With No Administrator and No Schema Migration
+- **12.7 P2P File Sharing**: The Wire Protocol's Message Set Is a Minimal Viable Interface for Distributed Data Transfer
+- **12.7 P2P File Sharing**: Endgame Mode Reveals That the Optimal Strategy Changes Discontinuously at the Tail
+- **12.8 WebRTC Infrastructure**: NAT Traversal Is a Distributed Discovery Problem Under Time Pressure
+- **12.8 WebRTC Infrastructure**: Congestion Control Is a Three-Party Feedback Loop, Not a Two-Party Handshake
+- **12.8 WebRTC Infrastructure**: The Jitter Buffer Is a Real-Time Scheduling Problem
+- **12.9 Code Execution Sandbox**: Security Is an Architectural Constraint, Not a Feature
+- **12.9 Code Execution Sandbox**: cgroups Protect Stability, Not Security—But You Need Both
+- **12.9 Code Execution Sandbox**: Wall-Clock and CPU-Clock Enforce Different Invariants
+- **12.9 Code Execution Sandbox**: The Message Queue Is a Security Buffer, Not Just a Scaling Tool
 
 ### Traffic Shaping
 
@@ -4079,3 +4232,5 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.2 Gaming: Multiplayer Game State Sync**: Priority Accumulator for Fair Bandwidth Distribution
 - **12.3 Gaming: Live Leaderboard**: The Hot Leaderboard Problem Is a Microcosm of the Thundering Herd Pattern
 - **12.4 Gaming: Matchmaking System**: Seasonal Resets Are Controlled Entropy Injection
+- **12.5 URL Shortener**: Hot URL Problem — Viral Links Create Single-Key Contention
+- **12.6 Pastebin**: Rate Limiting Anonymous Services Requires Multi-Signal Identity

@@ -209,6 +209,11 @@ Each system design directory contains 9 standardized documents:
 | 12.2 | Gaming: Multiplayer Game State Sync (Server Tick, Lag Compensation) | Completed | [View](./12.2-gaming-multiplayer-game-state-sync/00-index.md) |
 | 12.3 | Gaming: Live Leaderboard (Redis Sorted Sets, Near Real-time Updates) | Completed | [View](./12.3-gaming-live-leaderboard/00-index.md) |
 | 12.4 | Gaming: Matchmaking System (Skill-based, Queue Management, Latency) | Completed | [View](./12.4-gaming-matchmaking-system/00-index.md) |
+| 12.5 | Design a URL Shortener (TinyURL/Bitly - Classic Warmup, Analytics) | Completed | [View](./12.5-url-shortener/00-index.md) |
+| 12.6 | Design a Pastebin (Simple Storage, Expiry, Syntax Highlighting) | Completed | [View](./12.6-pastebin/00-index.md) |
+| 12.7 | Design a P2P File Sharing Network (BitTorrent - DHT/Kademlia, Chunks, Swarm) | Completed | [View](./12.7-p2p-file-sharing-network/00-index.md) |
+| 12.8 | Design WebRTC Infrastructure (STUN/TURN, ICE, SFU/MCU Scaling) | Completed | [View](./12.8-webrtc-infrastructure/00-index.md) |
+| 12.9 | Design a Code Execution Sandbox (LeetCode/Replit - Isolation, Resource Limits, Security) | Completed | [View](./12.9-code-execution-sandbox/00-index.md) |
 
 
 ---
