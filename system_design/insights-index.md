@@ -2342,6 +2342,76 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
+### 9.11 AI-Native Compliance Management [View](./9.11-ai-native-compliance-management/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Meta-Compliance Paradox Creates a Self-Referential Trust Architecture | Security |
+| 2 | Evidence Is a Temporal Proof, Not a Data Record | Data Structures |
+| 3 | The Control-Framework Mapping Is a Knowledge Graph, Not a Lookup Table | Data Structures |
+| 4 | Continuous Monitoring Inverts the Compliance Data Flow from Pull to Push | Streaming |
+| 5 | Integration Rate Limits Are the True Scalability Bottleneck | External Dependencies |
+| 6 | Compliance Scoring Debouncing Prevents Catastrophic Compute Amplification | Traffic Shaping |
+| 7 | Per-Tenant Encryption Keys Transform Breach Impact from Catastrophic to Contained | Security |
+| 8 | The Audit Package Is a Materialized View, Not a Generated Report | System Modeling |
+| 9 | Cryptographic Evidence Deletion Resolves the Immutability-Erasure Tension | Consistency |
+| 10 | Framework Interpretation Is an NLP Problem Disguised as a Lookup Problem | Search |
+| 11 | Connector Sandboxing Is a Supply Chain Security Problem | Resilience |
+| 12 | Evidence Heartbeats Prove Continuous Monitoring, Not Just Periodic Collection | System Modeling |
+
+---
+
+### 9.12 AI-Native Procurement & Spend Intelligence [View](./9.12-ai-native-procurement-spend-intelligence/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Closed-Loop Procurement Cycle Creates a Self-Improving System, but Requires Anti-Oscillation Engineering | Streaming |
+| 2 | Vendor Name Resolution Is the Hidden Data Quality Bottleneck | Data Structures |
+| 3 | Autonomous PO Generation Requires a Trust Architecture, Not Just an Accuracy Threshold | System Modeling |
+| 4 | The Feature Store Is the Architectural Bridge Between Operational Procurement and ML Intelligence | Data Structures |
+| 5 | Hierarchical Spend Classification Requires Error Containment at Each Level | Resilience |
+| 6 | Multi-Tenant ML Creates a Unique Data Gravity Challenge | Scaling |
+| 7 | Budget Consistency in Distributed Procurement Is Fundamentally a Distributed Transaction Problem | Distributed Transactions |
+| 8 | Document Intelligence Requires a Two-Speed Architecture | Streaming |
+| 9 | Supplier Risk Entity Resolution Is Harder Than Customer Entity Resolution | Search |
+| 10 | The Spend Cube Is Not Just an OLAP Cube — It's a Bi-Temporal Fact Table | Consistency |
+
+---
+
+### 9.13 AI-Native Revenue Intelligence Platform [View](./9.13-ai-native-revenue-intelligence-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Revenue Graph Is the Platform's True Moat, Not the AI Models | System Modeling |
+| 2 | Specialized Model Ensembles Beat General-Purpose LLMs at Revenue Intelligence Scale | Scaling |
+| 3 | Forecast Calibration Is a System, Not a Feature | Consistency |
+| 4 | Speaker Diarization Errors Propagate Silently Through the Entire Intelligence Layer | Data Structures |
+| 5 | CRM Sync Is the Platform's Achilles' Heel | External Dependencies |
+| 6 | Consent Is a Real-Time, Distributed, Legally-Binding System Decision | Security |
+| 7 | The Forecasting Ensemble Must Model Deal Correlation, Not Just Deal Probabilities | System Modeling |
+| 8 | Event-Driven Architecture Enables Model Improvement Without Data Reprocessing Infrastructure | Streaming |
+| 9 | The Ghost Deal Problem Reveals the Limits of AI-Only Pipeline Management | Resilience |
+| 10 | Multi-Tenant Model Serving Requires Hierarchical Architecture, Not Isolated Per-Tenant Models | Partitioning |
+
+---
+
+### 9.14 AI-Native Core Banking Platform [View](./9.14-ai-native-core-banking-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Immutable Ledger as Architectural Foundation | Consistency |
+| 2 | Account-Level Partitioning Is the Key Scalability Lever | Partitioning |
+| 3 | Synchronous Fraud Scoring — The One Inline Intelligence That Justifies Its Latency | Streaming |
+| 4 | Multi-Currency as a Native Ledger Primitive, Not an Add-On | Data Structures |
+| 5 | Configuration-Driven Product Factory Eliminates the Deployment Bottleneck | System Modeling |
+| 6 | Split-Brain Prevention Is the Non-Negotiable Reliability Constraint | Consensus |
+| 7 | Tiered Compliance Screening Balances Thoroughness with Latency | Traffic Shaping |
+| 8 | CQRS Projections Are Not Just Performance Optimization — They're Domain-Specific Views | Streaming |
+| 9 | Cryptographic Chaining Transforms the Ledger from "Trusted" to "Verifiable" | Security |
+| 10 | The Product Factory Pattern Inverts the Banking Innovation Model | System Modeling |
+
+---
+
 ## Cross-Reference: Insights by Category
 
 ### Atomicity
@@ -2519,6 +2589,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.19 AI Voice Assistant**: Multi-Device Wake Word Conflicts Require Room-Level Leader Election
 - **3.38 AI-Native Autonomous Vehicle Platform**: Safety Envelope as a Formal Verification Layer
 - **4.9 Telegram**: Deterministic Tiebreaker for Simultaneous Secret Chat Initiation
+- **9.14 AI-Native Core Banking Platform**: Split-Brain Prevention Is the Non-Negotiable Reliability Constraint
 
 ### Consistency
 
@@ -2648,6 +2719,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.12 CBDC/Digital Currency Platform**: Merkle-Tree Reconciliation Between Tiers Prevents Silent Money Creation
 - **8.13 Cryptocurrency Wallet System**: Nonce as a Serialization Bottleneck: The Single-Writer Pattern for Correctness
 - **9.5 Procurement System**: Budget Encumbrance as a Three-State Financial Commitment Model
+- **9.11 AI-Native Compliance Management**: Cryptographic Evidence Deletion Resolves the Immutability-Erasure Tension
+- **9.12 AI-Native Procurement & Spend Intelligence**: The Spend Cube Is Not Just an OLAP Cube — It's a Bi-Temporal Fact Table
+- **9.13 AI-Native Revenue Intelligence Platform**: Forecast Calibration Is a System, Not a Feature
+- **9.14 AI-Native Core Banking Platform**: The Immutable Ledger as Architectural Foundation
 
 ### Contention
 
@@ -2921,6 +2996,12 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.12 CBDC/Digital Currency Platform**: The Token-Account Hybrid Is the Only Architecture That Achieves Both Cash Equivalence and Regulatory Compliance
 - **9.5 Procurement System**: Three-Way Matching is a Constrained Assignment Problem, Not Equality Checking
 - **9.5 Procurement System**: Vendor Scoring Is a Multi-Dimensional Time-Series Problem
+- **9.11 AI-Native Compliance Management**: Evidence Is a Temporal Proof, Not a Data Record
+- **9.11 AI-Native Compliance Management**: The Control-Framework Mapping Is a Knowledge Graph, Not a Lookup Table
+- **9.12 AI-Native Procurement & Spend Intelligence**: Vendor Name Resolution Is the Hidden Data Quality Bottleneck
+- **9.12 AI-Native Procurement & Spend Intelligence**: The Feature Store Is the Architectural Bridge Between Operational Procurement and ML Intelligence
+- **9.13 AI-Native Revenue Intelligence Platform**: Speaker Diarization Errors Propagate Silently Through the Entire Intelligence Layer
+- **9.14 AI-Native Core Banking Platform**: Multi-Currency as a Native Ledger Primitive, Not an Add-On
 
 ### Distributed Transactions
 
@@ -2948,6 +3029,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.5 Zoho Suite**: Saga Pattern for Cross-Product Data Consistency
 - **6.6 Ticketmaster**: Idempotent Payments with Outbox Pattern
 - **8.12 CBDC/Digital Currency Platform**: Cross-Border CBDC Settlement Eliminates Correspondent Banking's Biggest Costs
+- **9.12 AI-Native Procurement & Spend Intelligence**: Budget Consistency in Distributed Procurement Is Fundamentally a Distributed Transaction Problem
 
 ### Edge Computing
 
@@ -2992,6 +3074,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **7.6 Flight Booking System**: NDC vs. GDS: Direct vs. Intermediary Trade-off -- Mid-Transition Industry Requires Hybrid Architecture
 - **7.6 Flight Booking System**: APIS Compliance: Pre-Departure Passenger Data Reporting -- Regulatory Requirements Create Hard Architectural Constraints
 - **8.14 Super App Payment Platform**: The TPP Paradox — Building a Platform Around an Uncontrollable Dependency
+- **9.11 AI-Native Compliance Management**: Integration Rate Limits Are the True Scalability Bottleneck
+- **9.13 AI-Native Revenue Intelligence Platform**: CRM Sync Is the Platform's Achilles' Heel
 
 ### Partitioning
 
@@ -3032,6 +3116,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **2.9 Multi-Region Active-Active Architecture**: Merkle Tree Anti-Entropy as the Background Consistency Net
 - **2.12 Edge-Native Application Platform**: Tree-Topology Replication to Tame Write Amplification
 - **4.9 Telegram**: PTS/QTS/SEQ State Model for Multi-Device Sync
+- **9.13 AI-Native Revenue Intelligence Platform**: Multi-Tenant Model Serving Requires Hierarchical Architecture, Not Isolated Per-Tenant Models
+- **9.14 AI-Native Core Banking Platform**: Account-Level Partitioning Is the Key Scalability Lever
 
 ### Resilience
 
@@ -3165,6 +3251,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.12 CBDC/Digital Currency Platform**: CBDC Holding Limits Are the Circuit Breaker Against Digital Bank Runs
 - **8.13 Cryptocurrency Wallet System**: Key Lifecycle Outlives System Lifecycle: Irrecoverable Assets Demand 11-Nines Durability
 - **8.13 Cryptocurrency Wallet System**: The Policy Engine Must Be Co-Available with Signing: Fail-Closed Is the Only Safe Default
+- **9.11 AI-Native Compliance Management**: Connector Sandboxing Is a Supply Chain Security Problem
+- **9.12 AI-Native Procurement & Spend Intelligence**: Hierarchical Spend Classification Requires Error Containment at Each Level
+- **9.13 AI-Native Revenue Intelligence Platform**: The Ghost Deal Problem Reveals the Limits of AI-Only Pipeline Management
 
 ### Scaling
 
@@ -3299,6 +3388,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.11 UPI Real-Time Payment System**: Stateless Switch with External State Store Enables Horizontal Scaling
 - **8.14 Super App Payment Platform**: Festival Spike Engineering — Pre-Computed Scaling, Not Reactive Auto-Scale
 - **9.5 Procurement System**: Quarter-End Spikes Require Predictive Capacity, Not Reactive Scaling
+- **9.12 AI-Native Procurement & Spend Intelligence**: Multi-Tenant ML Creates a Unique Data Gravity Challenge
+- **9.13 AI-Native Revenue Intelligence Platform**: Specialized Model Ensembles Beat General-Purpose LLMs at Revenue Intelligence Scale
 
 ### Search
 
@@ -3313,6 +3404,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **3.18 AI Code Assistant**: AST-Based Context Retrieval Provides Structural Understanding That Embedding Search Cannot
 - **4.10 Slack/Discord**: Search Scalability Through Workspace and Time-Based Sharding
 - **7.2 Airbnb**: Geo + ML Hybrid Search Ranking -- Map Results Require Fundamentally Different Ranking Theory Than List Results
+- **9.11 AI-Native Compliance Management**: Framework Interpretation Is an NLP Problem Disguised as a Lookup Problem
+- **9.12 AI-Native Procurement & Spend Intelligence**: Supplier Risk Entity Resolution Is Harder Than Customer Entity Resolution
 
 ### Security
 
@@ -3387,6 +3480,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **9.5 Procurement System**: Sealed Bids Require Cryptographic Enforcement, Not Just Access Control
 - **9.5 Procurement System**: Separation of Duties Must Be Enforced at the System Level, Not the Policy Level
 - **9.5 Procurement System**: Punch-Out Catalogs Create a Unique Trust Boundary Problem
+- **9.11 AI-Native Compliance Management**: The Meta-Compliance Paradox Creates a Self-Referential Trust Architecture
+- **9.11 AI-Native Compliance Management**: Per-Tenant Encryption Keys Transform Breach Impact from Catastrophic to Contained
+- **9.13 AI-Native Revenue Intelligence Platform**: Consent Is a Real-Time, Distributed, Legally-Binding System Decision
+- **9.14 AI-Native Core Banking Platform**: Cryptographic Chaining Transforms the Ledger from "Trusted" to "Verifiable"
 
 ### Streaming
 
@@ -3440,6 +3537,12 @@ A cross-reference of key architectural insights extracted from each system desig
 - **7.3 Car Parking System**: Short-Lived QR Code Pattern for Physical Access -- Dynamic TOTP-Style Tokens Prevent Screenshot Replay Attacks
 - **7.4 Food Delivery System**: Server-Side GPS Trajectory Validation -- Physical Impossibility Detection Defeats GPS Spoofing Fraud
 - **8.3 Zerodha**: Binary WebSocket Fan-Out: Mode-Based Streaming at Scale
+- **9.11 AI-Native Compliance Management**: Continuous Monitoring Inverts the Compliance Data Flow from Pull to Push
+- **9.12 AI-Native Procurement & Spend Intelligence**: The Closed-Loop Procurement Cycle Creates a Self-Improving System, but Requires Anti-Oscillation Engineering
+- **9.12 AI-Native Procurement & Spend Intelligence**: Document Intelligence Requires a Two-Speed Architecture
+- **9.13 AI-Native Revenue Intelligence Platform**: Event-Driven Architecture Enables Model Improvement Without Data Reprocessing Infrastructure
+- **9.14 AI-Native Core Banking Platform**: Synchronous Fraud Scoring — The One Inline Intelligence That Justifies Its Latency
+- **9.14 AI-Native Core Banking Platform**: CQRS Projections Are Not Just Performance Optimization — They're Domain-Specific Views
 
 ### System Modeling
 
@@ -3539,6 +3642,13 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.14 Super App Payment Platform**: Mini-App Sandbox as a Platform Trust Boundary
 - **9.5 Procurement System**: The Document Chain as a Distributed State Machine
 - **9.5 Procurement System**: Approval Workflows are a Multi-Dimensional Rule Evaluation Problem, Not a Simple Chain
+- **9.11 AI-Native Compliance Management**: The Audit Package Is a Materialized View, Not a Generated Report
+- **9.11 AI-Native Compliance Management**: Evidence Heartbeats Prove Continuous Monitoring, Not Just Periodic Collection
+- **9.12 AI-Native Procurement & Spend Intelligence**: Autonomous PO Generation Requires a Trust Architecture, Not Just an Accuracy Threshold
+- **9.13 AI-Native Revenue Intelligence Platform**: The Revenue Graph Is the Platform's True Moat, Not the AI Models
+- **9.13 AI-Native Revenue Intelligence Platform**: The Forecasting Ensemble Must Model Deal Correlation, Not Just Deal Probabilities
+- **9.14 AI-Native Core Banking Platform**: Configuration-Driven Product Factory Eliminates the Deployment Bottleneck
+- **9.14 AI-Native Core Banking Platform**: The Product Factory Pattern Inverts the Banking Innovation Model
 
 ### Traffic Shaping
 
@@ -3603,3 +3713,5 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.2 Stripe / Razorpay**: Webhook Delivery: Building a Reliable Notification System at Scale
 - **8.3 Zerodha**: Predictable Thundering Herd: Pre-Provision Over Auto-Scale
 - **8.10 Expense Management System**: Month-End Surge Requires Queue-Based Admission Control, Not Just Auto-Scaling
+- **9.11 AI-Native Compliance Management**: Compliance Scoring Debouncing Prevents Catastrophic Compute Amplification
+- **9.14 AI-Native Core Banking Platform**: Tiered Compliance Screening Balances Thoroughness with Latency

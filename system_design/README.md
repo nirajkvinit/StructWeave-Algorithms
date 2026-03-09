@@ -189,6 +189,10 @@ Each system design directory contains 9 standardized documents:
 | 9.8 | Supply Chain Management (Demand Forecasting, Order Management, Logistics Optimization) | Completed | [View](./9.8-supply-chain-management/00-index.md) |
 | 9.9 | CRM System Design (Salesforce/Zoho CRM - Lead Management, Pipeline, Custom Objects) | Completed | [View](./9.9-crm-system-design/00-index.md) |
 | 9.10 | Business Intelligence Platform (Tableau/Looker - OLAP Cubes, Semantic Layer, Dashboard Engine) | Completed | [View](./9.10-business-intelligence-platform/00-index.md) |
+| 9.11 | AI-Native Compliance Management (Vanta/Drata/Secureframe - Auto Evidence Collection, Control Monitoring, SOC2/HIPAA/ISO27001) | Completed | [View](./9.11-ai-native-compliance-management/00-index.md) |
+| 9.12 | AI-Native Procurement & Spend Intelligence (Zip, Coupa AI, SAP Ariba AI - Supplier Discovery, Price Optimization, Autonomous PO) | Completed | [View](./9.12-ai-native-procurement-spend-intelligence/00-index.md) |
+| 9.13 | AI-Native Revenue Intelligence Platform (Gong, Clari, Salesforce Einstein - Conversation Intelligence, Pipeline Forecasting) | Completed | [View](./9.13-ai-native-revenue-intelligence-platform/00-index.md) |
+| 9.14 | AI-Native Core Banking Platform (Infosys Finacle/TCS BaNCS - Microservices CBS, Multi-Currency, Open Banking, ISO 20022) | Completed | [View](./9.14-ai-native-core-banking-platform/00-index.md) |
 
 
 ---
