@@ -13,15 +13,55 @@
 
 ### Phase-by-Phase Strategy
 
-**Requirements phase:** Immediately establish that this is a **security-first system**. Ask: "Should I assume all submitted code is potentially malicious?" (The answer is always yes.) This signals that you understand the domain.
+**Requirements phase (5 min):** Immediately establish that this is a **security-first system**. Ask: "Should I assume all submitted code is potentially malicious?" (The answer is always yes.) This signals that you understand the domain. Also clarify:
 
-**High-level design:** Draw the queue-based worker pool architecture early. Show the decoupling between submission ingestion and execution. Name the key components: Submission API, Message Queue, Scheduler, Worker Pool, Warm Pool Manager, Sandbox Environment.
+- Is this for competitive programming, online education, or CI/CD?
+- How many languages? 5 or 50+?
+- Are there contests with synchronized start times?
+- Real-time output streaming or batch results?
 
-**Isolation deep dive (this is where you win or lose):** The interviewer wants to see **layered thinking**. Don't just say "use Docker." Walk through each isolation layer: namespaces → seccomp → cgroups → filesystem → network. For each, explain what it prevents. Then cover specific threats: fork bombs, memory bombs, network exfiltration.
+Nail down the scale: daily submissions (5M), peak submissions/sec (175), languages (60+).
 
-**Worker pool:** Show you understand the cold start problem and why warm pools exist. Discuss the trade-off: warm pools trade idle resource cost for latency.
+**High-level design (10 min):** Draw the queue-based worker pool architecture early. Show the decoupling between submission ingestion and execution—this is the single most important architectural decision. Name the key components:
 
-**Scale & reliability:** Focus on queue-based load leveling, auto-scaling signals, and what happens when workers crash mid-execution.
+1. **Submission API** — accepts code, validates, enqueues
+2. **Message Queue** — decouples ingestion from execution; absorbs spikes
+3. **Scheduler** — assigns submissions to workers based on language affinity and load
+4. **Worker Pool** — stateless compute nodes that execute sandboxed code
+5. **Warm Pool Manager** — maintains pre-created sandboxes per language
+6. **Sandbox Environment** — isolated execution environment with defense-in-depth
+7. **Result Store + Cache** — persists verdicts and execution metadata
+8. **WebSocket Gateway** — streams output in real-time
+
+Show the submission lifecycle: Client → API → Queue → Scheduler → Worker → Sandbox → Result.
+
+**Isolation deep dive (12 min — this is where you win or lose):** The interviewer wants to see **layered thinking**. Walk through each isolation layer systematically:
+
+1. **Namespaces** (PID, mount, network, user, IPC, UTS, cgroup) — what each isolates
+2. **seccomp-BPF** — allowlist ~50 syscalls; explain why allowlist not blocklist
+3. **cgroups v2** — CPU, memory, PID count, disk I/O limits
+4. **Filesystem** — read-only root, tmpfs workspace, no /proc or /sys
+5. **Network** — empty namespace (no interfaces at all)
+6. **Capabilities** — drop ALL, set NO_NEW_PRIVS
+7. **Time limits** — wall-clock + CPU time, both needed
+
+Then cover 3-4 specific threats: fork bombs, memory bombs, network exfiltration, /proc exploitation.
+
+**Worker pool (8 min):** Show you understand the cold start problem and why warm pools exist. Cover:
+
+- Cold start: 1-3s (namespace creation, filesystem mount, cgroup setup)
+- Warm pool: < 100ms lease from pre-created pool
+- Scrubbing: must be as thorough as creation (filesystem wipe, PID reset, cgroup reset)
+- Per-language partitioning: Python pool can't serve Java requests
+- Tiered strategy: Tier 1 (warm), Tier 2 (partial), Tier 3 (cold only)
+
+**Scale & reliability (5 min):** Focus on:
+
+- Queue-based load leveling: absorb 10× spikes without dropping requests
+- Auto-scaling signals: queue depth, P95 wait, CPU utilization, warm pool hit rate
+- Worker crash recovery: queue visibility timeout → auto-retry on another worker
+- Poison message detection: 3 failures → dead letter queue
+- Circuit breaker per language runtime
 
 ---
 
@@ -31,15 +71,26 @@
 
 This system is fundamentally different from most system design questions:
 
-1. **Security is the primary constraint, not performance.** In most systems, you optimize for throughput, latency, or consistency. Here, you optimize for isolation. Every performance optimization must be evaluated against: "Does this create a new attack vector?"
+**1. Security is the primary constraint, not performance.** In most systems, you optimize for throughput, latency, or consistency. Here, you optimize for isolation. Every performance optimization must be evaluated against: "Does this create a new attack vector?"
 
-2. **Users are adversarial by nature.** Unlike a social media platform where 99.9% of users are cooperative, a code execution sandbox's *primary use case* involves executing untrusted code. Even well-intentioned users accidentally write fork bombs, infinite loops, and memory-hogging programs. Malicious users will actively try to escape.
+**2. Users are adversarial by nature.** Unlike a social media platform where 99.9% of users are cooperative, a code execution sandbox's *primary use case* involves executing untrusted code. Even well-intentioned users accidentally write fork bombs, infinite loops, and memory-hogging programs. Malicious users will actively try to escape.
 
-3. **The interviewer wants to see defense-in-depth thinking.** Saying "I'll use Docker for isolation" shows surface-level understanding. The strong answer layers multiple independent defenses: namespaces for process isolation, seccomp for syscall filtering, cgroups for resource limits, filesystem restrictions for data isolation, network namespaces for network isolation, and time limits for runaway prevention. Each layer independently contains different attack classes.
+**3. The interviewer wants to see defense-in-depth thinking.** Saying "I'll use Docker for isolation" shows surface-level understanding. The strong answer layers multiple independent defenses: namespaces for process isolation, seccomp for syscall filtering, cgroups for resource limits, filesystem restrictions for data isolation, network namespaces for network isolation, and time limits for runaway prevention.
 
-4. **OS-level knowledge is a differentiator.** Candidates who can discuss Linux namespaces, seccomp-BPF, cgroups v2, and capability dropping demonstrate systems engineering depth. You don't need to recite syscall numbers, but knowing that PID namespaces prevent cross-process visibility, or that `pids.max` in cgroups prevents fork bombs, sets you apart.
+**4. OS-level knowledge is a differentiator.** Candidates who can discuss Linux namespaces, seccomp-BPF, cgroups v2, and capability dropping demonstrate systems engineering depth. You don't need to recite syscall numbers, but knowing that PID namespaces prevent cross-process visibility, or that `pids.max` in cgroups prevents fork bombs, sets you apart.
 
-5. **The "simple" approach is dangerously wrong.** A naive design (run code in a Docker container, set a timeout) is vulnerable to dozens of attacks. The interviewer will probe whether you understand why Docker alone is insufficient for untrusted code execution.
+**5. The "simple" approach is dangerously wrong.** A naive design (run code in a Docker container, set a timeout) is vulnerable to dozens of attacks. The interviewer will probe whether you understand why Docker alone is insufficient for untrusted code execution.
+
+### What the Interviewer Is Testing
+
+| Signal | Strong Answer | Weak Answer |
+|---|---|---|
+| **Security depth** | Multi-layer isolation with specific mechanisms | "Put it in Docker" |
+| **Adversarial thinking** | Proactively identifies fork bombs, memory bombs, /proc exploitation | Only discusses happy path |
+| **Systems knowledge** | Discusses namespaces, seccomp-BPF, cgroups v2, capabilities | Vague "isolation" without specifics |
+| **Trade-off reasoning** | VM vs container vs microVM with clear criteria | Picks one without discussing alternatives |
+| **Operational maturity** | Warm pool sizing, circuit breakers, crash recovery, observability | Stops at the architecture diagram |
+| **Resource enforcement** | CPU, memory, PIDs, disk, network limits independently addressed | "Set a timeout" as the complete resource strategy |
 
 ---
 
@@ -53,19 +104,53 @@ This system is fundamentally different from most system design questions:
 | **Compilation included vs Pre-compiled** | Include compilation in sandbox: simpler; compiler has same security constraints; adds 1-5s latency | Pre-compile outside sandbox, inject binary: faster execution; but compiler bugs are now a separate security domain | Always compile inside the sandbox. Compiler exploits are real (crafted source files that trigger compiler bugs). Compilation must be sandboxed |
 | **Output streaming vs Batch result** | Streaming: real-time feedback, better UX for interactive coding; complex (WebSocket per user, output buffering) | Batch: simple poll for result; no streaming overhead; worse UX | Support both: WebSocket streaming for interactive use; polling for API clients. Output must be bounded regardless (64KB cap) |
 | **Allowlist vs Blocklist seccomp** | Allowlist (default-deny): safer (new syscalls blocked by default); requires per-language maintenance; may break on kernel updates | Blocklist (default-allow): easier to maintain; new syscalls are allowed by default (dangerous); miss new attack vectors | Always use allowlist. The maintenance cost is worth it—a blocklist means every new kernel version could introduce an exploitable syscall you didn't think to block |
+| **nsjail vs gVisor vs Firecracker** | nsjail: minimal overhead, single binary, excellent for competitive programming. gVisor: user-space kernel, high I/O overhead | Firecracker: full VM isolation, 125ms boot, strongest isolation | nsjail for baseline; escalate to Firecracker for contests/enterprise. gVisor is the middle ground for workloads that need more isolation than nsjail but can't afford microVM overhead |
 
 ---
 
 ## 4. Trap Questions
 
-| Question | Why It's a Trap | Strong Answer |
-|---|---|---|
-| **"Why not just use Docker?"** | Docker with default settings exposes 300+ syscalls, runs as root (unless configured), shares the host kernel, and has a long history of container escapes. Saying "Docker is fine" shows you don't understand the security requirements | "Docker alone is insufficient for untrusted code. Default Docker shares the host kernel with 300+ syscalls exposed, runs processes that map to UID 0 on the host, and has had multiple escape vulnerabilities. We need additional layers: user namespace mapping (container root → host nobody), seccomp-BPF to restrict syscalls to ~50, cgroups v2 for hard resource limits, and read-only filesystem with minimal /dev. Optionally, we wrap everything in a microVM for hardware-level isolation" |
-| **"How do you handle fork bombs?"** | This tests whether you understand cgroups PID limits AND why PID limits alone aren't sufficient (64 spinning processes still consume CPU) | "Three layers: first, `pids.max = 64` via cgroups v2 so fork() returns EAGAIN after 64 processes. But those 64 processes still consume CPU, so second, the CPU time quota limits their total CPU consumption. Third, the wall-clock timeout kills the entire cgroup after the time limit plus a grace period. The combination of PID limit + CPU limit + wall-clock timeout provides triple defense" |
-| **"What if someone exploits a kernel vulnerability?"** | Tests whether you know about microVM isolation and defense-in-depth beyond user-space protections | "This is why defense-in-depth is essential. seccomp-BPF reduces the kernel attack surface from 300+ to ~50 syscalls—the vulnerable syscall might not be in our allowlist. Capability dropping removes privileges needed for many exploits. User namespace mapping means even a successful root exploit inside the sandbox gains only nobody privileges on the host. For maximum isolation, we run sandboxes inside microVMs, providing a hardware boundary—a kernel exploit inside the microVM only compromises the guest kernel, not the host" |
-| **"Why not run in the cloud provider's serverless?"** | Serverless functions (Lambda-style) have cold starts of 500ms-5s, limited runtime customization, no control over isolation layers, and per-invocation pricing at high scale is extremely expensive | "Serverless functions aren't designed for adversarial workloads. We lose control over the isolation stack—we can't configure seccomp profiles, cgroup limits, or filesystem restrictions. Cold starts are unpredictable (500ms-5s). We can't maintain warm pools. Pricing at 5M executions/day would be prohibitive. And we can't stream output in real-time. Custom worker infrastructure gives us the control needed for security and the economics needed for scale" |
-| **"How do you support 30+ languages efficiently?"** | Tests understanding of the operational complexity of multi-language support: image management, per-language seccomp profiles, warm pool partitioning, and the impact on resource allocation | "Tiered approach: Tier 1 (5-10 popular languages) gets dedicated warm pools, language-affinity workers, and optimized seccomp profiles. Tier 2 (10-20 additional) gets smaller warm pools with cold start fallback. Tier 3 (niche languages) runs on demand with cold starts. All languages share a common base image layer to minimize storage and pull times. Each language has its own seccomp profile because different runtimes need different syscalls (Java needs clone3 for threading; Python needs execve for interpreter startup; C needs neither)" |
-| **"What if the code runs forever?"** | Tests whether you understand the distinction between CPU time and wall-clock time, and why both are necessary | "Two independent time limits: CPU time (via cgroups cpu.max) catches infinite computation—`while(true){}` exhausts its CPU quota quickly. Wall-clock time (external timer) catches non-CPU resource consumption—`while(true){ sleep(1); }` uses zero CPU but blocks a worker forever. We need both because a program can consume resources without consuming CPU (sleeping, blocked I/O, waiting on locks). The wall-clock timer sends SIGTERM, waits 500ms for graceful shutdown, then SIGKILL" |
+### "Why not just use Docker?"
+
+**Why it's a trap:** Docker with default settings exposes 300+ syscalls, runs as root (unless configured), shares the host kernel, and has a long history of container escapes.
+
+**Strong answer:** "Docker alone is insufficient for untrusted code. Default Docker shares the host kernel with 300+ syscalls exposed, runs processes that map to UID 0 on the host, and has had multiple escape vulnerabilities. We need additional layers: user namespace mapping (container root → host nobody), seccomp-BPF to restrict syscalls to ~50, cgroups v2 for hard resource limits, and read-only filesystem with minimal /dev. Optionally, we wrap everything in a microVM for hardware-level isolation."
+
+### "How do you handle fork bombs?"
+
+**Why it's a trap:** This tests whether you understand cgroups PID limits AND why PID limits alone aren't sufficient.
+
+**Strong answer:** "Three layers: first, `pids.max = 64` via cgroups v2 so fork() returns EAGAIN after 64 processes. But those 64 processes still consume CPU, so second, the CPU time quota limits their total CPU consumption. Third, the wall-clock timeout kills the entire cgroup after the time limit plus a grace period. The combination of PID limit + CPU limit + wall-clock timeout provides triple defense."
+
+### "What if someone exploits a kernel vulnerability?"
+
+**Why it's a trap:** Tests whether you know about microVM isolation and defense-in-depth beyond user-space protections.
+
+**Strong answer:** "This is why defense-in-depth is essential. seccomp-BPF reduces the kernel attack surface from 300+ to ~50 syscalls—the vulnerable syscall might not be in our allowlist. Capability dropping removes privileges needed for many exploits. User namespace mapping means even a successful root exploit inside the sandbox gains only nobody privileges on the host. For maximum isolation, we run sandboxes inside microVMs, providing a hardware boundary—a kernel exploit inside the microVM only compromises the guest kernel, not the host."
+
+### "Why not run in the cloud provider's serverless?"
+
+**Why it's a trap:** Serverless functions have cold starts, limited runtime customization, no isolation control, and prohibitive pricing at scale.
+
+**Strong answer:** "Serverless functions aren't designed for adversarial workloads. We lose control over the isolation stack—we can't configure seccomp profiles, cgroup limits, or filesystem restrictions. Cold starts are unpredictable (500ms-5s). We can't maintain warm pools. Pricing at 5M executions/day would be prohibitive. And we can't stream output in real-time. Custom worker infrastructure gives us the control needed for security and the economics needed for scale."
+
+### "How do you support 30+ languages efficiently?"
+
+**Why it's a trap:** Tests understanding of the operational complexity multiplier from multi-language support.
+
+**Strong answer:** "Tiered approach: Tier 1 (5-10 popular languages) gets dedicated warm pools, language-affinity workers, and optimized seccomp profiles. Tier 2 (10-20 additional) gets smaller warm pools with cold start fallback. Tier 3 (niche languages) runs on demand with cold starts. All languages share a common base image layer to minimize storage and pull times. Each language has its own seccomp profile because different runtimes need different syscalls (Java needs clone3 for threading; Python needs execve for interpreter startup; C needs neither)."
+
+### "What if the code runs forever?"
+
+**Why it's a trap:** Tests whether you understand the CPU vs wall-clock time distinction.
+
+**Strong answer:** "Two independent time limits: CPU time (via cgroups cpu.max) catches infinite computation—`while(true){}` exhausts its CPU quota quickly. Wall-clock time (external timer) catches non-CPU resource consumption—`while(true){ sleep(1); }` uses zero CPU but blocks a worker forever. We need both because a program can consume resources without consuming CPU (sleeping, blocked I/O, waiting on locks). The wall-clock timer sends SIGTERM, waits 500ms for graceful shutdown, then SIGKILL."
+
+### "Can users share data between submissions?"
+
+**Why it's a trap:** Tests whether you understand the isolation guarantees of warm pool scrubbing.
+
+**Strong answer:** "No. Each submission runs in a fresh or fully scrubbed sandbox. Warm pool scrubbing includes: wipe /workspace and /tmp, kill all processes via cgroup.kill, reset cgroup counters (CPU, memory accounting), and verify filesystem integrity (check for symlinks). The scrubbed sandbox is as clean as a freshly created one, but faster to provision. If scrubbing fails or takes too long, the sandbox is destroyed and replaced rather than reused. Cross-submission isolation is a security invariant, not an optimization target."
 
 ---
 
@@ -111,6 +196,14 @@ This system is fundamentally different from most system design questions:
 
 **Fix:** Explicitly state: "Compilation happens inside the same sandbox, with the same isolation constraints. The compiler is just another program running untrusted input."
 
+### Mistake 6: Over-Engineering the Data Layer
+
+**What candidates do:** Spend 10 minutes designing a sharded submission database with complex indexing strategies.
+
+**Why it's wrong:** This system is compute-bound, not data-bound. The database stores 8KB per submission (source + results + metadata). Even at 5M submissions/day, that's 39GB/day — trivially handled by a standard database. The bottleneck is the execution worker pool, not the data store.
+
+**Fix:** Sketch a simple schema in 2 minutes (submission table + test case results table), mention time-based partitioning for retention management, and move on to the interesting parts: isolation architecture and worker pool design.
+
 ---
 
 ## 6. Questions to Ask the Interviewer
@@ -130,19 +223,43 @@ Ask 2-3 of these based on what hasn't been covered:
 
 ## 7. Quick Reference Card
 
-### Must-Mention Concepts
+### Architecture in One Sentence
 
-| Concept | Key Point | When to Mention |
+A queue-based worker pool where each worker leases ephemeral sandboxes (Linux namespaces + seccomp-BPF + cgroups v2) from a warm pool, executes untrusted code under strict resource limits with no network access, compares output against test cases, and returns verdicts—all while assuming every submission is an attack.
+
+### Five Things to Say in the First 5 Minutes
+
+1. "This is a security system first, compute system second."
+2. "Every submission must be treated as potentially malicious."
+3. "Isolation needs defense-in-depth: namespaces, seccomp, cgroups, filesystem restrictions, network isolation."
+4. "Decouple ingestion from execution via a message queue for backpressure and fault tolerance."
+5. "Warm pools amortize sandbox creation cost, but scrubbing on return is security-critical."
+
+### Seven Layers of Defense (Memorize This)
+
+| Layer | Mechanism | What It Prevents |
 |---|---|---|
-| **Defense-in-depth** | 5+ overlapping isolation layers; no single layer trusted | Within first 10 minutes; frame the entire isolation discussion around this |
-| **Namespaces** | PID, mount, network, user, IPC, UTS, cgroup — 7 namespace types | During isolation deep dive |
-| **seccomp-BPF** | Allowlist ~50 of 300+ syscalls; default-deny; per-language profiles | During isolation deep dive; specifically when asked about security |
-| **cgroups v2** | Hard limits for CPU, memory, PID count, disk I/O | When discussing resource limits and fork bomb defense |
-| **Warm pool** | Pre-created sandboxes; < 100ms lease vs 1-3s cold start | When discussing performance and the cold start problem |
-| **Queue-based load leveling** | Decouple ingestion from execution; absorb spikes | During high-level architecture |
-| **Wall-clock vs CPU time** | Both needed: infinite loop vs sleep() vs I/O blocking | When discussing time limits |
-| **MicroVM** | Hardware VM boundary; < 125ms boot; strongest isolation | When differentiating isolation options or asked "what about kernel exploits?" |
-| **Adversarial users** | Not an edge case—the primary workload is untrusted code | During requirements or meta-discussion |
+| 1 | Kernel namespaces (PID, mount, net, user, IPC) | Process/filesystem/network visibility |
+| 2 | seccomp-BPF (allowlist ~50 syscalls) | Dangerous kernel interactions |
+| 3 | Capability dropping (ALL + NO_NEW_PRIVS) | Privilege escalation |
+| 4 | cgroups v2 (CPU, memory, PIDs, I/O) | Resource exhaustion |
+| 5 | Filesystem restrictions (read-only root, tmpfs) | Persistent file manipulation |
+| 6 | Network isolation (empty namespace) | Data exfiltration, C2, lateral movement |
+| 7 | Time limits (wall-clock + CPU-clock) | Infinite execution, worker blocking |
+
+### Key Numbers
+
+| Metric | Value | Why It Matters |
+|---|---|---|
+| Warm pool lease time | < 100ms | Performance SLO depends on this |
+| Cold start time | 2–3s | Why warm pools are necessary |
+| Seccomp allowed syscalls | ~50 of 300+ | Attack surface reduction |
+| cgroup PID limit | 64 | Fork bomb containment |
+| Default memory limit | 256 MB | cgroup OOM kill threshold |
+| Output buffer cap | 64 KB | Prevents output-based DoS on worker |
+| Lease TTL | 120s | Safety net for stuck sandboxes |
+| Worker heartbeat timeout | 30s | Crash detection speed |
+| Queue visibility timeout | 60s | Auto-retry window for failed submissions |
 
 ### Architecture Diagram Checklist
 
