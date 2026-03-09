@@ -193,6 +193,22 @@ Each system design directory contains 9 standardized documents:
 | 9.12 | AI-Native Procurement & Spend Intelligence (Zip, Coupa AI, SAP Ariba AI - Supplier Discovery, Price Optimization, Autonomous PO) | Completed | [View](./9.12-ai-native-procurement-spend-intelligence/00-index.md) |
 | 9.13 | AI-Native Revenue Intelligence Platform (Gong, Clari, Salesforce Einstein - Conversation Intelligence, Pipeline Forecasting) | Completed | [View](./9.13-ai-native-revenue-intelligence-platform/00-index.md) |
 | 9.14 | AI-Native Core Banking Platform (Infosys Finacle/TCS BaNCS - Microservices CBS, Multi-Currency, Open Banking, ISO 20022) | Completed | [View](./9.14-ai-native-core-banking-platform/00-index.md) |
+| 10.1 | Telemedicine Platform (Video Consult, Scheduling, HIPAA Compliance) | Completed | [View](./10.1-telemedicine-platform/00-index.md) |
+| 10.2 | Cloud-Native Electronic Health Records (EHR) (Patient Data, Interoperability, HL7/FHIR) | Completed | [View](./10.2-cloud-native-ehr/00-index.md) |
+| 10.3 | Smart Home Platform (Device Registry, Commands, Automation Rules) | Completed | [View](./10.3-smart-home-platform/00-index.md) |
+| 10.4 | Fleet Management System (Vehicle Tracking, Telemetry, Route Optimization) | Completed | [View](./10.4-fleet-management-system/00-index.md) |
+| 10.5 | Industrial IoT Platform (Sensor Data Ingestion, Edge Processing, Alerts) | Completed | [View](./10.5-industrial-iot-platform/00-index.md) |
+| 10.6 | Wearable Health Monitoring (Fitbit/Apple Watch - Data Sync, Alerts, Trends) | Completed | [View](./10.6-wearable-health-monitoring/00-index.md) |
+| 10.7 | Biometric Travel Platform (DigiYatra - Facial Recognition, Blockchain Credentials, IATA One ID) | Completed | [View](./10.7-biometric-travel-platform/00-index.md) |
+| 11.1 | Online Learning Platform (Coursera/Udemy - Video Delivery, Progress, Certificates) | Completed | [View](./11.1-online-learning-platform/00-index.md) |
+| 11.2 | Live Classroom System (Zoom for Education - Whiteboard, Breakout Rooms) | Completed | [View](./11.2-live-classroom-system/00-index.md) |
+| 11.3 | Push Notification System (APNs/FCM - Delivery, Targeting, Analytics) | Completed | [View](./11.3-push-notification-system/00-index.md) |
+| 11.4 | Email Delivery System (SendGrid/Mailchimp - Deliverability, Templates, Tracking) | Completed | [View](./11.4-email-delivery-system/00-index.md) |
+| 11.5 | SMS Gateway (Twilio - Routing, Delivery Reports, Short Codes) | Completed | [View](./11.5-sms-gateway/00-index.md) |
+| 12.1 | AdTech: Real-Time Bidding (RTB) System (High Throughput, Low Latency Auction) | Completed | [View](./12.1-adtech-real-time-bidding/00-index.md) |
+| 12.2 | Gaming: Multiplayer Game State Sync (Server Tick, Lag Compensation) | Completed | [View](./12.2-gaming-multiplayer-game-state-sync/00-index.md) |
+| 12.3 | Gaming: Live Leaderboard (Redis Sorted Sets, Near Real-time Updates) | Completed | [View](./12.3-gaming-live-leaderboard/00-index.md) |
+| 12.4 | Gaming: Matchmaking System (Skill-based, Queue Management, Latency) | Completed | [View](./12.4-gaming-matchmaking-system/00-index.md) |
 
 
 ---

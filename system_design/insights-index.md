@@ -13,25 +13,25 @@ A cross-reference of key architectural insights extracted from each system desig
 
 | Category | Description | Topics Count |
 |----------|-------------|:------------:|
-| Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 57 |
-| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 69 |
+| Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 59 |
+| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 71 |
 | Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 16 |
-| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 97 |
-| Contention | Lock contention, hot keys, thundering herds, and resource competition | 77 |
-| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 53 |
-| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 96 |
+| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 112 |
+| Contention | Lock contention, hot keys, thundering herds, and resource competition | 80 |
+| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 59 |
+| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 111 |
 | Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 23 |
 | Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 21 |
-| External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 12 |
-| Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 24 |
+| External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 14 |
+| Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 26 |
 | Replication | Data replication, follower management, and cross-region synchronization | 8 |
-| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 103 |
-| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 105 |
+| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 117 |
+| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 117 |
 | Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 10 |
-| Security | Authentication, encryption, access control, and threat mitigation | 51 |
-| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 35 |
-| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 76 |
-| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 54 |
+| Security | Authentication, encryption, access control, and threat mitigation | 61 |
+| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 39 |
+| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 98 |
+| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 61 |
 
 ---
 
@@ -2412,6 +2412,254 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
+### 10.1 Telemedicine Platform [View](./10.1-telemedicine-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | SFU Over MCU Preserves End-to-End Encryption Without Sacrificing Scale | Streaming |
+| 2 | Scheduling Requires Serializable Isolation Despite Low Average Throughput | Consistency |
+| 3 | PHI Segmentation Transforms Breach Impact From Catastrophic to Contained | Security |
+| 4 | No-Show Prediction Converts a Revenue Problem Into a Capacity Optimization Lever | Scaling |
+| 5 | Event-Driven Audit Trails Decouple Compliance From Performance | Consistency |
+| 6 | Simulcast Enables Clinical-Grade Quality Adaptation Without Server-Side Transcoding | Streaming |
+| 7 | Cascading SFU Architecture Enables Global Video Routing Without Centralized Bottlenecks | Scaling |
+| 8 | Consent as a Runtime Enforcement Primitive, Not a Paper Exercise | Security |
+| 9 | Polyglot Persistence Maps Healthcare Data Heterogeneity to Optimal Storage Engines | Data Structures |
+| 10 | Graceful Degradation Hierarchy Preserves Clinical Utility During Partial Failures | Resilience |
+
+---
+
+### 10.2 Cloud-Native EHR Platform [View](./10.2-cloud-native-ehr/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | FHIR-Native Storage Eliminates the Interoperability Translation Tax | Data Structures |
+| 2 | The Master Patient Index Is the Most Safety-Critical Component in the Entire Platform | Consistency |
+| 3 | Consent-at-the-Data-Layer Is the Only Architecturally Sound Approach to Patient Privacy | Security |
+| 4 | CDS Alert Fatigue Is an Architecture Problem, Not a Clinical Education Problem | System Modeling |
+| 5 | Patient-Based Partitioning Is Uniquely Well-Suited to Clinical Data Because of the "Chart" Access Pattern | Partitioning |
+| 6 | The Audit Trail Is Not a Logging Feature — It Is a Regulatory Data Store with Stricter Requirements Than Clinical Data | Security |
+| 7 | Break-the-Glass Is a Patient Safety Feature, Not a Security Bypass | Security |
+| 8 | FHIR Subscriptions Transform the EHR from a Record System into an Event Platform | Streaming |
+| 9 | Clinical Downtime Procedures Are an Architectural Requirement, Not an Operational Afterthought | Resilience |
+| 10 | Terminology Binding Is the Hidden Foundation of Clinical Data Quality and Interoperability | Data Structures |
+
+---
+
+### 10.3 Smart Home Platform [View](./10.3-smart-home-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Device Shadow Is Not a Cache — It's a Coordination Primitive | Data Structures |
+| 2 | The Edge-Cloud Split Is Not About Performance — It's About Availability | Resilience |
+| 3 | Capability Abstraction Is the Key to Surviving Protocol Wars | System Modeling |
+| 4 | Automation Conflict Resolution Is the Hidden Complexity Monster | Consistency |
+| 5 | MQTT Broker Scaling Requires Home-Affinity Routing | Partitioning |
+| 6 | The Thundering Herd Is the Scariest Failure Mode — And the Easiest to Prevent | Traffic Shaping |
+| 7 | Camera Data Requires a Fundamentally Different Architecture Than Other Devices | Security |
+| 8 | The Hub Is a Distributed System's Weakest Link and Strongest Resilience Layer | Resilience |
+| 9 | Matter Doesn't Eliminate Protocol Complexity — It Adds Another Layer | System Modeling |
+| 10 | Smart Home Scale Is Unique Because Growth Is Per-Home, Not Per-User | Scaling |
+
+---
+
+### 10.4 Fleet Management System [View](./10.4-fleet-management-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Dual-Timescale Architecture Is the Defining Constraint | System Modeling |
+| 2 | Geospatial Indexing Must Be a First-Class Architectural Primitive | Data Structures |
+| 3 | The Edge-Cloud Continuum Is Non-Negotiable, Not an Optimization | Resilience |
+| 4 | VRPTW Is NP-Hard, and Your Architecture Must Embrace This | System Modeling |
+| 5 | Time-Series Data Demands a Purpose-Built Storage Strategy | Cost Optimization |
+| 6 | Adaptive Telemetry Frequency Is a Hidden Bandwidth Multiplier | Cost Optimization |
+| 7 | GPS Noise Filtering Determines System Trustworthiness | Consistency |
+| 8 | Multi-Level Geofence State Management Is a Hidden Distributed Systems Problem | Consistency |
+| 9 | Compliance Data and Operational Data Require Different Consistency Guarantees | Consistency |
+| 10 | Predictive Maintenance ROI Depends More on Feature Engineering Than Model Sophistication | System Modeling |
+
+---
+
+### 10.5 Industrial IoT Platform [View](./10.5-industrial-iot-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The OT/IT Protocol Boundary Is the System's Most Consequential Architectural Decision | System Modeling |
+| 2 | Report-by-Exception Fundamentally Changes the Data Economics of Scale | Data Structures |
+| 3 | Edge Autonomy Is a Safety Requirement That Shapes the Entire Architecture | Resilience |
+| 4 | Alarm Correlation Is the Bridge Between Raw Data and Operator Action | System Modeling |
+| 5 | Time-Series Compression and Tiered Retention Are Existential for Long-Term Viability | Cost Optimization |
+
+---
+
+### 10.6 Wearable Health Monitoring [View](./10.6-wearable-health-monitoring/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Battery Is the Architect, Not a Constraint | System Modeling |
+| 2 | The Phone-as-Gateway Pattern Creates a Unique Three-Tier Processing Hierarchy | System Modeling |
+| 3 | Motion Artifacts Make Signal Quality a First-Class Architectural Concern | Consistency |
+| 4 | The Regulatory Gradient Forces Architectural Bifurcation That Defines the Platform's Velocity | Security |
+| 5 | Personalized Baselines Transform Anomaly Detection from Population Statistics to Individual Medicine | Scaling |
+
+---
+
+### 10.7 Biometric Travel Platform [View](./10.7-biometric-travel-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | On-Device Biometric Storage Is a Regulatory Mandate, Not a Design Choice | Security |
+| 2 | The Gallery Lifecycle Is the Hidden Complexity Center | Contention |
+| 3 | The Asymmetric Cost of Errors Demands Per-Touchpoint Threshold Tuning | Security |
+| 4 | Edge-First Processing Creates a Novel Trust Architecture | System Modeling |
+| 5 | Consent-Driven Architecture Is a Distributed State Machine, Not a Checkbox | Consistency |
+
+---
+
+### 11.1 Online Learning Platform [View](./11.1-online-learning-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Progress Tracking Demands Financial-Grade Durability Despite Being an Educational Feature | Resilience |
+| 2 | The CDN Is the Architecture—Everything Else Is a Control Plane | Scaling |
+| 3 | Assessment Integrity Is an Adversarial Security Problem Disguised as a Product Feature | Security |
+| 4 | The Content Graph's Hierarchical Dependencies Create a Hidden State Machine Problem | Data Structures |
+| 5 | Multi-DRM Is a Necessary Tax Whose Latency Impact Must Be Architecturally Hidden | Caching |
+
+---
+
+### 11.2 Live Classroom System [View](./11.2-live-classroom-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Media Plane and Control Plane Must Be Architecturally Independent—They Fail Differently | System Modeling |
+| 2 | Simulcast Layer Selection Is the Single Biggest Lever for Cost, Quality, and Scalability | Cost Optimization |
+| 3 | Hour-Boundary Thundering Herds Are a Schedule-Driven Capacity Cliff That Traditional Auto-Scaling Cannot Handle | Scaling |
+| 4 | CRDTs Solve Whiteboard Convergence but Create a Monotonically Growing State Problem That Requires Application-Level Garbage Collection | Data Structures |
+| 5 | Breakout Rooms Are a Dynamic Topology Orchestration Problem Disguised as a Feature Toggle | System Modeling |
+| 6 | SFU Failover Mid-Session Is a Hard Real-Time Problem Where "Eventually Consistent" Means "Visibly Broken" | Resilience |
+| 7 | DTLS-SRTP Encryption Makes the SFU a Trusted Intermediary—and E2EE Fundamentally Changes What the SFU Can Do | Security |
+
+---
+
+### 11.3 Push Notification System [View](./11.3-push-notification-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | You Don't Own the Last Mile—And That Changes Everything | Architecture |
+| 2 | Fan-Out Is Not Pub/Sub—It's 500 Million Individually-Addressed API Calls | Scaling |
+| 3 | Provider Heterogeneity Makes the Adapter Layer a Leaky Abstraction by Necessity | Integration |
+| 4 | Token Entropy Is a Silent Reliability Killer That Demands Active Management | Reliability |
+| 5 | Priority Isolation Requires Physical Queue Separation, Not Logical Priority Fields | Contention |
+| 6 | Timezone-Aware Delivery Creates a Rolling Global Peak That's More Manageable Than a Synchronized Spike | Traffic Shaping |
+| 7 | Provider Feedback Is the Immune System—Without It, the System Silently Degrades | Resilience |
+
+---
+
+### 11.4 Email Delivery System [View](./11.4-email-delivery-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Reputation Is the Product — Not Infrastructure, Not Software | Architecture |
+| 2 | The Receiving Side Controls Everything — You Cannot Force Delivery | Constraints |
+| 3 | The Multi-Stage Queue Is the Architecture's Defining Pattern | Data Structures |
+| 4 | Suppression Lists Demand a Three-Layer Architecture for Sub-Microsecond Compliance Enforcement | Performance |
+| 5 | Bot Detection Has Become the Central Accuracy Problem for Email Analytics | Analytics |
+| 6 | IP Warming Is a Trust-Building Protocol That Cannot Be Shortcut | Scaling |
+| 7 | Time-Sensitivity Spans Six Orders of Magnitude Within a Single System | Scheduling |
+
+---
+
+### 11.5 SMS Gateway [View](./11.5-sms-gateway/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Carrier Is the Bottleneck You Cannot Engineer Away | Scaling |
+| 2 | Message State Is a Distributed Consensus Problem Across Trust Boundaries | Consistency |
+| 3 | Regulatory Compliance Is Per-Message, Creating a Unique Runtime Evaluation Problem | Compliance |
+| 4 | GSM-7 Encoding Is a Hidden Cost Multiplier That Shapes Product Decisions | Data Structures |
+| 5 | Carrier-Partitioned Queues Are a Rate-Matching Architecture, Not Just a Routing Convenience | Architecture |
+| 6 | SMPP's Asynchronous Window Protocol Creates a Natural Backpressure Mechanism | Resilience |
+| 7 | Traffic Pumping Is an Economic Attack Exploiting the Billing Asymmetry Between Sender and Receiver | Security |
+| 8 | The 10DLC Registration Pipeline Converts a Real-Time System Into a Days-Long Approval Workflow | Operations |
+
+### 12.1 AdTech: Real-Time Bidding (RTB) System [View](./12.1-adtech-real-time-bidding/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The 100ms Deadline Inverts Normal Distributed Systems Thinking | System Modeling |
+| 2 | Budget Pacing Is a Control Theory Problem, Not a Database Problem | System Modeling |
+| 3 | Bid Shading Transforms Auction Theory into an ML Problem | Cost Optimization |
+| 4 | The Feature Store Is the True Bottleneck, Not the ML Model | Caching |
+| 5 | Frequency Capping Reveals the Impossibility of Strong Consistency in Time-Critical Systems | Consistency |
+| 6 | The Multi-Party Trust Problem Requires Supply Chain Cryptography | Security |
+| 7 | Impression Tracking Creates an Unavoidable Revenue Reconciliation Problem | Consistency |
+| 8 | Edge Deployment Transforms a Latency Problem into a Data Replication Problem | Scaling |
+| 9 | Load Shedding in RTB Is Revenue Optimization, Not Damage Control | Traffic Shaping |
+| 10 | The Cookieless Transition Is Forcing an Architectural Shift from Lookup to Computation | System Modeling |
+| 11 | First-Price Auctions Created a New Information Asymmetry That Drives System Complexity | System Modeling |
+| 12 | The RTB Event Stream Is Simultaneously a Billing Ledger, ML Training Set, and Operational Log | Streaming |
+
+### 12.2 Gaming: Multiplayer Game State Sync [View](./12.2-gaming-multiplayer-game-state-sync/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Lie-to-the-Player Consistency Model | Consistency |
+| 2 | Bandwidth as the Architectural Binding Constraint | Traffic Shaping |
+| 3 | Fixed-Timestep Simulation as a Serialization Barrier | Atomicity |
+| 4 | Time-Traveling Hit Detection | Consistency |
+| 5 | Per-Client Delta Baselines | Data Structures |
+| 6 | Priority Accumulator for Fair Bandwidth Distribution | Traffic Shaping |
+| 7 | Interest Management as Both Optimization and Security | Scaling |
+| 8 | Dynamic Tick Rate as Phase-Aware Resource Allocation | Cost Optimization |
+| 9 | Redundant Input Transmission as Cheap Insurance | Resilience |
+| 10 | Edge Relay Fan-Out as Bandwidth Multiplier | Scaling |
+| 11 | Quantization as Lossy Compression Tuned to Human Perception | Data Structures |
+| 12 | Ephemeral Sessions Enable Aggressive Design Trade-offs | System Modeling |
+| 13 | Peeker's Advantage as an Unavoidable Latency Artifact | Consistency |
+| 14 | Spatial Hashing for O(1) Entity Lookup | Data Structures |
+| 15 | Sendmmsg as a Syscall Batching Optimization | Contention |
+| 16 | Checksum-Based Desync Detection | Resilience |
+| 17 | Server Migration via Dual-Write Convergence | Resilience |
+
+### 12.3 Gaming: Live Leaderboard [View](./12.3-gaming-live-leaderboard/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Ranking Problem Is O(N) in Disguise Until You Choose the Right Data Structure | Data Structures |
+| 2 | CQRS Is Not a Choice but an Inevitability in Read-Heavy Ranking Systems | System Modeling |
+| 3 | The "Around-Me" Query Breaks Every Caching Assumption | Caching |
+| 4 | Seasonal Resets Are a Distributed Transaction Disguised as a Simple Operation | Atomicity |
+| 5 | Composite Scores Turn the Tiebreaking Problem Into an Encoding Problem | Data Structures |
+| 6 | Scatter-Gather Is the Tax You Pay for Horizontal Scaling of Ordered Data | Scaling |
+| 7 | Server-Authoritative Scoring Is an Architectural Choice, Not Just a Security Measure | System Modeling |
+| 8 | Event Sourcing Makes the Ranking Engine a Derived View, Not the Source of Truth | Resilience |
+| 9 | The Hot Leaderboard Problem Is a Microcosm of the Thundering Herd Pattern | Traffic Shaping |
+| 10 | Approximate Ranking Is a Product Decision Masquerading as a Technical Limitation | System Modeling |
+| 11 | Shadow Banning Exploits the Information Asymmetry Between Cheater and System | Security |
+
+### 12.4 Gaming: Matchmaking System [View](./12.4-gaming-matchmaking-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Expanding Window Is a Time-Space Trade-Off Disguised as a Search Algorithm | System Modeling |
+| 2 | Uncertainty (σ) Is the Most Powerful Parameter in the Rating System | Data Structures |
+| 3 | Optimistic Concurrency Beats Locking for High-Throughput Queue Operations | Contention |
+| 4 | Party Skill Aggregation Is a Game Design Decision Disguised as a Math Problem | System Modeling |
+| 5 | Smurf Detection's Primary Weapon Is Convergence Speed, Not Punishment | Resilience |
+| 6 | Queue State Is the One Place Where Eventual Consistency Is Unacceptable | Consistency |
+| 7 | The Top 0.1% Problem Cannot Be Solved—Only Managed | Scaling |
+| 8 | Regionalization Is a Correctness Requirement, Not a Performance Optimization | System Modeling |
+| 9 | The Matching Quality Function Is the Product — Everything Else Is Infrastructure | System Modeling |
+| 10 | Rating Transparency Creates an Adversarial Relationship Between Players and the System | System Modeling |
+| 11 | Seasonal Resets Are Controlled Entropy Injection | Traffic Shaping |
+| 12 | Match Tickets Are an Exercise in Temporal Data Modeling | Data Structures |
+| 13 | Graceful Degradation in Matchmaking Is Quality Reduction, Not Feature Shedding | Resilience |
+| 14 | The Feedback Loop Between Rating Accuracy and Match Quality Is Self-Reinforcing | Consistency |
+| 15 | Server Selection Is Constrained Optimization Across Heterogeneous Preferences | Cost Optimization |
+
+---
+
 ## Cross-Reference: Insights by Category
 
 ### Atomicity
@@ -2478,6 +2726,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.2 Document Collaboration Engine**: WAL-Before-ACK for Operation Durability
 - **6.4 HubSpot**: Idempotent Email Send with Campaign-Contact Deduplication
 - **6.6 Ticketmaster**: All-or-Nothing Multi-Seat Holds
+- **12.2 Gaming: Multiplayer Game State Sync**: Fixed-Timestep Simulation as a Serialization Barrier
+- **12.3 Gaming: Live Leaderboard**: Seasonal Resets Are a Distributed Transaction Disguised as a Simple Operation
 
 ### Caching
 
@@ -2567,6 +2817,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **7.6 Flight Booking System**: Aggressive Search Result Caching with Stale Re-Verification
 - **7.6 Flight Booking System**: Cache Stampede Prevention for Popular Routes -- Lock-Based Refresh Prevents GDS Cost Explosions
 - **8.14 Super App Payment Platform**: VPA as a Four-Layer Resolution Protocol
+- **12.1 AdTech: Real-Time Bidding (RTB) System**: The Feature Store Is the True Bottleneck, Not the ML Model
+- **12.3 Gaming: Live Leaderboard**: The "Around-Me" Query Breaks Every Caching Assumption
 
 ### Consensus
 
@@ -2723,6 +2975,21 @@ A cross-reference of key architectural insights extracted from each system desig
 - **9.12 AI-Native Procurement & Spend Intelligence**: The Spend Cube Is Not Just an OLAP Cube — It's a Bi-Temporal Fact Table
 - **9.13 AI-Native Revenue Intelligence Platform**: Forecast Calibration Is a System, Not a Feature
 - **9.14 AI-Native Core Banking Platform**: The Immutable Ledger as Architectural Foundation
+- **10.1 Telemedicine Platform**: Scheduling Requires Serializable Isolation Despite Low Average Throughput
+- **10.1 Telemedicine Platform**: Event-Driven Audit Trails Decouple Compliance From Performance
+- **10.2 Cloud-Native EHR Platform**: The Master Patient Index Is the Most Safety-Critical Component in the Entire Platform
+- **10.3 Smart Home Platform**: Automation Conflict Resolution Is the Hidden Complexity Monster
+- **10.4 Fleet Management System**: GPS Noise Filtering Determines System Trustworthiness
+- **10.4 Fleet Management System**: Multi-Level Geofence State Management Is a Hidden Distributed Systems Problem
+- **10.4 Fleet Management System**: Compliance Data and Operational Data Require Different Consistency Guarantees
+- **11.5 SMS Gateway**: Message State Is a Distributed Consensus Problem Across Trust Boundaries
+- **12.1 AdTech: Real-Time Bidding (RTB) System**: Frequency Capping Reveals the Impossibility of Strong Consistency in Time-Critical Systems
+- **12.1 AdTech: Real-Time Bidding (RTB) System**: Impression Tracking Creates an Unavoidable Revenue Reconciliation Problem
+- **12.2 Gaming: Multiplayer Game State Sync**: Lie-to-the-Player Consistency Model
+- **12.2 Gaming: Multiplayer Game State Sync**: Time-Traveling Hit Detection
+- **12.2 Gaming: Multiplayer Game State Sync**: Peeker's Advantage as an Unavoidable Latency Artifact
+- **12.4 Gaming: Matchmaking System**: Queue State Is the One Place Where Eventual Consistency Is Unacceptable
+- **12.4 Gaming: Matchmaking System**: The Feedback Loop Between Rating Accuracy and Match Quality Is Self-Reinforcing
 
 ### Contention
 
@@ -2811,6 +3078,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.4 Digital Wallet**: Atomic Balance-Check-and-Debit: The Double-Spend Firewall
 - **8.13 Cryptocurrency Wallet System**: Pre-Signing Triples: Decoupling Computation from Latency
 - **8.14 Super App Payment Platform**: Hierarchical Budget Counters — Solving Contention at Cashback Scale
+- **11.3 Push Notification System**: Priority Isolation Requires Physical Queue Separation, Not Logical Priority Fields
+- **12.2 Gaming: Multiplayer Game State Sync**: Sendmmsg as a Syscall Batching Optimization
+- **12.4 Gaming: Matchmaking System**: Optimistic Concurrency Beats Locking for High-Throughput Queue Operations
 
 ### Cost Optimization
 
@@ -2877,6 +3147,12 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.11 UPI Real-Time Payment System**: UPI Lite Offloads Small-Value Transactions to On-Device Wallets
 - **8.11 UPI Real-Time Payment System**: Multilateral Net Settlement Reduces Liquidity Requirements by 60-70%
 - **8.13 Cryptocurrency Wallet System**: Gas Sponsorship Is an Economic System, Not Just a Technical Feature
+- **10.4 Fleet Management System**: Time-Series Data Demands a Purpose-Built Storage Strategy
+- **10.4 Fleet Management System**: Adaptive Telemetry Frequency Is a Hidden Bandwidth Multiplier
+- **11.2 Live Classroom System**: Simulcast Layer Selection Is the Single Biggest Lever for Cost, Quality, and Scalability
+- **12.1 AdTech: Real-Time Bidding (RTB) System**: Bid Shading Transforms Auction Theory into an ML Problem
+- **12.2 Gaming: Multiplayer Game State Sync**: Dynamic Tick Rate as Phase-Aware Resource Allocation
+- **12.4 Gaming: Matchmaking System**: Server Selection Is Constrained Optimization Across Heterogeneous Preferences
 
 ### Data Structures
 
@@ -3002,6 +3278,14 @@ A cross-reference of key architectural insights extracted from each system desig
 - **9.12 AI-Native Procurement & Spend Intelligence**: The Feature Store Is the Architectural Bridge Between Operational Procurement and ML Intelligence
 - **9.13 AI-Native Revenue Intelligence Platform**: Speaker Diarization Errors Propagate Silently Through the Entire Intelligence Layer
 - **9.14 AI-Native Core Banking Platform**: Multi-Currency as a Native Ledger Primitive, Not an Add-On
+- **10.1 Telemedicine Platform**: Polyglot Persistence Maps Healthcare Data Heterogeneity to Optimal Storage Engines
+- **10.2 Cloud-Native EHR Platform**: FHIR-Native Storage Eliminates the Interoperability Translation Tax
+- **10.2 Cloud-Native EHR Platform**: Terminology Binding Is the Hidden Foundation of Clinical Data Quality and Interoperability
+- **10.3 Smart Home Platform**: The Device Shadow Is Not a Cache — It's a Coordination Primitive
+- **10.4 Fleet Management System**: Geospatial Indexing Must Be a First-Class Architectural Primitive
+- **11.2 Live Classroom System**: CRDTs Solve Whiteboard Convergence but Create a Monotonically Growing State Problem That Requires Application-Level Garbage Collection
+- **11.4 Email Delivery System**: The Multi-Stage Queue Is the Architecture's Defining Pattern
+- **11.5 SMS Gateway**: GSM-7 Encoding Is a Hidden Cost Multiplier That Shapes Product Decisions
 
 ### Distributed Transactions
 
@@ -3076,6 +3360,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.14 Super App Payment Platform**: The TPP Paradox — Building a Platform Around an Uncontrollable Dependency
 - **9.11 AI-Native Compliance Management**: Integration Rate Limits Are the True Scalability Bottleneck
 - **9.13 AI-Native Revenue Intelligence Platform**: CRM Sync Is the Platform's Achilles' Heel
+- **11.5 SMS Gateway**: Regulatory Compliance Is Per-Message, Creating a Unique Runtime Evaluation Problem
+- **11.5 SMS Gateway**: The 10DLC Registration Pipeline Converts a Real-Time System Into a Days-Long Approval Workflow
 
 ### Partitioning
 
@@ -3118,6 +3404,15 @@ A cross-reference of key architectural insights extracted from each system desig
 - **4.9 Telegram**: PTS/QTS/SEQ State Model for Multi-Device Sync
 - **9.13 AI-Native Revenue Intelligence Platform**: Multi-Tenant Model Serving Requires Hierarchical Architecture, Not Isolated Per-Tenant Models
 - **9.14 AI-Native Core Banking Platform**: Account-Level Partitioning Is the Key Scalability Lever
+- **10.2 Cloud-Native EHR Platform**: Patient-Based Partitioning Is Uniquely Well-Suited to Clinical Data Because of the "Chart" Access Pattern
+- **10.3 Smart Home Platform**: MQTT Broker Scaling Requires Home-Affinity Routing
+- **12.2 Gaming: Multiplayer Game State Sync**: Per-Client Delta Baselines
+- **12.2 Gaming: Multiplayer Game State Sync**: Quantization as Lossy Compression Tuned to Human Perception
+- **12.2 Gaming: Multiplayer Game State Sync**: Spatial Hashing for O(1) Entity Lookup
+- **12.3 Gaming: Live Leaderboard**: The Ranking Problem Is O(N) in Disguise Until You Choose the Right Data Structure
+- **12.3 Gaming: Live Leaderboard**: Composite Scores Turn the Tiebreaking Problem Into an Encoding Problem
+- **12.4 Gaming: Matchmaking System**: Uncertainty (σ) Is the Most Powerful Parameter in the Rating System
+- **12.4 Gaming: Matchmaking System**: Match Tickets Are an Exercise in Temporal Data Modeling
 
 ### Resilience
 
@@ -3254,6 +3549,20 @@ A cross-reference of key architectural insights extracted from each system desig
 - **9.11 AI-Native Compliance Management**: Connector Sandboxing Is a Supply Chain Security Problem
 - **9.12 AI-Native Procurement & Spend Intelligence**: Hierarchical Spend Classification Requires Error Containment at Each Level
 - **9.13 AI-Native Revenue Intelligence Platform**: The Ghost Deal Problem Reveals the Limits of AI-Only Pipeline Management
+- **10.1 Telemedicine Platform**: Graceful Degradation Hierarchy Preserves Clinical Utility During Partial Failures
+- **10.2 Cloud-Native EHR Platform**: Clinical Downtime Procedures Are an Architectural Requirement, Not an Operational Afterthought
+- **10.3 Smart Home Platform**: The Edge-Cloud Split Is Not About Performance — It's About Availability
+- **10.3 Smart Home Platform**: The Hub Is a Distributed System's Weakest Link and Strongest Resilience Layer
+- **10.4 Fleet Management System**: The Edge-Cloud Continuum Is Non-Negotiable, Not an Optimization
+- **11.2 Live Classroom System**: SFU Failover Mid-Session Is a Hard Real-Time Problem Where "Eventually Consistent" Means "Visibly Broken"
+- **11.3 Push Notification System**: Provider Feedback Is the Immune System—Without It, the System Silently Degrades
+- **11.5 SMS Gateway**: SMPP's Asynchronous Window Protocol Creates a Natural Backpressure Mechanism
+- **12.2 Gaming: Multiplayer Game State Sync**: Redundant Input Transmission as Cheap Insurance
+- **12.2 Gaming: Multiplayer Game State Sync**: Checksum-Based Desync Detection
+- **12.2 Gaming: Multiplayer Game State Sync**: Server Migration via Dual-Write Convergence
+- **12.3 Gaming: Live Leaderboard**: Event Sourcing Makes the Ranking Engine a Derived View, Not the Source of Truth
+- **12.4 Gaming: Matchmaking System**: Smurf Detection's Primary Weapon Is Convergence Speed, Not Punishment
+- **12.4 Gaming: Matchmaking System**: Graceful Degradation in Matchmaking Is Quality Reduction, Not Feature Shedding
 
 ### Scaling
 
@@ -3390,6 +3699,18 @@ A cross-reference of key architectural insights extracted from each system desig
 - **9.5 Procurement System**: Quarter-End Spikes Require Predictive Capacity, Not Reactive Scaling
 - **9.12 AI-Native Procurement & Spend Intelligence**: Multi-Tenant ML Creates a Unique Data Gravity Challenge
 - **9.13 AI-Native Revenue Intelligence Platform**: Specialized Model Ensembles Beat General-Purpose LLMs at Revenue Intelligence Scale
+- **10.1 Telemedicine Platform**: No-Show Prediction Converts a Revenue Problem Into a Capacity Optimization Lever
+- **10.1 Telemedicine Platform**: Cascading SFU Architecture Enables Global Video Routing Without Centralized Bottlenecks
+- **10.3 Smart Home Platform**: Smart Home Scale Is Unique Because Growth Is Per-Home, Not Per-User
+- **11.2 Live Classroom System**: Hour-Boundary Thundering Herds Are a Schedule-Driven Capacity Cliff That Traditional Auto-Scaling Cannot Handle
+- **11.3 Push Notification System**: Fan-Out Is Not Pub/Sub—It's 500 Million Individually-Addressed API Calls
+- **11.4 Email Delivery System**: IP Warming Is a Trust-Building Protocol That Cannot Be Shortcut
+- **11.5 SMS Gateway**: The Carrier Is the Bottleneck You Cannot Engineer Away
+- **12.1 AdTech: Real-Time Bidding (RTB) System**: Edge Deployment Transforms a Latency Problem into a Data Replication Problem
+- **12.2 Gaming: Multiplayer Game State Sync**: Interest Management as Both Optimization and Security
+- **12.2 Gaming: Multiplayer Game State Sync**: Edge Relay Fan-Out as Bandwidth Multiplier
+- **12.3 Gaming: Live Leaderboard**: Scatter-Gather Is the Tax You Pay for Horizontal Scaling of Ordered Data
+- **12.4 Gaming: Matchmaking System**: The Top 0.1% Problem Cannot Be Solved—Only Managed
 
 ### Search
 
@@ -3484,6 +3805,16 @@ A cross-reference of key architectural insights extracted from each system desig
 - **9.11 AI-Native Compliance Management**: Per-Tenant Encryption Keys Transform Breach Impact from Catastrophic to Contained
 - **9.13 AI-Native Revenue Intelligence Platform**: Consent Is a Real-Time, Distributed, Legally-Binding System Decision
 - **9.14 AI-Native Core Banking Platform**: Cryptographic Chaining Transforms the Ledger from "Trusted" to "Verifiable"
+- **10.1 Telemedicine Platform**: PHI Segmentation Transforms Breach Impact From Catastrophic to Contained
+- **10.1 Telemedicine Platform**: Consent as a Runtime Enforcement Primitive, Not a Paper Exercise
+- **10.2 Cloud-Native EHR Platform**: Consent-at-the-Data-Layer Is the Only Architecturally Sound Approach to Patient Privacy
+- **10.2 Cloud-Native EHR Platform**: The Audit Trail Is Not a Logging Feature — It Is a Regulatory Data Store with Stricter Requirements Than Clinical Data
+- **10.2 Cloud-Native EHR Platform**: Break-the-Glass Is a Patient Safety Feature, Not a Security Bypass
+- **10.3 Smart Home Platform**: Camera Data Requires a Fundamentally Different Architecture Than Other Devices
+- **11.2 Live Classroom System**: DTLS-SRTP Encryption Makes the SFU a Trusted Intermediary—and E2EE Fundamentally Changes What the SFU Can Do
+- **11.5 SMS Gateway**: Traffic Pumping Is an Economic Attack Exploiting the Billing Asymmetry Between Sender and Receiver
+- **12.1 AdTech: Real-Time Bidding (RTB) System**: The Multi-Party Trust Problem Requires Supply Chain Cryptography
+- **12.3 Gaming: Live Leaderboard**: Shadow Banning Exploits the Information Asymmetry Between Cheater and System
 
 ### Streaming
 
@@ -3543,6 +3874,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **9.13 AI-Native Revenue Intelligence Platform**: Event-Driven Architecture Enables Model Improvement Without Data Reprocessing Infrastructure
 - **9.14 AI-Native Core Banking Platform**: Synchronous Fraud Scoring — The One Inline Intelligence That Justifies Its Latency
 - **9.14 AI-Native Core Banking Platform**: CQRS Projections Are Not Just Performance Optimization — They're Domain-Specific Views
+- **10.1 Telemedicine Platform**: SFU Over MCU Preserves End-to-End Encryption Without Sacrificing Scale
+- **10.1 Telemedicine Platform**: Simulcast Enables Clinical-Grade Quality Adaptation Without Server-Side Transcoding
+- **10.2 Cloud-Native EHR Platform**: FHIR Subscriptions Transform the EHR from a Record System into an Event Platform
+- **12.1 AdTech: Real-Time Bidding (RTB) System**: The RTB Event Stream Is Simultaneously a Billing Ledger, ML Training Set, and Operational Log
 
 ### System Modeling
 
@@ -3649,6 +3984,28 @@ A cross-reference of key architectural insights extracted from each system desig
 - **9.13 AI-Native Revenue Intelligence Platform**: The Forecasting Ensemble Must Model Deal Correlation, Not Just Deal Probabilities
 - **9.14 AI-Native Core Banking Platform**: Configuration-Driven Product Factory Eliminates the Deployment Bottleneck
 - **9.14 AI-Native Core Banking Platform**: The Product Factory Pattern Inverts the Banking Innovation Model
+- **10.2 Cloud-Native EHR Platform**: CDS Alert Fatigue Is an Architecture Problem, Not a Clinical Education Problem
+- **10.3 Smart Home Platform**: Capability Abstraction Is the Key to Surviving Protocol Wars
+- **10.3 Smart Home Platform**: Matter Doesn't Eliminate Protocol Complexity — It Adds Another Layer
+- **10.4 Fleet Management System**: The Dual-Timescale Architecture Is the Defining Constraint
+- **10.4 Fleet Management System**: VRPTW Is NP-Hard, and Your Architecture Must Embrace This
+- **10.4 Fleet Management System**: Predictive Maintenance ROI Depends More on Feature Engineering Than Model Sophistication
+- **11.2 Live Classroom System**: The Media Plane and Control Plane Must Be Architecturally Independent—They Fail Differently
+- **11.2 Live Classroom System**: Breakout Rooms Are a Dynamic Topology Orchestration Problem Disguised as a Feature Toggle
+- **11.5 SMS Gateway**: Carrier-Partitioned Queues Are a Rate-Matching Architecture, Not Just a Routing Convenience
+- **12.1 AdTech: Real-Time Bidding (RTB) System**: The 100ms Deadline Inverts Normal Distributed Systems Thinking
+- **12.1 AdTech: Real-Time Bidding (RTB) System**: Budget Pacing Is a Control Theory Problem, Not a Database Problem
+- **12.1 AdTech: Real-Time Bidding (RTB) System**: The Cookieless Transition Is Forcing an Architectural Shift from Lookup to Computation
+- **12.1 AdTech: Real-Time Bidding (RTB) System**: First-Price Auctions Created a New Information Asymmetry That Drives System Complexity
+- **12.2 Gaming: Multiplayer Game State Sync**: Ephemeral Sessions Enable Aggressive Design Trade-offs
+- **12.3 Gaming: Live Leaderboard**: CQRS Is Not a Choice but an Inevitability in Read-Heavy Ranking Systems
+- **12.3 Gaming: Live Leaderboard**: Server-Authoritative Scoring Is an Architectural Choice, Not Just a Security Measure
+- **12.3 Gaming: Live Leaderboard**: Approximate Ranking Is a Product Decision Masquerading as a Technical Limitation
+- **12.4 Gaming: Matchmaking System**: The Expanding Window Is a Time-Space Trade-Off Disguised as a Search Algorithm
+- **12.4 Gaming: Matchmaking System**: Party Skill Aggregation Is a Game Design Decision Disguised as a Math Problem
+- **12.4 Gaming: Matchmaking System**: Regionalization Is a Correctness Requirement, Not a Performance Optimization
+- **12.4 Gaming: Matchmaking System**: The Matching Quality Function Is the Product — Everything Else Is Infrastructure
+- **12.4 Gaming: Matchmaking System**: Rating Transparency Creates an Adversarial Relationship Between Players and the System
 
 ### Traffic Shaping
 
@@ -3715,3 +4072,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.10 Expense Management System**: Month-End Surge Requires Queue-Based Admission Control, Not Just Auto-Scaling
 - **9.11 AI-Native Compliance Management**: Compliance Scoring Debouncing Prevents Catastrophic Compute Amplification
 - **9.14 AI-Native Core Banking Platform**: Tiered Compliance Screening Balances Thoroughness with Latency
+- **10.3 Smart Home Platform**: The Thundering Herd Is the Scariest Failure Mode — And the Easiest to Prevent
+- **11.3 Push Notification System**: Timezone-Aware Delivery Creates a Rolling Global Peak That's More Manageable Than a Synchronized Spike
+- **12.1 AdTech: Real-Time Bidding (RTB) System**: Load Shedding in RTB Is Revenue Optimization, Not Damage Control
+- **12.2 Gaming: Multiplayer Game State Sync**: Bandwidth as the Architectural Binding Constraint
+- **12.2 Gaming: Multiplayer Game State Sync**: Priority Accumulator for Fair Bandwidth Distribution
+- **12.3 Gaming: Live Leaderboard**: The Hot Leaderboard Problem Is a Microcosm of the Thundering Herd Pattern
+- **12.4 Gaming: Matchmaking System**: Seasonal Resets Are Controlled Entropy Injection
