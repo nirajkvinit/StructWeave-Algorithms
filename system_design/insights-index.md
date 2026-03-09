@@ -14,24 +14,24 @@ A cross-reference of key architectural insights extracted from each system desig
 | Category | Description | Topics Count |
 |----------|-------------|:------------:|
 | Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 57 |
-| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 68 |
+| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 69 |
 | Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 16 |
-| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 94 |
-| Contention | Lock contention, hot keys, thundering herds, and resource competition | 74 |
-| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 50 |
-| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 93 |
-| Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 22 |
+| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 97 |
+| Contention | Lock contention, hot keys, thundering herds, and resource competition | 77 |
+| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 53 |
+| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 96 |
+| Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 23 |
 | Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 21 |
-| External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 11 |
+| External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 12 |
 | Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 24 |
 | Replication | Data replication, follower management, and cross-region synchronization | 8 |
-| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 99 |
-| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 102 |
+| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 103 |
+| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 105 |
 | Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 10 |
-| Security | Authentication, encryption, access control, and threat mitigation | 45 |
+| Security | Authentication, encryption, access control, and threat mitigation | 51 |
 | Streaming | Real-time data processing, event streaming, and pub/sub architectures | 35 |
-| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 68 |
-| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 53 |
+| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 76 |
+| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 54 |
 
 ---
 
@@ -2241,6 +2241,77 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
+### 8.10 Expense Management System [View](./8.10-expense-management-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Multi-Stage OCR with Confidence-Gated Human Review Achieves 99% Effective Accuracy | Data Structures |
+| 2 | Declarative Policy Engine with Compile-Time Optimization Evaluates Hundreds of Rules in Sub-Millisecond | System Modeling |
+| 3 | Fuzzy Multi-Signal Matching Solves the Card-Receipt Reconciliation Problem | Data Structures |
+| 4 | Approval Workflow as a Persistent State Machine with Delegation Cycle Detection | System Modeling |
+| 5 | Policy Version Snapshotting Prevents Mid-Submission Rule Changes from Creating Inconsistent Evaluations | Consistency |
+| 6 | Month-End Surge Requires Queue-Based Admission Control, Not Just Auto-Scaling | Traffic Shaping |
+| 7 | Immutable Append-Only Audit Log with Hash Chaining Satisfies SOX Without Sacrificing Performance | Security |
+
+---
+
+### 8.11 UPI Real-Time Payment System [View](./8.11-upi-real-time-payment-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The VPA Abstraction Layer as a Privacy and Portability Primitive | System Modeling |
+| 2 | Hub-and-Spoke Eliminates N² Integration at the Cost of a Centralized SPOF | Scaling |
+| 3 | Stateless Switch with External State Store Enables Horizontal Scaling | Scaling |
+| 4 | End-to-End PIN Encryption Means the Router Never Sees the Secret | Security |
+| 5 | Auto-Reversal Protocol Converts Ambiguous Failures into Guaranteed Outcomes | Resilience |
+| 6 | UPI Lite Offloads Small-Value Transactions to On-Device Wallets | Cost Optimization |
+| 7 | Multilateral Net Settlement Reduces Liquidity Requirements by 60-70% | Cost Optimization |
+
+---
+
+### 8.12 CBDC/Digital Currency Platform [View](./8.12-cbdc-digital-currency-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Two-Tier Architecture is Not Optional—It's a Systemic Stability Requirement | System Modeling |
+| 2 | Offline Double-Spend Prevention Requires Hardware Trust, Not Cryptographic Consensus | Security |
+| 3 | Programmable Money Must Be Constrained to Prevent Monetary Dystopia | System Modeling |
+| 4 | CBDC Holding Limits Are the Circuit Breaker Against Digital Bank Runs | Resilience |
+| 5 | Cross-Border CBDC Settlement Eliminates Correspondent Banking's Biggest Costs | Distributed Transactions |
+| 6 | The Token-Account Hybrid Is the Only Architecture That Achieves Both Cash Equivalence and Regulatory Compliance | Data Structures |
+| 7 | Merkle-Tree Reconciliation Between Tiers Prevents Silent Money Creation | Consistency |
+
+---
+
+### 8.13 Cryptocurrency Wallet System [View](./8.13-cryptocurrency-wallet-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | No Single Key Materialization: The MPC-TSS Paradigm Shift | Security |
+| 2 | Pre-Signing Triples: Decoupling Computation from Latency | Contention |
+| 3 | Nonce as a Serialization Bottleneck: The Single-Writer Pattern for Correctness | Consistency |
+| 4 | Account Abstraction as the UX/Security Unification Layer | System Modeling |
+| 5 | Key Lifecycle Outlives System Lifecycle: Irrecoverable Assets Demand 11-Nines Durability | Resilience |
+| 6 | Chain Heterogeneity Makes Universal Abstraction Impossible: The Adapter Pattern Is the Only Honest Design | System Modeling |
+| 7 | The Policy Engine Must Be Co-Available with Signing: Fail-Closed Is the Only Safe Default | Resilience |
+| 8 | Gas Sponsorship Is an Economic System, Not Just a Technical Feature | Cost Optimization |
+
+---
+
+### 8.14 Super App Payment Platform [View](./8.14-super-app-payment-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The TPP Paradox — Building a Platform Around an Uncontrollable Dependency | External Dependencies |
+| 2 | Hierarchical Budget Counters — Solving Contention at Cashback Scale | Contention |
+| 3 | Device-as-Trust-Anchor — When Hardware Attestation Replaces Passwords | Security |
+| 4 | VPA as a Four-Layer Resolution Protocol | Caching |
+| 5 | Mini-App Sandbox as a Platform Trust Boundary | System Modeling |
+| 6 | Festival Spike Engineering — Pre-Computed Scaling, Not Reactive Auto-Scale | Scaling |
+| 7 | Regulatory Architecture as a First-Class System Constraint | Compliance |
+
+---
+
 ## Cross-Reference: Insights by Category
 
 ### Atomicity
@@ -2395,6 +2466,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **7.5 Maps & Navigation Service**: Hybrid Tile Generation -- Pre-Render Low Zoom, On-Demand High Zoom
 - **7.6 Flight Booking System**: Aggressive Search Result Caching with Stale Re-Verification
 - **7.6 Flight Booking System**: Cache Stampede Prevention for Popular Routes -- Lock-Based Refresh Prevents GDS Cost Explosions
+- **8.14 Super App Payment Platform**: VPA as a Four-Layer Resolution Protocol
 
 ### Consensus
 
@@ -2542,6 +2614,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.2 Stripe / Razorpay**: Settlement Reconciliation: Trust but Verify Across System Boundaries
 - **8.3 Zerodha**: Event-Sourced Position State: Derived, Never Directly Written
 - **8.4 Digital Wallet**: Double-Entry Ledger as the Fundamental Invariant
+- **8.10 Expense Management System**: Policy Version Snapshotting Prevents Mid-Submission Rule Changes from Creating Inconsistent Evaluations
+- **8.12 CBDC/Digital Currency Platform**: Merkle-Tree Reconciliation Between Tiers Prevents Silent Money Creation
+- **8.13 Cryptocurrency Wallet System**: Nonce as a Serialization Bottleneck: The Single-Writer Pattern for Correctness
 
 ### Contention
 
@@ -2628,6 +2703,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.1 Amazon**: Optimistic Locking for Inventory: Concurrency Without Serialization
 - **8.3 Zerodha**: In-Process Risk Engine: When Microseconds Define Architecture
 - **8.4 Digital Wallet**: Atomic Balance-Check-and-Debit: The Double-Spend Firewall
+- **8.13 Cryptocurrency Wallet System**: Pre-Signing Triples: Decoupling Computation from Latency
+- **8.14 Super App Payment Platform**: Hierarchical Budget Counters — Solving Contention at Cashback Scale
 
 ### Cost Optimization
 
@@ -2691,6 +2768,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.5 Zoho Suite**: Full Vertical Stack Ownership -- From Silicon to SaaS
 - **6.7 Google Meet / Zoom**: TURN Relay Creates a 2x Bandwidth Tax That Scales With User Count
 - **7.7 Hotel Booking System**: Rate Management: The Yield Curve as a First-Class Architectural Concept
+- **8.11 UPI Real-Time Payment System**: UPI Lite Offloads Small-Value Transactions to On-Device Wallets
+- **8.11 UPI Real-Time Payment System**: Multilateral Net Settlement Reduces Liquidity Requirements by 60-70%
+- **8.13 Cryptocurrency Wallet System**: Gas Sponsorship Is an Economic System, Not Just a Technical Feature
 
 ### Data Structures
 
@@ -2805,6 +2885,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.8 Real-Time Collaborative Editor**: Tombstone Accumulation Is the Hidden Scalability Tax of CRDTs
 - **7.7 Hotel Booking System**: Calendar Matrix: Multi-Dimensional Inventory as a Data Structure Problem
 - **8.1 Amazon**: Cart as a Distributed Key-Value Object: Simplicity Over Relational
+- **8.10 Expense Management System**: Multi-Stage OCR with Confidence-Gated Human Review Achieves 99% Effective Accuracy
+- **8.10 Expense Management System**: Fuzzy Multi-Signal Matching Solves the Card-Receipt Reconciliation Problem
+- **8.12 CBDC/Digital Currency Platform**: The Token-Account Hybrid Is the Only Architecture That Achieves Both Cash Equivalence and Regulatory Compliance
 
 ### Distributed Transactions
 
@@ -2831,6 +2914,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.4 HubSpot**: VTickets -- Globally Unique IDs Without Coordination
 - **6.5 Zoho Suite**: Saga Pattern for Cross-Product Data Consistency
 - **6.6 Ticketmaster**: Idempotent Payments with Outbox Pattern
+- **8.12 CBDC/Digital Currency Platform**: Cross-Border CBDC Settlement Eliminates Correspondent Banking's Biggest Costs
 
 ### Edge Computing
 
@@ -2874,6 +2958,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.6 Ticketmaster**: Payment Gateway as the True Bottleneck
 - **7.6 Flight Booking System**: NDC vs. GDS: Direct vs. Intermediary Trade-off -- Mid-Transition Industry Requires Hybrid Architecture
 - **7.6 Flight Booking System**: APIS Compliance: Pre-Departure Passenger Data Reporting -- Regulatory Requirements Create Hard Architectural Constraints
+- **8.14 Super App Payment Platform**: The TPP Paradox — Building a Platform Around an Uncontrollable Dependency
 
 ### Partitioning
 
@@ -3043,6 +3128,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.2 Stripe / Razorpay**: Payment Path Isolation: Protecting Revenue-Critical Infrastructure
 - **8.4 Digital Wallet**: Saga Pattern for Cross-Shard P2P Transfers
 - **8.4 Digital Wallet**: Idempotency as Financial Infrastructure
+- **8.11 UPI Real-Time Payment System**: Auto-Reversal Protocol Converts Ambiguous Failures into Guaranteed Outcomes
+- **8.12 CBDC/Digital Currency Platform**: CBDC Holding Limits Are the Circuit Breaker Against Digital Bank Runs
+- **8.13 Cryptocurrency Wallet System**: Key Lifecycle Outlives System Lifecycle: Irrecoverable Assets Demand 11-Nines Durability
+- **8.13 Cryptocurrency Wallet System**: The Policy Engine Must Be Co-Available with Signing: Fail-Closed Is the Only Safe Default
 
 ### Scaling
 
@@ -3173,6 +3262,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.3 Zerodha**: Predictable Thundering Herd: Pre-Provision Over Auto-Scale
 - **8.3 Zerodha**: Co-Located Gateway with Leased Line: Two-Tier Latency Architecture
 - **8.4 Digital Wallet**: Hot Wallet Problem: Write Contention on Popular Accounts
+- **8.11 UPI Real-Time Payment System**: Hub-and-Spoke Eliminates N² Integration at the Cost of a Centralized SPOF
+- **8.11 UPI Real-Time Payment System**: Stateless Switch with External State Store Enables Horizontal Scaling
+- **8.14 Super App Payment Platform**: Festival Spike Engineering — Pre-Computed Scaling, Not Reactive Auto-Scale
 
 ### Search
 
@@ -3252,6 +3344,12 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.4 Digital Wallet**: Custodial Fund Segregation: Not Your Money, Not Your Row
 - **8.4 Digital Wallet**: Tiered KYC as a Growth-Compliance Balance
 - **8.4 Digital Wallet**: Inline Fraud Scoring: The 100-Millisecond Tax Worth Paying
+- **8.10 Expense Management System**: Immutable Append-Only Audit Log with Hash Chaining Satisfies SOX Without Sacrificing Performance
+- **8.11 UPI Real-Time Payment System**: End-to-End PIN Encryption Means the Router Never Sees the Secret
+- **8.12 CBDC/Digital Currency Platform**: Offline Double-Spend Prevention Requires Hardware Trust, Not Cryptographic Consensus
+- **8.13 Cryptocurrency Wallet System**: No Single Key Materialization: The MPC-TSS Paradigm Shift
+- **8.14 Super App Payment Platform**: Device-as-Trust-Anchor — When Hardware Attestation Replaces Passwords
+- **8.14 Super App Payment Platform**: Regulatory Architecture as a First-Class System Constraint
 
 ### Streaming
 
@@ -3394,6 +3492,14 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.2 Stripe / Razorpay**: Payment State Machine: Making Financial State Transitions Explicit
 - **8.3 Zerodha**: Exchange as External Matching Authority: Route, Don't Match
 - **8.3 Zerodha**: T+1 Settlement: Managing Three Temporal Views of Portfolio
+- **8.10 Expense Management System**: Declarative Policy Engine with Compile-Time Optimization Evaluates Hundreds of Rules in Sub-Millisecond
+- **8.10 Expense Management System**: Approval Workflow as a Persistent State Machine with Delegation Cycle Detection
+- **8.11 UPI Real-Time Payment System**: The VPA Abstraction Layer as a Privacy and Portability Primitive
+- **8.12 CBDC/Digital Currency Platform**: The Two-Tier Architecture is Not Optional—It's a Systemic Stability Requirement
+- **8.12 CBDC/Digital Currency Platform**: Programmable Money Must Be Constrained to Prevent Monetary Dystopia
+- **8.13 Cryptocurrency Wallet System**: Account Abstraction as the UX/Security Unification Layer
+- **8.13 Cryptocurrency Wallet System**: Chain Heterogeneity Makes Universal Abstraction Impossible: The Adapter Pattern Is the Only Honest Design
+- **8.14 Super App Payment Platform**: Mini-App Sandbox as a Platform Trust Boundary
 
 ### Traffic Shaping
 
@@ -3454,3 +3560,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **6.4 HubSpot**: ISP-Aware Email Throttling with IP Reputation Management
 - **6.6 Ticketmaster**: Virtual Waiting Room with Leaky Bucket Admission
 - **6.7 Google Meet / Zoom**: Congestion Control Must Be Per-Subscriber, Not Per-Room
+- **8.1 Amazon**: Pre-Sharded Counters for Flash Sale Contention
+- **8.2 Stripe / Razorpay**: Webhook Delivery: Building a Reliable Notification System at Scale
+- **8.3 Zerodha**: Predictable Thundering Herd: Pre-Provision Over Auto-Scale
+- **8.10 Expense Management System**: Month-End Surge Requires Queue-Based Admission Control, Not Just Auto-Scaling

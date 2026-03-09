@@ -174,6 +174,11 @@ Each system design directory contains 9 standardized documents:
 | 8.7 | Cryptocurrency Exchange (Coinbase/Binance - Matching Engine, Wallet Management) | Completed | [View](./8.7-cryptocurrency-exchange/00-index.md) |
 | 8.8 | Blockchain Network (Ethereum/Bitcoin - Consensus, P2P, Smart Contracts) | Completed | [View](./8.8-blockchain-network/00-index.md) |
 | 8.9 | Buy Now Pay Later (BNPL) (Klarna/Affirm - Credit Decisioning, Installments) | Completed | [View](./8.9-buy-now-pay-later/00-index.md) |
+| 8.11 | UPI Real-Time Payment System (NPCI Switch, PSP Integration, QR/Intent Flows) | Completed | [View](./8.11-upi-real-time-payment-system/00-index.md) |
+| 8.10 | Expense Management System (Expensify/Brex - Receipt OCR, Policy Enforcement) | Completed | [View](./8.10-expense-management-system/00-index.md) |
+| 8.12 | CBDC/Digital Currency Platform (Digital Rupee/Drex/Digital Yuan) | Completed | [View](./8.12-cbdc-digital-currency-platform/00-index.md) |
+| 8.13 | Cryptocurrency Wallet System (MPC Wallets, Account Abstraction, Key Sharding) | Completed | [View](./8.13-cryptocurrency-wallet-system/00-index.md) |
+| 8.14 | Super App Payment Platform (GPay/PhonePe/Paytm - UPI TPP, Rewards) | Completed | [View](./8.14-super-app-payment-platform/00-index.md) |
 
 
 ---
