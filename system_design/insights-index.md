@@ -2312,6 +2312,36 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
+### 9.1 ERP System Design [View](./9.1-erp-system-design/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Customization Paradox — Flexibility is the Enemy of Upgradeability | Customization |
+| 2 | Multi-Tenancy is Not Just a Database Decision | Multi-Tenancy |
+| 3 | Month-End Close as a Distributed Consensus Problem | Data Consistency |
+| 4 | EAV is an Accidental Database-Within-a-Database | System Modeling |
+| 5 | The Extension Trust Boundary Determines Platform Velocity | Customization |
+| 6 | Regulatory Compliance Fragments the Monolith | Compliance |
+| 7 | Batch Processing Windows Are Shrinking to Zero | Scaling |
+
+---
+
+### 9.5 Procurement System [View](./9.5-procurement-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Document Chain as a Distributed State Machine | System Modeling |
+| 2 | Budget Encumbrance as a Three-State Financial Commitment Model | Consistency |
+| 3 | Approval Workflows are a Multi-Dimensional Rule Evaluation Problem, Not a Simple Chain | System Modeling |
+| 4 | Three-Way Matching is a Constrained Assignment Problem, Not Equality Checking | Data Structures |
+| 5 | Sealed Bids Require Cryptographic Enforcement, Not Just Access Control | Security |
+| 6 | Separation of Duties Must Be Enforced at the System Level, Not the Policy Level | Security |
+| 7 | Quarter-End Spikes Require Predictive Capacity, Not Reactive Scaling | Scaling |
+| 8 | Punch-Out Catalogs Create a Unique Trust Boundary Problem | Security |
+| 9 | Vendor Scoring Is a Multi-Dimensional Time-Series Problem | Data Structures |
+
+---
+
 ## Cross-Reference: Insights by Category
 
 ### Atomicity
@@ -2617,6 +2647,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.10 Expense Management System**: Policy Version Snapshotting Prevents Mid-Submission Rule Changes from Creating Inconsistent Evaluations
 - **8.12 CBDC/Digital Currency Platform**: Merkle-Tree Reconciliation Between Tiers Prevents Silent Money Creation
 - **8.13 Cryptocurrency Wallet System**: Nonce as a Serialization Bottleneck: The Single-Writer Pattern for Correctness
+- **9.5 Procurement System**: Budget Encumbrance as a Three-State Financial Commitment Model
 
 ### Contention
 
@@ -2888,6 +2919,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.10 Expense Management System**: Multi-Stage OCR with Confidence-Gated Human Review Achieves 99% Effective Accuracy
 - **8.10 Expense Management System**: Fuzzy Multi-Signal Matching Solves the Card-Receipt Reconciliation Problem
 - **8.12 CBDC/Digital Currency Platform**: The Token-Account Hybrid Is the Only Architecture That Achieves Both Cash Equivalence and Regulatory Compliance
+- **9.5 Procurement System**: Three-Way Matching is a Constrained Assignment Problem, Not Equality Checking
+- **9.5 Procurement System**: Vendor Scoring Is a Multi-Dimensional Time-Series Problem
 
 ### Distributed Transactions
 
@@ -3265,6 +3298,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.11 UPI Real-Time Payment System**: Hub-and-Spoke Eliminates N² Integration at the Cost of a Centralized SPOF
 - **8.11 UPI Real-Time Payment System**: Stateless Switch with External State Store Enables Horizontal Scaling
 - **8.14 Super App Payment Platform**: Festival Spike Engineering — Pre-Computed Scaling, Not Reactive Auto-Scale
+- **9.5 Procurement System**: Quarter-End Spikes Require Predictive Capacity, Not Reactive Scaling
 
 ### Search
 
@@ -3350,6 +3384,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.13 Cryptocurrency Wallet System**: No Single Key Materialization: The MPC-TSS Paradigm Shift
 - **8.14 Super App Payment Platform**: Device-as-Trust-Anchor — When Hardware Attestation Replaces Passwords
 - **8.14 Super App Payment Platform**: Regulatory Architecture as a First-Class System Constraint
+- **9.5 Procurement System**: Sealed Bids Require Cryptographic Enforcement, Not Just Access Control
+- **9.5 Procurement System**: Separation of Duties Must Be Enforced at the System Level, Not the Policy Level
+- **9.5 Procurement System**: Punch-Out Catalogs Create a Unique Trust Boundary Problem
 
 ### Streaming
 
@@ -3500,6 +3537,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **8.13 Cryptocurrency Wallet System**: Account Abstraction as the UX/Security Unification Layer
 - **8.13 Cryptocurrency Wallet System**: Chain Heterogeneity Makes Universal Abstraction Impossible: The Adapter Pattern Is the Only Honest Design
 - **8.14 Super App Payment Platform**: Mini-App Sandbox as a Platform Trust Boundary
+- **9.5 Procurement System**: The Document Chain as a Distributed State Machine
+- **9.5 Procurement System**: Approval Workflows are a Multi-Dimensional Rule Evaluation Problem, Not a Simple Chain
 
 ### Traffic Shaping
 

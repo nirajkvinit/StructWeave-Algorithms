@@ -179,6 +179,11 @@ Each system design directory contains 9 standardized documents:
 | 8.12 | CBDC/Digital Currency Platform (Digital Rupee/Drex/Digital Yuan) | Completed | [View](./8.12-cbdc-digital-currency-platform/00-index.md) |
 | 8.13 | Cryptocurrency Wallet System (MPC Wallets, Account Abstraction, Key Sharding) | Completed | [View](./8.13-cryptocurrency-wallet-system/00-index.md) |
 | 8.14 | Super App Payment Platform (GPay/PhonePe/Paytm - UPI TPP, Rewards) | Completed | [View](./8.14-super-app-payment-platform/00-index.md) |
+| 9.1 | ERP System Design (SAP/Oracle/Odoo - Modules, Multi-tenancy, Customization Engine) | Completed | [View](./9.1-erp-system-design/00-index.md) |
+| 9.2 | Accounting/General Ledger System (Double-entry Bookkeeping, Chart of Accounts, Reconciliation) | Completed | [View](./9.2-accounting-general-ledger-system/00-index.md) |
+| 9.3 | Tax Calculation Engine (Avalara/Vertex - Jurisdiction Rules, Real-time Calc, Compliance) | Completed | [View](./9.3-tax-calculation-engine/00-index.md) |
+| 9.4 | Inventory Management System (WMS - Stock Levels, FIFO/LIFO/FEFO, Multi-warehouse) | Completed | [View](./9.4-inventory-management-system/00-index.md) |
+| 9.5 | Procurement System (P2P - Purchase Orders, Approvals, Vendor Management, RFQ) | Completed | [View](./9.5-procurement-system/00-index.md) |
 
 
 ---
