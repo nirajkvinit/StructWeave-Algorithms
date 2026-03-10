@@ -13,25 +13,25 @@ A cross-reference of key architectural insights extracted from each system desig
 
 | Category | Description | Topics Count |
 |----------|-------------|:------------:|
-| Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 59 |
-| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 71 |
+| Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 61 |
+| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 72 |
 | Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 16 |
-| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 112 |
-| Contention | Lock contention, hot keys, thundering herds, and resource competition | 80 |
-| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 59 |
-| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 111 |
+| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 115 |
+| Contention | Lock contention, hot keys, thundering herds, and resource competition | 82 |
+| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 61 |
+| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 114 |
 | Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 23 |
 | Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 21 |
 | External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 14 |
 | Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 26 |
 | Replication | Data replication, follower management, and cross-region synchronization | 8 |
-| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 117 |
-| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 117 |
+| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 120 |
+| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 119 |
 | Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 10 |
-| Security | Authentication, encryption, access control, and threat mitigation | 61 |
-| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 39 |
-| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 98 |
-| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 61 |
+| Security | Authentication, encryption, access control, and threat mitigation | 65 |
+| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 40 |
+| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 101 |
+| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 63 |
 
 ---
 
@@ -2755,6 +2755,48 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
+### 12.10 Design a Polling/Voting System [View](./12.10-polling-voting-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Sharded Counters Transform Write Contention into a Configuration Problem | Contention |
+| 2 | CQRS Is Architecturally Necessary, Not an Optimization Choice | System Modeling |
+| 3 | Bloom Filters Create a Zero-Network-Cost Deduplication Layer | Data Structures |
+| 4 | The Closing State Is a Consistency Reconciliation Phase | Consistency |
+| 5 | Adaptive Shard Scaling Must Be Unidirectional During Active Polls | Scaling |
+| 6 | The SADD Return Value Is a Lock-Free Compare-and-Swap | Atomicity |
+| 7 | Hierarchical Fan-Out Prevents WebSocket Gateway Saturation | Streaming |
+| 8 | Split Consistency Is a Principled Design Choice, Not a Compromise | Consistency |
+| 9 | Hot Poll Detection Must Be Proactive, Not Reactive | Traffic Shaping |
+| 10 | The Vote Audit Log Is the Ultimate Source of Truth | Resilience |
+| 11 | Anonymous Dedup Is Fundamentally Best-Effort | Security |
+| 12 | Adaptive Aggregation Frequency Balances Freshness Against CPU Cost | Cost Optimization |
+| 13 | Cross-Region Dedup Requires Accepting a Small Duplicate Window | Consistency |
+| 14 | Idempotency Keys Transform Retries from a Bug Source into a Safety Mechanism | Atomicity |
+
+---
+
+### 12.11 Package Registry [View](./12.11-package-registry/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Immutability as Architectural Enabler, Not Just Policy | System Modeling |
+| 2 | Dependency Resolution Is Provably NP-Complete | Data Structures |
+| 3 | CDN Is the System, Not an Optimization | Scaling |
+| 4 | Supply Chain Security Protects the Ecosystem, Not Just the System | Security |
+| 5 | Content-Addressable Storage Solves Three Problems Simultaneously | Data Structures |
+| 6 | The Metadata-Artifact Split Enables Independent Scaling | System Modeling |
+| 7 | Async Security Scanning Trades Exposure Window for Developer Velocity | Traffic Shaping |
+| 8 | Download Counting at Scale Requires Probabilistic Aggregation | Contention |
+| 9 | Typosquatting Detection Is a Fuzzy String Matching Problem with Asymmetric Costs | Security |
+| 10 | Transparency Logs Make Registry Compromise Detectable | Resilience |
+| 11 | The Origin Shield Pattern Prevents Cache Stampede Without Sacrificing Freshness | Caching |
+| 12 | Scoped Namespaces Are a Security Mechanism, Not Just an Organizational Convenience | Security |
+| 13 | Abbreviated Metadata Is a Bandwidth Optimization with Outsized Impact | Cost Optimization |
+| 14 | Immutable Artifacts Make CDN Outages Survivable | Resilience |
+
+---
+
 ## Cross-Reference: Insights by Category
 
 ### Atomicity
@@ -2825,6 +2867,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.3 Gaming: Live Leaderboard**: Seasonal Resets Are a Distributed Transaction Disguised as a Simple Operation
 - **12.5 URL Shortener**: Idempotent URL Creation — Same Long URL, New Short Code, or Same One?
 - **12.6 Pastebin**: Burn-After-Reading Converts a Stateless Read into a Stateful Mutation
+- **12.10 Polling/Voting System**: The SADD Return Value Is a Lock-Free Compare-and-Swap
+- **12.10 Polling/Voting System**: Idempotency Keys Transform Retries from a Bug Source into a Safety Mechanism
 
 ### Caching
 
@@ -2920,6 +2964,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.5 URL Shortener**: Geographic Redirect Optimization — Edge Caching for Sub-10ms Global Latency
 - **12.6 Pastebin**: Immutable Content Is a Caching Superpower
 - **12.6 Pastebin**: CDN Cache TTL Is a Correctness Knob, Not Just a Performance Knob
+- **12.11 Package Registry**: The Origin Shield Pattern Prevents Cache Stampede Without Sacrificing Freshness
 
 ### Consensus
 
@@ -3093,6 +3138,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.4 Gaming: Matchmaking System**: The Feedback Loop Between Rating Accuracy and Match Quality Is Self-Reinforcing
 - **12.5 URL Shortener**: Custom Aliases Create a Dual-Key System with Different Collision Semantics
 - **12.6 Pastebin**: Reference Counting Is the Price of Deduplication
+- **12.10 Polling/Voting System**: The Closing State Is a Consistency Reconciliation Phase
+- **12.10 Polling/Voting System**: Split Consistency Is a Principled Design Choice, Not a Compromise
+- **12.10 Polling/Voting System**: Cross-Region Dedup Requires Accepting a Small Duplicate Window
 
 ### Contention
 
@@ -3186,6 +3234,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.4 Gaming: Matchmaking System**: Optimistic Concurrency Beats Locking for High-Throughput Queue Operations
 - **12.5 URL Shortener**: Pre-Generated Key Pool Eliminates Write-Path Contention
 - **12.6 Pastebin**: The Key Pool Is a Pre-Materialized Index of Future State
+- **12.10 Polling/Voting System**: Sharded Counters Transform Write Contention into a Configuration Problem
+- **12.11 Package Registry**: Download Counting at Scale Requires Probabilistic Aggregation
 
 ### Cost Optimization
 
@@ -3262,6 +3312,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.6 Pastebin**: Eventual Consistency in View Counts Is a Feature, Not a Compromise
 - **12.8 WebRTC Infrastructure**: TURN Is the Expensive Safety Net That You Cannot Remove
 - **12.8 WebRTC Infrastructure**: The 85% of Sessions That Don't Need TURN Subsidize the Architecture for the 15% That Do
+- **12.10 Polling/Voting System**: Adaptive Aggregation Frequency Balances Freshness Against CPU Cost
+- **12.11 Package Registry**: Abbreviated Metadata Is a Bandwidth Optimization with Outsized Impact
 
 ### Data Structures
 
@@ -3526,6 +3578,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.3 Gaming: Live Leaderboard**: Composite Scores Turn the Tiebreaking Problem Into an Encoding Problem
 - **12.4 Gaming: Matchmaking System**: Uncertainty (σ) Is the Most Powerful Parameter in the Rating System
 - **12.4 Gaming: Matchmaking System**: Match Tickets Are an Exercise in Temporal Data Modeling
+- **12.10 Polling/Voting System**: Bloom Filters Create a Zero-Network-Cost Deduplication Layer
+- **12.11 Package Registry**: Dependency Resolution Is Provably NP-Complete
+- **12.11 Package Registry**: Content-Addressable Storage Solves Three Problems Simultaneously
 
 ### Resilience
 
@@ -3679,6 +3734,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.7 P2P File Sharing**: Rarest-First Is Emergent Distributed Replication Without a Coordinator
 - **12.7 P2P File Sharing**: The k-Bucket "Prefer Old Nodes" Policy Is an Anti-Sybil Mechanism Disguised as Cache Management
 - **12.9 Code Execution Sandbox**: Verdict Correctness Is a 100% SLO Because Every Error Is Visible
+- **12.10 Polling/Voting System**: The Vote Audit Log Is the Ultimate Source of Truth
+- **12.11 Package Registry**: Transparency Logs Make Registry Compromise Detectable
+- **12.11 Package Registry**: Immutable Artifacts Make CDN Outages Survivable
 
 ### Scaling
 
@@ -3838,6 +3896,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.8 WebRTC Infrastructure**: Room Size Has Discontinuous Scaling Thresholds
 - **12.9 Code Execution Sandbox**: Language-Affinity Routing Transforms a Global Scheduling Problem into Independent Per-Language Problems
 - **12.9 Code Execution Sandbox**: Pre-Scaling for Known Events Transforms Unpredictable Load into Predictable Capacity
+- **12.10 Polling/Voting System**: Adaptive Shard Scaling Must Be Unidirectional During Active Polls
+- **12.11 Package Registry**: CDN Is the System, Not an Optimization
 
 ### Search
 
@@ -3952,6 +4012,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.9 Code Execution Sandbox**: Empty Network Namespace Beats Firewall Rules by Eliminating the Configuration Surface
 - **12.9 Code Execution Sandbox**: Sandbox Scrubbing Must Be Atomic, Not Incremental
 - **12.9 Code Execution Sandbox**: Elimination Is Safer Than Restriction
+- **12.10 Polling/Voting System**: Anonymous Dedup Is Fundamentally Best-Effort
+- **12.11 Package Registry**: Supply Chain Security Protects the Ecosystem, Not Just the System
+- **12.11 Package Registry**: Typosquatting Detection Is a Fuzzy String Matching Problem with Asymmetric Costs
+- **12.11 Package Registry**: Scoped Namespaces Are a Security Mechanism, Not Just an Organizational Convenience
 
 ### Streaming
 
@@ -4015,6 +4079,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **10.1 Telemedicine Platform**: Simulcast Enables Clinical-Grade Quality Adaptation Without Server-Side Transcoding
 - **10.2 Cloud-Native EHR Platform**: FHIR Subscriptions Transform the EHR from a Record System into an Event Platform
 - **12.1 AdTech: Real-Time Bidding (RTB) System**: The RTB Event Stream Is Simultaneously a Billing Ledger, ML Training Set, and Operational Log
+- **12.10 Polling/Voting System**: Hierarchical Fan-Out Prevents WebSocket Gateway Saturation
 
 ### System Modeling
 
@@ -4159,6 +4224,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.9 Code Execution Sandbox**: cgroups Protect Stability, Not Security—But You Need Both
 - **12.9 Code Execution Sandbox**: Wall-Clock and CPU-Clock Enforce Different Invariants
 - **12.9 Code Execution Sandbox**: The Message Queue Is a Security Buffer, Not Just a Scaling Tool
+- **12.10 Polling/Voting System**: CQRS Is Architecturally Necessary, Not an Optimization Choice
+- **12.11 Package Registry**: Immutability as Architectural Enabler, Not Just Policy
+- **12.11 Package Registry**: The Metadata-Artifact Split Enables Independent Scaling
 
 ### Traffic Shaping
 
@@ -4234,3 +4302,5 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.4 Gaming: Matchmaking System**: Seasonal Resets Are Controlled Entropy Injection
 - **12.5 URL Shortener**: Hot URL Problem — Viral Links Create Single-Key Contention
 - **12.6 Pastebin**: Rate Limiting Anonymous Services Requires Multi-Signal Identity
+- **12.10 Polling/Voting System**: Hot Poll Detection Must Be Proactive, Not Reactive
+- **12.11 Package Registry**: Async Security Scanning Trades Exposure Window for Developer Velocity

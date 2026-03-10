@@ -214,6 +214,8 @@ Each system design directory contains 9 standardized documents:
 | 12.7 | Design a P2P File Sharing Network (BitTorrent - DHT/Kademlia, Chunks, Swarm) | Completed | [View](./12.7-p2p-file-sharing-network/00-index.md) |
 | 12.8 | Design WebRTC Infrastructure (STUN/TURN, ICE, SFU/MCU Scaling) | Completed | [View](./12.8-webrtc-infrastructure/00-index.md) |
 | 12.9 | Design a Code Execution Sandbox (LeetCode/Replit - Isolation, Resource Limits, Security) | Completed | [View](./12.9-code-execution-sandbox/00-index.md) |
+| 12.10 | Design a Polling/Voting System (High Write Throughput, Result Aggregation) | Completed | [View](./12.10-polling-voting-system/00-index.md) |
+| 12.11 | Package Registry (npm/PyPI/Maven Central - Artifact Storage, Versioning, Security Scanning, CDN) | Completed | [View](./12.11-package-registry/00-index.md) |
 
 
 ---
