@@ -363,6 +363,8 @@
 - **13.3 AI-Native Energy & Grid Management Platform**: Grid State Estimation and OPF Form a Feedback Loop That Invalidates Its Own Input
 - **13.4 AI-Native Real Estate & PropTech Platform**: The AVM's Spatial Model Creates a Valuation Feedback Loop That Must Be Dampened
 - **13.5 AI-Native Agriculture & Precision Farming Platform**: Soil Sensor Calibration Drift Is Spatially Correlated, Making Cross-Sensor Validation Unreliable
+- **13.7 AI-Native Construction & Engineering Platform**: Point Cloud Registration Drift Accumulates Silently, Creating Phantom Progress Signals
+- **14.1 AI-Native MSME Credit Scoring & Lending Platform**: Consent Expiry Creates a Stale-Data Cliff That Standard ML Feature Stores Cannot Handle
 
 ### Contention
 
@@ -460,6 +462,9 @@
 - **12.11 Package Registry**: Download Counting at Scale Requires Probabilistic Aggregation
 - **13.3 AI-Native Energy & Grid Management Platform**: Smart Meter Collection Scheduling Is a Network Capacity Planning Problem Disguised as a Batch Job
 - **13.5 AI-Native Agriculture & Precision Farming Platform**: LoRaWAN's Aloha-Based MAC Protocol Creates a Throughput Cliff During Irrigation Events
+- **13.6 AI-Native Media & Entertainment Platform**: GPU Model Loading Is the True Latency Bottleneck — Not Inference
+- **13.7 AI-Native Construction & Engineering Platform**: The BIM Clash Report Is a Political Document That Determines Who Pays for Coordination Failures
+- **14.1 AI-Native MSME Credit Scoring & Lending Platform**: Loan Stacking Detection Is a Distributed Consensus Problem Across Competing Lenders
 
 ### Cost Optimization
 
@@ -540,6 +545,9 @@
 - **12.11 Package Registry**: Abbreviated Metadata Is a Bandwidth Optimization with Outsized Impact
 - **12.16 Product Analytics Platform**: Three-Tier Storage Is Not a Caching Strategy — It's a Latency vs. Cost Trade-off at Each Time Horizon
 - **13.1 AI-Native Manufacturing Platform**: CV Model Accuracy Is Meaningless Without the Economic Cost Matrix at Production Volume
+- **13.6 AI-Native Media & Entertainment Platform**: Ad Pod Duration Should Be Optimized Per-Session, Not Per-Break
+- **13.7 AI-Native Construction & Engineering Platform**: Construction Cost Distributions Are Not Independent — Correlated Sampling Reveals 40% Larger Fat Tails
+- **14.1 AI-Native MSME Credit Scoring & Lending Platform**: The Auto-Debit Retry Problem Is a Multi-Armed Bandit, Not a Scheduling Problem
 
 ### Data Structures
 
@@ -684,6 +692,9 @@
 - **13.3 AI-Native Energy & Grid Management Platform**: The Hardest Part of Theft Detection Is Not the ML Model — It Is the Ground Truth Label Pipeline
 - **13.4 AI-Native Real Estate & PropTech Platform**: Entity Resolution Is the True Data Moat, Not the ML Models
 - **13.5 AI-Native Agriculture & Precision Farming Platform**: Cloud Masking Errors in Satellite Imagery Compound Directionally Into Prescription Bias
+- **13.6 AI-Native Media & Entertainment Platform**: Provenance Chain Compaction Is Required — Unbounded Manifest Growth Makes Verification Intractable
+- **13.7 AI-Native Construction & Engineering Platform**: The Digital Twin's Value Is in the Temporal Dimension for Forensic Reconstruction
+- **14.1 AI-Native MSME Credit Scoring & Lending Platform**: The Credit Model's Biggest Competitor Is the Bank Statement Parser
 
 ### Distributed Transactions
 
@@ -742,6 +753,8 @@
 - **6.7 Google Meet / Zoom**: Geo-Routing Media Servers via Anycast Minimizes First-Hop Latency
 - **12.13 Bot Detection System**: Edge-First Architecture Is Forced by Latency Physics, Not Engineering Preference
 - **13.5 AI-Native Agriculture & Precision Farming Platform**: Temporal Redundancy Across Camera Frames Converts Per-Frame Accuracy Into Per-Weed Accuracy Exponentially
+- **13.6 AI-Native Media & Entertainment Platform**: Personalization Feature Freshness Has Diminishing Returns — The Breakpoint Is Not Where You Expect
+- **13.7 AI-Native Construction & Engineering Platform**: Edge Safety CV Models Must Be Calibrated Per-Camera, Not Per-Site
 
 ### External Dependencies
 
@@ -822,6 +835,9 @@
 - **12.12 Password Manager**: CRDT Semantics Work on Ciphertext Metadata, Not Plaintext
 - **12.13 Bot Detection System**: Session Reputation Changes the Detection Paradigm from Static to Temporal
 - **12.14 A/B Testing Platform**: The Append-Only Event Log Is the System's Source of Truth — Metric Definitions Should Not Be Locked In at Experiment Start
+- **13.6 AI-Native Media & Entertainment Platform**: SSAI Manifest Uniqueness Creates a CDN Anti-Pattern Where Every Viewer Gets a Cache Miss
+- **13.7 AI-Native Construction & Engineering Platform**: Construction Resource Optimization Is a Spatial Deconfliction Problem Where Physical Space Is the Binding Constraint
+- **14.1 AI-Native MSME Credit Scoring & Lending Platform**: The Embedded Finance API's Hardest Problem Is Capital Allocation Across Competing Partners
 
 ### Resilience
 
@@ -990,6 +1006,7 @@
 - **13.3 AI-Native Energy & Grid Management Platform**: Grid Contingency Analysis Must Account for Protection System Failures — N-1 Is an Illusion Without Relay Misoperation Modeling
 - **13.4 AI-Native Real Estate & PropTech Platform**: Building Safety Systems Must Be Architecturally Immune to Cloud Failures, Not Just Resilient
 - **13.5 AI-Native Agriculture & Precision Farming Platform**: Edge Spray Controller Fail-Safe Default Must Be "Spray On" — Counterintuitive but Agronomically Correct
+- **13.7 AI-Native Construction & Engineering Platform**: The Construction Schedule Is a Continuously Violated Constraint Set — Value Comes from Detecting and Propagating Violations
 
 ### Scaling
 
@@ -1162,6 +1179,8 @@
 - **12.21 AI-Native Creative Design Platform**: Perceptual Deduplication Enables Cross-User Learning Beyond Storage Savings
 - **13.2 AI-Native Logistics & Supply Chain Platform**: Hierarchical Forecast Reconciliation Is the Computational Bottleneck
 - **13.5 AI-Native Agriculture & Precision Farming Platform**: The Satellite Imagery Pipeline's Real Bottleneck Is Atmospheric Correction, Not Cloud Masking or Model Inference
+- **13.6 AI-Native Media & Entertainment Platform**: Voice Cloning Embeddings Are Correlated Across Languages — Quality Collapse for Phonetically Distant Targets
+- **14.1 AI-Native MSME Credit Scoring & Lending Platform**: Model Retraining Frequency Is Constrained by Label Maturity, Not Computational Cost
 
 ### Search
 
@@ -1302,6 +1321,8 @@
 - **13.1 AI-Native Manufacturing Platform**: OT/IT Network Segmentation Shapes Every API and Deployment Topology
 - **13.2 AI-Native Logistics & Supply Chain Platform**: Cold Chain Sensor Gaps Create Compliance Ambiguity Requiring Human Disposition
 - **13.4 AI-Native Real Estate & PropTech Platform**: Property Search Personalization Operates Under a Fair Housing Constraint That Differs From E-Commerce
+- **13.6 AI-Native Media & Entertainment Platform**: Content Safety Classifiers Must Be Calibrated for the Distribution Channel, Not the Content
+- **14.1 AI-Native MSME Credit Scoring & Lending Platform**: The Fraud Graph's Most Powerful Signal Is Temporal Coordination, Not Connection Density
 
 ### Streaming
 
@@ -1552,6 +1573,9 @@
 - **13.4 AI-Native Real Estate & PropTech Platform**: Lease Abstraction Accuracy Must Be Measured Per-Clause Because Error Costs Vary by 1000x
 - **13.5 AI-Native Agriculture & Precision Farming Platform**: The Yield Prediction Confidence Interval Is More Valuable Than the Point Estimate
 - **13.5 AI-Native Agriculture & Precision Farming Platform**: Prescription Map Resolution Must Match Implement Capability, Not Data Resolution
+- **13.6 AI-Native Media & Entertainment Platform**: Lip-Sync Tolerance Is Phoneme-Dependent — Global Sync Metrics Hide Perceptual Failures
+- **13.7 AI-Native Construction & Engineering Platform**: Progress Tracking Accuracy Is Bounded by Occlusion — The Occluded Elements Are the Most Valuable
+- **14.1 AI-Native MSME Credit Scoring & Lending Platform**: Psychometric Scoring's Value Is Not Predictive Power — It Is Orthogonality to Transaction Data
 
 ### Traffic Shaping
 

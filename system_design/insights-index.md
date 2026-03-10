@@ -53,7 +53,8 @@ A cross-reference of key architectural insights extracted from each system desig
 | 10 | Healthcare & IoT | 7 (10.1–10.7) | [View](./insights/section-10-healthcare-iot.md) |
 | 11 | Communication Systems | 5 (11.1–11.5) | [View](./insights/section-11-communication.md) |
 | 12 | Specialized Systems | 21 (12.1–12.21) | [View](./insights/section-12-specialized-systems.md) |
-| 13 | AI-Native Industry Verticals | 5 (13.1–13.5) | [View](./insights/section-13-ai-industry-verticals.md) |
+| 13 | AI-Native Industry Verticals | 7 (13.1–13.7) | [View](./insights/section-13-ai-industry-verticals.md) |
+| 14 | AI-Native MSME Solutions | 1 (14.1) | [View](./insights/section-14-ai-native-msme-solutions.md) |
 
 ---
 

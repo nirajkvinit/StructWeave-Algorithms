@@ -77,3 +77,33 @@
 | 7 | The Satellite Imagery Pipeline's Real Bottleneck Is Atmospheric Correction, Not Cloud Masking or Model Inference | Scaling |
 | 8 | Edge Spray Controller Fail-Safe Default Must Be "Spray On", Which Is Counterintuitive From a Software Safety Perspective | Resilience |
 
+---
+
+### 13.6 AI-Native Media & Entertainment Platform [View](../13.6-ai-native-media-entertainment-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | GPU Model Loading Is the True Latency Bottleneck — Not Inference | Contention |
+| 2 | Lip-Sync Tolerance Is Phoneme-Dependent — Global Sync Metrics Hide Perceptual Failures | System Modeling |
+| 3 | Ad Pod Duration Should Be Optimized Per-Session, Not Per-Break | Cost Optimization |
+| 4 | Provenance Chain Compaction Is Required — Unbounded Manifest Growth Makes Verification Intractable | Data Structures |
+| 5 | Content Safety Classifiers Must Be Calibrated for the Distribution Channel, Not the Content | Security |
+| 6 | Voice Cloning Embeddings Are Correlated Across Languages in Non-Obvious Ways That Cause Quality Collapse | Scaling |
+| 7 | Personalization Feature Freshness Has Diminishing Returns — but the Breakpoint Is Not Where You Expect | Edge Computing |
+| 8 | SSAI Manifest Uniqueness Creates a CDN Anti-Pattern Where Every Viewer Gets a Cache Miss | Partitioning |
+
+---
+
+### 13.7 AI-Native Construction & Engineering Platform [View](../13.7-ai-native-construction-engineering-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Progress Tracking Accuracy Is Bounded by Occlusion, Not Model Quality — And the Occluded Elements Are Exactly the Ones That Matter Most | System Modeling |
+| 2 | The BIM Clash Report Is Not a Technical Artifact — It Is a Political Document That Determines Who Pays for Coordination Failures | Contention |
+| 3 | Construction Cost Distributions Are Not Independent — Material Price Correlation Creates Fat Tails That Monte Carlo with Independent Sampling Misses by 40% | Cost Optimization |
+| 4 | Edge Safety CV Models Must Be Calibrated Per-Camera, Not Per-Site | Edge Computing |
+| 5 | The Construction Schedule Is Not a Plan — It Is a Continuously Violated Constraint Set Where the System's Value Comes from Detecting and Propagating Violations | Resilience |
+| 6 | Point Cloud Registration Drift Accumulates Silently Across Daily Snapshots, Creating a Phantom Progress Signal | Consistency |
+| 7 | Construction Resource Optimization Is Not a Scheduling Problem — It Is a Spatial Deconfliction Problem Where the Binding Constraint Is Physical Space | Partitioning |
+| 8 | The Digital Twin's Value Is Not in the 3D Model — It Is in the Temporal Dimension That Enables Forensic Reconstruction | Data Structures |
+

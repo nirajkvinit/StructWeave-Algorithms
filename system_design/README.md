@@ -231,6 +231,9 @@ Each system design directory contains 9 standardized documents:
 | 13.3 | AI-Native Energy & Grid Management Platform (Grid Optimization, Renewable Forecasting, Demand Response, Virtual Power Plants, Smart Metering) | Completed | [View](./13.3-ai-native-energy-grid-management-platform/00-index.md) |
 | 13.4 | AI-Native Real Estate & PropTech Platform (Automated Valuation, Smart Building Management, Tenant Matching, Lease Intelligence, Property Search) | Completed | [View](./13.4-ai-native-real-estate-proptech-platform/00-index.md) |
 | 13.5 | AI-Native Agriculture & Precision Farming Platform (Crop Monitoring, Yield Prediction, Precision Spraying, Soil Analysis, Irrigation Optimization) | Completed | [View](./13.5-ai-native-agriculture-precision-farming-platform/00-index.md) |
+| 13.6 | AI-Native Media & Entertainment Platform (Content Generation, Audience Analytics, Personalization, Ad Optimization, Rights Management, Dubbing/Localization) | Completed | [View](./13.6-ai-native-media-entertainment-platform/00-index.md) |
+| 13.7 | AI-Native Construction & Engineering Platform (BIM Intelligence, Cost Estimation, Safety Monitoring, Progress Tracking, Resource Optimization, Risk Prediction) | Completed | [View](./13.7-ai-native-construction-engineering-platform/00-index.md) |
+| 14.1 | AI-Native MSME Credit Scoring & Lending Platform (Alternative Data Credit Scoring, Behavioral/Transactional Analysis, Psychometric Testing, Thin-File Lending, Embedded Finance) | Completed | [View](./14.1-ai-native-msme-credit-scoring-lending-platform/00-index.md) |
 
 
 ---
