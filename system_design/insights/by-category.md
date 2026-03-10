@@ -359,6 +359,10 @@
 - **12.20 AI-Native Recruitment Platform**: The ANN Recall Stage and the Compatibility Ranker Must Have Independent Retraining Cycles
 - **12.21 AI-Native Creative Design Platform**: AI Generation and Human Collaboration Must Share the Same Write Path
 - **13.2 AI-Native Logistics & Supply Chain Platform**: Warehouse Digital Twin Is a Concurrent State Management Problem
+- **13.3 AI-Native Energy & Grid Management Platform**: The Grid's Real-Time Constraint Is Not Latency — It Is Determinism
+- **13.3 AI-Native Energy & Grid Management Platform**: Grid State Estimation and OPF Form a Feedback Loop That Invalidates Its Own Input
+- **13.4 AI-Native Real Estate & PropTech Platform**: The AVM's Spatial Model Creates a Valuation Feedback Loop That Must Be Dampened
+- **13.5 AI-Native Agriculture & Precision Farming Platform**: Soil Sensor Calibration Drift Is Spatially Correlated, Making Cross-Sensor Validation Unreliable
 
 ### Contention
 
@@ -454,6 +458,8 @@
 - **12.6 Pastebin**: The Key Pool Is a Pre-Materialized Index of Future State
 - **12.10 Polling/Voting System**: Sharded Counters Transform Write Contention into a Configuration Problem
 - **12.11 Package Registry**: Download Counting at Scale Requires Probabilistic Aggregation
+- **13.3 AI-Native Energy & Grid Management Platform**: Smart Meter Collection Scheduling Is a Network Capacity Planning Problem Disguised as a Batch Job
+- **13.5 AI-Native Agriculture & Precision Farming Platform**: LoRaWAN's Aloha-Based MAC Protocol Creates a Throughput Cliff During Irrigation Events
 
 ### Cost Optimization
 
@@ -675,6 +681,9 @@
 - **12.15 Customer Data Platform**: The Inverted Segment Index Is What Makes Streaming Evaluation Feasible
 - **12.16 Product Analytics Platform**: Funnel Computation Is a Set Algebra Problem, Not a Join Problem
 - **12.16 Product Analytics Platform**: Bloom Filters at the Collector Tier Are Worth Their Complexity Because Downstream Deduplication Is 100x More Expensive
+- **13.3 AI-Native Energy & Grid Management Platform**: The Hardest Part of Theft Detection Is Not the ML Model — It Is the Ground Truth Label Pipeline
+- **13.4 AI-Native Real Estate & PropTech Platform**: Entity Resolution Is the True Data Moat, Not the ML Models
+- **13.5 AI-Native Agriculture & Precision Farming Platform**: Cloud Masking Errors in Satellite Imagery Compound Directionally Into Prescription Bias
 
 ### Distributed Transactions
 
@@ -732,6 +741,7 @@
 - **6.6 Ticketmaster**: Edge-Side Token Validation
 - **6.7 Google Meet / Zoom**: Geo-Routing Media Servers via Anycast Minimizes First-Hop Latency
 - **12.13 Bot Detection System**: Edge-First Architecture Is Forced by Latency Physics, Not Engineering Preference
+- **13.5 AI-Native Agriculture & Precision Farming Platform**: Temporal Redundancy Across Camera Frames Converts Per-Frame Accuracy Into Per-Weed Accuracy Exponentially
 
 ### External Dependencies
 
@@ -783,6 +793,7 @@
 - **6.4 HubSpot**: Hublet Architecture -- Full Infrastructure Isolation Per Region
 - **12.14 A/B Testing Platform**: Layered Mutual Exclusion Enables Thousands of Concurrent Experiments by Making Isolation a Namespace Property
 - **12.16 Product Analytics Platform**: Behavioral Cohorts Require Set Algebra, Not SQL Subqueries, to Scale
+- **13.4 AI-Native Real Estate & PropTech Platform**: The Nightly AVM Batch Must Process Properties in Spatial Dependency Order, Not Arbitrary Order
 
 ### Replication
 
@@ -976,6 +987,9 @@
 - **12.19 AI-Native Insurance Platform**: CAT Event Mode Must Be a System State, Not an Operational Checklist
 - **13.1 AI-Native Manufacturing Platform**: Offline-First Is Not a Fallback Mode — It Is the Primary Architecture
 - **13.1 AI-Native Manufacturing Platform**: AI in Safety-Critical Manufacturing Is an Optimization Layer, Never a Safety Layer
+- **13.3 AI-Native Energy & Grid Management Platform**: Grid Contingency Analysis Must Account for Protection System Failures — N-1 Is an Illusion Without Relay Misoperation Modeling
+- **13.4 AI-Native Real Estate & PropTech Platform**: Building Safety Systems Must Be Architecturally Immune to Cloud Failures, Not Just Resilient
+- **13.5 AI-Native Agriculture & Precision Farming Platform**: Edge Spray Controller Fail-Safe Default Must Be "Spray On" — Counterintuitive but Agronomically Correct
 
 ### Scaling
 
@@ -1147,6 +1161,7 @@
 - **12.21 AI-Native Creative Design Platform**: Progressive Generation Simultaneously Optimizes UX, Cost, and Quality
 - **12.21 AI-Native Creative Design Platform**: Perceptual Deduplication Enables Cross-User Learning Beyond Storage Savings
 - **13.2 AI-Native Logistics & Supply Chain Platform**: Hierarchical Forecast Reconciliation Is the Computational Bottleneck
+- **13.5 AI-Native Agriculture & Precision Farming Platform**: The Satellite Imagery Pipeline's Real Bottleneck Is Atmospheric Correction, Not Cloud Masking or Model Inference
 
 ### Search
 
@@ -1163,6 +1178,7 @@
 - **7.2 Airbnb**: Geo + ML Hybrid Search Ranking -- Map Results Require Fundamentally Different Ranking Theory Than List Results
 - **9.11 AI-Native Compliance Management**: Framework Interpretation Is an NLP Problem Disguised as a Lookup Problem
 - **9.12 AI-Native Procurement & Spend Intelligence**: Supplier Risk Entity Resolution Is Harder Than Customer Entity Resolution
+- **13.4 AI-Native Real Estate & PropTech Platform**: The AVM's Accuracy Bottleneck Is Comparable Selection, Not Model Inference
 
 ### Security
 
@@ -1285,6 +1301,7 @@
 - **12.21 AI-Native Creative Design Platform**: Content Safety Must Be a Synchronous Blocking Gate Before Canvas Display
 - **13.1 AI-Native Manufacturing Platform**: OT/IT Network Segmentation Shapes Every API and Deployment Topology
 - **13.2 AI-Native Logistics & Supply Chain Platform**: Cold Chain Sensor Gaps Create Compliance Ambiguity Requiring Human Disposition
+- **13.4 AI-Native Real Estate & PropTech Platform**: Property Search Personalization Operates Under a Fair Housing Constraint That Differs From E-Commerce
 
 ### Streaming
 
@@ -1529,6 +1546,12 @@
 - **13.2 AI-Native Logistics & Supply Chain Platform**: Route Solution Stability Matters More Than Optimality
 - **13.2 AI-Native Logistics & Supply Chain Platform**: Forecast Accuracy Should Be Measured Differently per Hierarchy Level
 - **13.2 AI-Native Logistics & Supply Chain Platform**: Multi-Modal ETA Is a Chain of Conditional Predictions with Compounding Uncertainty
+- **13.3 AI-Native Energy & Grid Management Platform**: VPP Bid Quantity Is a Risk Management Decision, Not an Optimization Output
+- **13.3 AI-Native Energy & Grid Management Platform**: Renewable Forecast Error Is Non-Stationary — Clear-Sky Models Fail on Cloudy Days
+- **13.4 AI-Native Real Estate & PropTech Platform**: Climate Risk Scores Have an Irreducible Uncertainty Floor That Must Be Communicated
+- **13.4 AI-Native Real Estate & PropTech Platform**: Lease Abstraction Accuracy Must Be Measured Per-Clause Because Error Costs Vary by 1000x
+- **13.5 AI-Native Agriculture & Precision Farming Platform**: The Yield Prediction Confidence Interval Is More Valuable Than the Point Estimate
+- **13.5 AI-Native Agriculture & Precision Farming Platform**: Prescription Map Resolution Must Match Implement Capability, Not Data Resolution
 
 ### Traffic Shaping
 
@@ -1619,4 +1642,5 @@
 - **12.20 AI-Native Recruitment Platform**: Compatibility Model Training Data Embeds the Biases It Should Correct
 - **12.20 AI-Native Recruitment Platform**: ANN Recall and Compatibility Ranker Need Independent Retraining Cycles
 - **12.20 AI-Native Recruitment Platform**: 4/5ths Rule Sample Size Requirements Break Per-Requisition Monitoring
+- **13.3 AI-Native Energy & Grid Management Platform**: DR Rebound Prevention Is a Harder Control Problem Than the Original Curtailment
 

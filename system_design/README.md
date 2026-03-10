@@ -228,6 +228,9 @@ Each system design directory contains 9 standardized documents:
 | 12.21 | AI-Native Creative Design Platform (Generative Design, Layout Generation, Brand Consistency, Asset Variation, Design System Automation) | Completed | [View](./12.21-ai-native-creative-design-platform/00-index.md) |
 | 13.1 | AI-Native Manufacturing Platform (Digital Twin, Predictive Maintenance, Quality Inspection CV, Production Optimization, Defect Detection) | Completed | [View](./13.1-ai-native-manufacturing-platform/00-index.md) |
 | 13.2 | AI-Native Logistics & Supply Chain Platform (Route Optimization, Demand Forecasting, Warehouse Automation, Fleet Management, Last-Mile Delivery) | Completed | [View](./13.2-ai-native-logistics-supply-chain-platform/00-index.md) |
+| 13.3 | AI-Native Energy & Grid Management Platform (Grid Optimization, Renewable Forecasting, Demand Response, Virtual Power Plants, Smart Metering) | Completed | [View](./13.3-ai-native-energy-grid-management-platform/00-index.md) |
+| 13.4 | AI-Native Real Estate & PropTech Platform (Automated Valuation, Smart Building Management, Tenant Matching, Lease Intelligence, Property Search) | Completed | [View](./13.4-ai-native-real-estate-proptech-platform/00-index.md) |
+| 13.5 | AI-Native Agriculture & Precision Farming Platform (Crop Monitoring, Yield Prediction, Precision Spraying, Soil Analysis, Irrigation Optimization) | Completed | [View](./13.5-ai-native-agriculture-precision-farming-platform/00-index.md) |
 
 
 ---

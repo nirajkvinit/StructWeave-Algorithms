@@ -32,3 +32,48 @@
 | 7 | Demand Forecast Accuracy Should Be Measured Differently at Each Hierarchy Level | System Modeling |
 | 8 | Multi-Modal ETA Is Not a Single Model Problem — It Is a Chain of Conditional Predictions | System Modeling |
 
+---
+
+### 13.3 AI-Native Energy & Grid Management Platform [View](../13.3-ai-native-energy-grid-management-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Grid's Real-Time Constraint Is Not Latency — It Is Determinism | Consistency |
+| 2 | VPP Bid Quantity Is Not an Optimization Output — It Is a Risk Management Decision | System Modeling |
+| 3 | The Hardest Part of Theft Detection Is Not the ML Model — It Is the Ground Truth Label Pipeline | Data Structures |
+| 4 | Renewable Forecast Error Is Non-Stationary — A Model Trained on Clear-Sky Days Is Dangerously Wrong on Cloudy Days | System Modeling |
+| 5 | DR Rebound Prevention Is a Harder Control Problem Than the Original Curtailment | Traffic Shaping |
+| 6 | Grid Contingency Analysis Must Account for Protection System Failures — N-1 Security Is an Illusion Without Modeling Relay Misoperation | Resilience |
+| 7 | Smart Meter Collection Scheduling Is a Network Capacity Planning Problem Disguised as a Batch Job | Contention |
+| 8 | Grid State Estimation and OPF Together Form a Feedback Loop Where the OPF Solver Invalidates the State It Was Computed From | Consistency |
+
+---
+
+### 13.4 AI-Native Real Estate & PropTech Platform [View](../13.4-ai-native-real-estate-proptech-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The AVM's Accuracy Bottleneck Is Comparable Selection, Not Model Inference | Search |
+| 2 | Building Safety Systems Must Be Architecturally Immune to Cloud Failures, Not Just Resilient | Resilience |
+| 3 | Entity Resolution Is the True Data Moat, Not the ML Models | Data Structures |
+| 4 | Climate Risk Scores Have an Irreducible Uncertainty Floor That Must Be Communicated, Not Hidden | System Modeling |
+| 5 | The AVM's Spatial Model Creates a Valuation Feedback Loop That Must Be Dampened | Consistency |
+| 6 | Lease Abstraction Accuracy Must Be Measured Per-Clause, Not Per-Document, Because Error Costs Vary by 1000x | System Modeling |
+| 7 | Property Search Personalization Operates Under a Fairness Constraint That Fundamentally Differs from E-Commerce | Security |
+| 8 | The Nightly AVM Batch Must Process Properties in Spatial Dependency Order, Not Arbitrary Order | Partitioning |
+
+---
+
+### 13.5 AI-Native Agriculture & Precision Farming Platform [View](../13.5-ai-native-agriculture-precision-farming-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Temporal Redundancy Across Camera Frames Converts Per-Frame Accuracy Into Per-Weed Accuracy Exponentially | Edge Computing |
+| 2 | Cloud Masking Errors in Satellite Imagery Compound Directionally Into Prescription Bias | Data Structures |
+| 3 | Soil Sensor Calibration Drift Is Spatially Correlated, Making Cross-Sensor Validation Unreliable When It Matters Most | Consistency |
+| 4 | The Yield Prediction Confidence Interval Is More Valuable Than the Point Estimate for Farm Financial Decisions | System Modeling |
+| 5 | LoRaWAN's Aloha-Based MAC Protocol Creates a Throughput Cliff During Irrigation Events | Contention |
+| 6 | Prescription Map Resolution Must Match Implement Capability, Not Data Resolution | System Modeling |
+| 7 | The Satellite Imagery Pipeline's Real Bottleneck Is Atmospheric Correction, Not Cloud Masking or Model Inference | Scaling |
+| 8 | Edge Spray Controller Fail-Safe Default Must Be "Spray On", Which Is Counterintuitive From a Software Safety Perspective | Resilience |
+
