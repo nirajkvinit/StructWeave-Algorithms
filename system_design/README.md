@@ -222,6 +222,9 @@ Each system design directory contains 9 standardized documents:
 | 12.15 | Customer Data Platform (Event Collection, Identity Resolution, Destinations, Audience Building) | Completed | [View](./12.15-customer-data-platform/00-index.md) |
 | 12.16 | Product Analytics Platform (Funnel Analysis, Cohorts, Retention, Event Tracking, User Journeys) | Completed | [View](./12.16-product-analytics-platform/00-index.md) |
 | 12.17 | Content Moderation System (AI + Human Review, Toxicity Detection, Appeals, Review Queues, Policy Enforcement) | Completed | [View](./12.17-content-moderation-system/00-index.md) |
+| 12.18 | Marketplace Platform (Two-sided Marketplace, Trust & Safety, Search Ranking, Payments, Reviews) | Completed | [View](./12.18-marketplace-platform/00-index.md) |
+| 12.19 | AI-Native Insurance Platform (Instant Underwriting, Claims Automation, Risk Assessment, Fraud Detection, Behavioral Pricing) | Completed | [View](./12.19-ai-native-insurance-platform/00-index.md) |
+| 12.20 | AI-Native Recruitment Platform (Interview AI, Candidate Matching, Bias Detection, Skills Assessment, Conversational Recruiting) | Completed | [View](./12.20-ai-native-recruitment-platform/00-index.md) |
 
 
 ---

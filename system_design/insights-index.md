@@ -16,7 +16,7 @@ A cross-reference of key architectural insights extracted from each system desig
 | Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 69 |
 | Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 93 |
 | Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 20 |
-| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 157 |
+| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 160 |
 | Contention | Lock contention, hot keys, thundering herds, and resource competition | 92 |
 | Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 76 |
 | Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 138 |
@@ -25,12 +25,12 @@ A cross-reference of key architectural insights extracted from each system desig
 | External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 17 |
 | Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 28 |
 | Replication | Data replication, follower management, and cross-region synchronization | 25 |
-| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 159 |
-| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 161 |
+| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 160 |
+| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 164 |
 | Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 13 |
-| Security | Authentication, encryption, access control, and threat mitigation | 112 |
+| Security | Authentication, encryption, access control, and threat mitigation | 116 |
 | Streaming | Real-time data processing, event streaming, and pub/sub architectures | 61 |
-| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 152 |
+| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 165 |
 | Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 74 |
 
 ---
@@ -2887,6 +2887,51 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
+### 12.18 Marketplace Platform [View](./12.18-marketplace-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Seller Quality Score Is the Most Architecturally Central Signal — and the Most Dangerous to Get Wrong | System Modeling |
+| 2 | Inventory Reservation TTL Is a Business Trade-Off Masquerading as a Technical Detail | System Modeling |
+| 3 | Review Fraud and Review Quality Are Two Different Problems With Conflicting Solutions | Consistency |
+| 4 | The Escrow Ledger Must Be an Immutable Event Log, Not a Balance Table | Security |
+| 5 | Search Index Availability Signal Must Be Decoupled From the Ranking Index | Scaling |
+| 6 | The Platform's Take Rate Is a System Invariant That Must Be Enforced by Architecture, Not Policy | Security |
+| 7 | Seller Cold Start and Fraud Prevention Pull in Opposite Directions, Requiring an Explicit Calibration Policy | System Modeling |
+| 8 | Two-Sided Marketplace Search Cannot Be Optimized for Relevance Alone — It Must Also Optimize for Seller Diversity | System Modeling |
+
+---
+
+### 12.19 AI-Native Insurance Platform [View](./12.19-ai-native-insurance-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Immutable Risk Score Record Is a Regulatory Obligation, Not a Debugging Tool | System Modeling |
+| 2 | Prohibited Factor Exclusion Must Be Verifiable, Not Just Applied | Security |
+| 3 | Graph Fraud Detection and Per-Claim Fraud Scoring Are Not Substitutes — They Detect Different Things | System Modeling |
+| 4 | Telematics Behavioral Pricing Creates a Partial Adverse Selection Defense — and a New One | System Modeling |
+| 5 | Bureau Enrichment Caching Is Financially Significant, Not Just a Latency Optimization | Scaling |
+| 6 | Conversational Claims Intake Is a Schema Extraction Problem, Not a Natural Language Understanding Problem | System Modeling |
+| 7 | CAT Event Mode Must Be a System State, Not an Operational Checklist | Resilience |
+| 8 | Loss Ratio by Model Cohort Is the True Observability Signal — Technical Metrics Are Necessary but Insufficient | Consistency |
+
+---
+
+### 12.20 AI-Native Recruitment Platform [View](./12.20-ai-native-recruitment-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Demographic Data Must Be Structurally Isolated, Not Just Policy-Isolated | Security |
+| 2 | The Compatibility Model's Training Data Embeds the Biases It Is Supposed to Correct | System Modeling |
+| 3 | Facial Expression Analysis in Video Interviews Is Not Just Ethically Questionable — It Is Architecturally Fragile | System Modeling |
+| 4 | The ANN Recall Stage and the Compatibility Ranker Must Have Independent Retraining Cycles | Consistency |
+| 5 | Conversational AI Session State Is a Distributed Systems Problem, Not an AI Problem | Scaling |
+| 6 | IRT-Adaptive Assessment Requires a Calibration Pipeline as Complex as the Assessment Itself | System Modeling |
+| 7 | The 4/5ths Rule Requires Minimum Sample Sizes That Break Per-Requisition Monitoring | System Modeling |
+| 8 | The Hire Outcome Feedback Loop Creates a Confounding Problem Solvable Only with Randomized Holdout | System Modeling |
+
+---
+
 ## Cross-Reference: Insights by Category
 
 ### Atomicity
@@ -3239,6 +3284,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.16 Product Analytics Platform**: Point-in-Time User Property Correctness Is the Silent Accuracy Killer
 - **12.16 Product Analytics Platform**: Identity Stitching Must Be Applied at Query Time, Not Ingestion Time, for Historical Correctness
 - **12.17 Content Moderation System**: Automated Re-Review as the Primary Appeals Tier Is Not a Shortcut — It Is a Quality Signal
+- **12.18 Marketplace Platform**: Review Fraud and Review Quality Are Two Different Problems With Conflicting Solutions
+- **12.19 AI-Native Insurance Platform**: Loss Ratio by Model Cohort Is the True Observability Signal — Technical Metrics Are Necessary but Insufficient
+- **12.20 AI-Native Recruitment Platform**: The ANN Recall Stage and the Compatibility Ranker Must Have Independent Retraining Cycles
 
 ### Contention
 
@@ -3852,6 +3900,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.14 A/B Testing Platform**: Guardrail Metrics With Automated Kill-Switches Transform Experimentation From a Risk Into a Safety Net
 - **12.16 Product Analytics Platform**: Real-Time Freshness Is Best Measured by Canary Events, Not by Pipeline Lag Metrics
 - **12.17 Content Moderation System**: Reviewer Wellness Constraints Change the Queue Architecture Fundamentally
+- **12.19 AI-Native Insurance Platform**: CAT Event Mode Must Be a System State, Not an Operational Checklist
 
 ### Scaling
 
@@ -4016,6 +4065,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.14 A/B Testing Platform**: CUPED Buys Sample Size Reduction by Partitioning Variance, Not by Changing the Experiment
 - **12.15 Customer Data Platform**: The Fan-out Multiplier Makes Destination Delivery the Dominant Cost Center
 - **12.17 Content Moderation System**: Human Review Queue Is a First-Class Infrastructure Primitive, Not a Fallback
+- **12.18 Marketplace Platform**: Search Index Availability Signal Must Be Decoupled From the Ranking Index
+- **12.19 AI-Native Insurance Platform**: Bureau Enrichment Caching Is Financially Significant, Not Just a Latency Optimization
+- **12.20 AI-Native Recruitment Platform**: Conversational AI Session State Is a Distributed Systems Problem, Not an AI Problem
 
 ### Search
 
@@ -4147,6 +4199,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.15 Customer Data Platform**: Crypto-Shredding Solves the "Erasure in Immutable Logs" Dilemma
 - **12.17 Content Moderation System**: Perceptual Hashes Are Sensitive Material, Not Just Tool Outputs
 - **12.17 Content Moderation System**: Adversarial Normalization Must Precede All Classification, Not Follow It
+- **12.18 Marketplace Platform**: The Escrow Ledger Must Be an Immutable Event Log, Not a Balance Table
+- **12.18 Marketplace Platform**: The Platform's Take Rate Is a System Invariant That Must Be Enforced by Architecture, Not Policy
+- **12.19 AI-Native Insurance Platform**: Prohibited Factor Exclusion Must Be Verifiable, Not Just Applied
+- **12.20 AI-Native Recruitment Platform**: Demographic Data Must Be Structurally Isolated, Not Just Policy-Isolated
 
 ### Streaming
 
@@ -4366,6 +4422,19 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.17 Content Moderation System**: Policy and Classification Must Be Independently Evolvable
 - **12.17 Content Moderation System**: The False Positive Trade-Off Is Category-Specific and Policy-Determined, Not Technically Optimizable
 - **12.17 Content Moderation System**: Content Moderation System Design Requires Explicit Harm Valuation, Not Just Technical Optimization
+- **12.18 Marketplace Platform**: The Seller Quality Score Is the Most Architecturally Central Signal — and the Most Dangerous to Get Wrong
+- **12.18 Marketplace Platform**: Inventory Reservation TTL Is a Business Trade-Off Masquerading as a Technical Detail
+- **12.18 Marketplace Platform**: Seller Cold Start and Fraud Prevention Pull in Opposite Directions, Requiring an Explicit Calibration Policy
+- **12.18 Marketplace Platform**: Two-Sided Marketplace Search Cannot Be Optimized for Relevance Alone — It Must Also Optimize for Seller Diversity
+- **12.19 AI-Native Insurance Platform**: The Immutable Risk Score Record Is a Regulatory Obligation, Not a Debugging Tool
+- **12.19 AI-Native Insurance Platform**: Graph Fraud Detection and Per-Claim Fraud Scoring Are Not Substitutes — They Detect Different Things
+- **12.19 AI-Native Insurance Platform**: Telematics Behavioral Pricing Creates a Partial Adverse Selection Defense — and a New One
+- **12.19 AI-Native Insurance Platform**: Conversational Claims Intake Is a Schema Extraction Problem, Not a Natural Language Understanding Problem
+- **12.20 AI-Native Recruitment Platform**: The Compatibility Model's Training Data Embeds the Biases It Is Supposed to Correct
+- **12.20 AI-Native Recruitment Platform**: Facial Expression Analysis in Video Interviews Is Not Just Ethically Questionable — It Is Architecturally Fragile
+- **12.20 AI-Native Recruitment Platform**: IRT-Adaptive Assessment Requires a Calibration Pipeline as Complex as the Assessment Itself
+- **12.20 AI-Native Recruitment Platform**: The 4/5ths Rule Requires Minimum Sample Sizes That Break Per-Requisition Monitoring
+- **12.20 AI-Native Recruitment Platform**: The Hire Outcome Feedback Loop Creates a Confounding Problem Solvable Only with Randomized Holdout
 
 ### Traffic Shaping
 
@@ -4443,3 +4512,16 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.6 Pastebin**: Rate Limiting Anonymous Services Requires Multi-Signal Identity
 - **12.10 Polling/Voting System**: Hot Poll Detection Must Be Proactive, Not Reactive
 - **12.11 Package Registry**: Async Security Scanning Trades Exposure Window for Developer Velocity
+- **12.18 Marketplace Platform**: The Seller Quality Score Must Be Versioned and Audit-Trailed
+- **12.18 Marketplace Platform**: Review Fraud and Review Quality Are Conflicting Objectives
+- **12.18 Marketplace Platform**: Escrow Ledger Must Be Immutable Event Log for Reconciliation Integrity
+- **12.18 Marketplace Platform**: Search Availability Signal Must Be Decoupled From the Ranking Index
+- **12.18 Marketplace Platform**: Seller Cold Start and Fraud Prevention Pull in Opposite Directions
+- **12.19 AI-Native Insurance Platform**: Immutable Risk Score Record Is a Regulatory Obligation (7+ Year Audits)
+- **12.19 AI-Native Insurance Platform**: Bureau Enrichment Caching Is a $25M–$250M Annual COGS Decision
+- **12.19 AI-Native Insurance Platform**: CAT Event Mode Must Be Automatically Triggered, Not Manual
+- **12.19 AI-Native Insurance Platform**: Loss Ratio by Model Cohort Is the True Observability Signal
+- **12.20 AI-Native Recruitment Platform**: Demographic Data Must Be Structurally Isolated, Not Policy-Isolated
+- **12.20 AI-Native Recruitment Platform**: Compatibility Model Training Data Embeds the Biases It Should Correct
+- **12.20 AI-Native Recruitment Platform**: ANN Recall and Compatibility Ranker Need Independent Retraining Cycles
+- **12.20 AI-Native Recruitment Platform**: 4/5ths Rule Sample Size Requirements Break Per-Requisition Monitoring
