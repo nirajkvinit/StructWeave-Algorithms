@@ -55,7 +55,8 @@ A cross-reference of key architectural insights extracted from each system desig
 | 12 | Specialized Systems | 21 (12.1–12.21) | [View](./insights/section-12-specialized-systems.md) |
 | 13 | AI-Native Industry Verticals | 7 (13.1–13.7) | [View](./insights/section-13-ai-industry-verticals.md) |
 | 14 | AI-Native MSME Solutions | 22 (14.1–14.22) | [View](./insights/section-14-ai-native-msme-solutions.md) |
-| 15 | Observability & Reliability | 4 (15.1–15.4) | [View](./insights/section-15-observability-reliability.md) |
+| 15 | Observability & Reliability | 8 (15.1–15.8) | [View](./insights/section-15-observability-reliability.md) |
+| 16 | Data Systems & Databases | 4 (16.1–16.4) | [View](./insights/section-16-data-systems-databases.md) |
 
 ---
 

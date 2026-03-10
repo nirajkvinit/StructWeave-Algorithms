@@ -192,6 +192,7 @@
 - **14.12 AI-Native Field Service Management for SMEs**: Distance Matrix Caching Exploits the Power-Law Distribution of Service Locations
 - **14.13 AI-Native MSME Business Intelligence Dashboard**: Query Result Caching Requires Semantic Deduplication, Not String Matching
 - **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: Business Archetype Caching Transforms O(B × V) Obligation Computation into O(A × V), But Archetype Invalidation Is a Hidden Thundering Herd
+- **16.4 Graph Database**: The Buffer Cache Hit Ratio Is the Single Number That Predicts Whether Your Graph Database Will Meet Its SLOs — Because Index-Free Adjacency's O(1) Guarantee Assumes Memory, Not Disk
 
 ### Consensus
 
@@ -404,6 +405,12 @@
 - **15.5 Chaos Engineering Platform**: Chaos Engineering Results Are Perishable — A Test That Passed Last Month May Fail Today
 - **15.6 Incident Management System**: The Fingerprint Store's Sliding Window Creates a Time-Dependent Definition of "Same Incident" That Silently Changes Behavior Under Load
 - **15.7 AI-Native Cybersecurity Platform**: Model Drift in Security AI Has a Unique Failure Signature — It Looks Like Improved Performance When It Is Actually Degraded Detection
+- **16.3 Text Search Engine**: BM25's IDF Creates a Distributed Coordination Problem That Most Systems Solve by Accepting Inaccuracy
+- **15.8 Error Tracking Platform**: The Deploy-Upload Temporal Gap Creates a Bootstrapping Problem — The First Errors After a Deploy Are the Most Important and the Least Symbolicated
+- **15.8 Error Tracking Platform**: Retro-Symbolication Creates a State Consistency Problem — Re-Resolving Stack Frames Can Change the Fingerprint
+- **15.8 Error Tracking Platform**: The Columnar Store and Relational Store Have a Fundamental Consistency Gap — Event Counts Diverge Under Load
+- **16.2 Time-Series Database**: Out-of-Order Ingestion Is Not an Edge Case --- It Is the Default for Push-Based Architectures
+- **16.1 Web Crawlers**: Content-Addressed Storage Turns Deduplication From a Pre-Write Check Into a Free Property of the Storage Layer
 
 ### Contention
 
@@ -524,7 +531,11 @@
 - **15.5 Chaos Engineering Platform**: The Grace Period Is Not a Delay — It's a Trade-off Between False Rollbacks and Extended Customer Impact
 - **15.5 Chaos Engineering Platform**: Concurrent Experiment Safety Is a Distributed Locking Problem Disguised as a Scheduling Problem
 - **15.6 Incident Management System**: The Escalation Timer Is Not a Timeout — It Is a Dead Man's Switch That Makes Human Unreachability a First-Class System State
+- **16.3 Text Search Engine**: The Segment Merge Tax Is the Fundamental I/O Budget That Determines the System's Throughput Ceiling
+- **16.1 Web Crawlers**: Coverage, Freshness, and Politeness Form an Impossible Triangle — And the Crawler's Job Is to Navigate the Trade-off, Not Solve It
+- **16.2 Time-Series Database**: The Head Block Double-Buffer Swap Eliminates Write-Path Locks at the Cost of Temporary Memory Duplication
 
+- **15.8 Error Tracking Platform**: Alert Rule Evaluation Must Be Decoupled from Event Processing — Making Alerts a Side Effect of Ingestion Turns Every Spike into an Alert Delay
 ### Cost Optimization
 
 - **1.2 Distributed Load Balancer**: TLS Session Resumption Converts a 25-Core Problem into a 2-Core Problem
@@ -623,7 +634,10 @@
 - **15.1 Metrics & Monitoring System**: Downsampling Is Lossy and Irreversible — Different Aggregation Functions Lose Different Information
 - **15.3 Log Aggregation System**: The Indexing Strategy Is Not a Technology Choice — It Is a Three-Way Economic Trade-off Between Ingestion Cost, Search Cost, and Storage Cost
 - **15.7 AI-Native Cybersecurity Platform**: Multi-Tenant Security Platforms Face an Impossible Trilemma: Per-Tenant Model Accuracy vs. Cross-Tenant Threat Intelligence vs. Privacy Isolation
+- **16.2 Time-Series Database**: Downsampling Must Store Four Aggregations Per Interval Because No Single Aggregation Preserves the Original Signal
+- **16.4 Graph Database**: The Query Planner's Starting Node Selection Can Change Query Cost by Six Orders of Magnitude — Making It the Single Most Important Optimization in the System
 
+- **15.8 Error Tracking Platform**: Quota Accounting in a Distributed Relay Fleet Is an Eventually Consistent Counter Problem — And the Acceptable Error Margin Is Asymmetric
 ### Data Structures
 
 - **1.2 Distributed Load Balancer**: Maglev Hashing Achieves Near-Minimal Disruption Through Permutation Tables
@@ -793,6 +807,15 @@
 - **15.3 Log Aggregation System**: Bloom Filters Transform the Search Problem from "Find the Needle" to "Eliminate the Haystacks"
 - **15.3 Log Aggregation System**: The Finite State Transducer Is the Unsung Data Structure That Makes Full-Text Log Search Possible at Scale
 - **15.7 AI-Native Cybersecurity Platform**: Alert Correlation Is a Graph Problem, Not a Time-Series Problem — And the Graph's Topology Determines Whether Correlation Is Tractable
+- **16.4 Graph Database**: Index-Free Adjacency Is Not an Optimization — It Is the Architectural Decision That Defines Whether You Have a Graph Database or a Graph API on a Relational Store
+- **16.4 Graph Database**: The Doubly-Linked Relationship Chain Is the Most Elegant and Most Dangerous Data Structure in the System — Elegant Because It Enables Bidirectional Traversal Without Indexes, Dangerous Because Every Mutation Requires Six Coordinated Pointer Updates
+- **16.2 Time-Series Database**: Gorilla Compression Is a Bet on Data Regularity That Fails Gracefully but Expensively
+- **16.2 Time-Series Database**: The Inverted Index Is a Search Engine, Not a Database Index --- and This Changes the Scaling Model
+- **16.3 Text Search Engine**: The Inverted Index Is Not a Data Structure --- It Is a Co-Located Family of Six Specialized Structures That Must Be Consistent Within a Segment
+- **16.3 Text Search Engine**: The Finite State Transducer Is the Memory-Efficiency Innovation That Makes Billion-Term Dictionaries Feasible
+
+- **16.1 Web Crawlers**: The URL Frontier Is Not a Queue — It Is a Two-Dimensional Scheduler Solving Priority and Politeness Simultaneously
+- **16.1 Web Crawlers**: URL Normalization Is Deceptively Hard — And Getting It Wrong Means Either Wasting 30% of Your Crawl Budget or Missing Pages Entirely
 
 ### Distributed Transactions
 
@@ -912,7 +935,10 @@
 - **14.7 AI-Native SMB Workforce Scheduling & Gig Management**: Multi-Tenant Solver Fairness Requires Work-Stealing, Not FIFO Queuing
 - **14.18 Digital Document Vault Platform**: The Platform Is Not Truly Centralized—It Is a Forced Centralization Point in an Otherwise Federated Document Ecosystem
 - **15.2 Distributed Tracing System**: Consistent Hashing by Trace ID Is Not a Load-Balancing Strategy — It Is the Enabler of Local Trace Assembly
+- **16.2 Time-Series Database**: Time-Based Partitioning Is the Single Architectural Decision That Makes Every Core Operation Cheap
+- **16.4 Graph Database**: Graph Partitioning Is NP-Hard, and the Consequence Is That Every Distributed Graph Database Makes a Lossy Approximation Whose Error Directly Determines Traversal Performance
 
+- **15.8 Error Tracking Platform**: Stack Trace Normalization for Fingerprinting Is Fundamentally Platform-Specific — A Universal Algorithm Produces Terrible Grouping
 ### Replication
 
 - **1.3 Distributed Key-Value Store**: Sloppy Quorum with Hinted Handoff Prioritizes Availability Over Strict Replica Placement
@@ -1138,6 +1164,12 @@
 - **15.7 AI-Native Cybersecurity Platform**: Edge Detection Is Not a Bandwidth Optimization — It Is the Only Architecture That Survives a Network Attack
 - **15.7 AI-Native Cybersecurity Platform**: The Agent Heartbeat Is the Platform's Most Underrated Signal — Its Absence Is More Informative Than Any Telemetry It Could Send
 - **15.7 AI-Native Cybersecurity Platform**: The Approval Gate in SOAR Is Not a Speed Bump — It Is a Control Theory Problem Where Timeout Behavior Determines Fail-Safe vs. Fail-Deadly
+- **16.3 Text Search Engine**: The Separation of Durability (Translog) from Searchability (Refresh) Is the Architectural Innovation That Enables Near-Real-Time Search
+- **16.3 Text Search Engine**: Dynamic Field Mapping Is a Ticking Time Bomb That Creates Cluster State Bloat and Eventual Cluster Instability
+
+- **15.8 Error Tracking Platform**: Error Traffic Is Anti-Correlated with System Health — The Platform Faces Maximum Load at the Exact Moment Its Users Need It Most
+- **16.1 Web Crawlers**: Spider Traps Are Not Just Malicious — Most Are Accidental — And the Crawler Must Distinguish Infinite URL Spaces from Legitimately Large Sites
+- **16.2 Time-Series Database**: The WAL Is Not Just a Crash Recovery Mechanism --- Its Operational Characteristics Directly Determine Recovery Time, Replication Lag, and Write Latency Distribution
 
 ### Scaling
 
@@ -1325,6 +1357,12 @@
 - **15.5 Chaos Engineering Platform**: GameDay Orchestration Is an Incident Simulation — And the Hardest Part Is Not Technical
 - **15.6 Incident Management System**: On-Call Schedule Resolution Is a Read-Heavy, Time-Dependent Computation That Only Changes at Discrete Boundaries
 - **15.7 AI-Native Cybersecurity Platform**: The Model Cascade Is Not an Optimization — It Is the Only Viable Architecture for ML Detection at Billion-Event Scale
+- **16.4 Graph Database**: Property Sharding Separates What Changes Together From What Is Traversed Together — a Decomposition That Preserves Graph Locality While Enabling Horizontal Storage Scaling
+- **16.3 Text Search Engine**: The Two-Phase Query-Then-Fetch Pattern Saves 95% of Network Bandwidth by Deferring Document Retrieval
+- **16.2 Time-Series Database**: Cardinality Is an Adversarial Scaling Problem Because It Grows Combinatorially, Not Linearly
+- **16.3 Text Search Engine**: Adaptive Replica Selection Transforms Shard Routing from a Load Balancing Problem into a Latency Optimization Problem
+
+- **16.1 Web Crawlers**: Politeness Is the Defining Constraint — Not a Feature — And It Inverts the Normal Scaling Paradigm
 
 ### Search
 
@@ -1342,6 +1380,7 @@
 - **9.11 AI-Native Compliance Management**: Framework Interpretation Is an NLP Problem Disguised as a Lookup Problem
 - **9.12 AI-Native Procurement & Spend Intelligence**: Supplier Risk Entity Resolution Is Harder Than Customer Entity Resolution
 - **13.4 AI-Native Real Estate & PropTech Platform**: The AVM's Accuracy Bottleneck Is Comparable Selection, Not Model Inference
+- **16.3 Text Search Engine**: Hybrid Lexical-Vector Search with Reciprocal Rank Fusion Outperforms Either Approach Alone by 15-30% on Recall
 
 ### Security
 
@@ -1482,7 +1521,13 @@
 - **15.6 Incident Management System**: The Break-Glass Authentication Problem — The Incident Platform Must Be Accessible When the Identity Provider Is the System That's Down
 - **15.7 AI-Native Cybersecurity Platform**: The Behavioral Baseline's Cold-Start Period Is a Security Vulnerability, Not Just a Data Quality Problem
 - **15.7 AI-Native Cybersecurity Platform**: SOAR Playbook Automated Response Has an Adversarial Failure Mode — Attackers Can Weaponize the Platform's Own Response Against It
+- **16.4 Graph Database**: Traversal Escalation Is a Graph-Specific Security Threat That Has No Equivalent in Relational Databases — An Authorized Starting Point Can Reach Unauthorized Data Through Structural Connectivity
+- **16.3 Text Search Engine**: Delete-by-ID in a Search Engine Does Not Free Space Until Merge --- and GDPR Erasure Requires Force-Merge to Guarantee Physical Removal
 
+- **16.1 Web Crawlers**: Robots.txt Is Both a Contract and a Vulnerability — Treating a 5xx Response as 'Allow Everything' Can Get the Crawler Permanently Blocked
+
+- **15.8 Error Tracking Platform**: Source Maps Are the Platform's Most Sensitive Asset — They Contain the Complete Original Source Code and Must Be Treated as Secrets, Not Files
+- **15.8 Error Tracking Platform**: The DSN Is a Public Secret — The Entire Security Model Must Be Designed Around the Assumption That the Authentication Token Is Compromised
 ### Streaming
 
 - **1.5 Distributed Log-Based Broker**: The Commit Log Abstraction Enables Time Travel That Traditional Queues Cannot
@@ -1774,6 +1819,15 @@
 - **15.6 Incident Management System**: Incident Severity and Notification Urgency Are Not the Same Axis — Conflating Them Causes Either Alert Fatigue or Missed Incidents
 - **15.7 AI-Native Cybersecurity Platform**: The False Positive Rate That Seems Excellent on Paper Is Catastrophic at Scale — Security AI Operates in a Regime Where Base Rate Dominates Precision
 - **15.7 AI-Native Cybersecurity Platform**: The Unified Common Event Schema Is Not a Data Engineering Convenience — It Is the Architectural Foundation That Makes XDR Possible or Impossible
+- **16.4 Graph Database**: The Supernode Problem Is Not a Bug in Your Data Model — It Is a Fundamental Property of Real-World Graphs That Must Be Designed for at the Storage Engine Level
+- **16.4 Graph Database**: The Wait-For Graph Used for Deadlock Detection Is Itself a Graph — Making Graph Databases One of the Rare Systems Where the Core Data Structure Appears in Its Own Operational Infrastructure
+
+- **16.1 Web Crawlers**: Bloom Filters Trade a Small False Positive Rate for Massive Memory Savings — But "Small" at 10 Billion URLs Means 100 Million Missed Pages
+
+- **15.8 Error Tracking Platform**: The Fingerprinting Algorithm Is Not a Feature of the Platform — It IS the Platform, and Its Precision-Recall Trade-off Is Fundamentally Asymmetric
+- **15.8 Error Tracking Platform**: The Columnar Store and Relational Store Have a Fundamental Consistency Gap — Event Counts Diverge Under Load
+- **15.8 Error Tracking Platform**: The New Issue Rate Is the Platform's Most Important Meta-Signal — Distinguishing Real Incidents from Grouping Regressions Is Critical
+- **16.2 Time-Series Database**: Compaction Is Not Just Optimization --- It Is the Mechanism That Resolves Out-of-Order Data, Enforces Deletions, and Bounds Query Complexity
 
 ### System Tuning
 
@@ -1782,6 +1836,10 @@
 ### Performance
 
 - **14.15 AI-Native Hyperlocal Logistics & Delivery Platform for SMEs**: The Geofence Evaluation Problem Flips from O(N) to O(1) with the Right Index
+
+- **16.1 Web Crawlers**: DNS Resolution Is the Hidden Bottleneck — Every Fetch Requires It, Upstream Resolvers Have Rate Limits, and Cache Misses Add 50-500ms of Latency
+- **16.1 Web Crawlers**: Recrawl Scheduling Is a Multi-Armed Bandit Problem — Not a Simple Timer — Because the Crawler Learns Page Change Frequency from Its Own Observations
+- **16.1 Web Crawlers**: The Fetcher's Connection Pool Is a Distributed Resource That Must Be Managed Like Database Connections — Per-Host Limits, Idle Timeouts, and the Thundering Herd Problem
 
 ### Feedback Loop
 
@@ -1887,6 +1945,7 @@
 - **15.6 Incident Management System**: Alert Storm Handling Requires Treating the Dedup Engine and Notification Pipeline as Two Separate Scaling Problems with Inverted Pressure Profiles
 - **15.7 AI-Native Cybersecurity Platform**: Seasonal and Contextual Baselines Are Not Nice-to-Haves — Without Them, Behavioral Detection Creates Predictable False Positive Storms
 
+- **15.8 Error Tracking Platform**: Spike Protection Is Not Rate Limiting — It Is a Seasonality-Aware Anomaly Detector That Must Distinguish Between Legitimate Traffic Growth and Pathological Error Bursts
 ### Workflow
 
 - **14.3 AI-Native MSME Accounting & Tax Compliance Platform**: The Chart of Accounts Is a Slowly Evolving Schema, and Every Schema Migration Is a Retroactive Reclassification of Historical Data
@@ -1944,6 +2003,8 @@
 ### Architecture
 
 - **15.4 eBPF-based Observability Platform**: The eBPF Observability Platform's True Competitive Moat Is Not Data Collection — It Is the Kernel-Side Data Reduction Ratio
+- **16.2 Time-Series Database**: The Columnar Revolution in TSDBs Is Not About Compression --- It Is About Decoupling the Write Format from the Read Format
+- **16.4 Graph Database**: A Graph Database's Competitive Moat Is Not the Query Language — It Is the Physical Storage Layout That Makes Multi-Hop Traversals Independent of Data Size
 
 ### Safety
 

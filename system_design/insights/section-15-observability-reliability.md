@@ -120,3 +120,22 @@
 | 12 | Seasonal and Contextual Baselines Are Not Nice-to-Haves — Without Them, Behavioral Detection Creates Predictable False Positive Storms | Traffic Shaping |
 
 ---
+
+### 15.8 Error Tracking Platform [View](../15.8-error-tracking-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Fingerprinting Algorithm Is Not a Feature of the Platform — It IS the Platform, and Its Precision-Recall Trade-off Is Fundamentally Asymmetric | System Modeling |
+| 2 | Error Traffic Is Anti-Correlated with System Health — The Platform Faces Maximum Load at the Exact Moment Its Users Need It Most | Resilience |
+| 3 | Source Maps Are the Platform's Most Sensitive Asset — They Contain the Complete Original Source Code and Must Be Treated as Secrets, Not Files | Security |
+| 4 | The Deploy-Upload Temporal Gap Creates a Bootstrapping Problem — The First Errors After a Deploy Are the Most Important and the Least Symbolicated | Consistency |
+| 5 | The DSN Is a Public Secret — The Entire Security Model Must Be Designed Around the Assumption That the Authentication Token Is Compromised | Security |
+| 6 | Spike Protection Is Not Rate Limiting — It Is a Seasonality-Aware Anomaly Detector That Must Distinguish Between Legitimate Traffic Growth and Pathological Error Bursts | Traffic Shaping |
+| 7 | The Columnar Store and Relational Store Have a Fundamental Consistency Gap — Event Counts Diverge Under Load | Consistency |
+| 8 | Stack Trace Normalization for Fingerprinting Is Fundamentally Platform-Specific — A Universal Algorithm Produces Terrible Grouping | Data Structures |
+| 9 | Alert Rule Evaluation Must Be Decoupled from Event Processing — Making Alerts a Side Effect of Ingestion Turns Every Spike into an Alert Delay | Contention |
+| 10 | Retro-Symbolication Creates a State Consistency Problem — Re-Resolving Stack Frames Can Change the Fingerprint | Consistency |
+| 11 | Quota Accounting in a Distributed Relay Fleet Is an Eventually Consistent Counter Problem — And the Acceptable Error Margin Is Asymmetric | Cost Optimization |
+| 12 | The New Issue Rate Is the Platform's Most Important Meta-Signal — Distinguishing Real Incidents from Grouping Regressions Is Critical | System Modeling |
+
+---

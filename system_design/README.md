@@ -262,6 +262,11 @@ Each system design directory contains 9 standardized documents:
 | 15.5 | Chaos Engineering Platform | Completed | [View](./15.5-chaos-engineering-platform/00-index.md) |
 | 15.6 | Incident Management System | Completed | [View](./15.6-incident-management-system/00-index.md) |
 | 15.7 | AI-Native Cybersecurity Platform | Completed | [View](./15.7-ai-native-cybersecurity-platform/00-index.md) |
+| 15.8 | Error Tracking Platform | Completed | [View](./15.8-error-tracking-platform/00-index.md) |
+| 16.1 | Web Crawlers | Completed | [View](./16.1-web-crawlers/00-index.md) |
+| 16.2 | Time-Series Database | Completed | [View](./16.2-time-series-database/00-index.md) |
+| 16.3 | Text Search Engine | Completed | [View](./16.3-text-search-engine/00-index.md) |
+| 16.4 | Graph Database | Completed | [View](./16.4-graph-database/00-index.md) |
 
 
 ---
