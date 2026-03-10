@@ -216,6 +216,9 @@ Each system design directory contains 9 standardized documents:
 | 12.9 | Design a Code Execution Sandbox (LeetCode/Replit - Isolation, Resource Limits, Security) | Completed | [View](./12.9-code-execution-sandbox/00-index.md) |
 | 12.10 | Design a Polling/Voting System (High Write Throughput, Result Aggregation) | Completed | [View](./12.10-polling-voting-system/00-index.md) |
 | 12.11 | Package Registry (npm/PyPI/Maven Central - Artifact Storage, Versioning, Security Scanning, CDN) | Completed | [View](./12.11-package-registry/00-index.md) |
+| 12.12 | Password Manager (Zero-Knowledge Encryption, Key Hierarchy, Vault Sync, Browser Extension Autofill) | Completed | [View](./12.12-password-manager/00-index.md) |
+| 12.13 | Bot Detection System (Behavioral Biometrics, Device Fingerprinting, ML Risk Scoring, Challenge-Response) | Completed | [View](./12.13-bot-detection-system/00-index.md) |
+| 12.14 | A/B Testing Platform (Experiment Assignment, Statistical Significance, Feature Flags, Segmentation) | Completed | [View](./12.14-ab-testing-platform/00-index.md) |
 
 
 ---

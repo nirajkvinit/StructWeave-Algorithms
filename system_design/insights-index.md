@@ -13,25 +13,25 @@ A cross-reference of key architectural insights extracted from each system desig
 
 | Category | Description | Topics Count |
 |----------|-------------|:------------:|
-| Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 61 |
-| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 72 |
-| Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 16 |
-| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 115 |
-| Contention | Lock contention, hot keys, thundering herds, and resource competition | 82 |
-| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 61 |
-| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 114 |
-| Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 23 |
-| Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 21 |
-| External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 14 |
-| Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 26 |
-| Replication | Data replication, follower management, and cross-region synchronization | 8 |
-| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 120 |
-| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 119 |
-| Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 10 |
-| Security | Authentication, encryption, access control, and threat mitigation | 65 |
-| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 40 |
-| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 101 |
-| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 63 |
+| Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 69 |
+| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 93 |
+| Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 20 |
+| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 151 |
+| Contention | Lock contention, hot keys, thundering herds, and resource competition | 92 |
+| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 75 |
+| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 135 |
+| Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 25 |
+| Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 26 |
+| External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 17 |
+| Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 27 |
+| Replication | Data replication, follower management, and cross-region synchronization | 25 |
+| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 157 |
+| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 159 |
+| Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 13 |
+| Security | Authentication, encryption, access control, and threat mitigation | 108 |
+| Streaming | Real-time data processing, event streaming, and pub/sub architectures | 61 |
+| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 147 |
+| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 74 |
 
 ---
 
@@ -2797,6 +2797,51 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
+### 12.12 Password Manager [View](./12.12-password-manager/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Server as Structurally Blind Infrastructure | Security |
+| 2 | Hierarchical Key Envelopes Enable Fine-Grained Access Without Exposing Root Secrets | Security |
+| 3 | CRDT Semantics Work on Ciphertext Metadata, Not Plaintext | Consistency |
+| 4 | Authentication Without Password Transmission Is Non-Trivial but Essential | Security |
+| 5 | k-Anonymity Enables Privacy-Preserving Threat Intelligence | Security |
+| 6 | Emergency Access Must Balance Usability Against Zero-Knowledge Preservation | Resilience |
+| 7 | Browser Extension Content Script Isolation Is the Last Line of Defense | System Modeling |
+| 8 | Metadata Leakage Is an Unavoidable Residual Risk in Zero-Knowledge Systems | Security |
+
+---
+
+### 12.13 Bot Detection System [View](./12.13-bot-detection-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Behavioral Biometrics are the Last Line of Defense in the Arms Race | Security |
+| 2 | The Risk Score Must Be Calibrated, Not Just Accurate | System Modeling |
+| 3 | Edge-First Architecture Is Forced by Latency Physics, Not Engineering Preference | Edge Computing |
+| 4 | Session Reputation Changes the Detection Paradigm from Static to Temporal | Consistency |
+| 5 | The Challenge System Is a Safety Valve, Not a Detection Mechanism | Resilience |
+| 6 | Canary Features Are the Defense Against Model Inversion | Security |
+| 7 | Fail-Open Is the Only Correct Failure Mode | Resilience |
+| 8 | Privacy-Preserving Fingerprinting Requires Architecture-Level Commitments, Not Afterthoughts | Security |
+
+---
+
+### 12.14 A/B Testing Platform [View](./12.14-ab-testing-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Deterministic Hashing Makes Sticky Assignment a Mathematical Guarantee, Not a Database Query | Data Structures |
+| 2 | Sequential Testing Resolves the Peeking Problem Without Sacrificing Analytical Freedom | System Modeling |
+| 3 | CUPED Buys Sample Size Reduction by Partitioning Variance, Not by Changing the Experiment | Scaling |
+| 4 | Sample Ratio Mismatch Detection Is the Most Important Data Quality Check in Experimentation | Consistency |
+| 5 | Layered Mutual Exclusion Enables Thousands of Concurrent Experiments by Making Isolation a Namespace Property | Partitioning |
+| 6 | The Append-Only Event Log Is the System's Source of Truth — Metric Definitions Should Not Be Locked In at Experiment Start | Replication |
+| 7 | Feature Flags and A/B Experiments Share the Same Delivery Mechanism — Unifying Them Eliminates an Entire Class of Consistency Bugs | Atomicity |
+| 8 | Guardrail Metrics With Automated Kill-Switches Transform Experimentation From a Risk Into a Safety Net | Resilience |
+
+---
+
 ## Cross-Reference: Insights by Category
 
 ### Atomicity
@@ -2869,6 +2914,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.6 Pastebin**: Burn-After-Reading Converts a Stateless Read into a Stateful Mutation
 - **12.10 Polling/Voting System**: The SADD Return Value Is a Lock-Free Compare-and-Swap
 - **12.10 Polling/Voting System**: Idempotency Keys Transform Retries from a Bug Source into a Safety Mechanism
+- **12.14 A/B Testing Platform**: Feature Flags and A/B Experiments Share the Same Delivery Mechanism — Unifying Them Eliminates an Entire Class of Consistency Bugs
 
 ### Caching
 
@@ -3141,6 +3187,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.10 Polling/Voting System**: The Closing State Is a Consistency Reconciliation Phase
 - **12.10 Polling/Voting System**: Split Consistency Is a Principled Design Choice, Not a Compromise
 - **12.10 Polling/Voting System**: Cross-Region Dedup Requires Accepting a Small Duplicate Window
+- **12.14 A/B Testing Platform**: Sample Ratio Mismatch Detection Is the Most Important Data Quality Check in Experimentation
 
 ### Contention
 
@@ -3451,6 +3498,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.6 Pastebin**: Content-Addressable Storage Turns Deduplication into a Free Side Effect
 - **12.7 P2P File Sharing**: XOR Distance Creates the Most Elegant Routing Structure in Distributed Systems
 - **12.7 P2P File Sharing**: Content-Addressing Eliminates the Naming Problem and Enables Zero-Trust Verification
+- **12.14 A/B Testing Platform**: Deterministic Hashing Makes Sticky Assignment a Mathematical Guarantee, Not a Database Query
 
 ### Distributed Transactions
 
@@ -3507,6 +3555,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **5.7 Twitch**: Demand-Based Replication Tree with Push Propagation
 - **6.6 Ticketmaster**: Edge-Side Token Validation
 - **6.7 Google Meet / Zoom**: Geo-Routing Media Servers via Anycast Minimizes First-Hop Latency
+- **12.13 Bot Detection System**: Edge-First Architecture Is Forced by Latency Physics, Not Engineering Preference
 
 ### External Dependencies
 
@@ -3556,6 +3605,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **4.11 Reddit**: Subreddit-Sharded Vote Queues for Hot Spot Isolation
 - **4.11 Reddit**: Community-Based Sharding vs. User-Based Fanout
 - **6.4 HubSpot**: Hublet Architecture -- Full Infrastructure Isolation Per Region
+- **12.14 A/B Testing Platform**: Layered Mutual Exclusion Enables Thousands of Concurrent Experiments by Making Isolation a Namespace Property
 
 ### Replication
 
@@ -3581,6 +3631,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.10 Polling/Voting System**: Bloom Filters Create a Zero-Network-Cost Deduplication Layer
 - **12.11 Package Registry**: Dependency Resolution Is Provably NP-Complete
 - **12.11 Package Registry**: Content-Addressable Storage Solves Three Problems Simultaneously
+- **12.12 Password Manager**: CRDT Semantics Work on Ciphertext Metadata, Not Plaintext
+- **12.13 Bot Detection System**: Session Reputation Changes the Detection Paradigm from Static to Temporal
+- **12.14 A/B Testing Platform**: The Append-Only Event Log Is the System's Source of Truth — Metric Definitions Should Not Be Locked In at Experiment Start
 
 ### Resilience
 
@@ -3737,6 +3790,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.10 Polling/Voting System**: The Vote Audit Log Is the Ultimate Source of Truth
 - **12.11 Package Registry**: Transparency Logs Make Registry Compromise Detectable
 - **12.11 Package Registry**: Immutable Artifacts Make CDN Outages Survivable
+- **12.12 Password Manager**: Emergency Access Must Balance Usability Against Zero-Knowledge Preservation
+- **12.13 Bot Detection System**: The Challenge System Is a Safety Valve, Not a Detection Mechanism
+- **12.13 Bot Detection System**: Fail-Open Is the Only Correct Failure Mode
+- **12.14 A/B Testing Platform**: Guardrail Metrics With Automated Kill-Switches Transform Experimentation From a Risk Into a Safety Net
 
 ### Scaling
 
@@ -3898,6 +3955,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.9 Code Execution Sandbox**: Pre-Scaling for Known Events Transforms Unpredictable Load into Predictable Capacity
 - **12.10 Polling/Voting System**: Adaptive Shard Scaling Must Be Unidirectional During Active Polls
 - **12.11 Package Registry**: CDN Is the System, Not an Optimization
+- **12.14 A/B Testing Platform**: CUPED Buys Sample Size Reduction by Partitioning Variance, Not by Changing the Experiment
 
 ### Search
 
@@ -4016,6 +4074,15 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.11 Package Registry**: Supply Chain Security Protects the Ecosystem, Not Just the System
 - **12.11 Package Registry**: Typosquatting Detection Is a Fuzzy String Matching Problem with Asymmetric Costs
 - **12.11 Package Registry**: Scoped Namespaces Are a Security Mechanism, Not Just an Organizational Convenience
+- **12.12 Password Manager**: The Server as Structurally Blind Infrastructure
+- **12.12 Password Manager**: Hierarchical Key Envelopes Enable Fine-Grained Access Without Exposing Root Secrets
+- **12.12 Password Manager**: Authentication Without Password Transmission Is Non-Trivial but Essential
+- **12.12 Password Manager**: k-Anonymity Enables Privacy-Preserving Threat Intelligence
+- **12.12 Password Manager**: Browser Extension Content Script Isolation Is the Last Line of Defense
+- **12.12 Password Manager**: Metadata Leakage Is an Unavoidable Residual Risk in Zero-Knowledge Systems
+- **12.13 Bot Detection System**: Behavioral Biometrics are the Last Line of Defense in the Arms Race
+- **12.13 Bot Detection System**: Canary Features Are the Defense Against Model Inversion
+- **12.13 Bot Detection System**: Privacy-Preserving Fingerprinting Requires Architecture-Level Commitments, Not Afterthoughts
 
 ### Streaming
 
@@ -4227,6 +4294,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.10 Polling/Voting System**: CQRS Is Architecturally Necessary, Not an Optimization Choice
 - **12.11 Package Registry**: Immutability as Architectural Enabler, Not Just Policy
 - **12.11 Package Registry**: The Metadata-Artifact Split Enables Independent Scaling
+- **12.12 Password Manager**: Browser Extension Content Script Isolation Is the Last Line of Defense
+- **12.13 Bot Detection System**: The Risk Score Must Be Calibrated, Not Just Accurate
+- **12.14 A/B Testing Platform**: Sequential Testing Resolves the Peeking Problem Without Sacrificing Analytical Freedom
 
 ### Traffic Shaping
 
