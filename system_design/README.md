@@ -234,6 +234,11 @@ Each system design directory contains 9 standardized documents:
 | 13.6 | AI-Native Media & Entertainment Platform (Content Generation, Audience Analytics, Personalization, Ad Optimization, Rights Management, Dubbing/Localization) | Completed | [View](./13.6-ai-native-media-entertainment-platform/00-index.md) |
 | 13.7 | AI-Native Construction & Engineering Platform (BIM Intelligence, Cost Estimation, Safety Monitoring, Progress Tracking, Resource Optimization, Risk Prediction) | Completed | [View](./13.7-ai-native-construction-engineering-platform/00-index.md) |
 | 14.1 | AI-Native MSME Credit Scoring & Lending Platform (Alternative Data Credit Scoring, Behavioral/Transactional Analysis, Psychometric Testing, Thin-File Lending, Embedded Finance) | Completed | [View](./14.1-ai-native-msme-credit-scoring-lending-platform/00-index.md) |
+| 14.2 | AI-Native Conversational Commerce Platform (WhatsApp Business API, Catalog Sync, Cart Management, Payment Integration, Vernacular NLP, Broadcast Campaigns) | Completed | [View](./14.2-ai-native-conversational-commerce-platform/00-index.md) |
+| 14.3 | AI-Native MSME Accounting & Tax Compliance Platform (Auto Categorization, GST/VAT Filing, Bank Reconciliation, Invoice OCR, Multi-Country Compliance) | Completed | [View](./14.3-ai-native-msme-accounting-tax-compliance-platform/00-index.md) |
+| 14.4 | AI-Native SME Inventory & Demand Forecasting System (Demand Sensing, Stock Optimization, Reorder Automation, Multi-Channel Sync, Expiry/Batch Management) | Completed | [View](./14.4-ai-native-sme-inventory-demand-forecasting-system/00-index.md) |
+| 14.5 | AI-Native B2B Supplier Discovery & Procurement Marketplace (Semantic Supplier Search, Field-Aware Embeddings, Trust Scoring, RFQ Optimization, Price Benchmarking, Escrow Payments) | Completed | [View](./14.5-ai-native-b2b-supplier-discovery-procurement-marketplace/00-index.md) |
+| 14.6 | AI-Native Vernacular Voice Commerce Platform (Multilingual ASR, Code-Mixed Speech, Voice Ordering, Vernacular Product Resolution, Outbound Campaigns, Telephony Integration) | Completed | [View](./14.6-ai-native-vernacular-voice-commerce-platform/00-index.md) |
 
 
 ---

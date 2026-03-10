@@ -75,6 +75,9 @@
 - **12.10 Polling/Voting System**: The SADD Return Value Is a Lock-Free Compare-and-Swap
 - **12.10 Polling/Voting System**: Idempotency Keys Transform Retries from a Bug Source into a Safety Mechanism
 - **12.14 A/B Testing Platform**: Feature Flags and A/B Experiments Share the Same Delivery Mechanism — Unifying Them Eliminates an Entire Class of Consistency Bugs
+- **14.3 AI-Native MSME Accounting & Tax Compliance Platform**: The Accounting Equation Is a Database Constraint, Not an Application Validation
+- **14.2 AI-Native Conversational Commerce Platform**: Webhook Deduplication Is Necessary but Not Sufficient — The Real Problem Is Idempotent Side Effects
+- **14.5 AI-Native B2B Supplier Discovery & Procurement Marketplace**: The Escrow State Machine Must Handle a State That Financial Systems Typically Cannot: The "Dispute Without Resolution" Deadlock
 
 ### Caching
 
@@ -365,6 +368,11 @@
 - **13.5 AI-Native Agriculture & Precision Farming Platform**: Soil Sensor Calibration Drift Is Spatially Correlated, Making Cross-Sensor Validation Unreliable
 - **13.7 AI-Native Construction & Engineering Platform**: Point Cloud Registration Drift Accumulates Silently, Creating Phantom Progress Signals
 - **14.1 AI-Native MSME Credit Scoring & Lending Platform**: Consent Expiry Creates a Stale-Data Cliff That Standard ML Feature Stores Cannot Handle
+- **14.3 AI-Native MSME Accounting & Tax Compliance Platform**: Tax Rule Versioning Requires Bi-Temporal Modeling, Not Just Effective Dates
+- **14.5 AI-Native B2B Supplier Discovery & Procurement Marketplace**: Entity Resolution's Hardest Case Is Not Duplicates — It Is Near-Duplicates That Are Legitimately Different Products
+- **14.2 AI-Native Conversational Commerce Platform**: Per-Conversation Message Ordering Is Necessary but Must Tolerate Out-of-Order Status Updates Without Breaking the State Machine
+- **14.4 AI-Native SME Inventory & Demand Forecasting System**: Multi-Channel Reconciliation Is a Consensus Problem Where You Don't Control the Participants
+- **14.6 AI-Native Vernacular Voice Commerce Platform**: Streaming TTS Creates an Irrecoverable Commitment Problem That Shapes the Entire Response Generation Architecture
 
 ### Contention
 
@@ -465,6 +473,10 @@
 - **13.6 AI-Native Media & Entertainment Platform**: GPU Model Loading Is the True Latency Bottleneck — Not Inference
 - **13.7 AI-Native Construction & Engineering Platform**: The BIM Clash Report Is a Political Document That Determines Who Pays for Coordination Failures
 - **14.1 AI-Native MSME Credit Scoring & Lending Platform**: Loan Stacking Detection Is a Distributed Consensus Problem Across Competing Lenders
+- **14.3 AI-Native MSME Accounting & Tax Compliance Platform**: The Filing Deadline Thundering Herd Is Not a Load Problem — It Is a Priority Inversion Problem
+- **14.5 AI-Native B2B Supplier Discovery & Procurement Marketplace**: The RFQ Routing Problem Is a Two-Sided Matching Market, Not a One-Sided Search
+- **14.2 AI-Native Conversational Commerce Platform**: The Broadcast Engine's Hardest Problem Is Not Sending 1M Messages — It Is Not Degrading the Conversational Experience While Doing So
+- **14.6 AI-Native Vernacular Voice Commerce Platform**: The Telephony Channel's 8 kHz Bandwidth Destroys Exactly the Acoustic Features That Distinguish Confusable Product Names
 
 ### Cost Optimization
 
@@ -548,6 +560,11 @@
 - **13.6 AI-Native Media & Entertainment Platform**: Ad Pod Duration Should Be Optimized Per-Session, Not Per-Break
 - **13.7 AI-Native Construction & Engineering Platform**: Construction Cost Distributions Are Not Independent — Correlated Sampling Reveals 40% Larger Fat Tails
 - **14.1 AI-Native MSME Credit Scoring & Lending Platform**: The Auto-Debit Retry Problem Is a Multi-Armed Bandit, Not a Scheduling Problem
+- **14.3 AI-Native MSME Accounting & Tax Compliance Platform**: Bank Charge Auto-Categorization Is the Reconciliation Engine's Highest-ROI Feature Despite Being Its Simplest
+- **14.5 AI-Native B2B Supplier Discovery & Procurement Marketplace**: Price Benchmarks in B2B Are Not Stationary Statistics — They Are Regime-Switching Models
+- **14.2 AI-Native Conversational Commerce Platform**: WhatsApp's Template Approval Process Creates an Inventory Management Problem for Message Content
+- **14.4 AI-Native SME Inventory & Demand Forecasting System**: Channel Safety Buffers Are Not Static Reserves — They Are Continuously Priced Options
+- **14.6 AI-Native Vernacular Voice Commerce Platform**: GPU Cost Optimization for Voice Commerce Requires Audio-Aware Batch Formation, Not Request-Count-Based Batching
 
 ### Data Structures
 
@@ -695,6 +712,11 @@
 - **13.6 AI-Native Media & Entertainment Platform**: Provenance Chain Compaction Is Required — Unbounded Manifest Growth Makes Verification Intractable
 - **13.7 AI-Native Construction & Engineering Platform**: The Digital Twin's Value Is in the Temporal Dimension for Forensic Reconstruction
 - **14.1 AI-Native MSME Credit Scoring & Lending Platform**: The Credit Model's Biggest Competitor Is the Bank Statement Parser
+- **14.3 AI-Native MSME Accounting & Tax Compliance Platform**: The Reconciliation Engine's Most Expensive Operation Is Not Matching — It Is Counterparty Resolution
+- **14.5 AI-Native B2B Supplier Discovery & Procurement Marketplace**: The Vocabulary Gap Is Not a Search Problem — It Is a Knowledge Representation Problem
+- **14.2 AI-Native Conversational Commerce Platform**: Catalog Search in Conversational Commerce Requires Recall-First Ranking, Not Precision-First
+- **14.4 AI-Native SME Inventory & Demand Forecasting System**: The Forecast's Confidence Interval Is More Valuable Than Its Point Estimate for SME Decision-Making
+- **14.6 AI-Native Vernacular Voice Commerce Platform**: The Vernacular Synonym Dictionary Is a Living Knowledge Graph, Not a Static Lookup Table
 
 ### Distributed Transactions
 
@@ -807,6 +829,10 @@
 - **12.14 A/B Testing Platform**: Layered Mutual Exclusion Enables Thousands of Concurrent Experiments by Making Isolation a Namespace Property
 - **12.16 Product Analytics Platform**: Behavioral Cohorts Require Set Algebra, Not SQL Subqueries, to Scale
 - **13.4 AI-Native Real Estate & PropTech Platform**: The Nightly AVM Batch Must Process Properties in Spatial Dependency Order, Not Arbitrary Order
+- **14.1 AI-Native MSME Credit Scoring & Lending Platform**: The Embedded Finance API's Hardest Problem Is Not Technology — It Is Capital Allocation Across Competing Partners
+- **14.2 AI-Native Conversational Commerce Platform**: The Multi-Tenant Outbound Gateway Is a Real-Time Resource Allocation Problem Isomorphic to CPU Scheduling
+- **14.4 AI-Native SME Inventory & Demand Forecasting System**: Tenant Forecast Compute Isolation Matters More Than Tenant Data Isolation for System Stability
+- **14.5 AI-Native B2B Supplier Discovery & Procurement Marketplace**: The Marketplace's Most Valuable Data Asset Is Not the Product Catalog — It Is the Buyer-Supplier Match Graph
 
 ### Replication
 
@@ -1181,6 +1207,8 @@
 - **13.5 AI-Native Agriculture & Precision Farming Platform**: The Satellite Imagery Pipeline's Real Bottleneck Is Atmospheric Correction, Not Cloud Masking or Model Inference
 - **13.6 AI-Native Media & Entertainment Platform**: Voice Cloning Embeddings Are Correlated Across Languages — Quality Collapse for Phonetically Distant Targets
 - **14.1 AI-Native MSME Credit Scoring & Lending Platform**: Model Retraining Frequency Is Constrained by Label Maturity, Not Computational Cost
+- **14.4 AI-Native SME Inventory & Demand Forecasting System**: The ABC Classification Paradox — Categories Change Because of the Actions Taken Based on the Classification
+- **14.6 AI-Native Vernacular Voice Commerce Platform**: The Outbound Campaign Dialer Must Model Telephony Infrastructure as a Stochastic Adversary, Not a Reliable Transport
 
 ### Search
 
@@ -1323,6 +1351,7 @@
 - **13.4 AI-Native Real Estate & PropTech Platform**: Property Search Personalization Operates Under a Fair Housing Constraint That Differs From E-Commerce
 - **13.6 AI-Native Media & Entertainment Platform**: Content Safety Classifiers Must Be Calibrated for the Distribution Channel, Not the Content
 - **14.1 AI-Native MSME Credit Scoring & Lending Platform**: The Fraud Graph's Most Powerful Signal Is Temporal Coordination, Not Connection Density
+- **14.3 AI-Native MSME Accounting & Tax Compliance Platform**: The Audit Trail's Merkle Chain Must Be Per-Business, Not Global, to Enable Verifiable Deletion
 
 ### Streaming
 
@@ -1576,6 +1605,13 @@
 - **13.6 AI-Native Media & Entertainment Platform**: Lip-Sync Tolerance Is Phoneme-Dependent — Global Sync Metrics Hide Perceptual Failures
 - **13.7 AI-Native Construction & Engineering Platform**: Progress Tracking Accuracy Is Bounded by Occlusion — The Occluded Elements Are the Most Valuable
 - **14.1 AI-Native MSME Credit Scoring & Lending Platform**: Psychometric Scoring's Value Is Not Predictive Power — It Is Orthogonality to Transaction Data
+- **14.3 AI-Native MSME Accounting & Tax Compliance Platform**: Per-Business Model Adaptation Must Be Bayesian, Not Fine-Tuning, to Prevent Catastrophic Forgetting
+- **14.5 AI-Native B2B Supplier Discovery & Procurement Marketplace**: Trust Score Decay Creates an Implicit SLA That Suppliers Cannot See
+- **14.6 AI-Native Vernacular Voice Commerce Platform**: The Endpointing Decision Is the Single Largest Latency Contributor, and It Is Fundamentally a Classification Problem, Not a Threshold Problem
+- **14.2 AI-Native Conversational Commerce Platform**: The 24-Hour Conversation Window Is Not a Limitation — It Is the Architecture's Natural Transaction Boundary
+- **14.4 AI-Native SME Inventory & Demand Forecasting System**: The Reorder Point's Biggest Enemy Is Not Demand Uncertainty — It Is Lead Time Variance
+- **14.4 AI-Native SME Inventory & Demand Forecasting System**: Intermittent Demand Forecasting Is Not a Forecasting Problem — It Is a Decision Theory Problem
+- **14.6 AI-Native Vernacular Voice Commerce Platform**: Code-Mixing Ratio Is a User-Specific Feature That Predicts Commerce Intent Quality Better Than Language Detection
 
 ### Traffic Shaping
 
@@ -1668,3 +1704,10 @@
 - **12.20 AI-Native Recruitment Platform**: 4/5ths Rule Sample Size Requirements Break Per-Requisition Monitoring
 - **13.3 AI-Native Energy & Grid Management Platform**: DR Rebound Prevention Is a Harder Control Problem Than the Original Curtailment
 
+### Workflow
+
+- **14.3 AI-Native MSME Accounting & Tax Compliance Platform**: The Chart of Accounts Is a Slowly Evolving Schema, and Every Schema Migration Is a Retroactive Reclassification of Historical Data
+- **14.5 AI-Native B2B Supplier Discovery & Procurement Marketplace**: Supplier Onboarding Verification Is Not a Gate — It Is a Bayesian Prior That Updates Continuously
+- **14.2 AI-Native Conversational Commerce Platform**: Agent Handoff Context Transfer Is a Lossy Compression Problem — Not a Data Transfer Problem
+- **14.4 AI-Native SME Inventory & Demand Forecasting System**: FEFO Allocation Creates a Hidden Demand Acceleration Feedback Loop
+- **14.6 AI-Native Vernacular Voice Commerce Platform**: The Non-Literate User's Working Memory Constraint Creates a Hard Limit on Cart Size That Text Commerce Never Encounters
