@@ -219,6 +219,9 @@ Each system design directory contains 9 standardized documents:
 | 12.12 | Password Manager (Zero-Knowledge Encryption, Key Hierarchy, Vault Sync, Browser Extension Autofill) | Completed | [View](./12.12-password-manager/00-index.md) |
 | 12.13 | Bot Detection System (Behavioral Biometrics, Device Fingerprinting, ML Risk Scoring, Challenge-Response) | Completed | [View](./12.13-bot-detection-system/00-index.md) |
 | 12.14 | A/B Testing Platform (Experiment Assignment, Statistical Significance, Feature Flags, Segmentation) | Completed | [View](./12.14-ab-testing-platform/00-index.md) |
+| 12.15 | Customer Data Platform (Event Collection, Identity Resolution, Destinations, Audience Building) | Completed | [View](./12.15-customer-data-platform/00-index.md) |
+| 12.16 | Product Analytics Platform (Funnel Analysis, Cohorts, Retention, Event Tracking, User Journeys) | Completed | [View](./12.16-product-analytics-platform/00-index.md) |
+| 12.17 | Content Moderation System (AI + Human Review, Toxicity Detection, Appeals, Review Queues, Policy Enforcement) | Completed | [View](./12.17-content-moderation-system/00-index.md) |
 
 
 ---

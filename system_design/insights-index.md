@@ -16,21 +16,21 @@ A cross-reference of key architectural insights extracted from each system desig
 | Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 69 |
 | Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 93 |
 | Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 20 |
-| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 151 |
+| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 157 |
 | Contention | Lock contention, hot keys, thundering herds, and resource competition | 92 |
-| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 75 |
-| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 135 |
+| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 76 |
+| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 138 |
 | Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 25 |
 | Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 26 |
 | External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 17 |
-| Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 27 |
+| Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 28 |
 | Replication | Data replication, follower management, and cross-region synchronization | 25 |
-| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 157 |
-| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 159 |
+| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 159 |
+| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 161 |
 | Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 13 |
-| Security | Authentication, encryption, access control, and threat mitigation | 108 |
+| Security | Authentication, encryption, access control, and threat mitigation | 112 |
 | Streaming | Real-time data processing, event streaming, and pub/sub architectures | 61 |
-| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 147 |
+| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 152 |
 | Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 74 |
 
 ---
@@ -2842,6 +2842,51 @@ A cross-reference of key architectural insights extracted from each system desig
 
 ---
 
+### 12.15 Customer Data Platform [View](./12.15-customer-data-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Identity Resolution Is a Distributed Consensus Problem in Disguise | Consistency |
+| 2 | The Fan-out Multiplier Makes Destination Delivery the Dominant Cost Center | Scaling |
+| 3 | Consent Must Be an Architectural Invariant, Not a Compliance Check | Security |
+| 4 | The Inverted Segment Index Is What Makes Streaming Evaluation Feasible | Data Structures |
+| 5 | Crypto-Shredding Solves the "Erasure in Immutable Logs" Dilemma | Security |
+| 6 | Profile Merges Require Survivorship Rules, Not Just Data Aggregation | Consistency |
+| 7 | Dual-Path Segment Evaluation Creates a Consistency Challenge That Must Be Explicitly Managed | Consistency |
+| 8 | The Warehouse-Native CDP Trades Real-Time Performance for Data Gravity Efficiency | System Modeling |
+
+---
+
+### 12.16 Product Analytics Platform [View](./12.16-product-analytics-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Funnel Computation Is a Set Algebra Problem, Not a Join Problem | Data Structures |
+| 2 | Schema-on-Read Enables Retroactive Analysis — But Requires Governance to Stay Useful | System Modeling |
+| 3 | Point-in-Time User Property Correctness Is the Silent Accuracy Killer | Consistency |
+| 4 | Three-Tier Storage Is Not a Caching Strategy — It's a Latency vs. Cost Trade-off at Each Time Horizon | Cost Optimization |
+| 5 | Bloom Filters at the Collector Tier Are Worth Their Complexity Because Downstream Deduplication Is 100x More Expensive | Data Structures |
+| 6 | Behavioral Cohorts Require Set Algebra, Not SQL Subqueries, to Scale | Partitioning |
+| 7 | Identity Stitching Must Be Applied at Query Time, Not Ingestion Time, for Historical Correctness | Consistency |
+| 8 | Real-Time Freshness Is Best Measured by Canary Events, Not by Pipeline Lag Metrics | Resilience |
+
+---
+
+### 12.17 Content Moderation System [View](./12.17-content-moderation-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Policy and Classification Must Be Independently Evolvable | System Modeling |
+| 2 | Human Review Queue Is a First-Class Infrastructure Primitive, Not a Fallback | Scaling |
+| 3 | Perceptual Hashes Are Sensitive Material, Not Just Tool Outputs | Security |
+| 4 | The False Positive Trade-Off Is Category-Specific and Policy-Determined, Not Technically Optimizable | System Modeling |
+| 5 | Adversarial Normalization Must Precede All Classification, Not Follow It | Security |
+| 6 | Automated Re-Review as the Primary Appeals Tier Is Not a Shortcut — It Is a Quality Signal | Consistency |
+| 7 | Reviewer Wellness Constraints Change the Queue Architecture Fundamentally | Resilience |
+| 8 | Content Moderation System Design Requires Explicit Harm Valuation, Not Just Technical Optimization | System Modeling |
+
+---
+
 ## Cross-Reference: Insights by Category
 
 ### Atomicity
@@ -3188,6 +3233,12 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.10 Polling/Voting System**: Split Consistency Is a Principled Design Choice, Not a Compromise
 - **12.10 Polling/Voting System**: Cross-Region Dedup Requires Accepting a Small Duplicate Window
 - **12.14 A/B Testing Platform**: Sample Ratio Mismatch Detection Is the Most Important Data Quality Check in Experimentation
+- **12.15 Customer Data Platform**: Identity Resolution Is a Distributed Consensus Problem in Disguise
+- **12.15 Customer Data Platform**: Profile Merges Require Survivorship Rules, Not Just Data Aggregation
+- **12.15 Customer Data Platform**: Dual-Path Segment Evaluation Creates a Consistency Challenge That Must Be Explicitly Managed
+- **12.16 Product Analytics Platform**: Point-in-Time User Property Correctness Is the Silent Accuracy Killer
+- **12.16 Product Analytics Platform**: Identity Stitching Must Be Applied at Query Time, Not Ingestion Time, for Historical Correctness
+- **12.17 Content Moderation System**: Automated Re-Review as the Primary Appeals Tier Is Not a Shortcut — It Is a Quality Signal
 
 ### Contention
 
@@ -3361,6 +3412,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.8 WebRTC Infrastructure**: The 85% of Sessions That Don't Need TURN Subsidize the Architecture for the 15% That Do
 - **12.10 Polling/Voting System**: Adaptive Aggregation Frequency Balances Freshness Against CPU Cost
 - **12.11 Package Registry**: Abbreviated Metadata Is a Bandwidth Optimization with Outsized Impact
+- **12.16 Product Analytics Platform**: Three-Tier Storage Is Not a Caching Strategy — It's a Latency vs. Cost Trade-off at Each Time Horizon
 
 ### Data Structures
 
@@ -3499,6 +3551,9 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.7 P2P File Sharing**: XOR Distance Creates the Most Elegant Routing Structure in Distributed Systems
 - **12.7 P2P File Sharing**: Content-Addressing Eliminates the Naming Problem and Enables Zero-Trust Verification
 - **12.14 A/B Testing Platform**: Deterministic Hashing Makes Sticky Assignment a Mathematical Guarantee, Not a Database Query
+- **12.15 Customer Data Platform**: The Inverted Segment Index Is What Makes Streaming Evaluation Feasible
+- **12.16 Product Analytics Platform**: Funnel Computation Is a Set Algebra Problem, Not a Join Problem
+- **12.16 Product Analytics Platform**: Bloom Filters at the Collector Tier Are Worth Their Complexity Because Downstream Deduplication Is 100x More Expensive
 
 ### Distributed Transactions
 
@@ -3606,6 +3661,7 @@ A cross-reference of key architectural insights extracted from each system desig
 - **4.11 Reddit**: Community-Based Sharding vs. User-Based Fanout
 - **6.4 HubSpot**: Hublet Architecture -- Full Infrastructure Isolation Per Region
 - **12.14 A/B Testing Platform**: Layered Mutual Exclusion Enables Thousands of Concurrent Experiments by Making Isolation a Namespace Property
+- **12.16 Product Analytics Platform**: Behavioral Cohorts Require Set Algebra, Not SQL Subqueries, to Scale
 
 ### Replication
 
@@ -3794,6 +3850,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.13 Bot Detection System**: The Challenge System Is a Safety Valve, Not a Detection Mechanism
 - **12.13 Bot Detection System**: Fail-Open Is the Only Correct Failure Mode
 - **12.14 A/B Testing Platform**: Guardrail Metrics With Automated Kill-Switches Transform Experimentation From a Risk Into a Safety Net
+- **12.16 Product Analytics Platform**: Real-Time Freshness Is Best Measured by Canary Events, Not by Pipeline Lag Metrics
+- **12.17 Content Moderation System**: Reviewer Wellness Constraints Change the Queue Architecture Fundamentally
 
 ### Scaling
 
@@ -3956,6 +4014,8 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.10 Polling/Voting System**: Adaptive Shard Scaling Must Be Unidirectional During Active Polls
 - **12.11 Package Registry**: CDN Is the System, Not an Optimization
 - **12.14 A/B Testing Platform**: CUPED Buys Sample Size Reduction by Partitioning Variance, Not by Changing the Experiment
+- **12.15 Customer Data Platform**: The Fan-out Multiplier Makes Destination Delivery the Dominant Cost Center
+- **12.17 Content Moderation System**: Human Review Queue Is a First-Class Infrastructure Primitive, Not a Fallback
 
 ### Search
 
@@ -4083,6 +4143,10 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.13 Bot Detection System**: Behavioral Biometrics are the Last Line of Defense in the Arms Race
 - **12.13 Bot Detection System**: Canary Features Are the Defense Against Model Inversion
 - **12.13 Bot Detection System**: Privacy-Preserving Fingerprinting Requires Architecture-Level Commitments, Not Afterthoughts
+- **12.15 Customer Data Platform**: Consent Must Be an Architectural Invariant, Not a Compliance Check
+- **12.15 Customer Data Platform**: Crypto-Shredding Solves the "Erasure in Immutable Logs" Dilemma
+- **12.17 Content Moderation System**: Perceptual Hashes Are Sensitive Material, Not Just Tool Outputs
+- **12.17 Content Moderation System**: Adversarial Normalization Must Precede All Classification, Not Follow It
 
 ### Streaming
 
@@ -4297,6 +4361,11 @@ A cross-reference of key architectural insights extracted from each system desig
 - **12.12 Password Manager**: Browser Extension Content Script Isolation Is the Last Line of Defense
 - **12.13 Bot Detection System**: The Risk Score Must Be Calibrated, Not Just Accurate
 - **12.14 A/B Testing Platform**: Sequential Testing Resolves the Peeking Problem Without Sacrificing Analytical Freedom
+- **12.15 Customer Data Platform**: The Warehouse-Native CDP Trades Real-Time Performance for Data Gravity Efficiency
+- **12.16 Product Analytics Platform**: Schema-on-Read Enables Retroactive Analysis — But Requires Governance to Stay Useful
+- **12.17 Content Moderation System**: Policy and Classification Must Be Independently Evolvable
+- **12.17 Content Moderation System**: The False Positive Trade-Off Is Category-Specific and Policy-Determined, Not Technically Optimizable
+- **12.17 Content Moderation System**: Content Moderation System Design Requires Explicit Harm Valuation, Not Just Technical Optimization
 
 ### Traffic Shaping
 
