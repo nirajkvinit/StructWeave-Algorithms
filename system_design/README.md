@@ -225,6 +225,9 @@ Each system design directory contains 9 standardized documents:
 | 12.18 | Marketplace Platform (Two-sided Marketplace, Trust & Safety, Search Ranking, Payments, Reviews) | Completed | [View](./12.18-marketplace-platform/00-index.md) |
 | 12.19 | AI-Native Insurance Platform (Instant Underwriting, Claims Automation, Risk Assessment, Fraud Detection, Behavioral Pricing) | Completed | [View](./12.19-ai-native-insurance-platform/00-index.md) |
 | 12.20 | AI-Native Recruitment Platform (Interview AI, Candidate Matching, Bias Detection, Skills Assessment, Conversational Recruiting) | Completed | [View](./12.20-ai-native-recruitment-platform/00-index.md) |
+| 12.21 | AI-Native Creative Design Platform (Generative Design, Layout Generation, Brand Consistency, Asset Variation, Design System Automation) | Completed | [View](./12.21-ai-native-creative-design-platform/00-index.md) |
+| 13.1 | AI-Native Manufacturing Platform (Digital Twin, Predictive Maintenance, Quality Inspection CV, Production Optimization, Defect Detection) | Completed | [View](./13.1-ai-native-manufacturing-platform/00-index.md) |
+| 13.2 | AI-Native Logistics & Supply Chain Platform (Route Optimization, Demand Forecasting, Warehouse Automation, Fleet Management, Last-Mile Delivery) | Completed | [View](./13.2-ai-native-logistics-supply-chain-platform/00-index.md) |
 
 
 ---
