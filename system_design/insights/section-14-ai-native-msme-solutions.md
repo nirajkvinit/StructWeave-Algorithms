@@ -250,3 +250,93 @@
 | 6 | Protocol Version Heterogeneity Creates an N×M Compatibility Matrix That Grows Quadratically | System Evolution |
 | 7 | The Gateway's Fan-Out Search Is a Hidden Amplification Attack Vector | Resilience |
 | 8 | The ONDC Registry Solves DNS for Commerce—With the Same Single-Point-of-Failure and Cache-Coherence Problems | Infrastructure |
+
+---
+
+### 14.17 AI-Native India Stack Integration Platform [View](../14.17-ai-native-india-stack-integration-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Consent Is Not Authorization—It Is a Distributed State Machine That Outlives the Transaction It Authorized | System Modeling |
+| 2 | The Platform's Reliability Ceiling Is Set by Its Least Reliable Upstream DPI—But Different Workflows Have Different Ceilings | Reliability |
+| 3 | The AI Layer Faces a "Train Once, Infer Once" Constraint That Fundamentally Differs from Standard ML Architectures | Data Modeling |
+| 4 | Cross-DPI Identity Resolution Is Harder Than It Appears Because India Stack Has No Native Cross-Component Identity Layer | Data Modeling |
+| 5 | The Fair Use Template Enforcement Creates an Implicit API Governance Layer That Constrains Platform Design | Workflow |
+| 6 | The Encryption Key Lifecycle Is the Hidden Bottleneck—Not the Data Volume | Security |
+| 7 | Workflow Timeout Design Is a Product Decision Disguised as an Engineering Decision | Workflow |
+| 8 | The Platform's Competitive Moat Is Not the DPI Integration—It's the FIP Performance Intelligence | Cost Optimization |
+
+---
+
+### 14.18 Digital Document Vault Platform [View](../14.18-digital-document-vault-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The URI Reference Model Creates a Distributed System Disguised as a Storage System—and Most Teams Design for the Wrong Problem | System Modeling |
+| 2 | Consent Is Not an Authorization Decision—It Is a Legally Binding Distributed Transaction with Stricter Correctness Requirements Than Financial Transfers | Consistency |
+| 3 | Legal Equivalence Transforms an Availability SLO from a Business Metric into a Civil Rights Constraint | Reliability |
+| 4 | The Issuer-Requester Power Asymmetry Creates a Hidden Consent Dark Pattern That Architecture Must Prevent | Security |
+| 5 | The Document Cache Invalidation Problem Is Fundamentally Unsolvable in the General Case—and the System Must Be Designed Around This Impossibility | Data Modeling |
+| 6 | The Platform's Most Valuable Security Asset Is the Audit Trail, Not the Documents | Atomicity |
+| 7 | The OCR-and-Classify Pipeline Solves the Wrong Problem—The Real Challenge Is Building a Confidence-Aware System | System Evolution |
+| 8 | The Platform Is Not Truly Centralized—It Is a Forced Centralization Point in an Otherwise Federated Document Ecosystem | Partitioning |
+
+---
+
+### 14.19 AI-Native Mobile Money Super App Platform (M-Pesa Model) [View](../14.19-ai-native-mobile-money-super-app-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | USSD's 182-Character Screen Limit Creates an Information-Theoretic Constraint That Shapes the Entire Product Architecture | System Modeling |
+| 2 | The Agent Network Creates a Physical Consensus Problem Where the Digital Ledger and Physical Cash Must Agree | Consistency |
+| 3 | The Idempotency Window for Mobile Money Must Be Semantically Aware, Not Just Key-Based | Atomicity |
+| 4 | Float Forecasting Is Actually Two Coupled Problems—Demand Prediction and Supply Chain Logistics | Workflow |
+| 5 | Credit Scoring Using Transaction Graph Features Creates Circular Dependencies That Require PageRank-Style Iterative Convergence | Data Structures |
+| 6 | The USSD Session Timeout Creates a Natural Circuit Breaker That Prevents Cascade Failures | Reliability |
+| 7 | Mobile Money's Trust Account Architecture Creates a System-Wide Balance Invariant | Financial Systems |
+| 8 | Deploying Financial Products via USSD Creates a "Menu Depth vs. Product Complexity" Trade-off | System Evolution |
+
+---
+
+### 14.20 AI-Native Agent Banking Platform for Africa [View](../14.20-ai-native-agent-banking-platform-africa/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Float Management Is a Physical Logistics Problem Disguised as a Software Problem | System Modeling |
+| 2 | Offline-First Inverts the Consistency Model—The Device Is the Source of Truth, and the Server Must Reconcile to the Device | Consistency |
+| 3 | Biometric Quality Variance Creates a Hidden Selection Bias Where the System Systematically Excludes Its Most Important Users | Data Modeling |
+| 4 | Agent Fraud Scoring Must Account for the Asymmetry Between False Positives and False Negatives—Suspending a Legitimate Agent Destroys a Small Business | Financial Systems |
+| 5 | The CBN Agent Exclusivity Rule Transforms a Technical Integration Problem into a Game-Theoretic Competition for Agent Lock-In | System Evolution |
+| 6 | The Morning Sync Wave Is a Thundering Herd Problem Where the Herd Size Is Determined by Geography and Infrastructure | Scaling |
+| 7 | Geo-Fencing Compliance Creates an Inherent Conflict with Offline Operation | Reliability |
+| 8 | The Agent Commission Structure Determines the Fraud Surface Area | Contention |
+
+---
+
+### 14.21 AI-Native PIX Commerce Platform (Brazil Model) [View](../14.21-ai-native-pix-commerce-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Irrevocability Inverts the Fraud Economics Stack — Detection Must Be Pre-Transaction or Worthless | Financial Systems |
+| 2 | The DICT Is Both a Performance Bottleneck and a Fraud Intelligence Goldmine — And These Two Uses Conflict | Contention |
+| 3 | Brazil's Tax System Makes Every Payment Platform a Distributed Fiscal Compliance Engine | Workflow |
+| 4 | PIX Automático's Advance Billing Window Creates a Scheduling Problem That Is Harder Than Cron | Reliability |
+| 5 | The MED Fund-Tracing Problem Is a Real-Time Graph Traversal Against an Adversary Who Is Actively Modifying the Graph | Security |
+| 6 | Split Payment Rounding at Centavo Precision Is a Consistency Problem Disguised as an Arithmetic Problem | Atomicity |
+| 7 | PIX's 24/7 Operation Eliminates the "Maintenance Window" Escape Hatch That Most Financial Systems Rely On | System Evolution |
+| 8 | The Payer's PSP Is a Black Box—Your Fraud Model Must Reason About Fraud It Cannot Directly Observe | Data Modeling |
+
+---
+
+### 14.22 AI-Native WhatsApp+PIX Commerce Assistant [View](../14.22-ai-native-whatsapp-pix-commerce-assistant/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Webhook's At-Least-Once Delivery Collides with PIX's Irrevocable Settlement to Create the System's Central Consistency Challenge | Atomicity |
+| 2 | Compound Confidence Scoring for Voice Payments Creates a Non-Obvious Accuracy Cliff Where Each Pipeline Stage Multiplies Uncertainty | System Modeling |
+| 3 | The 24-Hour Conversation Window Is Not Just a WhatsApp Limitation—It Is a Natural Transaction Timeout That Prevents Orphaned Payment States | Workflow |
+| 4 | QR Code Recognition from Photos Solves a Different Problem Than QR Code Scanning—And the Error Profile Is Fundamentally Different | Data Structures |
+| 5 | The Secure Authentication Handoff's Drop-Off Rate Is the System's Most Important Business Metric—And It's in Tension with the System's Most Important Security Requirement | Contention |
+| 6 | Brazilian Portuguese Colloquialisms Create an Amount-Parsing Problem Where the Same Word Means Different Values in Different Regions | Consistency |
+| 7 | The Outbound Message Rate Limit Creates a Priority Inversion Problem Where Low-Value Marketing Messages Can Starve High-Value Payment Receipts | Traffic Shaping |
+| 8 | CADE's Third-Party AI Mandate Transforms the LLM Integration from a Simple API Call into a Provider Abstraction Layer with Non-Trivial Behavioral Consistency Requirements | System Evolution |

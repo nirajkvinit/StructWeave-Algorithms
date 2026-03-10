@@ -249,6 +249,16 @@ Each system design directory contains 9 standardized documents:
 | 14.14 | AI-Native Regulatory & Compliance Assistant for MSMEs | Completed | [View](./14.14-ai-native-regulatory-compliance-assistant-msmes/00-index.md) |
 | 14.15 | AI-Native Hyperlocal Logistics & Delivery Platform for SMEs | Completed | [View](./14.15-ai-native-hyperlocal-logistics-delivery-platform-smes/00-index.md) |
 | 14.16 | AI-Native ONDC Commerce Platform | Completed | [View](./14.16-ai-native-ondc-commerce-platform/00-index.md) |
+| 14.17 | AI-Native India Stack Integration Platform | Completed | [View](./14.17-ai-native-india-stack-integration-platform/00-index.md) |
+| 14.18 | Digital Document Vault Platform | Completed | [View](./14.18-digital-document-vault-platform/00-index.md) |
+| 14.19 | AI-Native Mobile Money Super App Platform (M-Pesa Model) | Completed | [View](./14.19-ai-native-mobile-money-super-app-platform/00-index.md) |
+| 14.20 | AI-Native Agent Banking Platform for Africa | Completed | [View](./14.20-ai-native-agent-banking-platform-africa/00-index.md) |
+| 14.21 | AI-Native PIX Commerce Platform (Brazil Model) | Completed | [View](./14.21-ai-native-pix-commerce-platform/00-index.md) |
+| 14.22 | AI-Native WhatsApp+PIX Commerce Assistant | Completed | [View](./14.22-ai-native-whatsapp-pix-commerce-assistant/00-index.md) |
+| 15.1 | Metrics & Monitoring System | Completed | [View](./15.1-metrics-monitoring-system/00-index.md) |
+| 15.2 | Distributed Tracing System | Completed | [View](./15.2-distributed-tracing-system/00-index.md) |
+| 15.3 | Log Aggregation System | Completed | [View](./15.3-log-aggregation-system/00-index.md) |
+| 15.4 | eBPF-based Observability Platform | Completed | [View](./15.4-ebpf-observability-platform/00-index.md) |
 
 
 ---

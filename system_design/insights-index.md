@@ -14,25 +14,25 @@ A cross-reference of key architectural insights extracted from each system desig
 
 | Category | Description | Topics Count |
 |----------|-------------|:------------:|
-| Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 69 |
-| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 93 |
+| Atomicity | Atomic operations, CAS, idempotency, and transactional guarantees | 85 |
+| Caching | Cache strategies, invalidation, warm-up, and tiered caching architectures | 98 |
 | Consensus | Leader election, Raft/Paxos, quorum protocols, and distributed agreement | 20 |
-| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 162 |
-| Contention | Lock contention, hot keys, thundering herds, and resource competition | 92 |
-| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 77 |
-| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 138 |
+| Consistency | Data consistency models, conflict resolution, and read-your-writes guarantees | 183 |
+| Contention | Lock contention, hot keys, thundering herds, and resource competition | 114 |
+| Cost Optimization | Resource efficiency, compression, tiered storage, and cost-aware design | 95 |
+| Data Structures | Specialized data structures, indexes, encoding schemes, and storage formats | 166 |
 | Distributed Transactions | Sagas, 2PC, outbox pattern, and cross-service coordination | 25 |
-| Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 26 |
+| Edge Computing | Edge deployment, CDN logic, on-device processing, and geo-distribution | 29 |
 | External Dependencies | Third-party API integration, regulatory compliance, and external system coupling | 17 |
-| Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 28 |
-| Replication | Data replication, follower management, and cross-region synchronization | 25 |
-| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 162 |
-| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 168 |
-| Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 13 |
-| Security | Authentication, encryption, access control, and threat mitigation | 119 |
+| Partitioning | Data sharding, consistent hashing, and workload distribution strategies | 36 |
+| Replication | Data replication, follower management, and cross-region synchronization | 28 |
+| Resilience | Fault tolerance, graceful degradation, circuit breakers, and recovery patterns | 184 |
+| Scaling | Horizontal/vertical scaling, throughput optimization, and capacity planning | 181 |
+| Search | Full-text search, vector search, hybrid retrieval, and ranking algorithms | 14 |
+| Security | Authentication, encryption, access control, and threat mitigation | 133 |
 | Streaming | Real-time data processing, event streaming, and pub/sub architectures | 61 |
-| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 177 |
-| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 74 |
+| System Modeling | Architecture patterns, domain modeling, and design trade-off analysis | 216 |
+| Traffic Shaping | Rate limiting, backpressure, load shedding, and flow control | 90 |
 
 
 ---
@@ -54,7 +54,8 @@ A cross-reference of key architectural insights extracted from each system desig
 | 11 | Communication Systems | 5 (11.1–11.5) | [View](./insights/section-11-communication.md) |
 | 12 | Specialized Systems | 21 (12.1–12.21) | [View](./insights/section-12-specialized-systems.md) |
 | 13 | AI-Native Industry Verticals | 7 (13.1–13.7) | [View](./insights/section-13-ai-industry-verticals.md) |
-| 14 | AI-Native MSME Solutions | 16 (14.1–14.16) | [View](./insights/section-14-ai-native-msme-solutions.md) |
+| 14 | AI-Native MSME Solutions | 22 (14.1–14.22) | [View](./insights/section-14-ai-native-msme-solutions.md) |
+| 15 | Observability & Reliability | 4 (15.1–15.4) | [View](./insights/section-15-observability-reliability.md) |
 
 ---
 

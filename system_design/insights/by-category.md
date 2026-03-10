@@ -87,6 +87,10 @@
 - **14.13 AI-Native MSME Business Intelligence Dashboard**: The Auto-Insight Pipeline Must Handle Correlated Anomalies Without Double-Counting Impact
 - **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: Government Deadline Extensions Are a Cache Invalidation Problem Where the "Write" Happens Outside Your System
 - **14.15 AI-Native Hyperlocal Logistics & Delivery Platform for SMEs**: Order Batching Creates Hidden Cross-Order Dependencies That Make Failure Recovery Exponentially Harder
+- **14.18 Digital Document Vault Platform**: The Platform's Most Valuable Security Asset Is the Audit Trail, Not the Documents
+- **14.19 AI-Native Mobile Money Super App Platform**: The Idempotency Window for Mobile Money Must Be Semantically Aware, Not Just Key-Based
+- **14.21 AI-Native PIX Commerce Platform**: Split Payment Rounding at Centavo Precision Is a Consistency Problem Disguised as an Arithmetic Problem
+- **14.22 AI-Native WhatsApp+PIX Commerce Assistant**: The Webhook's At-Least-Once Delivery Collides with PIX's Irrevocable Settlement to Create the System's Central Consistency Challenge
 
 ### Caching
 
@@ -390,6 +394,13 @@
 - **14.7 AI-Native SMB Workforce Scheduling & Gig Management**: Predictive Scheduling Laws Transform Every Schedule Modification Into a Financial Transaction
 - **14.8 AI-Native Quality Control for SME Manufacturing**: The Production Line's Physical Reject Mechanism Creates an Irreversible Commitment Window
 - **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The Credit Insurance Underwriting Model Must Price Correlation Risk, Not Just Individual Default Risk
+- **14.18 Digital Document Vault Platform**: Consent Is Not an Authorization Decision—It Is a Legally Binding Distributed Transaction with Stricter Correctness Requirements Than Financial Transfers
+- **14.19 AI-Native Mobile Money Super App Platform**: The Agent Network Creates a Physical Consensus Problem Where the Digital Ledger and Physical Cash Must Agree
+- **14.20 AI-Native Agent Banking Platform for Africa**: Offline-First Inverts the Consistency Model—The Device Is the Source of Truth, and the Server Must Reconcile to the Device
+- **15.2 Distributed Tracing System**: Clock Skew Correction Is Heuristic, Not Deterministic — and Getting It Wrong Distorts Latency Attribution More Than Not Correcting at All
+- **15.4 eBPF-based Observability Platform**: The Cgroup-to-Pod Mapping Is the Platform's Most Fragile Dependency — And It Updates on a Different Clock Than the Kernel Events It Enriches
+- **14.22 AI-Native WhatsApp+PIX Commerce Assistant**: Brazilian Portuguese Colloquialisms Create an Amount-Parsing Problem Where the Same Word Means Different Values in Different Regions
+- **15.3 Log Aggregation System**: Schema-on-Read Wins at Microservice Scale Because the Coordination Cost of Schema-on-Write Exceeds the Query Performance Benefit
 
 ### Contention
 
@@ -501,6 +512,12 @@
 - **14.12 AI-Native Field Service Management for SMEs**: The Offline Payment Queue Creates a Temporal Coupling Between Payment Processing and Financial Reconciliation
 - **14.13 AI-Native MSME Business Intelligence Dashboard**: The NL-to-SQL Feedback Loop Creates a Template Promotion Pipeline That Mirrors Code Compilation
 - **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: Multi-Jurisdiction Conflict Resolution Is Not Simply "Apply the Stricter Rule"
+- **14.20 AI-Native Agent Banking Platform for Africa**: The Agent Commission Structure Determines the Fraud Surface Area
+- **14.21 AI-Native PIX Commerce Platform**: The DICT Is Both a Performance Bottleneck and a Fraud Intelligence Goldmine — And These Two Uses Conflict
+- **15.2 Distributed Tracing System**: The Trace Wait Window Creates a Fundamental Trade-off Between Completeness and Memory That Cannot Be Resolved — Only Managed
+- **15.1 Metrics & Monitoring System**: Alert Evaluation Must Be the Highest-Priority Reader — Yet It's Usually Designed as Just Another Query Consumer
+- **14.22 AI-Native WhatsApp+PIX Commerce Assistant**: The Secure Authentication Handoff's Drop-Off Rate Is the System's Most Important Business Metric—And It's in Tension with the System's Most Important Security Requirement
+- **15.3 Log Aggregation System**: The Segment Merge Tax Is the Hidden Throughput Ceiling That Doesn't Appear in Benchmarks
 
 ### Cost Optimization
 
@@ -595,6 +612,10 @@
 - **14.12 AI-Native Field Service Management for SMEs**: IoT-Driven Demand Shaping Inverts the Typical Scheduling Optimization: From Minimizing Cost to Maximizing Revenue
 - **14.13 AI-Native MSME Business Intelligence Dashboard**: The WhatsApp Digest Character Limit Forces an Extractive-Abstractive Summarization Pipeline
 - **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: The "Compliance Score" Requires Careful Calibration to Avoid Perverse Incentives
+- **14.17 AI-Native India Stack Integration Platform**: The Platform's Competitive Moat Is Not the DPI Integration—It's the FIP Performance Intelligence
+- **15.4 eBPF-based Observability Platform**: In-Kernel Filtering Inverts the Traditional Observability Cost Model — You Pay for What You Don't Collect, Not What You Do
+- **15.1 Metrics & Monitoring System**: Downsampling Is Lossy and Irreversible — Different Aggregation Functions Lose Different Information
+- **15.3 Log Aggregation System**: The Indexing Strategy Is Not a Technology Choice — It Is a Three-Way Economic Trade-off Between Ingestion Cost, Search Cost, and Storage Cost
 
 ### Data Structures
 
@@ -755,6 +776,15 @@
 - **14.12 AI-Native Field Service Management for SMEs**: CRDT Selection for Field Service Must Account for the Asymmetric Authority of Dispatcher vs. Technician
 - **14.13 AI-Native MSME Business Intelligence Dashboard**: Materialized View Selection Is a Multi-Tenant Set Cover Problem Under a Storage Budget
 - **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: The Document Vault's Hash-Based Integrity Verification Creates a Subtle Version Migration Problem
+- **14.19 AI-Native Mobile Money Super App Platform**: Credit Scoring Using Transaction Graph Features Creates Circular Dependencies That Require PageRank-Style Iterative Convergence
+- **15.2 Distributed Tracing System**: Columnar Storage's Advantage for Traces Is Not Just Cost — It Is That Trace Data's High Redundancy Within a Trace Makes Column Encoding Extraordinarily Effective
+- **15.4 eBPF-based Observability Platform**: Protocol Parsing in eBPF Is Not a Miniature Application Parser — It Is a Probabilistic Classifier with Bounded Confidence
+- **15.1 Metrics & Monitoring System**: Gorilla Compression Is Not a Generic Algorithm — It's a Bet on Data Regularity That Can Be Lost
+- **15.1 Metrics & Monitoring System**: The Inverted Index Is the Query Engine's Achilles' Heel — Its Design Is Closer to Search Engines Than Databases
+- **15.1 Metrics & Monitoring System**: Fixed-Bucket Histograms Have a Fundamental Aggregation Flaw That DDSketch Solves Through Logarithmic Bucketing
+- **14.22 AI-Native WhatsApp+PIX Commerce Assistant**: QR Code Recognition from Photos Solves a Different Problem Than QR Code Scanning—And the Error Profile Is Fundamentally Different
+- **15.3 Log Aggregation System**: Bloom Filters Transform the Search Problem from "Find the Needle" to "Eliminate the Haystacks"
+- **15.3 Log Aggregation System**: The Finite State Transducer Is the Unsung Data Structure That Makes Full-Text Log Search Possible at Scale
 
 ### Distributed Transactions
 
@@ -872,6 +902,8 @@
 - **14.4 AI-Native SME Inventory & Demand Forecasting System**: Tenant Forecast Compute Isolation Matters More Than Tenant Data Isolation for System Stability
 - **14.5 AI-Native B2B Supplier Discovery & Procurement Marketplace**: The Marketplace's Most Valuable Data Asset Is Not the Product Catalog — It Is the Buyer-Supplier Match Graph
 - **14.7 AI-Native SMB Workforce Scheduling & Gig Management**: Multi-Tenant Solver Fairness Requires Work-Stealing, Not FIFO Queuing
+- **14.18 Digital Document Vault Platform**: The Platform Is Not Truly Centralized—It Is a Forced Centralization Point in an Otherwise Federated Document Ecosystem
+- **15.2 Distributed Tracing System**: Consistent Hashing by Trace ID Is Not a Load-Balancing Strategy — It Is the Enabler of Local Trace Assembly
 
 ### Replication
 
@@ -1080,6 +1112,16 @@
 - **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: Notification Reliability Requires Monitoring for Absence, Not Just Failure
 - **14.16 AI-Native ONDC Commerce Platform**: Trust Scoring Without Centralized Data Creates a Byzantine Fault Tolerance Problem Disguised as a Recommendation Problem
 - **14.16 AI-Native ONDC Commerce Platform**: The Gateway's Fan-Out Search Is a Hidden Amplification Attack Vector
+- **14.17 AI-Native India Stack Integration Platform**: The Platform's Reliability Ceiling Is Set by Its Least Reliable Upstream DPI
+- **14.18 Digital Document Vault Platform**: Legal Equivalence Transforms an Availability SLO from a Business Metric into a Civil Rights Constraint
+- **14.19 AI-Native Mobile Money Super App Platform**: The USSD Session Timeout Creates a Natural Circuit Breaker That Prevents Cascade Failures
+- **14.20 AI-Native Agent Banking Platform for Africa**: Geo-Fencing Compliance Creates an Inherent Conflict with Offline Operation
+- **14.21 AI-Native PIX Commerce Platform**: PIX Automático's Advance Billing Window Creates a Scheduling Problem That Is Harder Than Cron
+- **15.2 Distributed Tracing System**: A Tracing System Must Be Invisible When Healthy and Indispensable When Things Break — This Asymmetry Drives Every Major Design Decision
+- **15.4 eBPF-based Observability Platform**: eBPF Program Pinning Creates a Unique Split-Brain Lifecycle — The Data Plane Survives Control Plane Death
+- **15.1 Metrics & Monitoring System**: The Meta-Monitoring System Must Be Architecturally Simpler Than What It Monitors — Complexity Is the Enemy of the Last Line of Defense
+- **15.1 Metrics & Monitoring System**: The WAL Is Not Just a Durability Mechanism — It's the Determinant of Recovery Time and Replication Strategy
+- **15.3 Log Aggregation System**: The Write Path and Read Path Are Maximally Correlated at the Worst Possible Moment
 
 ### Scaling
 
@@ -1260,6 +1302,10 @@
 - **14.8 AI-Native Quality Control for SME Manufacturing**: The Two-Stage Cascade Architecture Solves Three Problems Simultaneously
 - **14.9 AI-Native MSME Marketing & Social Commerce Platform**: Platform API Rate Limits Create an Information Asymmetry That Degrades Optimization Quality
 - **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: Quarter-End Invoice Surges Create a Supply-Demand Inversion That Requires Dynamic Market-Making
+- **14.20 AI-Native Agent Banking Platform for Africa**: The Morning Sync Wave Is a Thundering Herd Problem Where the Herd Size Is Determined by Geography and Infrastructure
+- **15.4 eBPF-based Observability Platform**: Adaptive Sampling Under Load Is a Control Theory Problem Disguised as a Systems Engineering Decision
+- **15.1 Metrics & Monitoring System**: Cardinality Is an Adversarial Scaling Problem That Grows Combinatorially, Not Linearly
+- **15.3 Log Aggregation System**: Adaptive Refresh Interval by Severity Turns a Global Performance Knob into a Priority System
 
 ### Search
 
@@ -1407,6 +1453,12 @@
 - **14.9 AI-Native MSME Marketing & Social Commerce Platform**: The Cross-MSME Bayesian Prior Is Both the Platform's Greatest Competitive Advantage and Its Greatest Privacy Risk
 - **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The Invoice Deduplication Problem Is Fundamentally Unsolvable Without a Universal Registry
 - **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The E-Invoice IRN Is a Necessary But Insufficient Proof of Invoice Legitimacy
+- **14.17 AI-Native India Stack Integration Platform**: The Encryption Key Lifecycle Is the Hidden Bottleneck—Not the Data Volume
+- **14.18 Digital Document Vault Platform**: The Issuer-Requester Power Asymmetry Creates a Hidden Consent Dark Pattern That Architecture Must Prevent
+- **14.21 AI-Native PIX Commerce Platform**: The MED Fund-Tracing Problem Is a Real-Time Graph Traversal Against an Adversary Who Is Actively Modifying the Graph
+- **15.2 Distributed Tracing System**: PII in Trace Data Is Not a Bug to Fix but an Ongoing Adversarial Game Between Instrumentation Convenience and Data Privacy
+- **15.4 eBPF-based Observability Platform**: Security Enforcement in eBPF Has an Asymmetric Blast Radius — A False-Positive Kill Is Worse Than Missing a True-Positive Detection
+- **15.3 Log Aggregation System**: PII Redaction in the Log Pipeline Is a Fail-Closed Gate, Not a Best-Effort Filter
 
 ### Streaming
 
@@ -1683,6 +1735,13 @@
 - **14.12 AI-Native Field Service Management for SMEs**: The Schedule Is a Constraint Satisfaction Problem Masquerading as a Resource Allocation Problem
 - **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: The Regulatory Knowledge Graph Is Not a Database of Rules—It Is a Temporal Ontology Where "Current Law" Is a Query, Not a State
 - **14.16 AI-Native ONDC Commerce Platform**: Catalog Normalization at Query Time Is Fundamentally Different From Normalization at Ingestion Time
+- **14.17 AI-Native India Stack Integration Platform**: Consent Is Not Authorization—It Is a Distributed State Machine That Outlives the Transaction It Authorized
+- **14.18 Digital Document Vault Platform**: The URI Reference Model Creates a Distributed System Disguised as a Storage System
+- **14.19 AI-Native Mobile Money Super App Platform**: USSD's 182-Character Screen Limit Creates an Information-Theoretic Constraint That Shapes the Entire Product Architecture
+- **14.20 AI-Native Agent Banking Platform for Africa**: Float Management Is a Physical Logistics Problem Disguised as a Software Problem
+- **15.2 Distributed Tracing System**: The Service Dependency Graph Is Not a Static Map — It Is a Time-Series of Topological Snapshots That Reveals Deployment Drift and Configuration Errors
+- **15.4 eBPF-based Observability Platform**: The Verifier Is Not a Safety Net — It Is the Architect That Shapes Every Design Decision
+- **14.22 AI-Native WhatsApp+PIX Commerce Assistant**: Compound Confidence Scoring for Voice Payments Creates a Non-Obvious Accuracy Cliff Where Each Pipeline Stage Multiplies Uncertainty
 
 ### System Tuning
 
@@ -1791,6 +1850,8 @@
 - **12.20 AI-Native Recruitment Platform**: ANN Recall and Compatibility Ranker Need Independent Retraining Cycles
 - **12.20 AI-Native Recruitment Platform**: 4/5ths Rule Sample Size Requirements Break Per-Requisition Monitoring
 - **13.3 AI-Native Energy & Grid Management Platform**: DR Rebound Prevention Is a Harder Control Problem Than the Original Curtailment
+- **15.2 Distributed Tracing System**: The Sampling Paradox — Head Sampling Is Fast but Blind, Tail Sampling Is Informed but Expensive, and Neither Alone Is Sufficient
+- **14.22 AI-Native WhatsApp+PIX Commerce Assistant**: The Outbound Message Rate Limit Creates a Priority Inversion Problem Where Low-Value Marketing Messages Can Starve High-Value Payment Receipts
 
 ### Workflow
 
@@ -1812,11 +1873,40 @@
 - **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: The Compliance Calendar Is a Constraint Satisfaction Problem Where "Priority" Is a Risk-Weighted Topological Order
 - **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: Threshold Monitoring Has a Hysteresis Problem—Activation and Deactivation Are Asymmetric
 - **14.16 AI-Native ONDC Commerce Platform**: WhatsApp's Conversational Commerce Model Inverts the Information Architecture
+- **14.17 AI-Native India Stack Integration Platform**: The Fair Use Template Enforcement Creates an Implicit API Governance Layer That Constrains Platform Design
+- **14.17 AI-Native India Stack Integration Platform**: Workflow Timeout Design Is a Product Decision Disguised as an Engineering Decision
+- **14.19 AI-Native Mobile Money Super App Platform**: Float Forecasting Is Actually Two Coupled Problems—Demand Prediction and Supply Chain Logistics
+- **14.21 AI-Native PIX Commerce Platform**: Brazil's Tax System Makes Every Payment Platform a Distributed Fiscal Compliance Engine
+- **14.22 AI-Native WhatsApp+PIX Commerce Assistant**: The 24-Hour Conversation Window Is Not Just a WhatsApp Limitation—It Is a Natural Transaction Timeout That Prevents Orphaned Payment States
 
 ### Financial Systems
 
 - **14.16 AI-Native ONDC Commerce Platform**: The Settlement Reconciliation Window Creates a Hidden Cash-Flow Float That Can Be Weaponized
+- **14.19 AI-Native Mobile Money Super App Platform**: Mobile Money's Trust Account Architecture Creates a System-Wide Balance Invariant
+- **14.20 AI-Native Agent Banking Platform for Africa**: Agent Fraud Scoring Must Account for the Asymmetry Between False Positives and False Negatives
+- **14.21 AI-Native PIX Commerce Platform**: Irrevocability Inverts the Fraud Economics Stack — Detection Must Be Pre-Transaction or Worthless
 
 ### System Evolution
 
 - **14.16 AI-Native ONDC Commerce Platform**: Protocol Version Heterogeneity Creates an N×M Compatibility Matrix That Grows Quadratically
+- **14.18 Digital Document Vault Platform**: The OCR-and-Classify Pipeline Solves the Wrong Problem—The Real Challenge Is Building a Confidence-Aware System
+- **14.19 AI-Native Mobile Money Super App Platform**: Deploying Financial Products via USSD Creates a "Menu Depth vs. Product Complexity" Trade-off
+- **14.20 AI-Native Agent Banking Platform for Africa**: The CBN Agent Exclusivity Rule Transforms a Technical Integration Problem into a Game-Theoretic Competition
+- **14.21 AI-Native PIX Commerce Platform**: PIX's 24/7 Operation Eliminates the "Maintenance Window" Escape Hatch
+- **14.22 AI-Native WhatsApp+PIX Commerce Assistant**: CADE's Third-Party AI Mandate Transforms the LLM Integration from a Simple API Call into a Provider Abstraction Layer with Non-Trivial Behavioral Consistency Requirements
+
+### Data Modeling
+
+- **14.17 AI-Native India Stack Integration Platform**: The AI Layer Faces a "Train Once, Infer Once" Constraint That Fundamentally Differs from Standard ML Architectures
+- **14.17 AI-Native India Stack Integration Platform**: Cross-DPI Identity Resolution Is Harder Than It Appears Because India Stack Has No Native Cross-Component Identity Layer
+- **14.18 Digital Document Vault Platform**: The Document Cache Invalidation Problem Is Fundamentally Unsolvable in the General Case
+- **14.20 AI-Native Agent Banking Platform for Africa**: Biometric Quality Variance Creates a Hidden Selection Bias Where the System Systematically Excludes Its Most Important Users
+- **14.21 AI-Native PIX Commerce Platform**: The Payer's PSP Is a Black Box—Your Fraud Model Must Reason About Fraud It Cannot Directly Observe
+
+### Back-Pressure
+
+- **15.4 eBPF-based Observability Platform**: The Ring Buffer Is Not Just a Queue — Its Fill Level Is the System's Most Important Control Signal
+
+### Architecture
+
+- **15.4 eBPF-based Observability Platform**: The eBPF Observability Platform's True Competitive Moat Is Not Data Collection — It Is the Kernel-Side Data Reduction Ratio
