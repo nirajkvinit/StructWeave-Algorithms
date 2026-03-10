@@ -72,3 +72,60 @@
 | 10 | A Graph Database's Competitive Moat Is Not the Query Language — It Is the Physical Storage Layout That Makes Multi-Hop Traversals Independent of Data Size | Architecture |
 
 ---
+
+### 16.5 NewSQL Database [View](../16.5-newsql-database/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Read Uncertainty Interval Is the Price You Pay for Commodity Clocks — and Its Width Directly Determines Your Transaction Restart Rate, Making Clock Quality a Performance Variable | Clock Synchronization |
+| 2 | Parallel Commits Transform the Distributed Transaction Bottleneck from Two Sequential Consensus Rounds to One — but the Price Is That Any Node Must Determine a Transaction's Fate by Inspecting Its Intents | Distributed Transactions |
+| 3 | The Range Is the Fundamental Atom of a NewSQL Database — Not the Row, Not the Table, Not the Node — and Every Operational Property Is Determined at the Range Level | Distributed Systems |
+
+---
+
+### 16.6 Data Warehouse [View](../16.6-data-warehouse/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Separation of Compute and Storage Is Not a Deployment Decision — It Is the Architectural Inversion That Makes Every Other Feature Possible | Architecture |
+| 2 | The Micro-Partition's Zone Map Is the Most Cost-Effective Data Structure in the System — A Few Bytes of Metadata Eliminate Terabytes of I/O | Data Structures |
+| 3 | Immutability Is Not a Constraint — It Is the Design Decision That Eliminates Concurrency Control, Enables Time Travel, and Makes Compression Optimal | System Modeling |
+
+---
+
+### 16.7 Data Lakehouse Architecture [View](../16.7-data-lakehouse-architecture/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | File-Level Tracking Is the Foundational Innovation That Makes ACID Possible on Immutable Object Storage | Storage Engine Design |
+| 2 | Compaction Is Not Maintenance — It Is a Core Architectural Concern That Prevents Degradation | Operational Architecture |
+| 3 | The Catalog Is a Deceptively Simple Single Point of Failure on the Critical Path of Every Read and Write | Distributed Systems |
+| 4 | Z-Ordering Trades Write Cost for Read Selectivity — and the ROI Depends Entirely on Query Patterns | Query Optimization |
+| 5 | Merge-on-Read and Copy-on-Write Are Not Binary — Compaction Frequency Is the Dial | Write Strategy |
+| 6 | Schema Evolution by Column ID Prevents a Class of Silent Data Corruption | Data Model Design |
+| 7 | Hidden Partitioning Decouples Physical Layout from Logical Queries | Data Organization |
+| 8 | Snapshot Retention Creates a Tension Between Time Travel and Storage Cost That Has No Universal Solution | Data Lifecycle Management |
+| 9 | Object Storage Eventual Consistency Is Bypassed, Not Solved — The Lakehouse Never Relies on Directory Listings | Distributed Systems |
+| 10 | The Open Table Format Wars Are Converging Toward Feature Parity — the Real Differentiator Is the Ecosystem | Industry Trends |
+
+---
+
+### 16.8 Change Data Capture (CDC) System [View](../16.8-change-data-capture-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | CDC Solves the Dual-Write Problem by Eliminating It — Making the Database's Transaction Log the Single Source of Truth for Both State and Events | Architecture |
+| 2 | The Snapshot-to-Streaming Handoff Is the Defining Engineering Challenge — Merging Two Fundamentally Different Data Sources into a Single Consistent Event Stream | Data Consistency |
+| 3 | A Stalled CDC Connector Can Take Down the Source Database — Unbounded WAL Growth from Unreleased Replication Slots Fills the Disk | Operational Risk |
+
+---
+
+### 16.9 Data Mesh Architecture [View](../16.9-data-mesh-architecture/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | Data Mesh Is Not a Technology Architecture — It Is an Organizational Operating Model That Happens to Require a Technology Platform | Architecture |
+| 2 | The Central Paradox of Data Mesh Is That Decentralized Ownership Requires a Centralized Platform — and the Quality of That Platform Determines Success | Platform Design |
+| 3 | Data Contracts Are the Trust Layer That Prevents a Data Mesh from Becoming a Data Mess | Data Contracts |
+
+---

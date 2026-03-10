@@ -267,6 +267,11 @@ Each system design directory contains 9 standardized documents:
 | 16.2 | Time-Series Database | Completed | [View](./16.2-time-series-database/00-index.md) |
 | 16.3 | Text Search Engine | Completed | [View](./16.3-text-search-engine/00-index.md) |
 | 16.4 | Graph Database | Completed | [View](./16.4-graph-database/00-index.md) |
+| 16.5 | NewSQL Database | Completed | [View](./16.5-newsql-database/00-index.md) |
+| 16.6 | Data Warehouse | Completed | [View](./16.6-data-warehouse/00-index.md) |
+| 16.7 | Data Lakehouse Architecture | Completed | [View](./16.7-data-lakehouse-architecture/00-index.md) |
+| 16.8 | Change Data Capture (CDC) System | Completed | [View](./16.8-change-data-capture-system/00-index.md) |
+| 16.9 | Data Mesh Architecture | Completed | [View](./16.9-data-mesh-architecture/00-index.md) |
 
 
 ---

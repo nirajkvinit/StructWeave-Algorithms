@@ -808,6 +808,7 @@
 - **15.3 Log Aggregation System**: The Finite State Transducer Is the Unsung Data Structure That Makes Full-Text Log Search Possible at Scale
 - **15.7 AI-Native Cybersecurity Platform**: Alert Correlation Is a Graph Problem, Not a Time-Series Problem — And the Graph's Topology Determines Whether Correlation Is Tractable
 - **16.4 Graph Database**: Index-Free Adjacency Is Not an Optimization — It Is the Architectural Decision That Defines Whether You Have a Graph Database or a Graph API on a Relational Store
+- **16.6 Data Warehouse**: The Micro-Partition's Zone Map Is the Most Cost-Effective Data Structure in the System — A Few Bytes of Metadata Eliminate Terabytes of I/O
 - **16.4 Graph Database**: The Doubly-Linked Relationship Chain Is the Most Elegant and Most Dangerous Data Structure in the System — Elegant Because It Enables Bidirectional Traversal Without Indexes, Dangerous Because Every Mutation Requires Six Coordinated Pointer Updates
 - **16.2 Time-Series Database**: Gorilla Compression Is a Bet on Data Regularity That Fails Gracefully but Expensively
 - **16.2 Time-Series Database**: The Inverted Index Is a Search Engine, Not a Database Index --- and This Changes the Scaling Model
@@ -844,6 +845,7 @@
 - **6.6 Ticketmaster**: Idempotent Payments with Outbox Pattern
 - **8.12 CBDC/Digital Currency Platform**: Cross-Border CBDC Settlement Eliminates Correspondent Banking's Biggest Costs
 - **9.12 AI-Native Procurement & Spend Intelligence**: Budget Consistency in Distributed Procurement Is Fundamentally a Distributed Transaction Problem
+- **16.5 NewSQL Database**: Parallel Commits Transform the Distributed Transaction Bottleneck from Two Sequential Consensus Rounds to One
 
 ### Edge Computing
 
@@ -1828,6 +1830,7 @@
 - **15.8 Error Tracking Platform**: The Columnar Store and Relational Store Have a Fundamental Consistency Gap — Event Counts Diverge Under Load
 - **15.8 Error Tracking Platform**: The New Issue Rate Is the Platform's Most Important Meta-Signal — Distinguishing Real Incidents from Grouping Regressions Is Critical
 - **16.2 Time-Series Database**: Compaction Is Not Just Optimization --- It Is the Mechanism That Resolves Out-of-Order Data, Enforces Deletions, and Bounds Query Complexity
+- **16.6 Data Warehouse**: Immutability Is Not a Constraint — It Is the Design Decision That Eliminates Concurrency Control, Enables Time Travel, and Makes Compression Optimal
 
 ### System Tuning
 
@@ -2005,6 +2008,67 @@
 - **15.4 eBPF-based Observability Platform**: The eBPF Observability Platform's True Competitive Moat Is Not Data Collection — It Is the Kernel-Side Data Reduction Ratio
 - **16.2 Time-Series Database**: The Columnar Revolution in TSDBs Is Not About Compression --- It Is About Decoupling the Write Format from the Read Format
 - **16.4 Graph Database**: A Graph Database's Competitive Moat Is Not the Query Language — It Is the Physical Storage Layout That Makes Multi-Hop Traversals Independent of Data Size
+- **16.6 Data Warehouse**: Separation of Compute and Storage Is Not a Deployment Decision — It Is the Architectural Inversion That Makes Every Other Feature Possible
+- **16.8 Change Data Capture (CDC) System**: CDC Solves the Dual-Write Problem by Eliminating It — Making the Database's Transaction Log the Single Source of Truth
+- **16.9 Data Mesh Architecture**: Data Mesh Is Not a Technology Architecture — It Is an Organizational Operating Model That Happens to Require a Technology Platform
+
+### Clock Synchronization
+
+- **16.5 NewSQL Database**: The Read Uncertainty Interval Is the Price You Pay for Commodity Clocks — and Its Width Directly Determines Your Transaction Restart Rate
+
+### Data Consistency
+
+- **16.8 Change Data Capture (CDC) System**: The Snapshot-to-Streaming Handoff Is the Defining Engineering Challenge — Merging Two Fundamentally Different Data Sources into a Single Consistent Event Stream
+
+### Data Contracts
+
+- **16.9 Data Mesh Architecture**: Data Contracts Are the Trust Layer That Prevents a Data Mesh from Becoming a Data Mess
+
+### Data Lifecycle Management
+
+- **16.7 Data Lakehouse Architecture**: Snapshot Retention Creates a Tension Between Time Travel and Storage Cost That Has No Universal Solution
+
+### Data Model Design
+
+- **16.7 Data Lakehouse Architecture**: Schema Evolution by Column ID Prevents a Class of Silent Data Corruption
+
+### Data Organization
+
+- **16.7 Data Lakehouse Architecture**: Hidden Partitioning Decouples Physical Layout from Logical Queries
+
+### Industry Trends
+
+- **16.7 Data Lakehouse Architecture**: The Open Table Format Wars Are Converging Toward Feature Parity — the Real Differentiator Is the Ecosystem
+
+### Operational Architecture
+
+- **16.7 Data Lakehouse Architecture**: Compaction Is Not Maintenance — It Is a Core Architectural Concern That Prevents Degradation
+
+### Operational Risk
+
+- **16.8 Change Data Capture (CDC) System**: A Stalled CDC Connector Can Take Down the Source Database — Unbounded WAL Growth Fills the Disk
+
+### Platform Design
+
+- **16.9 Data Mesh Architecture**: The Central Paradox of Data Mesh Is That Decentralized Ownership Requires a Centralized Platform
+
+### Query Optimization
+
+- **16.7 Data Lakehouse Architecture**: Z-Ordering Trades Write Cost for Read Selectivity — and the ROI Depends Entirely on Query Patterns
+
+### Storage Engine Design
+
+- **16.7 Data Lakehouse Architecture**: File-Level Tracking Is the Foundational Innovation That Makes ACID Possible on Immutable Object Storage
+
+### Write Strategy
+
+- **16.7 Data Lakehouse Architecture**: Merge-on-Read and Copy-on-Write Are Not Binary — Compaction Frequency Is the Dial
+
+### Distributed Systems
+
+- **16.5 NewSQL Database**: The Range Is the Fundamental Atom of a NewSQL Database — Not the Row, Not the Table, Not the Node
+- **16.7 Data Lakehouse Architecture**: The Catalog Is a Deceptively Simple Single Point of Failure on the Critical Path of Every Read and Write
+- **16.7 Data Lakehouse Architecture**: Object Storage Eventual Consistency Is Bypassed, Not Solved — The Lakehouse Never Relies on Directory Listings
 
 ### Safety
 
