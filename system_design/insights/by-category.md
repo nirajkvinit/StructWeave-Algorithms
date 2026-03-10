@@ -83,6 +83,10 @@
 - **14.9 AI-Native MSME Marketing & Social Commerce Platform**: Comment Response Timing Is the Strongest Discriminator Between Genuine and Manufactured Influencer Engagement
 - **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The Settlement Saga's Point-of-No-Return Creates an Asymmetric Risk Window
 - **14.11 AI-Native Digital Storefront Builder for SMEs**: Inventory Safety Buffers Are a Hidden Dynamic Programming Problem Across Channels
+- **14.12 AI-Native Field Service Management for SMEs**: Offline-First Pricing Determinism Requires Fixed-Point Arithmetic, Not Just Version Control
+- **14.13 AI-Native MSME Business Intelligence Dashboard**: The Auto-Insight Pipeline Must Handle Correlated Anomalies Without Double-Counting Impact
+- **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: Government Deadline Extensions Are a Cache Invalidation Problem Where the "Write" Happens Outside Your System
+- **14.15 AI-Native Hyperlocal Logistics & Delivery Platform for SMEs**: Order Batching Creates Hidden Cross-Order Dependencies That Make Failure Recovery Exponentially Harder
 
 ### Caching
 
@@ -181,6 +185,9 @@
 - **12.11 Package Registry**: The Origin Shield Pattern Prevents Cache Stampede Without Sacrificing Freshness
 - **14.9 AI-Native MSME Marketing & Social Commerce Platform**: Festival-Driven Content Demand Creates a "Flash Crowd" Problem Solvable by Speculative Pre-Generation
 - **14.11 AI-Native Digital Storefront Builder for SMEs**: CDN Cache Invalidation for 3 Million Storefronts Requires Product-to-URL Dependency Tracking
+- **14.12 AI-Native Field Service Management for SMEs**: Distance Matrix Caching Exploits the Power-Law Distribution of Service Locations
+- **14.13 AI-Native MSME Business Intelligence Dashboard**: Query Result Caching Requires Semantic Deduplication, Not String Matching
+- **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: Business Archetype Caching Transforms O(B × V) Obligation Computation into O(A × V), But Archetype Invalidation Is a Hidden Thundering Herd
 
 ### Consensus
 
@@ -491,6 +498,9 @@
 - **14.8 AI-Native Quality Control for SME Manufacturing**: Edge Device Thermal Management Is a Scheduling Problem, Not a Cooling Problem
 - **14.9 AI-Native MSME Marketing & Social Commerce Platform**: Self-Cannibalization Through Cross-Platform Audience Overlap Is the Scheduling Problem That No Single-Platform Optimizer Can See
 - **14.11 AI-Native Digital Storefront Builder for SMEs**: Incremental Static Regeneration at Platform Scale Creates a Thundering Herd on Origin When Product Updates Are Correlated
+- **14.12 AI-Native Field Service Management for SMEs**: The Offline Payment Queue Creates a Temporal Coupling Between Payment Processing and Financial Reconciliation
+- **14.13 AI-Native MSME Business Intelligence Dashboard**: The NL-to-SQL Feedback Loop Creates a Template Promotion Pipeline That Mirrors Code Compilation
+- **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: Multi-Jurisdiction Conflict Resolution Is Not Simply "Apply the Stricter Rule"
 
 ### Cost Optimization
 
@@ -582,6 +592,9 @@
 - **14.8 AI-Native Quality Control for SME Manufacturing**: The Cost of a False Negative and False Positive Are Not Just Different in Magnitude — They Are Different in Kind
 - **14.9 AI-Native MSME Marketing & Social Commerce Platform**: At $10/Day Budgets, the Multi-Armed Bandit's Exploration Cost Is Literally the MSME's Entire Daily Marketing Budget
 - **14.11 AI-Native Digital Storefront Builder for SMEs**: The Merchant's First 5 Minutes Determine 6-Month Retention
+- **14.12 AI-Native Field Service Management for SMEs**: IoT-Driven Demand Shaping Inverts the Typical Scheduling Optimization: From Minimizing Cost to Maximizing Revenue
+- **14.13 AI-Native MSME Business Intelligence Dashboard**: The WhatsApp Digest Character Limit Forces an Extractive-Abstractive Summarization Pipeline
+- **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: The "Compliance Score" Requires Careful Calibration to Avoid Perverse Incentives
 
 ### Data Structures
 
@@ -739,6 +752,9 @@
 - **14.9 AI-Native MSME Marketing & Social Commerce Platform**: Brand Kit Incompleteness Is the Norm — The System Must Synthesize Missing Brand Identity From Product Photos
 - **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The Double-Entry Ledger's Hash Chain Creates a Built-In Regulatory Compliance Accelerator
 - **14.11 AI-Native Digital Storefront Builder for SMEs**: Multi-Channel Order Attribution Is a Causal Inference Problem, Not a Last-Click Tracking Problem
+- **14.12 AI-Native Field Service Management for SMEs**: CRDT Selection for Field Service Must Account for the Asymmetric Authority of Dispatcher vs. Technician
+- **14.13 AI-Native MSME Business Intelligence Dashboard**: Materialized View Selection Is a Multi-Tenant Set Cover Problem Under a Storage Budget
+- **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: The Document Vault's Hash-Based Integrity Verification Creates a Subtle Version Migration Problem
 
 ### Distributed Transactions
 
@@ -1059,6 +1075,11 @@
 - **14.8 AI-Native Quality Control for SME Manufacturing**: The SME Factory's Single Point of Failure Is Not the Edge Device — It Is the Sole Quality Manager
 - **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: GSTN Cross-Verification Is Simultaneously the Strongest Fraud Signal and the Most Fragile System Dependency
 - **14.11 AI-Native Digital Storefront Builder for SMEs**: Payment Gateway Routing Is Not Just Cost Optimization — It Is a Real-Time Reliability Problem
+- **14.12 AI-Native Field Service Management for SMEs**: Predictive Maintenance False Positives Are Costlier Than False Negatives for SME Trust
+- **14.13 AI-Native MSME Business Intelligence Dashboard**: Cross-Tenant Benchmark Computation Requires an Asymmetric Trust Model
+- **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: Notification Reliability Requires Monitoring for Absence, Not Just Failure
+- **14.16 AI-Native ONDC Commerce Platform**: Trust Scoring Without Centralized Data Creates a Byzantine Fault Tolerance Problem Disguised as a Recommendation Problem
+- **14.16 AI-Native ONDC Commerce Platform**: The Gateway's Fan-Out Search Is a Hidden Amplification Attack Vector
 
 ### Scaling
 
@@ -1653,6 +1674,32 @@
 - **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The Buyer Credit Graph Creates a Network Intelligence Moat
 - **14.11 AI-Native Digital Storefront Builder for SMEs**: The Channel Projection Is Lossy Compression, and the Loss Function Must Be Channel-Aware
 - **14.11 AI-Native Digital Storefront Builder for SMEs**: Dynamic Pricing Cold-Start for New Products Is a Multi-Armed Bandit Problem Disguised as a Regression Problem
+- **14.13 AI-Native MSME Business Intelligence Dashboard**: The Semantic Graph Is a Slowly Evolving Consensus, Not a One-Time Mapping
+- **14.13 AI-Native MSME Business Intelligence Dashboard**: Tenant Onboarding Latency Is Dominated by Semantic Ambiguity Resolution, Not Data Transfer
+- **14.15 AI-Native Hyperlocal Logistics & Delivery Platform for SMEs**: The Delivery Graph Is Not a Graph Database Problem—It Is a Streaming Geospatial Index Problem
+- **14.15 AI-Native Hyperlocal Logistics & Delivery Platform for SMEs**: Pre-Positioning Riders Based on Demand Forecasts Creates a Costly Exploration-Exploitation Dilemma
+- **14.15 AI-Native Hyperlocal Logistics & Delivery Platform for SMEs**: Dynamic Pricing Oscillation Is the Default Behavior, Not an Edge Case, and Damping It Requires Forward-Looking Models
+- **14.16 AI-Native ONDC Commerce Platform**: The Protocol's Asynchronous Model Creates an Implicit Distributed State Machine Where No Single Node Holds the Complete State
+- **14.12 AI-Native Field Service Management for SMEs**: The Schedule Is a Constraint Satisfaction Problem Masquerading as a Resource Allocation Problem
+- **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: The Regulatory Knowledge Graph Is Not a Database of Rules—It Is a Temporal Ontology Where "Current Law" Is a Query, Not a State
+- **14.16 AI-Native ONDC Commerce Platform**: Catalog Normalization at Query Time Is Fundamentally Different From Normalization at Ingestion Time
+
+### System Tuning
+
+- **14.15 AI-Native Hyperlocal Logistics & Delivery Platform for SMEs**: Batch Matching Window Size Is the Single Most Important Tunable Parameter in the Entire System
+
+### Performance
+
+- **14.15 AI-Native Hyperlocal Logistics & Delivery Platform for SMEs**: The Geofence Evaluation Problem Flips from O(N) to O(1) with the Right Index
+
+### Feedback Loop
+
+- **14.15 AI-Native Hyperlocal Logistics & Delivery Platform for SMEs**: Rider Rejection of Dispatch Offers Is Not a Bug—It Is an Information Signal That the Matching Model Is Miscalibrated
+
+### Infrastructure
+
+- **14.15 AI-Native Hyperlocal Logistics & Delivery Platform for SMEs**: The Contraction Hierarchy for Road-Network Queries Must Be Rebuilt Hourly, Creating a Hidden Scaling Bottleneck
+- **14.16 AI-Native ONDC Commerce Platform**: The ONDC Registry Solves DNS for Commerce—With the Same Single-Point-of-Failure and Cache-Coherence Problems
 
 ### Traffic Shaping
 
@@ -1759,3 +1806,17 @@
 - **14.9 AI-Native MSME Marketing & Social Commerce Platform**: The MSME Owner's Approval Latency — Not GPU Generation Time — Is the True Bottleneck
 - **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The Financier Matching Engine Must Solve a Multi-Objective Optimization Problem
 - **14.11 AI-Native Digital Storefront Builder for SMEs**: The AI Theme Selection Decision Graph Creates an Implicit Contract with the Merchant
+- **14.13 AI-Native MSME Business Intelligence Dashboard**: The Insight Novelty Problem Is a Per-Tenant Information Theory Problem
+- **14.15 AI-Native Hyperlocal Logistics & Delivery Platform for SMEs**: ETA Is a Promise Contract, Not a Prediction Accuracy Problem, and the Optimal ETA Is Deliberately Inaccurate
+- **14.12 AI-Native Field Service Management for SMEs**: Schedule Re-Optimization Must Preserve Dispatcher Mental Model, Not Just Minimize Cost
+- **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: The Compliance Calendar Is a Constraint Satisfaction Problem Where "Priority" Is a Risk-Weighted Topological Order
+- **14.14 AI-Native Regulatory & Compliance Assistant for MSMEs**: Threshold Monitoring Has a Hysteresis Problem—Activation and Deactivation Are Asymmetric
+- **14.16 AI-Native ONDC Commerce Platform**: WhatsApp's Conversational Commerce Model Inverts the Information Architecture
+
+### Financial Systems
+
+- **14.16 AI-Native ONDC Commerce Platform**: The Settlement Reconciliation Window Creates a Hidden Cash-Flow Float That Can Be Weaponized
+
+### System Evolution
+
+- **14.16 AI-Native ONDC Commerce Platform**: Protocol Version Heterogeneity Creates an N×M Compatibility Matrix That Grows Quadratically

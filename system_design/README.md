@@ -244,6 +244,11 @@ Each system design directory contains 9 standardized documents:
 | 14.9 | AI-Native MSME Marketing & Social Commerce Platform | Completed | [View](./14.9-ai-native-msme-marketing-social-commerce-platform/00-index.md) |
 | 14.10 | AI-Native Trade Finance & Invoice Factoring Platform | Completed | [View](./14.10-ai-native-trade-finance-invoice-factoring-platform/00-index.md) |
 | 14.11 | AI-Native Digital Storefront Builder for SMEs | Completed | [View](./14.11-ai-native-digital-storefront-builder-smes/00-index.md) |
+| 14.12 | AI-Native Field Service Management for SMEs | Completed | [View](./14.12-ai-native-field-service-management-smes/00-index.md) |
+| 14.13 | AI-Native MSME Business Intelligence Dashboard | Completed | [View](./14.13-ai-native-msme-business-intelligence-dashboard/00-index.md) |
+| 14.14 | AI-Native Regulatory & Compliance Assistant for MSMEs | Completed | [View](./14.14-ai-native-regulatory-compliance-assistant-msmes/00-index.md) |
+| 14.15 | AI-Native Hyperlocal Logistics & Delivery Platform for SMEs | Completed | [View](./14.15-ai-native-hyperlocal-logistics-delivery-platform-smes/00-index.md) |
+| 14.16 | AI-Native ONDC Commerce Platform | Completed | [View](./14.16-ai-native-ondc-commerce-platform/00-index.md) |
 
 
 ---

@@ -174,3 +174,79 @@
 | 7 | The Merchant's First 5 Minutes Determine 6-Month Retention | Cost Optimization |
 | 8 | Multi-Channel Order Attribution Is a Causal Inference Problem, Not a Last-Click Tracking Problem | Data Structures |
 | 9 | Incremental Static Regeneration at Platform Scale Creates a Thundering Herd on Origin When Product Updates Are Correlated | Contention |
+
+### 14.12 AI-Native Field Service Management for SMEs [View](../14.12-ai-native-field-service-management-smes/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Schedule Is a Constraint Satisfaction Problem Masquerading as a Resource Allocation Problem | System Modeling |
+| 2 | Offline-First Pricing Determinism Requires Fixed-Point Arithmetic, Not Just Version Control | Atomicity |
+| 3 | Schedule Re-Optimization Must Preserve Dispatcher Mental Model, Not Just Minimize Cost | Workflow |
+| 4 | Distance Matrix Caching Exploits the Power-Law Distribution of Service Locations | Caching |
+| 5 | CRDT Selection for Field Service Must Account for the Asymmetric Authority of Dispatcher vs. Technician | Data Structures |
+| 6 | Predictive Maintenance False Positives Are Costlier Than False Negatives for SME Trust | Resilience |
+| 7 | The Offline Payment Queue Creates a Temporal Coupling Between Payment Processing and Financial Reconciliation | Contention |
+| 8 | IoT-Driven Demand Shaping Inverts the Typical Scheduling Optimization: From Minimizing Cost to Maximizing Revenue | Cost Optimization |
+
+---
+
+### 14.13 AI-Native MSME Business Intelligence Dashboard [View](../14.13-ai-native-msme-business-intelligence-dashboard/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Semantic Graph Is a Slowly Evolving Consensus, Not a One-Time Mapping | System Modeling |
+| 2 | Query Result Caching Requires Semantic Deduplication, Not String Matching | Caching |
+| 3 | The Insight Novelty Problem Is a Per-Tenant Information Theory Problem | Workflow |
+| 4 | Materialized View Selection Is a Multi-Tenant Set Cover Problem Under a Storage Budget | Data Structures |
+| 5 | The WhatsApp Digest Character Limit Forces an Extractive-Abstractive Summarization Pipeline | Cost Optimization |
+| 6 | Cross-Tenant Benchmark Computation Requires an Asymmetric Trust Model | Resilience |
+| 7 | The NL-to-SQL Feedback Loop Creates a Template Promotion Pipeline That Mirrors Code Compilation | Contention |
+| 8 | Tenant Onboarding Latency Is Dominated by Semantic Ambiguity Resolution, Not Data Transfer | System Modeling |
+| 9 | The Auto-Insight Pipeline Must Handle Correlated Anomalies Without Double-Counting Impact | Atomicity |
+
+---
+
+### 14.14 AI-Native Regulatory & Compliance Assistant for MSMEs [View](../14.14-ai-native-regulatory-compliance-assistant-msmes/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Regulatory Knowledge Graph Is Not a Database of Rules—It Is a Temporal Ontology Where "Current Law" Is a Query, Not a State | System Modeling |
+| 2 | Notification Reliability Requires Monitoring for Absence, Not Just Failure | Resilience |
+| 3 | Business Archetype Caching Transforms O(B × V) Obligation Computation into O(A × V), But Archetype Invalidation Is a Hidden Thundering Herd | Caching |
+| 4 | The Compliance Calendar Is a Constraint Satisfaction Problem Where "Priority" Is a Risk-Weighted Topological Order | Workflow |
+| 5 | Government Deadline Extensions Are a Cache Invalidation Problem Where the "Write" Happens Outside Your System | Atomicity |
+| 6 | The Document Vault's Hash-Based Integrity Verification Creates a Subtle Version Migration Problem | Data Structures |
+| 7 | Multi-Jurisdiction Conflict Resolution Is Not Simply "Apply the Stricter Rule" | Contention |
+| 8 | The "Compliance Score" Requires Careful Calibration to Avoid Perverse Incentives | Cost Optimization |
+| 9 | Threshold Monitoring Has a Hysteresis Problem—Activation and Deactivation Are Asymmetric | Workflow |
+
+---
+
+### 14.15 AI-Native Hyperlocal Logistics & Delivery Platform for SMEs [View](../14.15-ai-native-hyperlocal-logistics-delivery-platform-smes/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Delivery Graph Is Not a Graph Database Problem—It Is a Streaming Geospatial Index Problem | System Modeling |
+| 2 | Batch Matching Window Size Is the Single Most Important Tunable Parameter in the Entire System | System Tuning |
+| 3 | ETA Is a Promise Contract, Not a Prediction Accuracy Problem, and the Optimal ETA Is Deliberately Inaccurate | Workflow |
+| 4 | Pre-Positioning Riders Based on Demand Forecasts Creates a Costly Exploration-Exploitation Dilemma | System Modeling |
+| 5 | The Geofence Evaluation Problem Flips from O(N) to O(1) with the Right Index | Performance |
+| 6 | Rider Rejection of Dispatch Offers Is Not a Bug—It Is an Information Signal That the Matching Model Is Miscalibrated | Feedback Loop |
+| 7 | Order Batching Creates Hidden Cross-Order Dependencies That Make Failure Recovery Exponentially Harder | Atomicity |
+| 8 | The Contraction Hierarchy for Road-Network Queries Must Be Rebuilt Hourly, Creating a Hidden Scaling Bottleneck | Infrastructure |
+| 9 | Dynamic Pricing Oscillation Is the Default Behavior, Not an Edge Case, and Damping It Requires Forward-Looking Models | System Modeling |
+
+---
+
+### 14.16 AI-Native ONDC Commerce Platform [View](../14.16-ai-native-ondc-commerce-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Protocol's Asynchronous Model Creates an Implicit Distributed State Machine Where No Single Node Holds the Complete State | System Modeling |
+| 2 | Catalog Normalization at Query Time Is Fundamentally Different From Normalization at Ingestion Time | Data Modeling |
+| 3 | Trust Scoring Without Centralized Data Creates a Byzantine Fault Tolerance Problem Disguised as a Recommendation Problem | Reliability |
+| 4 | The Settlement Reconciliation Window Creates a Hidden Cash-Flow Float That Can Be Weaponized | Financial Systems |
+| 5 | WhatsApp's Conversational Commerce Model Inverts the Information Architecture | Workflow |
+| 6 | Protocol Version Heterogeneity Creates an N×M Compatibility Matrix That Grows Quadratically | System Evolution |
+| 7 | The Gateway's Fan-Out Search Is a Hidden Amplification Attack Vector | Resilience |
+| 8 | The ONDC Registry Solves DNS for Commerce—With the Same Single-Point-of-Failure and Cache-Coherence Problems | Infrastructure |
