@@ -272,6 +272,7 @@ Each system design directory contains 9 standardized documents:
 | 16.7 | Data Lakehouse Architecture | Completed | [View](./16.7-data-lakehouse-architecture/00-index.md) |
 | 16.8 | Change Data Capture (CDC) System | Completed | [View](./16.8-change-data-capture-system/00-index.md) |
 | 16.9 | Data Mesh Architecture | Completed | [View](./16.9-data-mesh-architecture/00-index.md) |
+| 16.10 | AI-Native Data Catalog & Governance | Completed | [View](./16.10-ai-native-data-catalog-governance/00-index.md) |
 
 
 ---

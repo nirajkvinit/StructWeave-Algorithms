@@ -129,3 +129,15 @@
 | 3 | Data Contracts Are the Trust Layer That Prevents a Data Mesh from Becoming a Data Mess | Data Contracts |
 
 ---
+
+### 16.10 AI-Native Data Catalog & Governance [View](../16.10-ai-native-data-catalog-governance/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Catalog's Primary Failure Mode Is Not Technical Downtime — It Is Low Adoption | Adoption |
+| 2 | Column-Level Lineage Is an Accuracy Spectrum, Not a Binary — the System Must Track and Communicate Confidence per Edge | Data Lineage |
+| 3 | Tag-Based Policy Enforcement Creates an Automated Governance Loop (Classify → Tag → Enforce → Audit) That Only Works If Classification Accuracy Sustains Trust | Governance Automation |
+| 4 | The Metadata Graph's Value Increases Superlinearly with Connected Sources — Connector Breadth Matters More Than Depth | Architecture |
+| 5 | NL-to-SQL in a Catalog Is Uniquely Positioned to Solve Both Accuracy (via Catalog RAG) and Safety (via Policy Enforcement) Simultaneously | AI Integration |
+
+---

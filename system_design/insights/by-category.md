@@ -2011,6 +2011,15 @@
 - **16.6 Data Warehouse**: Separation of Compute and Storage Is Not a Deployment Decision — It Is the Architectural Inversion That Makes Every Other Feature Possible
 - **16.8 Change Data Capture (CDC) System**: CDC Solves the Dual-Write Problem by Eliminating It — Making the Database's Transaction Log the Single Source of Truth
 - **16.9 Data Mesh Architecture**: Data Mesh Is Not a Technology Architecture — It Is an Organizational Operating Model That Happens to Require a Technology Platform
+- **16.10 AI-Native Data Catalog & Governance**: The Metadata Graph's Value Increases Superlinearly with Connected Sources — Connector Breadth Matters More Than Depth
+
+### Adoption
+
+- **16.10 AI-Native Data Catalog & Governance**: The Catalog's Primary Failure Mode Is Not Technical Downtime — It Is Low Adoption
+
+### AI Integration
+
+- **16.10 AI-Native Data Catalog & Governance**: NL-to-SQL in a Catalog Is Uniquely Positioned to Solve Both Accuracy (via Catalog RAG) and Safety (via Policy Enforcement) Simultaneously
 
 ### Clock Synchronization
 
@@ -2069,6 +2078,14 @@
 - **16.5 NewSQL Database**: The Range Is the Fundamental Atom of a NewSQL Database — Not the Row, Not the Table, Not the Node
 - **16.7 Data Lakehouse Architecture**: The Catalog Is a Deceptively Simple Single Point of Failure on the Critical Path of Every Read and Write
 - **16.7 Data Lakehouse Architecture**: Object Storage Eventual Consistency Is Bypassed, Not Solved — The Lakehouse Never Relies on Directory Listings
+
+### Data Lineage
+
+- **16.10 AI-Native Data Catalog & Governance**: Column-Level Lineage Is an Accuracy Spectrum, Not a Binary — the System Must Track and Communicate Confidence per Edge
+
+### Governance Automation
+
+- **16.10 AI-Native Data Catalog & Governance**: Tag-Based Policy Enforcement Creates an Automated Governance Loop (Classify → Tag → Enforce → Audit) That Only Works If Classification Accuracy Sustains Trust
 
 ### Safety
 
