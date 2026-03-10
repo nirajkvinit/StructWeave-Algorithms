@@ -64,3 +64,59 @@
 | 9 | The eBPF Observability Platform's True Competitive Moat Is Not Data Collection — It Is the Kernel-Side Data Reduction Ratio | Architecture |
 
 ---
+
+### 15.5 Chaos Engineering Platform [View](../15.5-chaos-engineering-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Chaos Platform Must Be the Most Reliable System in the Stack — Creating a Recursive Reliability Requirement | Resilience |
+| 2 | Blast Radius Is a Graph Problem, Not a Percentage — And the Graph Is Never Accurate | System Modeling |
+| 3 | The Revert-Before-Inject Pattern Is the Single Most Important Safety Pattern — And It's Easy to Get Wrong | Safety |
+| 4 | The Grace Period Is Not a Delay — It's a Trade-off Between False Rollbacks and Extended Customer Impact | Contention |
+| 5 | The Observability Paradox — You Cannot Validate System Health Using a System That Is Itself Under Chaos | System Modeling |
+| 6 | Concurrent Experiment Safety Is a Distributed Locking Problem Disguised as a Scheduling Problem | Contention |
+| 7 | Agent Autonomy Is the Platform's Last Line of Defense — But Autonomous Agents Create a Control Plane Consistency Problem | Resilience |
+| 8 | GameDay Orchestration Is an Incident Simulation — And the Hardest Part Is Not Technical | Scaling |
+| 9 | Chaos Engineering Results Are Perishable — A Test That Passed Last Month May Fail Today | Consistency |
+| 10 | The Blast Radius Ceiling Is an Organizational Risk Appetite Declaration — Not a Technical Parameter | Security |
+| 11 | Fault Injection Is Reversible by Design — But Some Real-World Failures Are Not, Creating a Fidelity Gap | System Modeling |
+
+---
+
+### 15.6 Incident Management System [View](../15.6-incident-management-system/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Meta-Reliability Paradox — The Incident Platform Must Be Strictly More Available Than Everything It Monitors | Resilience |
+| 2 | Alert Deduplication Is a Precision-Recall Trade-Off Where False Positives Are Catastrophically Worse Than False Negatives | System Modeling |
+| 3 | The Escalation Timer Is Not a Timeout — It Is a Dead Man's Switch That Makes Human Unreachability a First-Class System State | Contention |
+| 4 | Multi-Channel Notification Is Not Redundancy — Each Channel Has Fundamentally Different Failure Modes That Are Only Weakly Correlated | Resilience |
+| 5 | The Fingerprint Store's Sliding Window Creates a Time-Dependent Definition of "Same Incident" That Silently Changes Behavior Under Load | Consistency |
+| 6 | On-Call Schedule Resolution Is a Read-Heavy, Time-Dependent Computation That Only Changes at Discrete Boundaries | Scaling |
+| 7 | The Notification Pipeline Must Distinguish Between "Delivered" and "Engaged" — A Voicemail Pickup Is Not a Human Acknowledgment | System Modeling |
+| 8 | Alert Storm Handling Requires Treating the Dedup Engine and Notification Pipeline as Two Separate Scaling Problems with Inverted Pressure Profiles | Traffic Shaping |
+| 9 | The Escalation State Machine Has a Subtle Liveness Property — It Must Guarantee Progress Even When All Responders Are Unreachable | Resilience |
+| 10 | Post-Incident Reviews Produce Value Only If Action Items Are Tracked to Completion | System Modeling |
+| 11 | The Break-Glass Authentication Problem — The Incident Platform Must Be Accessible When the Identity Provider Is the System That's Down | Security |
+| 12 | Incident Severity and Notification Urgency Are Not the Same Axis — Conflating Them Causes Either Alert Fatigue or Missed Incidents | System Modeling |
+
+---
+
+### 15.7 AI-Native Cybersecurity Platform [View](../15.7-ai-native-cybersecurity-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Model Cascade Is Not an Optimization — It Is the Only Viable Architecture for ML Detection at Billion-Event Scale | Scaling |
+| 2 | The False Positive Rate That Seems Excellent on Paper Is Catastrophic at Scale — Security AI Operates in a Regime Where Base Rate Dominates Precision | System Modeling |
+| 3 | Edge Detection Is Not a Bandwidth Optimization — It Is the Only Architecture That Survives a Network Attack | Resilience |
+| 4 | The Behavioral Baseline's Cold-Start Period Is a Security Vulnerability, Not Just a Data Quality Problem | Security |
+| 5 | Alert Correlation Is a Graph Problem, Not a Time-Series Problem — And the Graph's Topology Determines Whether Correlation Is Tractable | Data Structures |
+| 6 | SOAR Playbook Automated Response Has an Adversarial Failure Mode — Attackers Can Weaponize the Platform's Own Response Against It | Security |
+| 7 | The Unified Common Event Schema Is Not a Data Engineering Convenience — It Is the Architectural Foundation That Makes XDR Possible or Impossible | System Modeling |
+| 8 | Model Drift in Security AI Has a Unique Failure Signature — It Looks Like Improved Performance When It Is Actually Degraded Detection | Consistency |
+| 9 | The Agent Heartbeat Is the Platform's Most Underrated Signal — Its Absence Is More Informative Than Any Telemetry It Could Send | Resilience |
+| 10 | Multi-Tenant Security Platforms Face an Impossible Trilemma: Per-Tenant Model Accuracy vs. Cross-Tenant Threat Intelligence vs. Privacy Isolation | Cost Optimization |
+| 11 | The Approval Gate in SOAR Is Not a Speed Bump — It Is a Control Theory Problem Where Timeout Behavior Determines Fail-Safe vs. Fail-Deadly | Resilience |
+| 12 | Seasonal and Contextual Baselines Are Not Nice-to-Haves — Without Them, Behavioral Detection Creates Predictable False Positive Storms | Traffic Shaping |
+
+---

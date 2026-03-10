@@ -401,6 +401,9 @@
 - **15.4 eBPF-based Observability Platform**: The Cgroup-to-Pod Mapping Is the Platform's Most Fragile Dependency — And It Updates on a Different Clock Than the Kernel Events It Enriches
 - **14.22 AI-Native WhatsApp+PIX Commerce Assistant**: Brazilian Portuguese Colloquialisms Create an Amount-Parsing Problem Where the Same Word Means Different Values in Different Regions
 - **15.3 Log Aggregation System**: Schema-on-Read Wins at Microservice Scale Because the Coordination Cost of Schema-on-Write Exceeds the Query Performance Benefit
+- **15.5 Chaos Engineering Platform**: Chaos Engineering Results Are Perishable — A Test That Passed Last Month May Fail Today
+- **15.6 Incident Management System**: The Fingerprint Store's Sliding Window Creates a Time-Dependent Definition of "Same Incident" That Silently Changes Behavior Under Load
+- **15.7 AI-Native Cybersecurity Platform**: Model Drift in Security AI Has a Unique Failure Signature — It Looks Like Improved Performance When It Is Actually Degraded Detection
 
 ### Contention
 
@@ -518,6 +521,9 @@
 - **15.1 Metrics & Monitoring System**: Alert Evaluation Must Be the Highest-Priority Reader — Yet It's Usually Designed as Just Another Query Consumer
 - **14.22 AI-Native WhatsApp+PIX Commerce Assistant**: The Secure Authentication Handoff's Drop-Off Rate Is the System's Most Important Business Metric—And It's in Tension with the System's Most Important Security Requirement
 - **15.3 Log Aggregation System**: The Segment Merge Tax Is the Hidden Throughput Ceiling That Doesn't Appear in Benchmarks
+- **15.5 Chaos Engineering Platform**: The Grace Period Is Not a Delay — It's a Trade-off Between False Rollbacks and Extended Customer Impact
+- **15.5 Chaos Engineering Platform**: Concurrent Experiment Safety Is a Distributed Locking Problem Disguised as a Scheduling Problem
+- **15.6 Incident Management System**: The Escalation Timer Is Not a Timeout — It Is a Dead Man's Switch That Makes Human Unreachability a First-Class System State
 
 ### Cost Optimization
 
@@ -616,6 +622,7 @@
 - **15.4 eBPF-based Observability Platform**: In-Kernel Filtering Inverts the Traditional Observability Cost Model — You Pay for What You Don't Collect, Not What You Do
 - **15.1 Metrics & Monitoring System**: Downsampling Is Lossy and Irreversible — Different Aggregation Functions Lose Different Information
 - **15.3 Log Aggregation System**: The Indexing Strategy Is Not a Technology Choice — It Is a Three-Way Economic Trade-off Between Ingestion Cost, Search Cost, and Storage Cost
+- **15.7 AI-Native Cybersecurity Platform**: Multi-Tenant Security Platforms Face an Impossible Trilemma: Per-Tenant Model Accuracy vs. Cross-Tenant Threat Intelligence vs. Privacy Isolation
 
 ### Data Structures
 
@@ -785,6 +792,7 @@
 - **14.22 AI-Native WhatsApp+PIX Commerce Assistant**: QR Code Recognition from Photos Solves a Different Problem Than QR Code Scanning—And the Error Profile Is Fundamentally Different
 - **15.3 Log Aggregation System**: Bloom Filters Transform the Search Problem from "Find the Needle" to "Eliminate the Haystacks"
 - **15.3 Log Aggregation System**: The Finite State Transducer Is the Unsung Data Structure That Makes Full-Text Log Search Possible at Scale
+- **15.7 AI-Native Cybersecurity Platform**: Alert Correlation Is a Graph Problem, Not a Time-Series Problem — And the Graph's Topology Determines Whether Correlation Is Tractable
 
 ### Distributed Transactions
 
@@ -1122,6 +1130,14 @@
 - **15.1 Metrics & Monitoring System**: The Meta-Monitoring System Must Be Architecturally Simpler Than What It Monitors — Complexity Is the Enemy of the Last Line of Defense
 - **15.1 Metrics & Monitoring System**: The WAL Is Not Just a Durability Mechanism — It's the Determinant of Recovery Time and Replication Strategy
 - **15.3 Log Aggregation System**: The Write Path and Read Path Are Maximally Correlated at the Worst Possible Moment
+- **15.5 Chaos Engineering Platform**: The Chaos Platform Must Be the Most Reliable System in the Stack — Creating a Recursive Reliability Requirement
+- **15.5 Chaos Engineering Platform**: Agent Autonomy Is the Platform's Last Line of Defense — But Autonomous Agents Create a Control Plane Consistency Problem
+- **15.6 Incident Management System**: The Meta-Reliability Paradox — The Incident Platform Must Be Strictly More Available Than Everything It Monitors
+- **15.6 Incident Management System**: Multi-Channel Notification Is Not Redundancy — Each Channel Has Fundamentally Different Failure Modes That Are Only Weakly Correlated
+- **15.6 Incident Management System**: The Escalation State Machine Has a Subtle Liveness Property — It Must Guarantee Progress Even When All Responders Are Unreachable
+- **15.7 AI-Native Cybersecurity Platform**: Edge Detection Is Not a Bandwidth Optimization — It Is the Only Architecture That Survives a Network Attack
+- **15.7 AI-Native Cybersecurity Platform**: The Agent Heartbeat Is the Platform's Most Underrated Signal — Its Absence Is More Informative Than Any Telemetry It Could Send
+- **15.7 AI-Native Cybersecurity Platform**: The Approval Gate in SOAR Is Not a Speed Bump — It Is a Control Theory Problem Where Timeout Behavior Determines Fail-Safe vs. Fail-Deadly
 
 ### Scaling
 
@@ -1306,6 +1322,9 @@
 - **15.4 eBPF-based Observability Platform**: Adaptive Sampling Under Load Is a Control Theory Problem Disguised as a Systems Engineering Decision
 - **15.1 Metrics & Monitoring System**: Cardinality Is an Adversarial Scaling Problem That Grows Combinatorially, Not Linearly
 - **15.3 Log Aggregation System**: Adaptive Refresh Interval by Severity Turns a Global Performance Knob into a Priority System
+- **15.5 Chaos Engineering Platform**: GameDay Orchestration Is an Incident Simulation — And the Hardest Part Is Not Technical
+- **15.6 Incident Management System**: On-Call Schedule Resolution Is a Read-Heavy, Time-Dependent Computation That Only Changes at Discrete Boundaries
+- **15.7 AI-Native Cybersecurity Platform**: The Model Cascade Is Not an Optimization — It Is the Only Viable Architecture for ML Detection at Billion-Event Scale
 
 ### Search
 
@@ -1459,6 +1478,10 @@
 - **15.2 Distributed Tracing System**: PII in Trace Data Is Not a Bug to Fix but an Ongoing Adversarial Game Between Instrumentation Convenience and Data Privacy
 - **15.4 eBPF-based Observability Platform**: Security Enforcement in eBPF Has an Asymmetric Blast Radius — A False-Positive Kill Is Worse Than Missing a True-Positive Detection
 - **15.3 Log Aggregation System**: PII Redaction in the Log Pipeline Is a Fail-Closed Gate, Not a Best-Effort Filter
+- **15.5 Chaos Engineering Platform**: The Blast Radius Ceiling Is an Organizational Risk Appetite Declaration — Not a Technical Parameter
+- **15.6 Incident Management System**: The Break-Glass Authentication Problem — The Incident Platform Must Be Accessible When the Identity Provider Is the System That's Down
+- **15.7 AI-Native Cybersecurity Platform**: The Behavioral Baseline's Cold-Start Period Is a Security Vulnerability, Not Just a Data Quality Problem
+- **15.7 AI-Native Cybersecurity Platform**: SOAR Playbook Automated Response Has an Adversarial Failure Mode — Attackers Can Weaponize the Platform's Own Response Against It
 
 ### Streaming
 
@@ -1742,6 +1765,15 @@
 - **15.2 Distributed Tracing System**: The Service Dependency Graph Is Not a Static Map — It Is a Time-Series of Topological Snapshots That Reveals Deployment Drift and Configuration Errors
 - **15.4 eBPF-based Observability Platform**: The Verifier Is Not a Safety Net — It Is the Architect That Shapes Every Design Decision
 - **14.22 AI-Native WhatsApp+PIX Commerce Assistant**: Compound Confidence Scoring for Voice Payments Creates a Non-Obvious Accuracy Cliff Where Each Pipeline Stage Multiplies Uncertainty
+- **15.5 Chaos Engineering Platform**: Blast Radius Is a Graph Problem, Not a Percentage — And the Graph Is Never Accurate
+- **15.5 Chaos Engineering Platform**: The Observability Paradox — You Cannot Validate System Health Using a System That Is Itself Under Chaos
+- **15.5 Chaos Engineering Platform**: Fault Injection Is Reversible by Design — But Some Real-World Failures Are Not, Creating a Fidelity Gap
+- **15.6 Incident Management System**: Alert Deduplication Is a Precision-Recall Trade-Off Where False Positives Are Catastrophically Worse Than False Negatives
+- **15.6 Incident Management System**: The Notification Pipeline Must Distinguish Between "Delivered" and "Engaged" — A Voicemail Pickup Is Not a Human Acknowledgment
+- **15.6 Incident Management System**: Post-Incident Reviews Produce Value Only If Action Items Are Tracked to Completion
+- **15.6 Incident Management System**: Incident Severity and Notification Urgency Are Not the Same Axis — Conflating Them Causes Either Alert Fatigue or Missed Incidents
+- **15.7 AI-Native Cybersecurity Platform**: The False Positive Rate That Seems Excellent on Paper Is Catastrophic at Scale — Security AI Operates in a Regime Where Base Rate Dominates Precision
+- **15.7 AI-Native Cybersecurity Platform**: The Unified Common Event Schema Is Not a Data Engineering Convenience — It Is the Architectural Foundation That Makes XDR Possible or Impossible
 
 ### System Tuning
 
@@ -1852,6 +1884,8 @@
 - **13.3 AI-Native Energy & Grid Management Platform**: DR Rebound Prevention Is a Harder Control Problem Than the Original Curtailment
 - **15.2 Distributed Tracing System**: The Sampling Paradox — Head Sampling Is Fast but Blind, Tail Sampling Is Informed but Expensive, and Neither Alone Is Sufficient
 - **14.22 AI-Native WhatsApp+PIX Commerce Assistant**: The Outbound Message Rate Limit Creates a Priority Inversion Problem Where Low-Value Marketing Messages Can Starve High-Value Payment Receipts
+- **15.6 Incident Management System**: Alert Storm Handling Requires Treating the Dedup Engine and Notification Pipeline as Two Separate Scaling Problems with Inverted Pressure Profiles
+- **15.7 AI-Native Cybersecurity Platform**: Seasonal and Contextual Baselines Are Not Nice-to-Haves — Without Them, Behavioral Detection Creates Predictable False Positive Storms
 
 ### Workflow
 
@@ -1910,3 +1944,7 @@
 ### Architecture
 
 - **15.4 eBPF-based Observability Platform**: The eBPF Observability Platform's True Competitive Moat Is Not Data Collection — It Is the Kernel-Side Data Reduction Ratio
+
+### Safety
+
+- **15.5 Chaos Engineering Platform**: The Revert-Before-Inject Pattern Is the Single Most Important Safety Pattern — And It's Easy to Get Wrong

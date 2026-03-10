@@ -259,6 +259,9 @@ Each system design directory contains 9 standardized documents:
 | 15.2 | Distributed Tracing System | Completed | [View](./15.2-distributed-tracing-system/00-index.md) |
 | 15.3 | Log Aggregation System | Completed | [View](./15.3-log-aggregation-system/00-index.md) |
 | 15.4 | eBPF-based Observability Platform | Completed | [View](./15.4-ebpf-observability-platform/00-index.md) |
+| 15.5 | Chaos Engineering Platform | Completed | [View](./15.5-chaos-engineering-platform/00-index.md) |
+| 15.6 | Incident Management System | Completed | [View](./15.6-incident-management-system/00-index.md) |
+| 15.7 | AI-Native Cybersecurity Platform | Completed | [View](./15.7-ai-native-cybersecurity-platform/00-index.md) |
 
 
 ---
