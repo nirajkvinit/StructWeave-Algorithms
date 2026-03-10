@@ -78,6 +78,11 @@
 - **14.3 AI-Native MSME Accounting & Tax Compliance Platform**: The Accounting Equation Is a Database Constraint, Not an Application Validation
 - **14.2 AI-Native Conversational Commerce Platform**: Webhook Deduplication Is Necessary but Not Sufficient — The Real Problem Is Idempotent Side Effects
 - **14.5 AI-Native B2B Supplier Discovery & Procurement Marketplace**: The Escrow State Machine Must Handle a State That Financial Systems Typically Cannot: The "Dispute Without Resolution" Deadlock
+- **14.7 AI-Native SMB Workforce Scheduling & Gig Management**: The Compliance Engine's Real Complexity Is Determining Which Rules Apply — Jurisdiction Binding Is an Ambiguous Classification Problem
+- **14.8 AI-Native Quality Control for SME Manufacturing**: Quantization Selectively Destroys Detection of Low-Contrast Defects
+- **14.9 AI-Native MSME Marketing & Social Commerce Platform**: Comment Response Timing Is the Strongest Discriminator Between Genuine and Manufactured Influencer Engagement
+- **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The Settlement Saga's Point-of-No-Return Creates an Asymmetric Risk Window
+- **14.11 AI-Native Digital Storefront Builder for SMEs**: Inventory Safety Buffers Are a Hidden Dynamic Programming Problem Across Channels
 
 ### Caching
 
@@ -174,6 +179,8 @@
 - **12.6 Pastebin**: Immutable Content Is a Caching Superpower
 - **12.6 Pastebin**: CDN Cache TTL Is a Correctness Knob, Not Just a Performance Knob
 - **12.11 Package Registry**: The Origin Shield Pattern Prevents Cache Stampede Without Sacrificing Freshness
+- **14.9 AI-Native MSME Marketing & Social Commerce Platform**: Festival-Driven Content Demand Creates a "Flash Crowd" Problem Solvable by Speculative Pre-Generation
+- **14.11 AI-Native Digital Storefront Builder for SMEs**: CDN Cache Invalidation for 3 Million Storefronts Requires Product-to-URL Dependency Tracking
 
 ### Consensus
 
@@ -373,6 +380,9 @@
 - **14.2 AI-Native Conversational Commerce Platform**: Per-Conversation Message Ordering Is Necessary but Must Tolerate Out-of-Order Status Updates Without Breaking the State Machine
 - **14.4 AI-Native SME Inventory & Demand Forecasting System**: Multi-Channel Reconciliation Is a Consensus Problem Where You Don't Control the Participants
 - **14.6 AI-Native Vernacular Voice Commerce Platform**: Streaming TTS Creates an Irrecoverable Commitment Problem That Shapes the Entire Response Generation Architecture
+- **14.7 AI-Native SMB Workforce Scheduling & Gig Management**: Predictive Scheduling Laws Transform Every Schedule Modification Into a Financial Transaction
+- **14.8 AI-Native Quality Control for SME Manufacturing**: The Production Line's Physical Reject Mechanism Creates an Irreversible Commitment Window
+- **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The Credit Insurance Underwriting Model Must Price Correlation Risk, Not Just Individual Default Risk
 
 ### Contention
 
@@ -477,6 +487,10 @@
 - **14.5 AI-Native B2B Supplier Discovery & Procurement Marketplace**: The RFQ Routing Problem Is a Two-Sided Matching Market, Not a One-Sided Search
 - **14.2 AI-Native Conversational Commerce Platform**: The Broadcast Engine's Hardest Problem Is Not Sending 1M Messages — It Is Not Degrading the Conversational Experience While Doing So
 - **14.6 AI-Native Vernacular Voice Commerce Platform**: The Telephony Channel's 8 kHz Bandwidth Destroys Exactly the Acoustic Features That Distinguish Confusable Product Names
+- **14.7 AI-Native SMB Workforce Scheduling & Gig Management**: The Sunday Evening Solver Surge Creates a Thundering Herd That Is Qualitatively Different from Typical API Traffic Spikes
+- **14.8 AI-Native Quality Control for SME Manufacturing**: Edge Device Thermal Management Is a Scheduling Problem, Not a Cooling Problem
+- **14.9 AI-Native MSME Marketing & Social Commerce Platform**: Self-Cannibalization Through Cross-Platform Audience Overlap Is the Scheduling Problem That No Single-Platform Optimizer Can See
+- **14.11 AI-Native Digital Storefront Builder for SMEs**: Incremental Static Regeneration at Platform Scale Creates a Thundering Herd on Origin When Product Updates Are Correlated
 
 ### Cost Optimization
 
@@ -565,6 +579,9 @@
 - **14.2 AI-Native Conversational Commerce Platform**: WhatsApp's Template Approval Process Creates an Inventory Management Problem for Message Content
 - **14.4 AI-Native SME Inventory & Demand Forecasting System**: Channel Safety Buffers Are Not Static Reserves — They Are Continuously Priced Options
 - **14.6 AI-Native Vernacular Voice Commerce Platform**: GPU Cost Optimization for Voice Commerce Requires Audio-Aware Batch Formation, Not Request-Count-Based Batching
+- **14.8 AI-Native Quality Control for SME Manufacturing**: The Cost of a False Negative and False Positive Are Not Just Different in Magnitude — They Are Different in Kind
+- **14.9 AI-Native MSME Marketing & Social Commerce Platform**: At $10/Day Budgets, the Multi-Armed Bandit's Exploration Cost Is Literally the MSME's Entire Daily Marketing Budget
+- **14.11 AI-Native Digital Storefront Builder for SMEs**: The Merchant's First 5 Minutes Determine 6-Month Retention
 
 ### Data Structures
 
@@ -717,6 +734,11 @@
 - **14.2 AI-Native Conversational Commerce Platform**: Catalog Search in Conversational Commerce Requires Recall-First Ranking, Not Precision-First
 - **14.4 AI-Native SME Inventory & Demand Forecasting System**: The Forecast's Confidence Interval Is More Valuable Than Its Point Estimate for SME Decision-Making
 - **14.6 AI-Native Vernacular Voice Commerce Platform**: The Vernacular Synonym Dictionary Is a Living Knowledge Graph, Not a Static Lookup Table
+- **14.7 AI-Native SMB Workforce Scheduling & Gig Management**: The "Clopening" Detection Problem Is a Graph Cycle Detection Problem in Disguise
+- **14.8 AI-Native Quality Control for SME Manufacturing**: The Most Valuable Data Is Not Defect Images — It Is the "Uncertain" Images the Model Cannot Confidently Classify
+- **14.9 AI-Native MSME Marketing & Social Commerce Platform**: Brand Kit Incompleteness Is the Norm — The System Must Synthesize Missing Brand Identity From Product Photos
+- **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The Double-Entry Ledger's Hash Chain Creates a Built-In Regulatory Compliance Accelerator
+- **14.11 AI-Native Digital Storefront Builder for SMEs**: Multi-Channel Order Attribution Is a Causal Inference Problem, Not a Last-Click Tracking Problem
 
 ### Distributed Transactions
 
@@ -833,6 +855,7 @@
 - **14.2 AI-Native Conversational Commerce Platform**: The Multi-Tenant Outbound Gateway Is a Real-Time Resource Allocation Problem Isomorphic to CPU Scheduling
 - **14.4 AI-Native SME Inventory & Demand Forecasting System**: Tenant Forecast Compute Isolation Matters More Than Tenant Data Isolation for System Stability
 - **14.5 AI-Native B2B Supplier Discovery & Procurement Marketplace**: The Marketplace's Most Valuable Data Asset Is Not the Product Catalog — It Is the Buyer-Supplier Match Graph
+- **14.7 AI-Native SMB Workforce Scheduling & Gig Management**: Multi-Tenant Solver Fairness Requires Work-Stealing, Not FIFO Queuing
 
 ### Replication
 
@@ -1033,6 +1056,9 @@
 - **13.4 AI-Native Real Estate & PropTech Platform**: Building Safety Systems Must Be Architecturally Immune to Cloud Failures, Not Just Resilient
 - **13.5 AI-Native Agriculture & Precision Farming Platform**: Edge Spray Controller Fail-Safe Default Must Be "Spray On" — Counterintuitive but Agronomically Correct
 - **13.7 AI-Native Construction & Engineering Platform**: The Construction Schedule Is a Continuously Violated Constraint Set — Value Comes from Detecting and Propagating Violations
+- **14.8 AI-Native Quality Control for SME Manufacturing**: The SME Factory's Single Point of Failure Is Not the Edge Device — It Is the Sole Quality Manager
+- **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: GSTN Cross-Verification Is Simultaneously the Strongest Fraud Signal and the Most Fragile System Dependency
+- **14.11 AI-Native Digital Storefront Builder for SMEs**: Payment Gateway Routing Is Not Just Cost Optimization — It Is a Real-Time Reliability Problem
 
 ### Scaling
 
@@ -1209,6 +1235,10 @@
 - **14.1 AI-Native MSME Credit Scoring & Lending Platform**: Model Retraining Frequency Is Constrained by Label Maturity, Not Computational Cost
 - **14.4 AI-Native SME Inventory & Demand Forecasting System**: The ABC Classification Paradox — Categories Change Because of the Actions Taken Based on the Classification
 - **14.6 AI-Native Vernacular Voice Commerce Platform**: The Outbound Campaign Dialer Must Model Telephony Infrastructure as a Stochastic Adversary, Not a Reliable Transport
+- **14.7 AI-Native SMB Workforce Scheduling & Gig Management**: The Demand Forecasting Cold Start Is Not Truly Cold — The Business's Industry, Location, and Size Encode a Strong Prior
+- **14.8 AI-Native Quality Control for SME Manufacturing**: The Two-Stage Cascade Architecture Solves Three Problems Simultaneously
+- **14.9 AI-Native MSME Marketing & Social Commerce Platform**: Platform API Rate Limits Create an Information Asymmetry That Degrades Optimization Quality
+- **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: Quarter-End Invoice Surges Create a Supply-Demand Inversion That Requires Dynamic Market-Making
 
 ### Search
 
@@ -1352,6 +1382,10 @@
 - **13.6 AI-Native Media & Entertainment Platform**: Content Safety Classifiers Must Be Calibrated for the Distribution Channel, Not the Content
 - **14.1 AI-Native MSME Credit Scoring & Lending Platform**: The Fraud Graph's Most Powerful Signal Is Temporal Coordination, Not Connection Density
 - **14.3 AI-Native MSME Accounting & Tax Compliance Platform**: The Audit Trail's Merkle Chain Must Be Per-Business, Not Global, to Enable Verifiable Deletion
+- **14.7 AI-Native SMB Workforce Scheduling & Gig Management**: GPS Spoofing Detection Is an Adversarial Classification Problem That Gets Harder Over Time
+- **14.9 AI-Native MSME Marketing & Social Commerce Platform**: The Cross-MSME Bayesian Prior Is Both the Platform's Greatest Competitive Advantage and Its Greatest Privacy Risk
+- **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The Invoice Deduplication Problem Is Fundamentally Unsolvable Without a Universal Registry
+- **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The E-Invoice IRN Is a Necessary But Insufficient Proof of Invoice Legitimacy
 
 ### Streaming
 
@@ -1612,6 +1646,13 @@
 - **14.4 AI-Native SME Inventory & Demand Forecasting System**: The Reorder Point's Biggest Enemy Is Not Demand Uncertainty — It Is Lead Time Variance
 - **14.4 AI-Native SME Inventory & Demand Forecasting System**: Intermittent Demand Forecasting Is Not a Forecasting Problem — It Is a Decision Theory Problem
 - **14.6 AI-Native Vernacular Voice Commerce Platform**: Code-Mixing Ratio Is a User-Specific Feature That Predicts Commerce Intent Quality Better Than Language Detection
+- **14.7 AI-Native SMB Workforce Scheduling & Gig Management**: The Schedule Optimizer Must Solve Two Fundamentally Different Problems Masquerading as One — Feasibility and Optimality
+- **14.8 AI-Native Quality Control for SME Manufacturing**: The Camera and Lighting System Is the Model — The Neural Network Is Just the Decoder
+- **14.8 AI-Native Quality Control for SME Manufacturing**: Model Drift in Manufacturing Is Not Stochastic — It Is Deterministic and Predictable
+- **14.9 AI-Native MSME Marketing & Social Commerce Platform**: The Layout Graph Is the System's Most Valuable Intermediate Representation
+- **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The Buyer Credit Graph Creates a Network Intelligence Moat
+- **14.11 AI-Native Digital Storefront Builder for SMEs**: The Channel Projection Is Lossy Compression, and the Loss Function Must Be Channel-Aware
+- **14.11 AI-Native Digital Storefront Builder for SMEs**: Dynamic Pricing Cold-Start for New Products Is a Multi-Armed Bandit Problem Disguised as a Regression Problem
 
 ### Traffic Shaping
 
@@ -1711,3 +1752,10 @@
 - **14.2 AI-Native Conversational Commerce Platform**: Agent Handoff Context Transfer Is a Lossy Compression Problem — Not a Data Transfer Problem
 - **14.4 AI-Native SME Inventory & Demand Forecasting System**: FEFO Allocation Creates a Hidden Demand Acceleration Feedback Loop
 - **14.6 AI-Native Vernacular Voice Commerce Platform**: The Non-Literate User's Working Memory Constraint Creates a Hard Limit on Cart Size That Text Commerce Never Encounters
+- **14.7 AI-Native SMB Workforce Scheduling & Gig Management**: The Shift Swap Marketplace Has an Adverse Selection Problem
+- **14.7 AI-Native SMB Workforce Scheduling & Gig Management**: The Gig Worker Integration Creates a Legal Landmine — The Scheduling System's Own Behavior Generates Evidence of Employment
+- **14.8 AI-Native Quality Control for SME Manufacturing**: The No-Code Training Interface's Biggest Challenge Is Preventing Operators from Encoding Their Biases
+- **14.9 AI-Native MSME Marketing & Social Commerce Platform**: The Quality Gate Is Not a Filter — It Is a Training Signal Generator
+- **14.9 AI-Native MSME Marketing & Social Commerce Platform**: The MSME Owner's Approval Latency — Not GPU Generation Time — Is the True Bottleneck
+- **14.10 AI-Native Trade Finance & Invoice Factoring Platform**: The Financier Matching Engine Must Solve a Multi-Objective Optimization Problem
+- **14.11 AI-Native Digital Storefront Builder for SMEs**: The AI Theme Selection Decision Graph Creates an Implicit Contract with the Merchant

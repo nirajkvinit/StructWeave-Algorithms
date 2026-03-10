@@ -91,3 +91,86 @@
 | 6 | GPU Cost Optimization for Voice Commerce Requires Audio-Aware Batch Formation, Not Request-Count-Based Batching | Cost Optimization |
 | 7 | The Non-Literate User's Working Memory Constraint Creates a Hard Limit on Cart Size That Text Commerce Never Encounters | Workflow |
 | 8 | The Outbound Campaign Dialer Must Model Telephony Infrastructure as a Stochastic Adversary, Not a Reliable Transport | Scaling |
+
+---
+
+### 14.7 AI-Native SMB Workforce Scheduling & Gig Management [View](../14.7-ai-native-smb-workforce-scheduling-gig-management/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Schedule Optimizer Must Solve Two Fundamentally Different Problems Masquerading as One — Feasibility and Optimality Are Separate Engineering Concerns | System Modeling |
+| 2 | Predictive Scheduling Laws Transform Every Schedule Modification Into a Financial Transaction | Consistency |
+| 3 | The "Clopening" Detection Problem Is a Graph Cycle Detection Problem in Disguise | Data Structures |
+| 4 | The Sunday Evening Solver Surge Creates a Thundering Herd That Is Qualitatively Different from Typical API Traffic Spikes | Contention |
+| 5 | GPS Spoofing Detection Is an Adversarial Classification Problem That Gets Harder Over Time | Security |
+| 6 | The Demand Forecasting Cold Start Is Not Truly Cold — The Business's Industry, Location, and Size Encode a Strong Prior | Scaling |
+| 7 | The Shift Swap Marketplace Has an Adverse Selection Problem | Workflow |
+| 8 | Multi-Tenant Solver Fairness Requires Work-Stealing, Not FIFO Queuing | Partitioning |
+| 9 | The Compliance Engine's Real Complexity Is Not Evaluating Rules — It's Determining Which Rules Apply | Atomicity |
+| 10 | The Gig Worker Integration Creates a Legal Landmine — The Scheduling System's Own Behavior Generates Evidence of Employment | Workflow |
+
+---
+
+### 14.8 AI-Native Quality Control for SME Manufacturing [View](../14.8-ai-native-quality-control-sme-manufacturing/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Camera and Lighting System Is the Model — The Neural Network Is Just the Decoder | System Modeling |
+| 2 | Quantization Does Not Uniformly Degrade All Defect Classes — It Selectively Destroys Detection of Low-Contrast Defects | Atomicity |
+| 3 | The Production Line's Physical Reject Mechanism Creates an Irreversible Commitment Window | Consistency |
+| 4 | The No-Code Training Interface's Biggest Challenge Is Preventing Operators from Encoding Their Biases | Workflow |
+| 5 | Edge Device Thermal Management Is a Scheduling Problem, Not a Cooling Problem | Contention |
+| 6 | The Most Valuable Data in the System Is Not Defect Images — It Is the "Uncertain" Images | Data Structures |
+| 7 | Model Drift in Manufacturing Is Not Stochastic — It Is Deterministic and Predictable, Driven by Tooling Wear Curves | System Modeling |
+| 8 | The Two-Stage Cascade Architecture Solves Three Problems Simultaneously: Compute Efficiency, Unknown Defect Detection, and Training Data Requirements | Scaling |
+| 9 | The SME Factory's Single Point of Failure Is Not the Edge Device — It Is the Sole Quality Manager | Resilience |
+| 10 | The Cost of a False Negative and False Positive Are Not Just Different in Magnitude — They Are Different in Kind | Cost Optimization |
+
+---
+
+### 14.9 AI-Native MSME Marketing & Social Commerce Platform [View](../14.9-ai-native-msme-marketing-social-commerce-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Layout Graph Is the System's Most Valuable Intermediate Representation Because It Decouples Generation Cost from Platform Proliferation | System Modeling |
+| 2 | At $10/Day Budgets, the Multi-Armed Bandit's Exploration Cost Is Literally the MSME's Entire Daily Marketing Budget | Cost Optimization |
+| 3 | Self-Cannibalization Through Cross-Platform Audience Overlap Is the Scheduling Problem That No Single-Platform Optimizer Can See | Contention |
+| 4 | The Quality Gate Is Not a Filter — It Is a Training Signal Generator That Closes the Loop Between Content Generation and Audience Response | Workflow |
+| 5 | Platform API Rate Limits Are Not Just a Scaling Constraint — They Create an Information Asymmetry That Degrades Optimization Quality | Scaling |
+| 6 | Brand Kit Incompleteness Is the Norm, Not the Exception, and the System Must Synthesize Missing Brand Identity From Product Photos | Data Structures |
+| 7 | The Influencer Authenticity Signal That Platform APIs Don't Expose — Comment Response Timing — Is the Strongest Discriminator | Atomicity |
+| 8 | Festival-Driven Content Demand Creates a "Flash Crowd" Problem Solvable by Speculative Pre-Generation | Caching |
+| 9 | The MSME Owner's Approval Latency — Not GPU Generation Time — Is the True Bottleneck in the Content-to-Publication Pipeline | Workflow |
+| 10 | The Cross-MSME Bayesian Prior Is Both the Platform's Greatest Competitive Advantage and Its Greatest Privacy Risk | Security |
+
+---
+
+### 14.10 AI-Native Trade Finance & Invoice Factoring Platform [View](../14.10-ai-native-trade-finance-invoice-factoring-platform/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Buyer Credit Graph Creates a Network Intelligence Moat Where Financing One Invoice Improves Pricing Accuracy for Every Other Invoice | System Modeling |
+| 2 | The Settlement Saga's Point-of-No-Return Creates an Asymmetric Risk Window That Shapes the Entire Disbursement Architecture | Atomicity |
+| 3 | GSTN Cross-Verification Is Simultaneously the Strongest Fraud Signal and the Most Fragile System Dependency | Resilience |
+| 4 | The Invoice Deduplication Problem Is Fundamentally Unsolvable Without a Universal Registry | Security |
+| 5 | Quarter-End Invoice Surges Create a Supply-Demand Inversion That Requires Dynamic Market-Making | Scaling |
+| 6 | The Credit Insurance Underwriting Model Must Price Correlation Risk, Not Just Individual Default Risk | Consistency |
+| 7 | The Double-Entry Ledger's Hash Chain Creates a Built-In Regulatory Compliance Accelerator | Data Structures |
+| 8 | The Financier Matching Engine Must Solve a Multi-Objective Optimization Problem | Workflow |
+| 9 | The E-Invoice IRN Is a Necessary But Insufficient Proof of Invoice Legitimacy | Security |
+
+---
+
+### 14.11 AI-Native Digital Storefront Builder for SMEs [View](../14.11-ai-native-digital-storefront-builder-smes/09-insights.md)
+
+| # | Insight | Category |
+|---|---------|----------|
+| 1 | The Channel Projection Is Lossy Compression, and the Loss Function Must Be Channel-Aware | System Modeling |
+| 2 | Inventory Safety Buffers Are a Hidden Dynamic Programming Problem Across Channels | Atomicity |
+| 3 | The AI Theme Selection Decision Graph Creates an Implicit Contract with the Merchant | Workflow |
+| 4 | Dynamic Pricing Cold-Start for New Products Is a Multi-Armed Bandit Problem Disguised as a Regression Problem | System Modeling |
+| 5 | CDN Cache Invalidation for 3 Million Storefronts Requires Product-to-URL Dependency Tracking | Caching |
+| 6 | Payment Gateway Routing Is Not Just Cost Optimization — It Is a Real-Time Reliability Problem | Resilience |
+| 7 | The Merchant's First 5 Minutes Determine 6-Month Retention | Cost Optimization |
+| 8 | Multi-Channel Order Attribution Is a Causal Inference Problem, Not a Last-Click Tracking Problem | Data Structures |
+| 9 | Incremental Static Regeneration at Platform Scale Creates a Thundering Herd on Origin When Product Updates Are Correlated | Contention |

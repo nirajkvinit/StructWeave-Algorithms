@@ -239,6 +239,11 @@ Each system design directory contains 9 standardized documents:
 | 14.4 | AI-Native SME Inventory & Demand Forecasting System (Demand Sensing, Stock Optimization, Reorder Automation, Multi-Channel Sync, Expiry/Batch Management) | Completed | [View](./14.4-ai-native-sme-inventory-demand-forecasting-system/00-index.md) |
 | 14.5 | AI-Native B2B Supplier Discovery & Procurement Marketplace (Semantic Supplier Search, Field-Aware Embeddings, Trust Scoring, RFQ Optimization, Price Benchmarking, Escrow Payments) | Completed | [View](./14.5-ai-native-b2b-supplier-discovery-procurement-marketplace/00-index.md) |
 | 14.6 | AI-Native Vernacular Voice Commerce Platform (Multilingual ASR, Code-Mixed Speech, Voice Ordering, Vernacular Product Resolution, Outbound Campaigns, Telephony Integration) | Completed | [View](./14.6-ai-native-vernacular-voice-commerce-platform/00-index.md) |
+| 14.7 | AI-Native SMB Workforce Scheduling & Gig Management | Completed | [View](./14.7-ai-native-smb-workforce-scheduling-gig-management/00-index.md) |
+| 14.8 | AI-Native Quality Control for SME Manufacturing | Completed | [View](./14.8-ai-native-quality-control-sme-manufacturing/00-index.md) |
+| 14.9 | AI-Native MSME Marketing & Social Commerce Platform | Completed | [View](./14.9-ai-native-msme-marketing-social-commerce-platform/00-index.md) |
+| 14.10 | AI-Native Trade Finance & Invoice Factoring Platform | Completed | [View](./14.10-ai-native-trade-finance-invoice-factoring-platform/00-index.md) |
+| 14.11 | AI-Native Digital Storefront Builder for SMEs | Completed | [View](./14.11-ai-native-digital-storefront-builder-smes/00-index.md) |
 
 
 ---
